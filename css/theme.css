@@ -1,0 +1,45 @@
+/* Identidade visual: #6DA5C0, aplicada num esquema tonal no estilo Material Design 3.
+   Contraste: texto sobre a cor principal usa --on-primary (escuro, ~6,5:1); links/ícones sobre fundo claro usam --link (#2F6A87, ~5,6:1),
+   pois #6DA5C0 sozinho (~2,6:1) não basta para texto no claro. Texto sobre containers tonais usa --on-primary-container (>9:1). */
+:root {
+  --primary: #6DA5C0;
+  --on-primary: #0F1A20;
+  --primary-container: #D3E8F2;
+  --on-primary-container: #0B2A39;
+  --bg: #F6F9FB;
+  --surface: #FFFFFF;
+  --surface-2: #EDF2F5;
+  --surface-3: #E1E9EE;
+  --text: #1B2227;
+  --text-2: #4B5963;
+  --border: #D5DEE4;
+  --link: #2F6A87;
+  --danger: #B3261E;
+  --scrim: rgba(15, 26, 32, .5);
+  --shadow: 0 1px 2px rgba(15, 26, 32, .10);
+  --shadow-menu: 0 2px 6px rgba(15, 26, 32, .14), 0 10px 28px rgba(15, 26, 32, .16);
+  --radius: 16px;
+  --radius-lg: 28px;
+  --ease: cubic-bezier(.2, 0, 0, 1);
+  --font-ui: Roboto, "Google Sans", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --on-primary: #0F1A20;
+  --primary-container: #264B5D;
+  --on-primary-container: #D3E8F2;
+  --bg: #111518;
+  --surface: #1B2125;
+  --surface-2: #232A2F;
+  --surface-3: #2D353B;
+  --text: #E6EBEE;
+  --text-2: #A9B4BC;
+  --border: #38424A;
+  --link: #8CBFD9;
+  --danger: #F2B8B5;
+  --scrim: rgba(0, 0, 0, .6);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .5);
+  --shadow-menu: 0 2px 6px rgba(0, 0, 0, .5), 0 10px 28px rgba(0, 0, 0, .5);
+  color-scheme: dark;
+}
