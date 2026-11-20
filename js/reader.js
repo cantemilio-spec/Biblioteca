@@ -90,11 +90,15 @@ async function start(root, bookId) {
   const tocPanel = h('aside', { class: 'r-panel toc', hidden: true, 'aria-label': 'Sumário' });
   const setPanel = h('aside', { class: 'r-panel settings', hidden: true, 'aria-label': 'Ajustes de leitura' });
   const status = h('div', { class: 'r-status', 'aria-hidden': 'true' });
+  // Controles explícitos fora do iframe: funcionam mesmo quando o WebKit não
+  // entrega corretamente os eventos de toque dentro do documento incorporado.
+  const prevBtn = h('button', { class: 'r-page-nav prev', type: 'button', 'aria-label': 'Página anterior', title: 'Página anterior' }, '‹');
+  const nextBtn = h('button', { class: 'r-page-nav next', type: 'button', 'aria-label': 'Próxima página', title: 'Próxima página' }, '›');
   const top = h('header', { class: 'r-top' },
     h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Voltar à biblioteca', onclick: () => { location.hash = '#biblioteca'; } }, icon('back')),
     h('div', { class: 'r-title' }, book.title), bmBtn, setBtn, moreBtn);
   const bottom = h('footer', { class: 'r-bottom' }, chapterLabel, pctLabel, slider);
-  const reader = h('div', { class: 'reader' }, h('div', { class: 'r-stage' }, iframe), status, top, bottom, tocPanel, setPanel, annPanel, selBar);
+  const reader = h('div', { class: 'reader' }, h('div', { class: 'r-stage' }, iframe), prevBtn, nextBtn, status, top, bottom, tocPanel, setPanel, annPanel, selBar);
   const applyDim = attachDim(reader);
   root.replaceChildren(reader);
   const stage = reader.querySelector('.r-stage');
@@ -268,6 +272,11 @@ async function start(root, bookId) {
     if (st.page > 0) flipTo(st.page - 1, 'prev');
     else if (st.idx > 0) openChapter(st.idx - 1, 'end').then(() => { st.dirty = true; update(); });
   };
+
+  // Os botões ficam no documento principal, não no iframe do EPUB.
+  // Isso evita depender dos eventos touch/click do Safari dentro do iframe.
+  prevBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); prev(); });
+  nextBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); next(); });
 
   slider.addEventListener('change', () => {
     const target = (Number(slider.value) / 1000) * epub.totalWeight;
