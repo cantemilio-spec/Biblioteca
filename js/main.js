@@ -43,7 +43,9 @@ async function boot() {
     h('nav', { class: 'nav', 'aria-label': 'Principal' },
       h('div', { class: 'brand' }, h('img', { src: 'icons/boto.png', alt: '', width: 32, height: 32 }), h('span', {}, 'Boto Azul')),
       Object.entries(ROUTES).filter(([, r]) => r.label).map(([k, r]) => h('a', { href: `#${k}`, 'data-route': k }, h('span', { class: 'ind' }, icon(r.icon, 24)), h('span', { class: 'lbl' }, r.label)))),
-    h('main', { id: 'main', tabindex: '-1' }));
+    h('main', { id: 'main', tabindex: '-1' }),
+    // barra superior só no celular (na tela larga a marca já fica no topo do menu lateral); vem depois do <main> porque #app usa column-reverse
+    h('header', { class: 'app-bar' }, h('a', { href: '#inicio', 'aria-label': 'Boto Azul — Início' }, h('img', { src: 'icons/boto.png', alt: '', width: 32, height: 32 }), h('span', {}, 'Boto Azul'))));
   window.addEventListener('hashchange', route);
   await route();
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {

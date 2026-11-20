@@ -551,9 +551,8 @@ export async function mountPdfReader(root, book, blob) {
       if (a) { const d = pageEl.querySelector(`.pdf-hl[data-id="${CSS.escape(a.id)}"]`); openEdit(a.id, (d || pageEl).getBoundingClientRect()); return; }
     }
     const x = e.clientX / viewer.clientWidth;
-    const fitsWidth = viewer.scrollWidth <= viewer.clientWidth + 2;
-    if (fitsWidth && x < 0.25) prevPage();
-    else if (fitsWidth && x > 0.75) nextPage();
+    if (x < 0.25) prevPage(); // também com zoom: tocar na borda vira a página
+    else if (x > 0.75) nextPage();
     else showChrome(!st.chromeOn);
   };
   // mouse/caneta: click. Dedo: tratado no touchend (no iOS o click não é entregue de forma confiável a elementos não interativos).
@@ -568,7 +567,10 @@ export async function mountPdfReader(root, book, blob) {
       pinch = { d0: dist(a, b), s0: st.scale, cx: (a.clientX + b.clientX) / 2 - vr.left, cy: (a.clientY + b.clientY) / 2 - vr.top, r: 1 };
       pagesEl.style.transformOrigin = `${pinch.cx + viewer.scrollLeft - pagesEl.offsetLeft}px ${pinch.cy + viewer.scrollTop - pagesEl.offsetTop}px`;
       swipe = null;
-    } else if (e.touches.length === 1) swipe = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() };
+    } else if (e.touches.length === 1) {
+      // com zoom, só vira página se o dedo começou já na borda da folha (senão o gesto apenas move o zoom)
+      swipe = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now(), eL: viewer.scrollLeft <= 2, eR: viewer.scrollLeft + viewer.clientWidth >= viewer.scrollWidth - 2 };
+    }
   }, { passive: true });
   viewer.addEventListener('touchmove', (e) => {
     if (pinch && e.touches.length === 2) {
@@ -586,7 +588,7 @@ export async function mountPdfReader(root, book, blob) {
     }
     if (swipe && !pinch) {
       const t = e.changedTouches[0], dx = t.clientX - swipe.x, dy = t.clientY - swipe.y, dt = Date.now() - swipe.t;
-      const fits = viewer.scrollWidth <= viewer.clientWidth + 2;
+      const fits = viewer.scrollWidth <= viewer.clientWidth + 2 || (dx < 0 ? swipe.eR : swipe.eL);
       if (fits && Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5 && dt < 1000 && document.getSelection().isCollapsed) {
         gestureAt = Date.now(); if (e.cancelable) e.preventDefault(); (dx < 0 ? nextPage : prevPage)();
       } else if (Math.hypot(dx, dy) < 12 && dt < 500) {
