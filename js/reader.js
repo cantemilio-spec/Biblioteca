@@ -22,7 +22,7 @@ const THEMES = {
   sepia: { bg: '#F4ECD8', fg: '#4A3B2A', link: '#7A4E2B' },
   dark: { bg: '#15191D', fg: '#E6EAED', link: '#6DA5C0' },
 };
-const DEFAULT_PREFS = { fontSize: 19, font: 'serif', lineHeight: 1.6, margin: 'medium', align: 'left', theme: null, mode: 'paged', effect: 'flip', paraGap: 0.8, letter: 0, bold: false, hyphens: true, width: 'medium', taps: 'normal', awake: true, progress: true };
+const DEFAULT_PREFS = { fontSize: 19, font: 'serif', lineHeight: 1.6, margin: 'medium', align: 'justify', theme: null, mode: 'paged', effect: 'flip', paraGap: 0.8, letter: 0, bold: false, hyphens: true, width: 'medium', taps: 'normal', awake: true, progress: true };
 const PAD_Y = 48;
 const WIDTHS = { narrow: 560, medium: 760, wide: 960 };
 
@@ -38,6 +38,7 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);-webkit-text
 .scroll #v{overflow-y:auto;-webkit-overflow-scrolling:touch}
 #c a{color:var(--link)}
 #c img{display:block;max-width:100%;max-height:var(--ih);margin:1em auto;object-fit:contain;break-inside:avoid}
+#c>:first-child{margin-top:0}
 #c h1,#c h2,#c h3,#c h4,#c h5,#c h6{line-height:1.25;margin:1.1em 0 .6em;break-after:avoid}
 #c p{margin:0 0 var(--pg,.8em)}#c blockquote{margin:1em 1.5em}#c pre{white-space:pre-wrap}
 #c table{border-collapse:collapse;max-width:100%}#c td,#c th{padding:.2em .5em;border:1px solid currentColor}
@@ -90,20 +91,21 @@ async function start(root, bookId) {
   const tocPanel = h('aside', { class: 'r-panel toc', hidden: true, 'aria-label': 'Sumário' });
   const setPanel = h('aside', { class: 'r-panel settings', hidden: true, 'aria-label': 'Ajustes de leitura' });
   const status = h('div', { class: 'r-status', 'aria-hidden': 'true' });
-  // Controles explícitos fora do iframe: funcionam mesmo quando o WebKit não
-  // entrega corretamente os eventos de toque dentro do documento incorporado.
-  const prevBtn = h('button', { class: 'r-page-nav prev', type: 'button', 'aria-label': 'Página anterior', title: 'Página anterior' }, '‹');
-  const nextBtn = h('button', { class: 'r-page-nav next', type: 'button', 'aria-label': 'Próxima página', title: 'Próxima página' }, '›');
   const top = h('header', { class: 'r-top' },
     h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Voltar à biblioteca', onclick: () => { location.hash = '#biblioteca'; } }, icon('back')),
     h('div', { class: 'r-title' }, book.title), bmBtn, setBtn, moreBtn);
   const bottom = h('footer', { class: 'r-bottom' }, chapterLabel, pctLabel, slider);
-  const reader = h('div', { class: 'reader' }, h('div', { class: 'r-stage' }, iframe), prevBtn, nextBtn, status, top, bottom, tocPanel, setPanel, annPanel, selBar);
+  const reader = h('div', { class: 'reader' }, h('div', { class: 'r-stage' }, iframe), status, top, bottom, tocPanel, setPanel, annPanel, selBar);
+  // áreas seguras (notch, barra de gestos, cantos arredondados): lidas por um elemento-sonda e somadas ao layout do texto
+  const probe = h('div', { class: 'r-probe', 'aria-hidden': 'true', style: 'position:absolute;visibility:hidden;pointer-events:none;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)' });
+  const handle = h('button', { class: 'r-handle', type: 'button', 'aria-label': 'Mostrar controles', onclick: () => showChrome(true) }, h('span'));
+  reader.append(probe, handle);
+  const safe = () => { const cs = getComputedStyle(probe); return { t: parseFloat(cs.paddingTop) || 0, r: parseFloat(cs.paddingRight) || 0, b: parseFloat(cs.paddingBottom) || 0, l: parseFloat(cs.paddingLeft) || 0 }; };
   const applyDim = attachDim(reader);
   root.replaceChildren(reader);
   const stage = reader.querySelector('.r-stage');
 
-  iframe.srcdoc = SHELL;
+  iframe.srcdoc = SHELL.replace('<html>', `<html lang="${String(book.language || navigator.language || 'pt-BR').replace(/[^A-Za-z-]/g, '').slice(0, 12) || 'pt-BR'}">`);
   await new Promise((r) => iframe.addEventListener('load', r, { once: true }));
   const doc = iframe.contentDocument;
   const v = doc.getElementById('v');
@@ -128,18 +130,19 @@ async function start(root, bookId) {
     endFlip();
     applyTheme();
     const iw = stage.clientWidth, ih = stage.clientHeight;
-    const side = Math.max(MARGINS[prefs.margin], Math.floor((iw - (WIDTHS[prefs.width] || 760)) / 2), 0);
+    const sf = safe(), padT = PAD_Y + sf.t, padB = PAD_Y + sf.b;
+    const side = Math.max(MARGINS[prefs.margin], Math.floor((iw - (WIDTHS[prefs.width] || 760)) / 2), Math.max(sf.l, sf.r) + 12, 0);
     const W = Math.max(120, iw - 2 * side);
-    doc.documentElement.style.setProperty('--ih', `${Math.max(100, ih - 2 * PAD_Y - 8)}px`);
+    doc.documentElement.style.setProperty('--ih', `${Math.max(100, ih - padT - padB - 8)}px`);
     st.side = side;
     if (paged()) {
-      v.style.cssText = `left:${side}px;top:${PAD_Y}px;width:${W}px;height:${Math.max(100, ih - 2 * PAD_Y)}px`;
+      v.style.cssText = `left:${side}px;top:${padT}px;width:${W}px;height:${Math.max(100, ih - padT - padB)}px`;
       c.style.cssText = `width:${W}px;column-width:${W}px;column-gap:${2 * side}px;transform:none`;
       st.stride = W + 2 * side;
       st.pages = Math.max(1, Math.round((c.scrollWidth + 2 * side) / st.stride));
     } else {
       v.style.cssText = 'left:0;right:0;top:0;bottom:0';
-      c.style.cssText = `padding:${PAD_Y}px ${side}px ${PAD_Y + 24}px`;
+      c.style.cssText = `padding:${padT}px ${side}px ${padB + 24}px`;
       st.pages = 1;
     }
   }
@@ -272,11 +275,6 @@ async function start(root, bookId) {
     if (st.page > 0) flipTo(st.page - 1, 'prev');
     else if (st.idx > 0) openChapter(st.idx - 1, 'end').then(() => { st.dirty = true; update(); });
   };
-
-  // Os botões ficam no documento principal, não no iframe do EPUB.
-  // Isso evita depender dos eventos touch/click do Safari dentro do iframe.
-  prevBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); prev(); });
-  nextBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); next(); });
 
   slider.addEventListener('change', () => {
     const target = (Number(slider.value) / 1000) * epub.totalWeight;
