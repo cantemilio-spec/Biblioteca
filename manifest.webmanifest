@@ -1,6 +1,6 @@
 {
-  "name": "Biblioteca Digital",
-  "short_name": "Biblioteca",
+  "name": "Boto Azul",
+  "short_name": "Boto Azul",
   "lang": "pt-BR",
   "start_url": "./",
   "scope": "./",
@@ -25,17 +25,11 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
-    },
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
     }
   ],
   "id": "./",
   "orientation": "any",
-  "description": "Biblioteca digital de EPUB e PDF com leitor, anotações e estatísticas. Funciona offline.",
+  "description": "Boto Azul: biblioteca digital de EPUB e PDF com leitor, anotações e estatísticas. Funciona offline.",
   "categories": [
     "books",
     "productivity"
