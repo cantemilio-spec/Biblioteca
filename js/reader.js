@@ -1,5 +1,6 @@
-// Leitor EPUB. O conteúdo roda num iframe sandbox="allow-same-origin" SEM allow-scripts + CSP própria:
-// nada de dentro do livro executa. Paginação por colunas CSS; modo rolagem como alternativa.
+// Leitor EPUB. O conteúdo roda num iframe sandbox + CSP própria (script-src 'none'): nada de dentro do livro executa.
+// allow-scripts é necessário só porque o WebKit (iPhone/Safari) NÃO entrega eventos de toque/clique aos ouvintes do app
+// registrados num documento sandbox sem allow-scripts. Scripts continuam bloqueados pela CSP e removidos pelo sanitizador (epub.js). Paginação por colunas CSS; modo rolagem como alternativa.
 import { h, icon, toast, menu } from './ui.js';
 import * as db from './db.js';
 import { getSetting, setSetting } from './settings.js';
@@ -27,7 +28,7 @@ const PAD_Y = 48;
 const WIDTHS = { narrow: 560, medium: 760, wide: 960 };
 
 const SHELL = `<!doctype html><html><head><meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src blob:; style-src 'unsafe-inline'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; img-src blob:; style-src 'unsafe-inline'; form-action 'none'; base-uri 'none'; frame-src 'none'; object-src 'none'">
 <style>
 html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);-webkit-text-size-adjust:100%;overscroll-behavior:none}
 .paged body{touch-action:pinch-zoom}.scroll body{touch-action:pan-y pinch-zoom}
@@ -79,7 +80,7 @@ async function start(root, bookId) {
   const st = { idx: 0, page: 0, pages: 1, stride: 1, side: 36, dirty: false, annots: [], token: 0, cur: null, chromeOn: true };
 
   /* ---------- DOM ---------- */
-  const iframe = h('iframe', { title: 'Conteúdo do livro', sandbox: 'allow-same-origin', class: 'r-frame' });
+  const iframe = h('iframe', { title: 'Conteúdo do livro', sandbox: 'allow-same-origin allow-scripts', class: 'r-frame' });
   const setBtn = h('button', { class: 'icon-btn aa', type: 'button', 'aria-label': 'Ajustes de leitura', 'aria-expanded': 'false' }, h('span', {}, 'Aa'));
   const moreBtn = h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Mais opções', 'aria-haspopup': 'menu', 'aria-expanded': 'false' }, icon('more'));
   const chapterLabel = h('button', { class: 'r-chapter', type: 'button', 'aria-label': 'Abrir sumário' });
