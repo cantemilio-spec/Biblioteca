@@ -120,16 +120,11 @@
 .reader[data-ptone="night"] .pdf-page, .reader[data-ptone="invert"] .pdf-page { background: #15191D; }
 .reader[data-ptone="sepia"] .pdf-page { background: #F4ECD8; }
 
-/* Navegação EPUB explícita: controles fora do iframe para maior confiabilidade no iOS */
-.reader:not(.pdf) .r-page-nav {
-  position: absolute; z-index: 2; top: 50%; transform: translateY(-50%);
-  display: grid; place-items: center; width: 38px; height: 64px;
-  padding: 0; border: 0; border-radius: 12px;
-  color: var(--r-fg); background: color-mix(in srgb, var(--r-bg) 72%, transparent);
-  font: 400 2rem/1 system-ui, sans-serif; cursor: pointer;
-  -webkit-tap-highlight-color: transparent; touch-action: manipulation;
-}
-.reader:not(.pdf) .r-page-nav.prev { left: max(5px, env(safe-area-inset-left)); }
-.reader:not(.pdf) .r-page-nav.next { right: max(5px, env(safe-area-inset-right)); }
-.reader:not(.pdf) .r-page-nav:active { background: color-mix(in srgb, var(--r-accent) 25%, var(--r-bg)); }
-.reader:not(.pdf) .r-page-nav:focus-visible { outline: 2px solid var(--r-accent); outline-offset: 2px; }
+/* --- Ajustes do leitor: cores nativas, folha de ajustes curta, alça para reabrir controles, avisos fora do caminho --- */
+.reader { color-scheme: light; } .reader[data-rtheme="dark"] { color-scheme: dark; }
+.r-handle { position: absolute; z-index: 3; top: env(safe-area-inset-top, 0px); left: 50%; transform: translateX(-50%); width: 96px; height: 28px; border: 0; background: none; padding: 0; display: none; align-items: center; justify-content: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.r-handle span { width: 36px; height: 4px; border-radius: 2px; background: var(--r-muted); opacity: .45; }
+.reader.chrome-off .r-handle { display: flex; }
+@media (max-width: 599px) { .r-panel.settings { max-height: min(56%, 520px); } }
+#app.reading ~ #toasts { top: calc(60px + env(safe-area-inset-top, 0px)); bottom: auto; }
+#app.reading ~ #toasts .toast { pointer-events: none; }
