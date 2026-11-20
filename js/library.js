@@ -147,7 +147,7 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
 
   function render() { root.classList.toggle('selecting', st.selecting); renderContent(); renderBar(); }
 
-  const emptyLibrary = () => h('div', { class: 'empty' }, icon('book', 44), h('h2', {}, 'Sua biblioteca está vazia'),
+  const emptyLibrary = () => h('div', { class: 'empty' }, h('img', { class: 'empty-logo', src: 'icons/boto.png', alt: 'Boto Azul', width: 96, height: 96 }), h('h2', {}, 'Sua biblioteca está vazia'),
     h('p', {}, 'Importe livros em EPUB ou PDF para começar. Você também pode arrastar os arquivos para esta janela.'),
     h('button', { class: 'btn primary', type: 'button', onclick: () => input.click() }, icon('plus', 18), 'Importar livros'));
 

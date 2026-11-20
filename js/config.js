@@ -1,7 +1,7 @@
-export const APP = { name: 'Biblioteca Digital', dbName: 'biblioteca-digital', dbVersion: 2 };
+export const APP = { name: 'Boto Azul', dbName: 'biblioteca-digital', dbVersion: 2 };
 
 export const DEFAULTS = {
-  goals: { dailyMin: 20, monthlyBooks: 2 }, maxFileMB: 200, autoIdentify: true, theme: 'auto', view: 'grid', sort: 'added-desc' };
+  goals: { dailyMin: 20, monthlyBooks: 2 }, maxFileMB: 200, autoIdentify: true, theme: 'auto', uiScale: 100, contrast: 'normal', motion: 'auto', gridSize: 'medium', view: 'grid', sort: 'added-desc' };
 
 // Limites de segurança para ZIP/EPUB (proteção contra zip-bomb e arquivos malformados).
 export const ZIP_LIMITS = {

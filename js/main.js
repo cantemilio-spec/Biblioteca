@@ -1,5 +1,5 @@
 import { h, icon } from './ui.js';
-import { initSettings, applyTheme, watchSystemTheme } from './settings.js';
+import { initSettings, applyTheme, applyAppearance, watchSystemTheme } from './settings.js';
 import { mountLibrary } from './library.js';
 import { mountSettings } from './settings-view.js';
 import { mountReader } from './reader.js';
@@ -37,11 +37,11 @@ async function route() {
 
 async function boot() {
   await initSettings();
-  applyTheme();
+  applyTheme(); applyAppearance();
   watchSystemTheme();
   document.getElementById('app').append(
     h('nav', { class: 'nav', 'aria-label': 'Principal' },
-      h('div', { class: 'brand' }, icon('book', 24), h('span', {}, 'Biblioteca')),
+      h('div', { class: 'brand' }, h('img', { src: 'icons/boto.png', alt: '', width: 32, height: 32 }), h('span', {}, 'Boto Azul')),
       Object.entries(ROUTES).filter(([, r]) => r.label).map(([k, r]) => h('a', { href: `#${k}`, 'data-route': k }, h('span', { class: 'ind' }, icon(r.icon, 24)), h('span', { class: 'lbl' }, r.label)))),
     h('main', { id: 'main', tabindex: '-1' }));
   window.addEventListener('hashchange', route);

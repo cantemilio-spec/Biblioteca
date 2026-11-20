@@ -12,6 +12,8 @@ import { copyToClipboard, colorDots, barButton, placeBar, openNoteEditor, render
 export const FONTS = {
   serif: 'Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif',
   sans: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+  palatino: '"Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif',
+  charter: 'Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif',
   mono: 'ui-monospace, "SF Mono", Menlo, Consolas, monospace',
 };
 const MARGINS = { small: 16, medium: 36, large: 72 };
@@ -20,23 +22,24 @@ const THEMES = {
   sepia: { bg: '#F4ECD8', fg: '#4A3B2A', link: '#7A4E2B' },
   dark: { bg: '#15191D', fg: '#E6EAED', link: '#6DA5C0' },
 };
-const DEFAULT_PREFS = { fontSize: 19, font: 'serif', lineHeight: 1.6, margin: 'medium', align: 'left', theme: null, mode: 'paged', effect: 'flip' };
+const DEFAULT_PREFS = { fontSize: 19, font: 'serif', lineHeight: 1.6, margin: 'medium', align: 'left', theme: null, mode: 'paged', effect: 'flip', paraGap: 0.8, letter: 0, bold: false, hyphens: true, width: 'medium', taps: 'normal', awake: true, progress: true };
 const PAD_Y = 48;
-const MAX_TEXT_W = 760;
+const WIDTHS = { narrow: 560, medium: 760, wide: 960 };
 
 const SHELL = `<!doctype html><html><head><meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src blob:; style-src 'unsafe-inline'">
 <style>
-html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);-webkit-text-size-adjust:100%}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);-webkit-text-size-adjust:100%;overscroll-behavior:none}
+.paged body{touch-action:pinch-zoom}.scroll body{touch-action:pan-y pinch-zoom}
 #v{position:absolute;overflow:hidden}
-#c{font-family:var(--ff);font-size:var(--fs);line-height:var(--lh);text-align:var(--al);hyphens:auto;overflow-wrap:break-word;box-sizing:border-box}
+#c{font-family:var(--ff);font-size:var(--fs);line-height:var(--lh);text-align:var(--al);hyphens:var(--hy,auto);-webkit-hyphens:var(--hy,auto);letter-spacing:var(--ls,0);font-weight:var(--fw,400);overflow-wrap:break-word;box-sizing:border-box}
 .paged #c{height:100%;column-fill:auto;transition:transform .28s ease}
 .noanim #c{transition:none!important}
 .scroll #v{overflow-y:auto;-webkit-overflow-scrolling:touch}
 #c a{color:var(--link)}
 #c img{display:block;max-width:100%;max-height:var(--ih);margin:1em auto;object-fit:contain;break-inside:avoid}
 #c h1,#c h2,#c h3,#c h4,#c h5,#c h6{line-height:1.25;margin:1.1em 0 .6em;break-after:avoid}
-#c p{margin:0 0 .8em}#c blockquote{margin:1em 1.5em}#c pre{white-space:pre-wrap}
+#c p{margin:0 0 var(--pg,.8em)}#c blockquote{margin:1em 1.5em}#c pre{white-space:pre-wrap}
 #c table{border-collapse:collapse;max-width:100%}#c td,#c th{padding:.2em .5em;border:1px solid currentColor}
 #c hr{border:0;border-top:1px solid currentColor;opacity:.3;margin:1.5em 0}
 .next-ch{display:block;margin:2em auto;padding:.7em 1.4em;border:1px solid currentColor;border-radius:10px;background:none;color:inherit;font:inherit;cursor:pointer}
@@ -70,7 +73,7 @@ async function start(root, bookId) {
   const prefs = { ...DEFAULT_PREFS, ...saved };
   if (!saved.effect && saved.animations === false) prefs.effect = 'none'; // migra a opção antiga "Animações"
   const themeName = () => prefs.theme || (document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.dataset.motion === 'reduce';
 
   const st = { idx: 0, page: 0, pages: 1, stride: 1, side: 36, dirty: false, annots: [], token: 0, cur: null, chromeOn: true };
 
@@ -109,7 +112,8 @@ async function start(root, bookId) {
     const s = doc.documentElement.style;
     s.setProperty('--bg', t.bg); s.setProperty('--fg', t.fg); s.setProperty('--link', t.link);
     s.setProperty('--ff', FONTS[prefs.font]); s.setProperty('--fs', `${prefs.fontSize}px`);
-    s.setProperty('--lh', String(prefs.lineHeight)); s.setProperty('--al', prefs.align);
+    s.setProperty('--lh', String(prefs.lineHeight)); s.setProperty('--pg', `${prefs.paraGap}em`); s.setProperty('--ls', `${prefs.letter}em`); s.setProperty('--fw', prefs.bold ? '600' : '400'); s.setProperty('--hy', prefs.hyphens ? 'auto' : 'manual');
+    status.hidden = !prefs.progress; s.setProperty('--al', prefs.align);
     doc.documentElement.className = `${prefs.mode === 'scroll' ? 'scroll' : 'paged'}${prefs.effect === 'slide' && !reduceMotion ? '' : ' noanim'}`;
   }
 
@@ -120,7 +124,7 @@ async function start(root, bookId) {
     endFlip();
     applyTheme();
     const iw = stage.clientWidth, ih = stage.clientHeight;
-    const side = Math.max(MARGINS[prefs.margin], Math.floor((iw - MAX_TEXT_W) / 2), 0);
+    const side = Math.max(MARGINS[prefs.margin], Math.floor((iw - (WIDTHS[prefs.width] || 760)) / 2), 0);
     const W = Math.max(120, iw - 2 * side);
     doc.documentElement.style.setProperty('--ih', `${Math.max(100, ih - 2 * PAD_Y - 8)}px`);
     st.side = side;
@@ -159,6 +163,9 @@ async function start(root, bookId) {
     p = Math.min(Math.max(0, p), st.pages - 1);
     if (p === st.page) return;
     if (!flipOK()) { setPage(p, { user: true }); return; }
+    try { flipAnim(p, dir); } catch { endFlip(); setPage(p, { user: true }); }
+  }
+  function flipAnim(p, dir) {
     const shown = dir === 'next' ? st.page : p; // página que fica na face da folha
     const mk = (cls, parent) => { const e = doc.createElement('div'); e.className = cls; parent?.append(e); return e; };
     const wrap = mk('flip'), cast = mk('cast', wrap), leafEl = mk('leaf', wrap), front = mk('face', leafEl), back = mk('face back', leafEl);
@@ -179,6 +186,7 @@ async function start(root, bookId) {
     if (dir === 'next') setPage(p, { user: true }); // a página nova já está por baixo enquanto a folha gira
     const mine = leaf;
     anims[0].finished.then(() => { if (leaf === mine) endFlip(); }).catch(() => {});
+    setTimeout(() => { if (leaf === mine) endFlip(); }, 800); // rede de segurança (WebKit pode não concluir a animação)
   }
 
   function restore(frac) {
@@ -217,7 +225,7 @@ async function start(root, bookId) {
     slider.value = String(Math.round(p * 1000));
     const entry = [...epub.toc].reverse().find((t) => t.spine <= st.idx);
     chapterLabel.textContent = entry ? entry.label : `Capítulo ${st.idx + 1}`;
-    status.textContent = `${chapterLabel.textContent} · ${Math.floor(p * 100)}%`;
+    status.textContent = `${chapterLabel.textContent} · ${paged() ? `pág. ${st.page + 1}/${st.pages} · ` : ''}${Math.floor(p * 100)}%`;
     updateBookmarkBtn();
     if (st.dirty) scheduleSave();
   }
@@ -271,7 +279,7 @@ async function start(root, bookId) {
 
   /* ---------- controles ---------- */
   function showChrome(on) { st.chromeOn = on; reader.classList.toggle('chrome-off', !on); if (!on) closePanels(); }
-  const hideChrome = () => { if (st.chromeOn) showChrome(false); };
+  const hideChrome = () => { if (st.chromeOn && panelsClosed()) showChrome(false); }; // nunca esconde com painel de ajustes aberto
   function closePanels() {
     tocPanel.hidden = setPanel.hidden = annPanel.hidden = true;
     moreBtn.setAttribute('aria-expanded', 'false'); setBtn.setAttribute('aria-expanded', 'false');
@@ -287,7 +295,7 @@ async function start(root, bookId) {
   moreBtn.addEventListener('click', () => menu(moreBtn, [
     { label: 'Sumário', icon: 'list', onClick: openToc },
     { label: 'Marcações e anotações', icon: 'note', onClick: openNotes },
-    { label: document.fullscreenElement ? 'Sair da tela cheia' : 'Tela cheia', icon: 'maximize', onClick: () => { if (document.fullscreenElement) document.exitFullscreen?.(); else (reader.requestFullscreen?.() || Promise.reject()).catch(() => toast('Este navegador não permitiu tela cheia.', 'error')); } },
+    ...(reader.requestFullscreen ? [{ label: document.fullscreenElement ? 'Sair da tela cheia' : 'Tela cheia', icon: 'maximize', onClick: () => { if (document.fullscreenElement) document.exitFullscreen?.(); else (reader.requestFullscreen?.() || Promise.reject()).catch(() => toast('Este navegador não permitiu tela cheia.', 'error')); } }] : []),
   ], { title: 'Mais opções' }));
 
   function buildToc() {
@@ -314,6 +322,9 @@ async function start(root, bookId) {
     if (patch.theme !== undefined) reader.dataset.rtheme = themeName();
   }
 
+  const range = (label, min, max, step, val, on) => { const el = h('input', { type: 'range', min, max, step, value: val, 'aria-label': label }); el.addEventListener('input', () => on(Number(el.value))); return el; };
+  const yesNo = (key, relayout) => seg([[true, 'Sim'], [false, 'Não']], !!prefs[key], (val) => changePref({ [key]: val }, relayout));
+
   function buildSettings() {
     const size = h('span', { class: 'r-val' }, `${prefs.fontSize}px`);
     const bump = (d) => { const n = Math.min(34, Math.max(13, prefs.fontSize + d)); size.textContent = `${n}px`; changePref({ fontSize: n }); };
@@ -330,13 +341,23 @@ async function start(root, bookId) {
       brightnessControl(applyDim), swatches,
       h('h3', { class: 'r-sec' }, 'Texto'),
       row('Tamanho', h('div', { class: 'stepper' }, h('button', { class: 'btn', type: 'button', 'aria-label': 'Diminuir fonte', onclick: () => bump(-1) }, 'A−'), size, h('button', { class: 'btn', type: 'button', 'aria-label': 'Aumentar fonte', onclick: () => bump(1) }, 'A+'))),
-      row('Fonte', seg([['serif', 'Serifada'], ['sans', 'Sem serifa'], ['mono', 'Mono']], prefs.font, (val) => changePref({ font: val }))),
+      row('Fonte', seg([['serif', 'Georgia'], ['palatino', 'Palatino'], ['charter', 'Charter'], ['sans', 'Sem serifa'], ['mono', 'Mono']], prefs.font, (val) => changePref({ font: val }))),
       row('Espaçamento entre linhas', lh),
       row('Margens', seg([['small', 'Estreita'], ['medium', 'Média'], ['large', 'Larga']], prefs.margin, (val) => changePref({ margin: val }))),
       row('Alinhamento', seg([['left', 'Esquerda'], ['justify', 'Justificado']], prefs.align, (val) => changePref({ align: val }))),
+      row('Espaçamento entre parágrafos', range('Espaçamento entre parágrafos', 0, 1.6, 0.2, prefs.paraGap, (v) => changePref({ paraGap: v }))),
+      row('Espaçamento entre letras', range('Espaçamento entre letras', 0, 0.08, 0.02, prefs.letter, (v) => changePref({ letter: v }))),
+      row('Largura do texto', seg([['narrow', 'Estreita'], ['medium', 'Média'], ['wide', 'Larga']], prefs.width, (val) => changePref({ width: val }))),
+      row('Negrito', yesNo('bold', true)),
+      row('Hifenização', yesNo('hyphens', true)),
       h('h3', { class: 'r-sec' }, 'Página'),
       row('Modo', seg([['paged', 'Páginas'], ['scroll', 'Rolagem']], prefs.mode, async (val) => { await changePref({ mode: val }); sync(); })),
-      effectRow);
+      effectRow,
+      h('h3', { class: 'r-sec' }, 'Controles'),
+      row('Toques nas laterais', seg([['normal', 'Normal'], ['inverted', 'Invertido'], ['off', 'Desligado']], prefs.taps, (val) => changePref({ taps: val }, false))),
+      row('Mostrar progresso', yesNo('progress', false)),
+      row('Manter tela ligada', seg([[true, 'Sim'], [false, 'Não']], prefs.awake, (val) => { prefs.awake = val; setSetting('reader', { ...prefs }).catch(() => {}); releaseAwake(); releaseAwake = val ? keepAwake() : () => {}; })),
+      h('button', { class: 'btn r-reset', type: 'button', onclick: async () => { await changePref({ ...DEFAULT_PREFS, theme: prefs.theme }); buildSettings(); } }, 'Restaurar padrões'));
   }
 
   /* ---------- marcadores, destaques e anotações ---------- */
@@ -454,6 +475,7 @@ async function start(root, bookId) {
 
   /* ---------- entrada: toque, mouse, teclado ---------- */
   function onClick(e) {
+    if (!e.synthetic && Date.now() - gestureAt < 700) { if (e.target.closest?.('a')) e.preventDefault(); return; } // toque/deslize de dedo já tratado no touchend
     const mk = e.target.closest?.('mark.hl');
     if (!selBar.hidden && !mk) { hideSel(); doc.getSelection().removeAllRanges(); return; }
     if (mk && doc.getSelection().isCollapsed) { e.preventDefault(); openEdit(mk.dataset.id, mk.getBoundingClientRect()); return; }
@@ -469,22 +491,33 @@ async function start(root, bookId) {
     if (!doc.getSelection().isCollapsed) return; // selecionando texto: não navegar
     if (!panelsClosed()) { closePanels(); return; }
     const w = doc.documentElement.clientWidth, x = e.clientX / w;
-    if (paged() && x < 0.28) prev();
-    else if (paged() && x > 0.72) next();
+    const L = prefs.taps === 'inverted' ? next : prev, R = prefs.taps === 'inverted' ? prev : next;
+    if (paged() && prefs.taps !== 'off' && x < 0.28) L();
+    else if (paged() && prefs.taps !== 'off' && x > 0.72) R();
     else showChrome(!st.chromeOn);
   }
   const panelsClosed = () => tocPanel.hidden && setPanel.hidden && annPanel.hidden;
   const next2 = () => { if (st.idx < epub.spine.length - 1) openChapter(st.idx + 1, 0).then(() => { st.dirty = true; update(); }); };
   doc.addEventListener('click', onClick);
 
-  let t0 = null;
-  doc.addEventListener('touchstart', (e) => { t0 = e.touches.length === 1 ? { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() } : null; }, { passive: true });
+  // Deslizar para virar página (eventos de toque: iguais no Chrome/Android e no WebKit do iPhone).
+  let t0 = null, gestureAt = 0;
+  const pt = (e) => e.changedTouches[0];
+  // Dedo: o próprio touchend decide entre deslizar (vira página) e tocar (zonas/links/marcações). No iOS o 'click' não é entregue de forma
+  // confiável a elementos não interativos dentro do iframe, por isso o toque não depende dele; o click fica só para mouse/caneta.
+  doc.addEventListener('touchstart', (e) => { t0 = e.touches.length === 1 ? { x: pt(e).clientX, y: pt(e).clientY, t: Date.now() } : null; }, { passive: true });
   doc.addEventListener('touchend', (e) => {
-    if (!t0 || !paged()) return;
-    const t = e.changedTouches[0], dx = t.clientX - t0.x, dy = t.clientY - t0.y;
-    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5 && Date.now() - t0.t < 800) (dx < 0 ? next : prev)();
-    t0 = null;
-  }, { passive: true });
+    const g = t0; t0 = null;
+    if (!g) return;
+    const p = pt(e), dx = p.clientX - g.x, dy = p.clientY - g.y, dt = Date.now() - g.t;
+    if (paged() && Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy) * 1.2 && dt < 1200 && doc.getSelection().isCollapsed) {
+      gestureAt = Date.now(); if (e.cancelable) e.preventDefault(); (dx < 0 ? next : prev)();
+    } else if (Math.hypot(dx, dy) < 12 && dt < 500) {
+      gestureAt = Date.now(); if (e.cancelable) e.preventDefault();
+      onClick({ synthetic: true, target: e.target, clientX: p.clientX, preventDefault() {} });
+    }
+  }, { passive: false });
+  doc.addEventListener('touchcancel', () => { t0 = null; }, { passive: true });
 
   let wheelLock = 0;
   doc.addEventListener('wheel', (e) => {
@@ -508,9 +541,12 @@ async function start(root, bookId) {
 
   // imagens que terminam de carregar mudam o layout: remede preservando a posição
   let relayoutT;
-  const relayout = () => { clearTimeout(relayoutT); relayoutT = setTimeout(() => { const f = fracNow(); measure(); restore(f); }, 120); };
+  doc.addEventListener('load', (e) => { if (!e.target.closest?.('.flip')) relayout(); }, true); // imagens que terminam de carregar mudam o número de páginas
+  doc.fonts?.ready?.then(() => relayout()).catch(() => {});
+  const relayout = () => { clearTimeout(relayoutT); relayoutT = setTimeout(() => { endFlip(); const f = fracNow(); measure(); restore(f); }, 120); }; // endFlip ANTES de ler a posição: a folha 'prev' só grava a página ao terminar
   c.addEventListener('load', relayout, true);
-  const ro = new ResizeObserver(relayout); ro.observe(stage);
+  let lastSize = `${stage.clientWidth}x${stage.clientHeight}`; // só refaz o layout se o tamanho realmente mudou (barra do navegador no celular dispara resize no meio do gesto)
+  const ro = new ResizeObserver(() => { const k = `${stage.clientWidth}x${stage.clientHeight}`; if (k !== lastSize) { lastSize = k; relayout(); } }); ro.observe(stage);
   v.addEventListener('scroll', () => { if (!paged()) { st.dirty = true; update(); } }, { passive: true });
   const onHide = () => { if (document.visibilityState === 'hidden') save(); };
   document.addEventListener('visibilitychange', onHide);
@@ -522,11 +558,12 @@ async function start(root, bookId) {
   tracker = startTracking(book.id);
   const startIdx = loc && Number.isInteger(loc.spine) && loc.spine >= 0 && loc.spine < epub.spine.length ? loc.spine : 0;
   await openChapter(startIdx, loc && typeof loc.frac === 'number' ? loc.frac : 0);
-  setTimeout(hideChrome, loc ? 1800 : 3500); // modo imersivo: os controles somem sozinhos
-  const releaseAwake = keepAwake();
+  const autoHide = setTimeout(hideChrome, loc ? 1800 : 3500); // modo imersivo: os controles somem sozinhos
+  reader.addEventListener('pointerdown', (e) => { if (e.target.closest('.r-top,.r-bottom,.r-panel')) clearTimeout(autoHide); }, true); // mexeu nos controles: não esconder
+  let releaseAwake = prefs.awake ? keepAwake() : () => {};
 
   return () => {
-    save(); tracker?.stop(); releaseAwake(); endFlip();
+    save(); tracker?.stop(); releaseAwake(); endFlip(); clearTimeout(autoHide);
     clearTimeout(relayoutT);
     ro.disconnect();
     document.removeEventListener('keydown', onKey);

@@ -9,7 +9,7 @@ import { loadPdfjs, openPdf } from './pdf.js';
 import { startTracking } from './stats.js';
 import { copyToClipboard, colorDots, barButton, placeBar, openNoteEditor, renderAnnPanel, attachDim, brightnessControl, keepAwake } from './annot-ui.js';
 
-const SCALE_MIN = 0.25, SCALE_MAX = 6, MAX_PIXELS = 16e6, PAD_X = 12, PAD_Y = 60;
+const SCALE_MIN = 0.25, SCALE_MAX = 6, MAX_PIXELS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform)) ? 8e6 : 16e6, PAD_X = 12, PAD_Y = 60;
 const DEFAULT_PREFS = { mode: 'continuous', fit: 'width', scale: 1 };
 
 /* ---------- geometria de destaques (independente da rotação) ---------- */
@@ -173,6 +173,8 @@ export async function mountPdfReader(root, book, blob) {
     views.forEach(applySize);
     views.forEach((pv) => { if (pv.wanted && !(pv.state === 'done' && pv.key === keyNow())) schedule(pv); });
     zoomLabel.textContent = `${Math.round(st.scale * 100)}%`;
+    // sem rolagem horizontal: o deslize lateral fica com o app; ampliado: o navegador pode arrastar para os lados
+    viewer.style.touchAction = viewer.scrollWidth <= viewer.clientWidth + 2 ? 'pan-y' : 'pan-x pan-y';
     if (!viewPanel.hidden) buildView();
   }
 
@@ -271,7 +273,7 @@ export async function mountPdfReader(root, book, blob) {
   moreBtn.addEventListener('click', () => menu(moreBtn, [
     { label: 'Páginas e sumário', icon: 'grid', onClick: () => togglePanel(pagesPanel, moreBtn, buildPagesPanel) },
     { label: 'Marcações e anotações', icon: 'note', onClick: () => togglePanel(annPanel, moreBtn, buildAnn) },
-    { label: 'Tela cheia', icon: 'maximize', onClick: () => toggleFullscreen() },
+    ...(reader.requestFullscreen ? [{ label: 'Tela cheia', icon: 'maximize', onClick: () => toggleFullscreen() }] : []),
   ], { title: 'Mais opções' }));
   viewBtn.addEventListener('click', () => togglePanel(viewPanel, viewBtn, buildView));
 
@@ -284,14 +286,17 @@ export async function mountPdfReader(root, book, blob) {
   };
   const row = (label, ctl) => h('div', { class: 'r-row' }, h('span', {}, label), ctl);
 
+  const saveView = () => setSetting('pdfReader', { ...prefs, mode: st.mode, fit: st.fit, scale: st.scale }).catch(() => {});
   function buildView() {
     viewPanel.replaceChildren(h('h2', {}, 'Exibição'), brightnessControl(applyDim),
       row('Modo', seg([['continuous', 'Contínuo'], ['single', 'Página única']], st.mode, setMode)),
       row('Ajuste', seg([['width', 'À largura'], ['height', 'À altura']], st.fit === 'custom' ? '' : st.fit, setFit)),
       row('Zoom', h('div', { class: 'stepper' }, h('button', { class: 'btn', type: 'button', 'aria-label': 'Diminuir zoom', onclick: () => setScale(st.scale / 1.25) }, icon('minus', 18)), h('span', { class: 'r-val' }, `${Math.round(st.scale * 100)}%`), h('button', { class: 'btn', type: 'button', 'aria-label': 'Aumentar zoom', onclick: () => setScale(st.scale * 1.25) }, icon('plus', 18)))),
+      row('Cor das páginas', seg([['normal', 'Normal'], ['sepia', 'Sépia'], ['night', 'Noturno'], ['invert', 'Invertido']], prefs.tone || 'normal', (val) => { prefs.tone = val; reader.dataset.ptone = val; saveView(); })),
+      row('Manter tela ligada', seg([[true, 'Sim'], [false, 'Não']], prefs.awake !== false, (val) => { prefs.awake = val; saveView(); releaseAwake(); releaseAwake = val ? keepAwake() : () => {}; })),
       h('div', { class: 'r-row' }, h('div', { class: 'view-actions' },
         h('button', { class: 'btn', type: 'button', onclick: rotate }, icon('rotate', 18), 'Girar páginas'),
-        h('button', { class: 'btn', type: 'button', onclick: toggleFullscreen }, icon('maximize', 18), 'Tela cheia'))));
+        reader.requestFullscreen ? h('button', { class: 'btn', type: 'button', onclick: toggleFullscreen }, icon('maximize', 18), 'Tela cheia') : null)));
   }
 
   /* --- miniaturas e sumário --- */
@@ -523,7 +528,7 @@ export async function mountPdfReader(root, book, blob) {
 
   /* ---------- entrada ---------- */
   function showChrome(on) { st.chromeOn = on; reader.classList.toggle('chrome-off', !on); if (!on) closePanels(); }
-  const hideChrome = () => { if (st.chromeOn) showChrome(false); };
+  const hideChrome = () => { if (st.chromeOn && panelsClosed()) showChrome(false); };
 
   function highlightAt(pageEl, e) {
     const pr = pageEl.getBoundingClientRect(), px = (e.clientX - pr.left) / pr.width, py = (e.clientY - pr.top) / pr.height;
@@ -534,7 +539,8 @@ export async function mountPdfReader(root, book, blob) {
     }
     return null;
   }
-  viewer.addEventListener('click', (e) => {
+  let gestureAt = 0;
+  const onTap = (e) => {
     if (e.target.closest('a')) return;
     const pageEl = e.target.closest('.pdf-page');
     if (!selBar.hidden) { hideSel(); document.getSelection().removeAllRanges(); return; }
@@ -546,10 +552,12 @@ export async function mountPdfReader(root, book, blob) {
     }
     const x = e.clientX / viewer.clientWidth;
     const fitsWidth = viewer.scrollWidth <= viewer.clientWidth + 2;
-    if (st.mode === 'single' && fitsWidth && x < 0.25) prevPage();
-    else if (st.mode === 'single' && fitsWidth && x > 0.75) nextPage();
+    if (fitsWidth && x < 0.25) prevPage();
+    else if (fitsWidth && x > 0.75) nextPage();
     else showChrome(!st.chromeOn);
-  });
+  };
+  // mouse/caneta: click. Dedo: tratado no touchend (no iOS o click não é entregue de forma confiável a elementos não interativos).
+  viewer.addEventListener('click', (e) => { if (Date.now() - gestureAt < 700) { e.preventDefault(); return; } onTap(e); });
 
   // pinça com dois dedos, deslizar entre páginas (modo página única) e Ctrl+roda
   let pinch = null, swipe = null;
@@ -576,12 +584,18 @@ export async function mountPdfReader(root, book, blob) {
       if (Math.abs(p.r - 1) > 0.02) setScale(p.s0 * p.r, p.cx, p.cy);
       return;
     }
-    if (swipe && st.mode === 'single' && viewer.scrollWidth <= viewer.clientWidth + 2) {
-      const t = e.changedTouches[0], dx = t.clientX - swipe.x, dy = t.clientY - swipe.y;
-      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5 && Date.now() - swipe.t < 800) (dx < 0 ? nextPage : prevPage)();
+    if (swipe && !pinch) {
+      const t = e.changedTouches[0], dx = t.clientX - swipe.x, dy = t.clientY - swipe.y, dt = Date.now() - swipe.t;
+      const fits = viewer.scrollWidth <= viewer.clientWidth + 2;
+      if (fits && Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5 && dt < 1000 && document.getSelection().isCollapsed) {
+        gestureAt = Date.now(); if (e.cancelable) e.preventDefault(); (dx < 0 ? nextPage : prevPage)();
+      } else if (Math.hypot(dx, dy) < 12 && dt < 500) {
+        gestureAt = Date.now(); if (e.cancelable) e.preventDefault();
+        onTap({ target: e.target, clientX: t.clientX, clientY: t.clientY, preventDefault() {} });
+      }
     }
     swipe = null;
-  }, { passive: true });
+  }, { passive: false });
   viewer.addEventListener('wheel', (e) => {
     if (!e.ctrlKey) return;
     e.preventDefault();
@@ -634,11 +648,13 @@ export async function mountPdfReader(root, book, blob) {
   buildPages(); relayout();
   goPage(st.page, loc && typeof loc.frac === 'number' ? loc.frac : 0);
   updateUI();
-  setTimeout(hideChrome, loc ? 1800 : 3500);
-  const releaseAwake = keepAwake();
+  const autoHide = setTimeout(hideChrome, loc ? 1800 : 3500);
+  reader.addEventListener('pointerdown', (e) => { if (e.target.closest('.r-top,.r-bottom,.r-panel')) clearTimeout(autoHide); }, true);
+  let releaseAwake = prefs.awake === false ? () => {} : keepAwake();
+  reader.dataset.ptone = prefs.tone || 'normal';
 
   return () => {
-    save(); tracker.stop(); releaseAwake();
+    save(); tracker.stop(); releaseAwake(); clearTimeout(autoHide);
     clearTimeout(resizeT); clearTimeout(goPage.t);
     ro.disconnect(); io?.disconnect(); thumbIO?.disconnect();
     views.forEach(release);

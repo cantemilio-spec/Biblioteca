@@ -17,6 +17,14 @@ export function applyTheme(pref = cache.theme) {
   document.documentElement.dataset.theme = dark ? 'dark' : 'light';
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#111518' : '#F6F9FB');
 }
+/** Escala da interface, contraste, movimento e tamanho das capas. */
+export function applyAppearance() {
+  const d = document.documentElement;
+  d.style.zoom = cache.uiScale && cache.uiScale !== 100 ? String(cache.uiScale / 100) : '';
+  d.dataset.contrast = cache.contrast === 'high' ? 'high' : 'normal';
+  d.dataset.motion = cache.motion === 'reduce' ? 'reduce' : 'auto';
+  d.style.setProperty('--grid-k', String({ small: 0.82, medium: 1, large: 1.3 }[cache.gridSize] || 1));
+}
 export const watchSystemTheme = () => mq.addEventListener('change', () => cache.theme === 'auto' && applyTheme());
 
 export async function setSetting(key, value) {
