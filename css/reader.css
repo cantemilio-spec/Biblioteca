@@ -101,3 +101,21 @@
 .res-p { color: var(--r-muted); } .results mark { background: rgba(255, 214, 10, .55); color: inherit; border-radius: 2px; }
 .view-actions { display: flex; flex-wrap: wrap; gap: 8px; } .view-actions .btn { flex: 1; }
 @media (max-width: 520px) { .reader.pdf .pg-total + input { min-width: 0; } .reader.pdf .r-pct { display: none; } }
+
+/* Sem barras: só ícones flutuantes (sem fundo); no EPUB o rodapé some e o progresso fica numa linha discreta */
+.r-top, .r-bottom { background: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.r-top { height: 44px; }
+.r-title { visibility: hidden; }
+.reader:not(.pdf) .r-bottom { display: none; }
+.reader:not(.pdf) .r-status { opacity: .7; }
+.reader:not(.pdf):not(.chrome-off) .r-status { opacity: .7; }
+.reader .icon-btn { background: color-mix(in srgb, var(--r-bg) 70%, transparent); }
+.r-top { gap: 6px; }
+.r-row .seg { flex-wrap: wrap; } .r-reset { margin-top: 14px; width: 100%; }
+
+/* Cor das páginas do PDF (filtro só no desenho; texto selecionável e anotações não mudam) */
+.reader[data-ptone="sepia"] .pdf-page > canvas { filter: sepia(.45) saturate(.9) brightness(.97); }
+.reader[data-ptone="night"] .pdf-page > canvas { filter: invert(.9) hue-rotate(180deg) brightness(.95) contrast(.95); }
+.reader[data-ptone="invert"] .pdf-page > canvas { filter: invert(1) hue-rotate(180deg); }
+.reader[data-ptone="night"] .pdf-page, .reader[data-ptone="invert"] .pdf-page { background: #15191D; }
+.reader[data-ptone="sepia"] .pdf-page { background: #F4ECD8; }
