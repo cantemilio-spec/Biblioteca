@@ -303,3 +303,11 @@ dialog.modal footer .btn.primary { order: 9; }
 .theme-prev.auto { background: linear-gradient(115deg, #F6F9FB 50%, #111518 50%); }
 .meter { height: 10px; border-radius: 999px; background: var(--surface); overflow: hidden; } .meter i { display: block; height: 100%; background: var(--primary); border-radius: 999px; }
 .set-about { text-align: center; margin: 16px 0 24px; }
+
+/* Marca no canto superior esquerdo (celular) */
+.app-bar { position: sticky; top: 0; z-index: 20; padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) 0 max(16px, env(safe-area-inset-left)); background: color-mix(in srgb, var(--bg) 88%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+.app-bar a { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
+.app-bar img { width: 32px; height: 32px; display: block; }
+.reading .app-bar { display: none; }
+@media (max-width: 599px) { main { padding-top: 4px; } }
+@media (min-width: 600px) { .app-bar { display: none; } }
