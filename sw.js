@@ -1,5 +1,5 @@
 // Service worker: apenas o "shell" do app (mesma origem). Livros ficam no IndexedDB, nunca em cache público.
-const CACHE = 'bd-shell-v20';
+const CACHE = 'bd-shell-v23';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'icon.svg', 'icons/boto.png', 'icons/apple-touch-icon.png',
   'css/theme.css', 'css/app.css', 'css/reader.css',
