@@ -69,6 +69,7 @@
 .note-edit { display: grid; gap: 10px; } .note-edit blockquote { margin: 0; padding-left: 10px; border-left: 3px solid var(--primary); color: var(--text-2); font-size: .9rem; max-height: 6em; overflow: auto; }
 
 /* Leitor PDF */
+.reader { touch-action: pan-x pan-y; }
 .pdf-viewer { position: absolute; inset: 0; overflow: auto; background: var(--r-bg); outline: none; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .pdf-pages { position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px; width: max-content; min-width: 100%; padding: 60px 12px; box-sizing: border-box; }
 .pdf-page { position: relative; flex: none; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 6px 18px rgba(0, 0, 0, .15); }

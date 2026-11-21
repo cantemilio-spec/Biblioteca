@@ -304,10 +304,30 @@ dialog.modal footer .btn.primary { order: 9; }
 .meter { height: 10px; border-radius: 999px; background: var(--surface); overflow: hidden; } .meter i { display: block; height: 100%; background: var(--primary); border-radius: 999px; }
 .set-about { text-align: center; margin: 16px 0 24px; }
 
-/* Marca no canto superior esquerdo (celular) */
-.app-bar { position: sticky; top: 0; z-index: 20; padding: env(safe-area-inset-top) max(16px, env(safe-area-inset-right)) 0 max(16px, env(safe-area-inset-left)); background: color-mix(in srgb, var(--bg) 88%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
-.app-bar a { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
-.app-bar img { width: 32px; height: 32px; display: block; }
-.reading .app-bar { display: none; }
-@media (max-width: 599px) { main { padding-top: 4px; } }
-@media (min-width: 600px) { .app-bar { display: none; } }
+/* Logo ao lado do título de cada aba */
+.hb { width: 44px; height: 44px; flex: none; display: block; }
+/* Cabeçalho único de todas as abas: logo e título sempre na mesma posição (logo no topo, título com altura fixa) */
+.head-brand, .top-row.view-head { display: flex; align-items: flex-start; gap: 14px; padding-top: 4px; margin-bottom: 12px; min-height: 48px; }
+.head-brand > div { min-width: 0; flex: 1; display: grid; gap: 2px; align-content: start; }
+.head-brand h1, .top-row.view-head h1 { margin: 0; font-size: 1.75rem; line-height: 44px; height: 44px; }
+.head-brand p { margin: 0; }
+.top-row.view-head h1 { flex: 1; align-self: flex-start; }
+.top-row.view-head .top-tools { align-self: flex-start; margin-top: -2px; }
+.greet.head-brand { padding-bottom: 0; }
+
+/* Pequenas animações (desligadas por "Reduzir animações" e pelo modo de movimento reduzido do aparelho) */
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+@keyframes pulse { 50% { transform: scale(1.12); } }
+.enter > *:not(.fab):not(input) { animation: rise .38s var(--ease) both; }
+.enter > :nth-child(2) { animation-delay: .04s; } .enter > :nth-child(3) { animation-delay: .08s; } .enter > :nth-child(4) { animation-delay: .12s; } .enter > :nth-child(n+5) { animation-delay: .16s; }
+.enter .book { animation: rise .4s var(--ease) both; }
+.enter .book:nth-child(2) { animation-delay: .04s; } .enter .book:nth-child(3) { animation-delay: .08s; } .enter .book:nth-child(4) { animation-delay: .12s; } .enter .book:nth-child(5) { animation-delay: .16s; } .enter .book:nth-child(6) { animation-delay: .2s; } .enter .book:nth-child(n+7) { animation-delay: .24s; }
+.enter .hb { animation: pop .45s var(--ease) both; }
+.fab { animation: pop .35s var(--ease) .15s both; }
+.nav a[aria-current="page"] .ind { animation: pop .25s var(--ease); }
+.nav a:active .ind { transform: scale(.94); transition: transform .1s; }
+.btn:active, .icon-btn:active, .chip:active { transform: scale(.96); }
+.btn, .icon-btn, .chip { transition: transform .12s var(--ease), background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease); }
+.book.grid:active .cover-wrap { transform: scale(.97); }
+.set-sec, .panel { animation: none; }
+.switch[aria-checked="true"] .knob { animation: pulse .25s var(--ease); }
