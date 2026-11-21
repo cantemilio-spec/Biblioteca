@@ -28,7 +28,7 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
   input.addEventListener('change', () => { const f = [...input.files]; input.value = ''; doImport(f); });
 
   async function load() {
-    st.books = await db.getAll('books');
+    st.books = (await db.getAll('books')).filter((b) => b.source !== 'adamastor'); // os Clássicos ficam na própria seção
     st.collections = await listCollections();
     st.genres = genresOf(st.books);
     if (st.genre && !st.genres.some((g) => g.key === st.genre)) st.genre = '';

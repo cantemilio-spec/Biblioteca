@@ -65,7 +65,7 @@ export async function openCollectionPicker(books, onDone) {
 
 /** Tela de gerenciamento de coleções. */
 export async function mountCollections(root) {
-  const [cols, books] = await Promise.all([listCollections(), db.getAll('books')]);
+  const [cols, books] = await Promise.all([listCollections(), db.getAll('books')]).then(([c, b]) => [c, b.filter((x) => x.source !== 'adamastor')]);
   const count = (id) => books.filter((b) => b.collections?.includes(id)).length;
   const reload = () => mountCollections(root);
   const nameIn = h('input', { type: 'text', maxlength: MAX_NAME, placeholder: 'Nova coleção', 'aria-label': 'Nome da nova coleção' });

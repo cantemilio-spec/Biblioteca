@@ -5,11 +5,13 @@ import { mountSettings } from './settings-view.js';
 import { mountReader } from './reader.js';
 import { mountStats } from './stats-view.js';
 import { mountCollections } from './collections.js';
+import { mountClassics } from './classics.js';
 
 const ROUTES = {
   inicio: { label: 'Início', icon: 'home', mount: (el) => mountLibrary(el, { home: true }) },
   biblioteca: { label: 'Biblioteca', icon: 'book', mount: (el) => mountLibrary(el) },
   favoritos: { mount: (el) => mountLibrary(el, { onlyFavorites: true }), navKey: 'biblioteca' }, // atalho; na barra fica em "Biblioteca"
+  classicos: { label: 'Clássicos', icon: 'bookmark', mount: (el) => mountClassics(el) },
   colecoes: { label: 'Coleções', icon: 'folder', mount: (el) => mountCollections(el) },
   estatisticas: { label: 'Estatísticas', icon: 'chart', mount: (el) => mountStats(el) },
   configuracoes: { label: 'Ajustes', icon: 'sliders', mount: (el) => mountSettings(el) },

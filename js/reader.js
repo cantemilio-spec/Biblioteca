@@ -30,7 +30,7 @@ const WIDTHS = { narrow: 560, medium: 760, wide: 960 };
 const SHELL = `<!doctype html><html><head><meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; img-src blob:; style-src 'unsafe-inline'; form-action 'none'; base-uri 'none'; frame-src 'none'; object-src 'none'">
 <style>
-html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);-webkit-text-size-adjust:100%;overscroll-behavior:none}
+html,body{margin:0;width:100%;height:100%;min-height:100%;background:var(--bg);color:var(--fg);-webkit-text-size-adjust:100%;overscroll-behavior:none}
 .paged body{touch-action:pinch-zoom}.scroll body{touch-action:pan-y pinch-zoom}
 #v{position:absolute;overflow:hidden}
 #c{font-family:var(--ff);font-size:var(--fs);line-height:var(--lh);text-align:var(--al);hyphens:var(--hy,auto);-webkit-hyphens:var(--hy,auto);letter-spacing:var(--ls,0);font-weight:var(--fw,400);overflow-wrap:break-word;box-sizing:border-box}
@@ -95,9 +95,10 @@ async function start(root, bookId) {
   const setPanel = h('aside', { class: 'r-panel settings', hidden: true, 'aria-label': 'Ajustes de leitura' });
   const status = h('div', { class: 'r-status', 'aria-hidden': 'true' });
   const top = h('header', { class: 'r-top' },
-    h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Voltar à biblioteca', onclick: () => { location.hash = '#biblioteca'; } }, icon('back')),
+    h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Voltar à biblioteca', onclick: () => { location.hash = backHash; } }, icon('back')),
     h('div', { class: 'r-title' }, book.title), bmBtn, setBtn, moreBtn);
   const bottom = h('footer', { class: 'r-bottom' }, chapterLabel, pctLabel, slider);
+  const backHash = book.source === 'adamastor' ? '#classicos' : '#biblioteca';
   const reader = h('div', { class: 'reader' }, h('div', { class: 'r-stage' }, iframe), status, top, bottom, tocPanel, setPanel, annPanel, selBar);
   // áreas seguras (notch, barra de gestos, cantos arredondados): lidas por um elemento-sonda e somadas ao layout do texto
   const probe = h('div', { class: 'r-probe', 'aria-hidden': 'true', style: 'position:absolute;visibility:hidden;pointer-events:none;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)' });
@@ -542,7 +543,7 @@ async function start(root, bookId) {
     if (document.querySelector('dialog[open]')) return; // diálogos tratam o próprio teclado
     if (e.target.matches?.('input[type=text],textarea')) return;
     const k = e.key;
-    if (k === 'Escape') { if (!panelsClosed()) closePanels(); else location.hash = '#biblioteca'; return; }
+    if (k === 'Escape') { if (!panelsClosed()) closePanels(); else location.hash = backHash; return; }
     if (e.target.closest?.('button,select,input') && (k === ' ' || k === 'Enter')) return;
     if (k === 'ArrowRight' || k === 'PageDown' || (k === ' ' && !e.shiftKey)) { e.preventDefault(); next(); }
     else if (k === 'ArrowLeft' || k === 'PageUp' || (k === ' ' && e.shiftKey)) { e.preventDefault(); prev(); }
@@ -575,10 +576,15 @@ async function start(root, bookId) {
   reader.addEventListener('pointerdown', (e) => { if (e.target.closest('.r-top,.r-bottom,.r-panel')) clearTimeout(autoHide); }, true); // mexeu nos controles: não esconder
   let releaseAwake = prefs.awake ? keepAwake() : () => {};
 
+  // iOS em modo app (tela inicial) às vezes mede a janela errado ao abrir; o leitor segue sempre o tamanho real da tela
+  const fit = () => { const vv = window.visualViewport, w = Math.round(vv?.width || window.innerWidth), hh = Math.round(vv?.height || window.innerHeight); if (w > 0 && hh > 0) { reader.style.width = `${w}px`; reader.style.height = `${hh}px`; } };
+  fit(); [150, 600, 1500].forEach((ms) => setTimeout(fit, ms));
+  window.addEventListener('resize', fit); window.addEventListener('orientationchange', fit); window.addEventListener('pageshow', fit); window.visualViewport?.addEventListener('resize', fit);
   return () => {
     save(); tracker?.stop(); releaseAwake(); endFlip(); clearTimeout(autoHide);
     clearTimeout(relayoutT);
     ro.disconnect();
+    window.removeEventListener('resize', fit); window.removeEventListener('orientationchange', fit); window.removeEventListener('pageshow', fit); window.visualViewport?.removeEventListener('resize', fit);
     document.removeEventListener('keydown', onKey);
     document.removeEventListener('visibilitychange', onHide);
     window.removeEventListener('pagehide', save);
