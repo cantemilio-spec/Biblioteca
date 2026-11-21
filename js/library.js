@@ -1,4 +1,4 @@
-import { h, icon, toast, modal, confirmDialog, menu } from './ui.js';
+import { h, icon, toast, modal, confirmDialog, menu, bimg } from './ui.js';
 import * as db from './db.js';
 import { getSetting, setSetting } from './settings.js';
 import { listCollections, openCollectionPicker } from './collections.js';
@@ -344,8 +344,8 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
   window.addEventListener('scroll', onScroll, { passive: true });
   const hour = new Date().getHours(), greeting = hour < 5 ? 'Boa madrugada' : hour < 12 ? 'Bom dia' : hour < 18 ? 'Boa tarde' : 'Boa noite';
   root.replaceChildren(
-    home ? h('div', { class: 'greet' }, h('h1', {}, greeting), h('p', { class: 'hint' }, 'Continue de onde parou.'))
-      : h('div', { class: 'view-head top-row' }, h('h1', {}, onlyFavorites ? 'Favoritos' : 'Biblioteca'), toolsEl),
+    home ? h('div', { class: 'greet head-brand' }, bimg(), h('div', {}, h('h1', {}, greeting), h('p', { class: 'hint' }, 'Continue de onde parou.')))
+      : h('div', { class: 'view-head top-row' }, bimg(), h('h1', {}, onlyFavorites ? 'Favoritos' : 'Biblioteca'), toolsEl),
     bar, content, input,
     fab);
   if (st.collection || st.genre) { setSetting('collection', ''); setSetting('genre', ''); } // filtro vindo do Início/Coleções vale só para esta visita

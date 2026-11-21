@@ -559,6 +559,8 @@ export async function mountPdfReader(root, book, blob) {
   viewer.addEventListener('click', (e) => { if (Date.now() - gestureAt < 700) { e.preventDefault(); return; } onTap(e); });
 
   // pinça com dois dedos, deslizar entre páginas (modo página única) e Ctrl+roda
+  // iOS/WebKit: impede o zoom da página inteira (o zoom é só do PDF, feito pela pinça abaixo)
+  for (const ev of ['gesturestart', 'gesturechange', 'gestureend']) viewer.addEventListener(ev, (e) => e.preventDefault());
   let pinch = null, swipe = null;
   const dist = (a, b) => Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
   viewer.addEventListener('touchstart', (e) => {

@@ -18,6 +18,7 @@ const ROUTES = {
 
 let cleanup = null;
 let routeToken = 0;
+let enterT = 0;
 async function route() {
   // aceita '#biblioteca', '#ler-<id>' e o formato antigo '#/ler/<id>'
   const raw = location.hash.replace(/^#\/?/, '');
@@ -29,6 +30,8 @@ async function route() {
   cleanup?.(); cleanup = null;
   document.getElementById('app').classList.toggle('reading', !!ROUTES[key].fullscreen);
   const main = document.getElementById('main');
+  main.classList.remove('enter'); void main.offsetWidth; main.classList.add('enter'); // animação de entrada da aba (some sozinha, para não repetir em buscas/filtros)
+  clearTimeout(enterT); enterT = setTimeout(() => main.classList.remove('enter'), 900);
   const result = (await ROUTES[key].mount(main, arg)) || null;
   if (token !== routeToken) { result?.(); return; } // o usuário já navegou para outra rota
   cleanup = result;
@@ -43,9 +46,8 @@ async function boot() {
     h('nav', { class: 'nav', 'aria-label': 'Principal' },
       h('div', { class: 'brand' }, h('img', { src: 'icons/boto.png', alt: '', width: 32, height: 32 }), h('span', {}, 'Boto Azul')),
       Object.entries(ROUTES).filter(([, r]) => r.label).map(([k, r]) => h('a', { href: `#${k}`, 'data-route': k }, h('span', { class: 'ind' }, icon(r.icon, 24)), h('span', { class: 'lbl' }, r.label)))),
-    h('main', { id: 'main', tabindex: '-1' }),
-    // barra superior só no celular (na tela larga a marca já fica no topo do menu lateral); vem depois do <main> porque #app usa column-reverse
-    h('header', { class: 'app-bar' }, h('a', { href: '#inicio', 'aria-label': 'Boto Azul — Início' }, h('img', { src: 'icons/boto.png', alt: '', width: 32, height: 32 }), h('span', {}, 'Boto Azul'))));
+    h('main', { id: 'main', tabindex: '-1' })
+  );
   window.addEventListener('hashchange', route);
   await route();
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {

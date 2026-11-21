@@ -1,6 +1,7 @@
 // Helpers de UI. Todo conteúdo dinâmico entra via textContent/nós DOM (nunca innerHTML) => sem XSS.
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
+export const bimg = () => h('img', { class: 'hb', src: 'icons/boto.png', alt: '', width: 44, height: 44 });
 export function h(tag, attrs = {}, ...kids) {
   const el = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs || {})) {

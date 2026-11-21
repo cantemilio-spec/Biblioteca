@@ -23,7 +23,7 @@ const THEMES = {
   sepia: { bg: '#F4ECD8', fg: '#4A3B2A', link: '#7A4E2B' },
   dark: { bg: '#15191D', fg: '#E6EAED', link: '#6DA5C0' },
 };
-const DEFAULT_PREFS = { fontSize: 19, font: 'serif', lineHeight: 1.6, margin: 'medium', align: 'justify', theme: null, mode: 'paged', effect: 'flip', paraGap: 0.8, letter: 0, bold: false, hyphens: true, width: 'medium', taps: 'normal', awake: true, progress: true };
+const DEFAULT_PREFS = { fontSize: 19, font: 'serif', lineHeight: 1.6, margin: 'medium', align: 'justify', theme: null, mode: 'paged', effect: 'curl', paraGap: 0.8, letter: 0, bold: false, hyphens: true, width: 'medium', taps: 'normal', awake: true, progress: true };
 const PAD_Y = 48;
 const WIDTHS = { narrow: 560, medium: 760, wide: 960 };
 
@@ -34,7 +34,7 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);-webkit-text
 .paged body{touch-action:pinch-zoom}.scroll body{touch-action:pan-y pinch-zoom}
 #v{position:absolute;overflow:hidden}
 #c{font-family:var(--ff);font-size:var(--fs);line-height:var(--lh);text-align:var(--al);hyphens:var(--hy,auto);-webkit-hyphens:var(--hy,auto);letter-spacing:var(--ls,0);font-weight:var(--fw,400);overflow-wrap:break-word;box-sizing:border-box}
-.paged #c{height:100%;column-fill:auto;transition:transform .28s ease}
+.paged #c{height:100%;column-fill:auto;transition:transform .36s cubic-bezier(.32,.72,0,1);will-change:transform}
 .noanim #c{transition:none!important}
 .scroll #v{overflow-y:auto;-webkit-overflow-scrolling:touch}
 #c a{color:var(--link)}
@@ -49,11 +49,13 @@ mark.hl{color:inherit;border-radius:3px;cursor:pointer;-webkit-box-decoration-br
 mark.hl-yellow{background:rgba(242,201,76,.45)}mark.hl-green{background:rgba(111,207,151,.42)}mark.hl-blue{background:rgba(109,165,192,.55)}mark.hl-pink{background:rgba(240,128,170,.42)}
 mark.hl[data-note]{border-bottom:2px solid currentColor}
 ::selection{background:#6DA5C0;color:#15191D}
-.flip{position:fixed;inset:0;perspective:2200px;-webkit-perspective:2200px;pointer-events:none;z-index:9;overflow:hidden}
-.leaf{position:absolute;inset:0;transform-origin:left center;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;will-change:transform}
-.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--bg);overflow:hidden}
-.face.back{transform:rotateY(180deg)}
-.sh,.cast{position:absolute;inset:0;opacity:0}
+.flip{position:fixed;inset:0;pointer-events:none;z-index:9;overflow:hidden}
+.cl-a{position:absolute;inset:0;overflow:hidden;will-change:transform}
+.cl-pg{position:absolute;inset:0;background:var(--bg);will-change:transform}
+.cl-f{position:absolute;top:0;bottom:0;left:0;width:100%;transform-origin:100% 50%;will-change:transform;overflow:hidden}
+.cl-fb{position:absolute;inset:0;opacity:.74;background:linear-gradient(to left,rgba(0,0,0,.30),rgba(255,255,255,.10) 26%,rgba(0,0,0,.08) 92%,rgba(0,0,0,.18)),var(--bg)}
+.cl-fm{position:absolute;inset:0;opacity:.2;transform:scaleX(-1);filter:blur(.3px)}
+.cl-s{position:absolute;top:0;bottom:0;left:100%;width:72px;background:linear-gradient(to right,rgba(0,0,0,.30),rgba(0,0,0,.08) 55%,rgba(0,0,0,0));will-change:transform}
 .fsh{background:linear-gradient(to right,rgba(0,0,0,0) 35%,rgba(0,0,0,.3))}
 .bsh{background:linear-gradient(to left,rgba(0,0,0,.34),rgba(0,0,0,0) 60%)}
 .cast{background:linear-gradient(to right,rgba(0,0,0,.32),rgba(0,0,0,0) 55%)}
@@ -73,7 +75,7 @@ async function start(root, bookId) {
 
   const saved = getSetting('reader') || {};
   const prefs = { ...DEFAULT_PREFS, ...saved };
-  if (!saved.effect && saved.animations === false) prefs.effect = 'none'; // migra a opção antiga "Animações"
+  if (prefs.effect !== 'slide') prefs.effect = 'curl'; // migra 'flip' (3D antigo), 'none' e a opção antiga "Animações": agora só Slide ou Curl ("Reduzir animações" nos Ajustes do app desliga ambos)
   const themeName = () => prefs.theme || (document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.dataset.motion === 'reduce';
 
@@ -156,8 +158,7 @@ async function start(root, bookId) {
     update();
   }
 
-  /* ---------- efeito de virar página (3D) ---------- */
-  // Uma "folha" com cópia da página atual gira em torno da lombada (CSS 3D + Web Animations: só transform/opacity, rodando no compositor).
+  /* ---------- efeito Curl (virar folha) ---------- */
   let leaf = null;
   function endFlip() {
     if (!leaf) return;
@@ -165,7 +166,7 @@ async function start(root, bookId) {
     l.anims.forEach((a) => { try { a.cancel(); } catch { /* já terminou */ } });
     l.el.remove(); l.done?.();
   }
-  const flipOK = () => paged() && prefs.effect === 'flip' && !reduceMotion && st.pages <= 200 && typeof v.animate === 'function';
+  const flipOK = () => paged() && prefs.effect === 'curl' && !reduceMotion && st.pages <= 200 && typeof v.animate === 'function';
   function flipTo(p, dir) {
     endFlip();
     p = Math.min(Math.max(0, p), st.pages - 1);
@@ -173,28 +174,32 @@ async function start(root, bookId) {
     if (!flipOK()) { setPage(p, { user: true }); return; }
     try { flipAnim(p, dir); } catch { endFlip(); setPage(p, { user: true }); }
   }
+  // Curl: a folha atual é dobrada a partir da borda direita (ou desdobrada, ao voltar). Só transform (compositor) e UMA cópia da página:
+  // A recorta a página até a linha da dobra f; F é o verso da folha (papel + sombreado) entre 2f-W e f; S é a sombra da dobra sobre a página de baixo.
   function flipAnim(p, dir) {
-    const shown = dir === 'next' ? st.page : p; // página que fica na face da folha
+    const shown = dir === 'next' ? st.page : p; // página que está na folha
+    const W = doc.documentElement.clientWidth || 1;
     const mk = (cls, parent) => { const e = doc.createElement('div'); e.className = cls; parent?.append(e); return e; };
-    const wrap = mk('flip'), cast = mk('cast', wrap), leafEl = mk('leaf', wrap), front = mk('face', leafEl), back = mk('face back', leafEl);
-    const fsh = mk('sh fsh', front), bsh = mk('sh bsh', back);
+    const wrap = mk('flip'), A = mk('cl-a', wrap), P = mk('cl-pg', A), F = mk('cl-f', wrap), S = mk('cl-s', wrap);
     const vv = v.cloneNode(false); vv.style.cssText = v.style.cssText;
     const cc = c.cloneNode(true); cc.style.cssText = `${c.style.cssText};transition:none;transform:translateX(${-shown * st.stride}px)`;
     cc.querySelectorAll('[id]').forEach((n) => n.removeAttribute('id')); cc.id = 'c'; // ids repetidos não podem roubar âncoras do livro real
-    vv.append(cc); front.prepend(vv);
+    vv.append(cc); P.append(vv);
+    mk('cl-fb', F); const M = mk('cl-fm', F); // verso da folha: papel translúcido com o texto espelhado (o texto da página de baixo aparece através)
+    const vm = vv.cloneNode(true); vm.querySelectorAll('[id]').forEach((n) => n.removeAttribute('id')); vm.style.background = 'transparent'; M.append(vm);
     doc.body.append(wrap);
-    const o = { duration: 500, easing: 'cubic-bezier(.45,.05,.2,1)', fill: 'both', direction: dir === 'next' ? 'normal' : 'reverse' };
+    const o = { duration: 520, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'both', direction: dir === 'next' ? 'normal' : 'reverse' };
     const anims = [
-      leafEl.animate([{ transform: 'rotateY(0deg)' }, { transform: 'rotateY(-180deg)' }], o),
-      fsh.animate([{ opacity: 0 }, { opacity: 1, offset: 0.5 }, { opacity: 1 }], o),
-      bsh.animate([{ opacity: 0 }, { opacity: 0, offset: 0.5 }, { opacity: 1, offset: 0.52 }, { opacity: 0 }], o),
-      cast.animate([{ opacity: 0 }, { opacity: 0.85, offset: 0.45 }, { opacity: 0 }], o),
+      A.animate([{ transform: 'translateX(0)' }, { transform: `translateX(${-W}px)` }], o),
+      P.animate([{ transform: 'translateX(0)' }, { transform: `translateX(${W}px)` }], o),
+      F.animate([{ transform: 'translateX(0) scaleX(0)' }, { transform: `translateX(${-W}px) scaleX(1)` }], o),
+      S.animate([{ transform: 'translateX(0)', opacity: 0.9 }, { transform: `translateX(${-W}px)`, opacity: 0.9 }], o),
     ];
     leaf = { el: wrap, anims, done: dir === 'next' ? null : () => setPage(p, { user: true }) };
-    if (dir === 'next') setPage(p, { user: true }); // a página nova já está por baixo enquanto a folha gira
+    if (dir === 'next') setPage(p, { user: true }); // a página nova já está por baixo enquanto a folha se dobra
     const mine = leaf;
     anims[0].finished.then(() => { if (leaf === mine) endFlip(); }).catch(() => {});
-    setTimeout(() => { if (leaf === mine) endFlip(); }, 800); // rede de segurança (WebKit pode não concluir a animação)
+    setTimeout(() => { if (leaf === mine) endFlip(); }, 900); // rede de segurança (WebKit pode não concluir a animação)
   }
 
   function restore(frac) {
@@ -342,7 +347,7 @@ async function start(root, bookId) {
       type: 'button', class: 'swatch', 'aria-pressed': String(themeName() === k), 'aria-label': l, style: `background:${THEMES[k].bg};color:${THEMES[k].fg}`,
       onclick: () => { changePref({ theme: k }, false); swatches.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === swatches.querySelector(`[aria-label="${l}"]`)))); },
     }, h('b', {}, 'Aa'), h('small', {}, l))));
-    const effectRow = row('Virar página', seg([['flip', 'Efeito 3D'], ['slide', 'Deslizar'], ['none', 'Nenhum']], prefs.effect, (val) => changePref({ effect: val }, false)));
+    const effectRow = row('Animação de página', seg([['slide', 'Slide'], ['curl', 'Curl']], prefs.effect, (val) => changePref({ effect: val }, false)));
     const sync = () => { effectRow.hidden = prefs.mode === 'scroll'; };
     sync();
     setPanel.replaceChildren(h('h2', {}, 'Ajustes de leitura'),

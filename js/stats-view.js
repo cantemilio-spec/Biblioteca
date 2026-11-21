@@ -1,5 +1,5 @@
 // Tela de estatísticas e metas. Dados reais vindos da loja "sessions" (tempo de leitura ativo) e dos livros.
-import { h, icon, toast } from './ui.js';
+import { h, icon, toast, bimg } from './ui.js';
 import * as db from './db.js';
 import { getSetting, setSetting } from './settings.js';
 import { DEFAULT_GOALS, byDay, byBook, streaks, lastDays, sumMonth, booksFinishedIn, fmtDuration, loadSessions, dayKey, monthKey, parseDay } from './stats.js';
@@ -79,7 +79,7 @@ export async function mountStats(root) {
   const monthBar = (v, goal) => h('div', { class: 'meter', role: 'progressbar', 'aria-valuemin': 0, 'aria-valuemax': goal, 'aria-valuenow': Math.min(v, goal) }, h('i', { style: `width:${Math.min(100, (v / goal) * 100)}%` }));
 
   root.replaceChildren(
-    h('div', { class: 'view-head' }, h('h1', {}, 'Estatísticas'), h('p', { class: 'hint' }, 'O tempo conta só enquanto você lê com o app aberto e ativo. Tudo fica apenas neste dispositivo.')),
+    h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Estatísticas'), h('p', { class: 'hint' }, 'O tempo conta só enquanto você lê com o app aberto e ativo. Tudo fica apenas neste dispositivo.'))),
     h('section', { class: 'panel' }, h('h2', {}, 'Metas'),
       h('div', { class: 'goals' },
         ring(todaySec / goalSec, `${Math.floor(todaySec / 60)} min`, `meta ${goals.dailyMin} min`),

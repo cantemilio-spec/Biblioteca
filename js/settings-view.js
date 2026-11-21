@@ -1,4 +1,4 @@
-import { h, icon, toast } from './ui.js';
+import { h, icon, toast, bimg } from './ui.js';
 import * as db from './db.js';
 import { getSetting, setSetting, applyTheme, applyAppearance } from './settings.js';
 import { formatBytes } from './books.js';
@@ -62,7 +62,7 @@ export async function mountSettings(root) {
   } }, 'Proteger meus livros') : null;
 
   root.replaceChildren(
-    h('div', { class: 'view-head set-head' }, h('img', { src: 'icons/boto.png', alt: '', width: 44, height: 44 }), h('div', {}, h('h1', {}, 'Ajustes'), h('p', { class: 'hint' }, 'As mudanças são salvas e aplicadas na hora.'))),
+    h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Ajustes'), h('p', { class: 'hint' }, 'As mudanças são salvas e aplicadas na hora.'))),
 
     section('sun', 'Aparência',
       row('Tema', 'Automático segue o modo claro/escuro do seu aparelho.', themeCards, true),
