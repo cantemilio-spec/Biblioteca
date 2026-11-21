@@ -2,12 +2,17 @@
 #app.reading { display: block; }
 .reading .nav { display: none; }
 .reading main { max-width: none; padding: 0; }
-.reader { position: fixed; inset: 0; z-index: 30; overflow: hidden;
+.reader { position: fixed; inset: 0; width: 100%; height: 100vh; height: 100dvh; z-index: 30; overflow: hidden;
   --surface: var(--r-chrome); --surface-2: var(--r-hover); --text: var(--r-fg); --text-2: var(--r-muted); --border: var(--r-border); --link: var(--r-accent); background: var(--r-bg); color: var(--r-fg); }
 .reader[data-rtheme="light"] { --r-bg: #F7F9FA; --r-fg: #202830; --r-chrome: #FFFFFF; --r-hover: #EEF2F4; --r-border: #DCE3E8; --r-muted: #55616B; --r-accent: #2F6A87; }
 .reader[data-rtheme="sepia"] { --r-bg: #F4ECD8; --r-fg: #4A3B2A; --r-chrome: #FBF5E6; --r-hover: #EDE3C9; --r-border: #E0D3B3; --r-muted: #7B6A55; --r-accent: #7A4E2B; }
 .reader[data-rtheme="dark"] { --r-bg: #15191D; --r-fg: #F1F4F6; --r-chrome: #20272D; --r-hover: #2A333A; --r-border: #35404A; --r-muted: #A9B4BC; --r-accent: #6DA5C0; }
 .r-stage, .r-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.r-stage, .r-frame { background: var(--r-bg); }
+/* a página por trás do leitor tem a mesma cor dele: nenhuma borda clara/cinza aparece se o iOS deixar uma fresta */
+html:has(.reader[data-rtheme="dark"]), body:has(.reader[data-rtheme="dark"]) { background: #15191D; }
+html:has(.reader[data-rtheme="sepia"]), body:has(.reader[data-rtheme="sepia"]) { background: #F4ECD8; }
+html:has(.reader[data-rtheme="light"]), body:has(.reader[data-rtheme="light"]) { background: #F7F9FA; }
 .r-top, .r-bottom { position: absolute; left: 0; right: 0; z-index: 3; display: flex; align-items: center; color: var(--r-muted); background: color-mix(in srgb, var(--r-bg) 92%, transparent); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); transition: transform .25s var(--ease, ease), opacity .25s ease; }
 .r-top { top: 0; height: 48px; gap: 2px; padding: env(safe-area-inset-top) max(4px, env(safe-area-inset-right)) 0 max(4px, env(safe-area-inset-left)); box-sizing: content-box; }
 .r-bottom { bottom: 0; flex-wrap: wrap; gap: 0 10px; padding: 8px max(20px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left)); font-size: .75rem; }
