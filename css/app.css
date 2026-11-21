@@ -17,7 +17,7 @@ main { flex: 1; min-width: 0; padding: calc(12px + env(safe-area-inset-top)) max
 .nav { position: fixed; inset: auto 0 0 0; display: flex; justify-content: space-around; background: var(--surface-2); padding: 8px max(4px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(4px, env(safe-area-inset-left)); z-index: 20; }
 .nav .brand { display: none; }
 .nav a { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0; min-height: 56px; color: var(--text-2); text-decoration: none; font-size: .6875rem; font-weight: 500; letter-spacing: .01em; border-radius: 16px; }
-.nav .ind { display: grid; place-items: center; width: 64px; height: 32px; border-radius: 16px; transition: background .2s var(--ease); }
+.nav .ind { display: grid; place-items: center; width: min(64px, calc(100% - 4px)); height: 32px; border-radius: 16px; transition: background .2s var(--ease); }
 .nav a:active .ind { background: var(--surface-3); }
 .nav .lbl { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .nav a[aria-current="page"] { color: var(--text); font-weight: 700; }
@@ -318,7 +318,7 @@ dialog.modal footer .btn.primary { order: 9; }
 /* Pequenas animações (desligadas por "Reduzir animações" e pelo modo de movimento reduzido do aparelho) */
 @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
 @keyframes pulse { 50% { transform: scale(1.12); } }
-.enter > *:not(.fab):not(input) { animation: rise .38s var(--ease) both; }
+.enter > *:not(.fab):not(input):not(.reader) { animation: rise .38s var(--ease) both; }
 .enter > :nth-child(2) { animation-delay: .04s; } .enter > :nth-child(3) { animation-delay: .08s; } .enter > :nth-child(4) { animation-delay: .12s; } .enter > :nth-child(n+5) { animation-delay: .16s; }
 .enter .book { animation: rise .4s var(--ease) both; }
 .enter .book:nth-child(2) { animation-delay: .04s; } .enter .book:nth-child(3) { animation-delay: .08s; } .enter .book:nth-child(4) { animation-delay: .12s; } .enter .book:nth-child(5) { animation-delay: .16s; } .enter .book:nth-child(6) { animation-delay: .2s; } .enter .book:nth-child(n+7) { animation-delay: .24s; }
@@ -331,3 +331,14 @@ dialog.modal footer .btn.primary { order: 9; }
 .book.grid:active .cover-wrap { transform: scale(.97); }
 .set-sec, .panel { animation: none; }
 .switch[aria-checked="true"] .knob { animation: pulse .25s var(--ease); }
+
+/* Clássicos da Literatura */
+.cl-count { margin: 10px 0 0; }
+.cl-tag { color: var(--text-2); font-size: .7rem; margin-top: 2px; }
+.book.pending { opacity: .55; }
+.book.busy { pointer-events: none; }
+.cl-busy { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(15, 26, 32, .55); color: #fff; font-size: .78rem; border-radius: 4px 10px 10px 4px; }
+.cl-license { margin: 24px 0 8px; font-size: .75rem; }
+.head-brand h1.cl-h1 { font-size: 1.35rem; }
+@media (max-width: 399px) { .nav a { font-size: .625rem; letter-spacing: 0; } }
+@media (max-width: 339px) { .nav a { font-size: .5625rem; } }
