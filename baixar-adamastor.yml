@@ -1,0 +1,22 @@
+name: Baixar clássicos do Projecto Adamastor
+on:
+  workflow_dispatch:
+  push:
+    paths: ['public/books/adamastor/*.epub']
+permissions:
+  contents: write
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node tools/baixar-adamastor.mjs
+      - name: Salvar arquivos baixados
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/books/adamastor
+          git diff --cached --quiet || git commit -m "Clássicos: EPUBs do Projecto Adamastor"
+          git push
