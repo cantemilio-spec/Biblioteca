@@ -6,7 +6,7 @@ const quando = (iso) => { if (!iso) return '—'; const d = new Date(iso); retur
 
 export async function mountPainel(root) {
   root.replaceChildren(h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Importação de livros'), h('p', { class: 'hint' }, 'Acompanhe o que o importador já trouxe, o que está pendente e como estão as fontes.'))), h('p', { class: 'hint', role: 'status' }, 'Carregando…'));
-  let est;
+  let est, lit = null;
   try {
     const r = await fetch('public/books/acervo/estado.json', { cache: 'no-cache' });
     if (!r.ok) throw new Error(String(r.status));
@@ -15,7 +15,8 @@ export async function mountPainel(root) {
     root.lastChild.replaceWith(h('div', { class: 'empty small' }, icon('book', 40), h('h2', {}, 'Nenhuma importação registrada'), h('p', {}, 'No GitHub, abra Actions e rode o workflow “Importar livros”. Quando terminar, o andamento aparece aqui.'), h('button', { class: 'btn', type: 'button', onclick: () => mountPainel(root) }, 'Atualizar')));
     return;
   }
-  const rs = est.resumo || {}, itens = Object.values(est.itens || {}), meta = rs.meta || 0, feitos = rs.concluidos ?? itens.filter((x) => x.status === 'concluido').length;
+  try { const r2 = await fetch('public/books/literatura-internacional/estado.json', { cache: 'no-cache' }); if (r2.ok) lit = await r2.json(); } catch { /* coleção ainda não importada */ }
+  const rs = est.resumo || {}, itens = [...Object.values(est.itens || {}), ...Object.values(lit?.itens || {})], meta = rs.meta || 0, feitos = rs.concluidos ?? itens.filter((x) => x.status === 'concluido').length;
   const pct = meta ? Math.min(100, Math.round((feitos / meta) * 100)) : 0;
   const card = (n, l, cls) => h('div', { class: `imp-card ${cls || ''}` }, h('strong', {}, String(n)), h('span', {}, l));
   const ex = est.ultima_execucao;
@@ -36,6 +37,8 @@ export async function mountPainel(root) {
       h('p', {}, `${feitos} de ${meta || '?'} livros (${pct}%)`),
       h('div', { class: 'imp-cards' }, card(feitos, 'Importados', 'ok'), card(rs.pendentes ?? 0, 'Pendentes', 'pend'), card(rs.erros ?? 0, 'Com erro', 'err'), card(rs.bloqueados ?? 0, 'Bloqueados', 'blk')),
       rs.por_categoria ? h('p', { class: 'hint' }, Object.entries(rs.por_categoria).map(([c, v]) => `${c}: ${v}`).join(' · ')) : null),
+    lit ? h('section', { class: 'panel' }, h('h2', {}, 'Literatura internacional'), h('div', { class: 'progress imp-bar', role: 'progressbar', 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-valuenow': lit.resumo?.meta ? Math.min(100, Math.round((lit.resumo.concluidos / lit.resumo.meta) * 100)) : 0, 'aria-label': 'Progresso da literatura internacional' }, h('span', { style: `width:${lit.resumo?.meta ? Math.min(100, Math.round((lit.resumo.concluidos / lit.resumo.meta) * 100)) : 0}%` })),
+      h('p', {}, `${lit.resumo?.concluidos ?? 0} de ${lit.resumo?.meta ?? '?'} livros · pendentes ${lit.resumo?.pendentes ?? 0} · erros ${lit.resumo?.erros ?? 0} · bloqueados ${lit.resumo?.bloqueados ?? 0}`), lit.resumo?.por_categoria ? h('p', { class: 'hint' }, Object.entries(lit.resumo.por_categoria).filter(([, v]) => !String(v).startsWith('0/')).map(([c, v]) => `${c}: ${v.split('/')[0]}`).join(' · ') || 'Nenhum livro ainda.') : null) : null,
     h('section', { class: 'panel' }, h('h2', {}, 'Fontes'), h('ul', { class: 'imp-srcs' }, fontes.length ? fontes : h('li', { class: 'hint' }, 'Sem dados de fontes ainda.'))),
     h('section', { class: 'panel' }, h('h2', {}, 'Última execução'), ex ? h('p', {}, `${quando(ex.inicio)} → ${quando(ex.fim)} · ${ex.novos} novo(s) · analisados ${ex.tentados} · parou por: ${ex.parou_por}`) : h('p', { class: 'hint' }, 'Sem registro.'), h('p', { class: 'hint' }, `Estado gravado em ${quando(est.atualizado_em)}.`)),
     h('section', { class: 'panel' }, h('h2', {}, 'Itens'), chips, lista),

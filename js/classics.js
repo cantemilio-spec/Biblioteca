@@ -10,8 +10,9 @@ import { libTabs, CLASSIC_TABS, isCatalogBook } from './lib-tabs.js';
 export const CLASSICS_SOURCE = 'adamastor';
 // Dois catálogos estáticos usam a mesma tela: os Clássicos (Projecto Adamastor) e a Estante (EPUBs que o dono coloca na pasta do repositório).
 const CFG = {
-  adamastor: { source: 'adamastor', dir: 'public/books/adamastor/', tabKey: 'todos', label: 'Buscar nos clássicos', hint: 'Tudo o que dá para ler: Clássicos, Acervo (Project Gutenberg) e Estante. Toque para abrir; o livro é baixado só na primeira vez.' },
+  adamastor: { source: 'adamastor', dir: 'public/books/adamastor/', tabKey: 'todos', label: 'Buscar nos clássicos', hint: 'Tudo o que dá para ler: Clássicos, Acervo, Internacional e Estante. Toque para abrir; o livro é baixado só na primeira vez.' },
   acervo: { source: 'acervo', dir: 'public/books/acervo/', label: 'Buscar no acervo', hint: 'Acervo de domínio público (Project Gutenberg): brasileiros, internacionais, filosofia e terror. Toque para abrir; o livro é baixado só na primeira vez.' },
+  literatura: { source: 'literatura', dir: 'public/books/literatura-internacional/', label: 'Buscar na literatura internacional', hint: 'Clássicos da literatura mundial traduzidos para português, por nacionalidade. Toque para abrir; o livro é baixado só na primeira vez.' },
   estante: { source: 'estante', dir: 'public/books/estante/', tabKey: 'estante', label: 'Buscar na estante', hint: 'Livros colocados na pasta public/books/estante do projeto. Toque para abrir; o livro é baixado só na primeira vez.' },
 };
 
@@ -45,6 +46,7 @@ export async function fetchClassic(c, cfg = CFG.adamastor) {
 export const mountClassics = (root, tab = '') => mountCatalog(root, tab, CFG.adamastor);
 export const mountEstante = (root) => mountCatalog(root, '', CFG.estante);
 export const mountAcervo = (root) => mountCatalog(root, '', CFG.acervo);
+export const mountLiteratura = (root) => mountCatalog(root, '', CFG.literatura);
 
 async function mountCatalog(root, tab, cfg) {
   const st = { query: '', cat: CLASSIC_TABS.find(([k]) => k === tab)?.[1] || '', saved: new Map(), busy: new Set() };
@@ -53,7 +55,7 @@ async function mountCatalog(root, tab, cfg) {
   const count = h('p', { class: 'hint cl-count', 'aria-live': 'polite' });
   root.replaceChildren(
     h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Biblioteca'), h('p', { class: 'hint' }, cfg.source === 'adamastor' && CLASSIC_TABS.some(([k]) => k === tab) ? 'Clássicos da Literatura (domínio público, Projecto Adamastor). Toque para abrir; o livro é baixado só na primeira vez.' : cfg.hint))),
-    libTabs(cfg.source === 'estante' || cfg.source === 'acervo' ? cfg.source : CLASSIC_TABS.some(([k]) => k === tab) ? tab : 'todos'), bar, count, grid);
+    libTabs(['estante', 'acervo', 'literatura'].includes(cfg.source) ? cfg.source : CLASSIC_TABS.some(([k]) => k === tab) ? tab : 'todos'), bar, count, grid);
 
   let cat;
   try { cat = await loadCatalog(cfg); } catch {
@@ -63,7 +65,7 @@ async function mountCatalog(root, tab, cfg) {
   }
   let books = cat.books;
   // "Disponíveis" mostra tudo que dá para ler: Clássicos + Estante (se o catálogo da Estante não existir, segue só com os Clássicos)
-  if (cfg.source === 'adamastor' && !CLASSIC_TABS.some(([k]) => k === tab)) { for (const extra of [CFG.acervo, CFG.estante]) { try { books = [...books, ...(await loadCatalog(extra)).books]; } catch { /* catálogo ausente: segue sem ele */ } } }
+  if (cfg.source === 'adamastor' && !CLASSIC_TABS.some(([k]) => k === tab)) { for (const extra of [CFG.acervo, CFG.literatura, CFG.estante]) { try { books = [...books, ...(await loadCatalog(extra)).books]; } catch { /* catálogo ausente: segue sem ele */ } } }
   
   async function refreshSaved() {
     st.saved = new Map((await db.getAll('books')).filter(isCatalogBook).map((b) => [b.classicId, b]));
@@ -111,8 +113,10 @@ async function mountCatalog(root, tab, cfg) {
   }
   function draw() {
     const list = filtered();
-    count.textContent = books.length || !['estante', 'acervo'].includes(cfg.source) ? `${list.length} ${list.length === 1 ? 'obra' : 'obras'}` : '';
-    const none = !books.length && cfg.source === 'acervo'
+    count.textContent = books.length || !['estante', 'acervo', 'literatura'].includes(cfg.source) ? `${list.length} ${list.length === 1 ? 'obra' : 'obras'}` : '';
+    const none = !books.length && cfg.source === 'literatura'
+      ? h('div', { class: 'empty small' }, icon('book', 40), h('h2', {}, 'Literatura internacional ainda não importada'), h('p', {}, 'No GitHub, rode o workflow “Importar livros” (Actions). Os livros aparecem aqui, separados por nacionalidade.'))
+      : !books.length && cfg.source === 'acervo'
       ? h('div', { class: 'empty small' }, icon('book', 40), h('h2', {}, 'Acervo ainda não importado'), h('p', {}, 'No GitHub, rode o workflow “Importar acervo” (Actions). Os livros aparecem aqui quando ele terminar.'))
       : !books.length && cfg.source === 'estante'
       ? h('div', { class: 'empty small' }, icon('book', 40), h('h2', {}, 'Estante vazia'), h('p', {}, 'Envie arquivos .epub para a pasta public/books/estante do repositório no GitHub. Em poucos minutos eles aparecem aqui.'))
@@ -124,7 +128,7 @@ async function mountCatalog(root, tab, cfg) {
   const clear = h('button', { class: 'icon-btn clear', type: 'button', 'aria-label': 'Limpar busca', hidden: true, onclick: () => { search.value = ''; st.query = ''; clear.hidden = true; draw(); search.focus(); } }, icon('close', 20));
   search.addEventListener('input', () => { st.query = search.value; clear.hidden = !st.query; draw(); });
   bar.append(h('div', { class: 'toolbar' }, h('div', { class: 'search-wrap' }, icon('search', 22), search, clear)));
-  if (cfg.source === 'acervo' && books.length) {
+  if (['acervo', 'literatura'].includes(cfg.source) && books.length) {
     const cats = ['', ...[...new Set(books.map((b) => b.categoria))]];
     const chips = h('div', { class: 'chips', role: 'group', 'aria-label': 'Categorias do acervo' }, cats.map((c) => h('button', { type: 'button', class: `chip${st.cat === c ? ' on' : ''}`, 'aria-pressed': String(st.cat === c), onclick: (e) => { st.cat = c; chips.querySelectorAll('.chip').forEach((x) => { const on = x === e.currentTarget; x.classList.toggle('on', on); x.setAttribute('aria-pressed', String(on)); }); draw(); } }, c || 'Todos')));
     bar.append(chips);

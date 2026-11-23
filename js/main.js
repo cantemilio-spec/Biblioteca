@@ -5,7 +5,7 @@ import { mountSettings } from './settings-view.js';
 import { mountReader } from './reader.js';
 import { mountStats } from './stats-view.js';
 import { mountCollections } from './collections.js';
-import { mountClassics, mountEstante, mountAcervo } from './classics.js';
+import { mountClassics, mountEstante, mountAcervo, mountLiteratura } from './classics.js';
 import { showWelcome } from './welcome.js';
 import { mountPainel } from './painel.js';
 
@@ -15,6 +15,7 @@ const ROUTES = {
   favoritos: { mount: (el) => mountLibrary(el, { onlyFavorites: true }), navKey: 'biblioteca' }, // atalho; na barra fica em "Biblioteca"
   estante: { mount: (el) => mountEstante(el), navKey: 'biblioteca' },
   acervo: { mount: (el) => mountAcervo(el), navKey: 'biblioteca' },
+  literatura: { mount: (el) => mountLiteratura(el), navKey: 'biblioteca' },
   classicos: { mount: (el, arg) => mountClassics(el, arg), navKey: 'biblioteca' }, // abas dentro da Biblioteca (#classicos-br/pt/in)
   colecoes: { mount: (el) => mountCollections(el), navKey: 'biblioteca' },
   importacao: { mount: (el) => mountPainel(el), navKey: 'configuracoes' }, // painel de acompanhamento (aberto pelos Ajustes)
