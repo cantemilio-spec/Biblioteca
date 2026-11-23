@@ -7,8 +7,8 @@ import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 
 const DIR = process.env.ADAMASTOR_DIR || 'public/books/adamastor', CAT = `${DIR}/catalogo.json`, MAX = 60 * 1024 * 1024;
-const unzipP = (file, entry) => execFileSync('unzip', ['-p', file, entry], { maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
-const attr = (xml, tag, name) => { const m = xml.match(new RegExp(`<${tag}\\b[^>]*\\b${name}="([^"]+)"`, 'i')); return m?.[1]; };
+export const unzipP = (file, entry) => execFileSync('unzip', ['-p', file, entry], { maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
+export const attr = (xml, tag, name) => { const m = xml.match(new RegExp(`<${tag}\\b[^>]*\\b${name}="([^"]+)"`, 'i')); return m?.[1]; };
 
 /** Acha o link do EPUB (não do MOBI) na página do livro. */
 export function findEpubLink(html) {
