@@ -5,7 +5,7 @@ import { readFile, writeFile, mkdir, unlink } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { http, ErroRede, plain, slugOf, sha256, validarEpub, lerJson, gravarJson } from './importador/nucleo.mjs';
+import { http, ErroRede, plain, slugOf, sha256, validarEpub, lerJson, gravarJson, MAX_BYTES, mb } from './importador/nucleo.mjs';
 import { FONTES, parseRdf, checarDireitos, casa, ANO_LIMITE, direitosIA } from './importador/fontes.mjs';
 import { inspectEpub } from './baixar-adamastor.mjs';
 export { parseRdf, checarDireitos, casa, ANO_LIMITE, direitosIA, validarEpub };
@@ -80,6 +80,7 @@ export async function executar({ dir, lista, fontes, limite = 100, lote = 30, or
         if (tn.length > 5 && [...outros, ...titulos].some((o) => o && (tn.includes(o) || o.includes(tn)) && Math.min(o.length, tn.length) > 5)) { rejeitar(`já existe na biblioteca (${v.titulo})`); continue; }
         let dl;
         try { dl = await f.baixar(c); } catch (e) { if (e instanceof ErroRede) { rede = true; f.falhas++; } errouBaixar = true; motivos.push(`${gid}: download falhou (${e.message})`); continue; }
+        if (dl.buf.length > MAX_BYTES) { rejeitar(`EPUB de ${mb(dl.buf.length)} MB excede o limite de ${mb(MAX_BYTES)} MB`); continue; }
         const slug = slugOf(`${v.titulo}-${f.id === 'gutenberg' ? c.id : f.id.slice(0, 3) + c.id}`); const pasta = `${dir}/${CATS[k][1]}`; const arq = `${pasta}/${slug}.epub`;
         if (dl.md5 && createHash('md5').update(dl.buf).digest('hex') !== dl.md5) { errouBaixar = true; motivos.push(`${gid}: MD5 não confere (download incompleto)`); continue; }
         const hash = sha256(dl.buf);
