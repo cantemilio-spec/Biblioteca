@@ -1,5 +1,34 @@
 {
   "colecao": "Estante",
   "licenca": "Arquivos enviados por você ao repositório. O app e o repositório são públicos: mantenha aqui apenas obras que você tem direito de distribuir.",
-  "livros": []
+  "livros": [
+    {
+      "id": "estante-fahrenheit-451-ray-bradbury",
+      "titulo": "Fahrenheit 451",
+      "autor": "Bradbury, Ray",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/fahrenheit-451-ray-bradbury.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/fahrenheit-451-ray-bradbury.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 187172,
+      "sha256": "0f1ab2abd6c110b04987a2a3ed1504202d51f6f8daa397b27ec71a43c4d1ab5d"
+    },
+    {
+      "id": "estante-o-caminho-da-servidao-the-road-to-serfdom-friedrich-august-hayek-welib-org",
+      "titulo": "O Caminho da Servidão",
+      "autor": "Friedrich A. Hayek",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/o-caminho-da-servidao-the-road-to-serfdom-friedrich-august-hayek-welib-org.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/o-caminho-da-servidao-the-road-to-serfdom-friedrich-august-hayek-welib-org.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 433416,
+      "sha256": "df3a5d0b46ce4dea85b92d5425e4dadf867143f816971d8893dc8ff2c6295343"
+    }
+  ]
 }
