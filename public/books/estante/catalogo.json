@@ -115,6 +115,20 @@
       "sha256": "1924ce3df255008f18d82bdc562d2b5aebac36746ddac18773f92410cbc296b8"
     },
     {
+      "id": "estante-6-harry-potter-e-o-enigma-do-principe",
+      "titulo": "Harry Potter e o enigma do Príncipe",
+      "autor": "J.K. Rowling",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/6-harry-potter-e-o-enigma-do-principe.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/6-harry-potter-e-o-enigma-do-principe.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 727670,
+      "sha256": "bf7ca04304b3699970366fe6f59145e214f4b7e780381febfea723af98eb8405"
+    },
+    {
       "id": "estante-3-harry-potter-e-o-prisioneiro-de-azkaban",
       "titulo": "Harry Potter e o prisioneiro de Azkaban",
       "autor": "J.K. Rowling",
