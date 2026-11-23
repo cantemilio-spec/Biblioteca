@@ -5,12 +5,12 @@ import { h, icon, toast, menu, bimg } from './ui.js';
 import * as db from './db.js';
 import { importFile } from './importer.js';
 import { norm } from './books.js';
-import { libTabs, CLASSIC_TABS } from './lib-tabs.js';
+import { libTabs, CLASSIC_TABS, isCatalogBook } from './lib-tabs.js';
 
 export const CLASSICS_SOURCE = 'adamastor';
 // Dois catálogos estáticos usam a mesma tela: os Clássicos (Projecto Adamastor) e a Estante (EPUBs que o dono coloca na pasta do repositório).
 const CFG = {
-  adamastor: { source: 'adamastor', dir: 'public/books/adamastor/', tabKey: 'todos', label: 'Buscar nos clássicos', hint: 'Clássicos da Literatura disponíveis para ler (domínio público, Projecto Adamastor). Toque para abrir; o livro é baixado só na primeira vez.' },
+  adamastor: { source: 'adamastor', dir: 'public/books/adamastor/', tabKey: 'todos', label: 'Buscar nos clássicos', hint: 'Livros disponíveis para ler: Clássicos da Literatura (domínio público, Projecto Adamastor) e os da sua Estante. Toque para abrir; o livro é baixado só na primeira vez.' },
   estante: { source: 'estante', dir: 'public/books/estante/', tabKey: 'estante', label: 'Buscar na estante', hint: 'Livros colocados na pasta public/books/estante do projeto. Toque para abrir; o livro é baixado só na primeira vez.' },
 };
 
@@ -27,7 +27,7 @@ async function loadCatalog(cfg) {
   const list = Array.isArray(j?.livros) ? j.livros : [];
   // só aceita caminhos dentro da pasta do catálogo (o JSON nunca aponta para fora do projeto)
   const ok = (p) => typeof p === 'string' && p.startsWith(cfg.dir) && !p.includes('..');
-  return { info: j, books: list.filter((b) => b && typeof b.id === 'string' && typeof b.titulo === 'string' && ok(b.epub)).map((b) => ({ ...b, capa: ok(b.capa) ? b.capa : null })) };
+  return { info: j, books: list.filter((b) => b && typeof b.id === 'string' && typeof b.titulo === 'string' && ok(b.epub)).map((b) => ({ ...b, capa: ok(b.capa) ? b.capa : null, _cfg: cfg })) };
 }
 
 /** Baixa o EPUB (sob demanda), valida e guarda no aparelho. Devolve o id do livro no banco. */
@@ -50,7 +50,7 @@ async function mountCatalog(root, tab, cfg) {
   const bar = h('div', { class: 'lib-bar' });
   const count = h('p', { class: 'hint cl-count', 'aria-live': 'polite' });
   root.replaceChildren(
-    h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Biblioteca'), h('p', { class: 'hint' }, cfg.hint))),
+    h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Biblioteca'), h('p', { class: 'hint' }, cfg.source === 'adamastor' && CLASSIC_TABS.some(([k]) => k === tab) ? 'Clássicos da Literatura (domínio público, Projecto Adamastor). Toque para abrir; o livro é baixado só na primeira vez.' : cfg.hint))),
     libTabs(cfg.source === 'estante' ? 'estante' : CLASSIC_TABS.some(([k]) => k === tab) ? tab : 'todos'), bar, count, grid);
 
   let cat;
@@ -59,10 +59,12 @@ async function mountCatalog(root, tab, cfg) {
       h('button', { class: 'btn', type: 'button', onclick: () => mountCatalog(root, tab, cfg) }, 'Tentar de novo')));
     bar.remove(); count.remove(); return;
   }
-  const books = cat.books;
+  let books = cat.books;
+  // "Disponíveis" mostra tudo que dá para ler: Clássicos + Estante (se o catálogo da Estante não existir, segue só com os Clássicos)
+  if (cfg.source === 'adamastor' && !CLASSIC_TABS.some(([k]) => k === tab)) { try { books = [...books, ...(await loadCatalog(CFG.estante)).books]; } catch { /* sem Estante */ } }
   
   async function refreshSaved() {
-    st.saved = new Map((await db.getAll('books')).filter((b) => b.source === cfg.source).map((b) => [b.classicId, b]));
+    st.saved = new Map((await db.getAll('books')).filter(isCatalogBook).map((b) => [b.classicId, b]));
   }
 
   async function open(c) {
@@ -71,7 +73,7 @@ async function mountCatalog(root, tab, cfg) {
     if (saved) { location.hash = `#ler-${saved.id}`; return; }
     if (st.busy.has(c.id)) return;
     st.busy.add(c.id); draw();
-    try { const id = await fetchClassic(c, cfg); location.hash = `#ler-${id}`; }
+    try { const id = await fetchClassic(c, c._cfg || cfg); location.hash = `#ler-${id}`; }
     catch (e) {
       st.busy.delete(c.id); draw();
       toast(e?.name === 'TypeError' ? 'Sem conexão para baixar este livro agora.' : (e?.message || 'Não foi possível abrir este livro.'), 'error');

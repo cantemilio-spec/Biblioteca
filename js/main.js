@@ -6,6 +6,7 @@ import { mountReader } from './reader.js';
 import { mountStats } from './stats-view.js';
 import { mountCollections } from './collections.js';
 import { mountClassics, mountEstante } from './classics.js';
+import { showWelcome } from './welcome.js';
 
 const ROUTES = {
   inicio: { label: 'Início', icon: 'home', mount: (el) => mountLibrary(el, { home: true }) },
@@ -52,7 +53,9 @@ async function boot() {
     h('main', { id: 'main', tabindex: '-1' })
   );
   window.addEventListener('hashchange', route);
+  const reading = /^#\/?ler/.test(location.hash); // reabriu direto num livro: não interrompe a leitura
   await route();
+  if (!reading) showWelcome();
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
