@@ -1,0 +1,31 @@
+name: Importar acervo (100 livros)
+on:
+  workflow_dispatch:
+    inputs:
+      quantidade:
+        description: 'Quantos livros no total (10 = teste, 100 = completo)'
+        required: true
+        default: '10'
+permissions:
+  contents: write
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Baixar e verificar os livros
+        env:
+          LIMITE: ${{ github.event.inputs.quantidade }}
+        run: node tools/importar-acervo.mjs
+      - name: Salvar no repositório
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/books/acervo
+          git diff --cached --quiet || git commit -m "Acervo: livros do Project Gutenberg"
+          git pull --rebase -q || true
+          git push
