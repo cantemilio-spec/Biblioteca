@@ -7,6 +7,7 @@ import { mountStats } from './stats-view.js';
 import { mountCollections } from './collections.js';
 import { mountClassics, mountEstante, mountAcervo } from './classics.js';
 import { showWelcome } from './welcome.js';
+import { mountPainel } from './painel.js';
 
 const ROUTES = {
   inicio: { label: 'Início', icon: 'home', mount: (el) => mountLibrary(el, { home: true }) },
@@ -16,6 +17,7 @@ const ROUTES = {
   acervo: { mount: (el) => mountAcervo(el), navKey: 'biblioteca' },
   classicos: { mount: (el, arg) => mountClassics(el, arg), navKey: 'biblioteca' }, // abas dentro da Biblioteca (#classicos-br/pt/in)
   colecoes: { mount: (el) => mountCollections(el), navKey: 'biblioteca' },
+  importacao: { mount: (el) => mountPainel(el), navKey: 'configuracoes' }, // painel de acompanhamento (aberto pelos Ajustes)
   estatisticas: { label: 'Estatísticas', icon: 'chart', mount: (el) => mountStats(el) },
   configuracoes: { label: 'Ajustes', icon: 'sliders', mount: (el) => mountSettings(el) },
   ler: { fullscreen: true, mount: (el, id) => mountReader(el, id) },

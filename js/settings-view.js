@@ -81,7 +81,8 @@ export async function mountSettings(root) {
 
     section('download', 'Importação',
       row('Tamanho máximo por arquivo', 'Em MB. Arquivos maiores são recusados.', mb),
-      row('Buscar capas e dados online', 'Envia título, autor e ISBN ao Google Livros e ao Open Library. O arquivo do livro nunca sai do aparelho.', toggle('Buscar capas e dados online', !!getSetting('autoIdentify'), async (on) => { await setSetting('autoIdentify', on); toast(on ? 'Busca online ativada.' : 'Busca online desativada.'); }))),
+      row('Buscar capas e dados online', 'Envia título, autor e ISBN ao Google Livros e ao Open Library. O arquivo do livro nunca sai do aparelho.', toggle('Buscar capas e dados online', !!getSetting('autoIdentify'), async (on) => { await setSetting('autoIdentify', on); toast(on ? 'Busca online ativada.' : 'Busca online desativada.'); })),
+      row('Importação automática de livros', 'Acompanhe o acervo importado pelo GitHub: fontes, pendências e erros.', h('a', { class: 'btn', href: '#importacao' }, 'Abrir painel'))),
 
     section('folder', 'Armazenamento',
       h('p', {}, `${count} livro(s) neste aparelho.`),
