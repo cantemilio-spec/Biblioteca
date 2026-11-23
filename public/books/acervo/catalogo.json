@@ -627,6 +627,32 @@
       "importado_em": "2026-11-23T10:52:00.072Z"
     },
     {
+      "id": "acervo-oliveira-martins-estudo-de-psychologia-intoliveiramartinse31379gut",
+      "chave": "fi||barreto|1",
+      "catKey": "fi",
+      "ids": [
+        "internet-archive:oliveiramartinse31379gut"
+      ],
+      "titulo": "Oliveira Martins: Estudo de Psychologia",
+      "autor": "Barreto, Guilherme Moniz, 1863-1896",
+      "categoria": "Filosofia",
+      "idioma": "pt",
+      "genero": "Filosofia",
+      "capa": "public/books/acervo/capas/oliveira-martins-estudo-de-psychologia-intoliveiramartinse31379gut.jpg",
+      "capa_ok": true,
+      "epub": "public/books/acervo/filosofia/oliveira-martins-estudo-de-psychologia-intoliveiramartinse31379gut.epub",
+      "fonte_id": "internet-archive",
+      "fonte": "https://archive.org/details/oliveiramartinse31379gut",
+      "origem_download": "https://archive.org/download/oliveiramartinse31379gut/pg31379.epub",
+      "credito": "Internet Archive: oliveiramartinse31379gut",
+      "licenca": "Declaração do item: \"Public domain in the USA.\"",
+      "autorizacao_redistribuicao": true,
+      "baixado": true,
+      "tamanho": 75122,
+      "sha256": "d7e20909b62a0f9211e740ff105e967e1e137f394f4d44c8530171a6981a6f10",
+      "importado_em": "2026-11-23T13:41:31.326Z"
+    },
+    {
       "id": "acervo-seneca-obra-intobras-filosoficas-de-seneca",
       "chave": "fi||seneca|1",
       "catKey": "fi",

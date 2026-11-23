@@ -1145,6 +1145,277 @@
       "pedido": "contrato social (rousseau)",
       "categoria": "Filosofia",
       "atualizado_em": "2026-11-23T10:52:22.833Z"
+    },
+    "fi||schopenhauer|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:AArteDeLidarComAsMulheres: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:a-arte-de-lidar-com-as-mulheres: EPUB com 28.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:40:49.889Z",
+      "pedido": "obra de (schopenhauer)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:40:49.889Z"
+    },
+    "fi||montesquieu|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:40:50.121Z",
+      "pedido": "obra de (montesquieu)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:40:50.121Z"
+    },
+    "fi||hume|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:40:50.461Z",
+      "pedido": "obra de (hume)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:40:50.461Z"
+    },
+    "fi||locke|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:40:50.738Z",
+      "pedido": "obra de (locke)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:40:50.738Z"
+    },
+    "fi||hobbes|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:40:50.937Z",
+      "pedido": "obra de (hobbes)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:40:50.937Z"
+    },
+    "fi||brito|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:DELTA53781_1FA: EPUB com 134.9 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | internet-archive:historiatragicom02brituoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:ononplusultradol00cort: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: The Library of Congress is unaware of any copyright restrictions for this item.) | internet-archive:chronicadecister00brituoft: sem licença de redistribuição explícita (license",
+      "proxima_tentativa": "2026-11-23T19:41:14.865Z",
+      "pedido": "obra de (brito)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:41:14.865Z"
+    },
+    "fi||barreto|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (barreto)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:41:31.326Z"
+    },
+    "fi||quental|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:sonnetspoemsofan00quen: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:prosas02quen: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:bomsensoebomgos00castgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:ossonetoscomplet00quenuoft: sem licença de redistribuição explícita (license",
+      "proxima_tentativa": "2026-11-23T19:41:31.550Z",
+      "pedido": "obra de (quental)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:41:31.550Z"
+    },
+    "fi||vieira|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:grandediccionari01vieiuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:DELTA53958_2FA: EPUB com 43.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) (decisão anterior) | internet-archive:grandediccionari05vieiuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:sermesdopadrean00vieigoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyrig",
+      "proxima_tentativa": "2026-11-23T19:41:31.760Z",
+      "pedido": "obra de (vieira)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:41:31.760Z"
+    },
+    "fi||barbosa|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:barbosa_1956: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:gri_33125005925538: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:portugalantigoe02ferrgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:freud-1931-cinco: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:gri_33",
+      "proxima_tentativa": "2026-11-23T19:41:33.943Z",
+      "pedido": "obra de (barbosa)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:41:33.943Z"
+    },
+    "fi||romero|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:cantospopularesd00rome: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:historiadalitter02romeuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:contospopulares01romegoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:oevolucionismoe00romegoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT",
+      "proxima_tentativa": "2026-11-23T19:41:41.988Z",
+      "pedido": "obra de (romero)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:41:41.988Z"
+    },
+    "fi||bacon|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:epdf.tips_o-progresso-do-conhecimento: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:bacon-a-sabedoria-dos-antigosrev: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:41:46.991Z",
+      "pedido": "obra de (bacon)",
+      "categoria": "Filosofia",
+      "atualizado_em": "2026-11-23T13:41:46.991Z"
+    },
+    "te|dracula|stoker|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:dracula-bram-stoker-1897: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:41:49.273Z",
+      "pedido": "dracula (stoker)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:41:49.273Z"
+    },
+    "te||stoker|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:dracula-bram-stoker-1897: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:41:49.448Z",
+      "pedido": "obra de (stoker)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:41:49.448Z"
+    },
+    "te|frankenstein|shelley|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:mary-shelley-frankenstein-ou-o-prometeu-moderno: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:19.942Z",
+      "pedido": "frankenstein (shelley)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:19.943Z"
+    },
+    "te|medico monstro|stevenson|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:22.863Z",
+      "pedido": "medico monstro (stevenson)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:22.863Z"
+    },
+    "te||stevenson|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:nimona-pt-br: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:23.576Z",
+      "pedido": "obra de (stevenson)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:23.576Z"
+    },
+    "te||poe|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:o-corvo-edgar-allan-poe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:24.513Z",
+      "pedido": "obra de (poe)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:24.513Z"
+    },
+    "te||poe|2": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:o-corvo-edgar-allan-poe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:24.616Z",
+      "pedido": "obra de (poe)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:24.616Z"
+    },
+    "te||poe|3": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:o-corvo-edgar-allan-poe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:24.764Z",
+      "pedido": "obra de (poe)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:24.764Z"
+    },
+    "te||doyle|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:man-on-the-run-tom-doyle: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:obra-completa-sherlock-holmes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:25.933Z",
+      "pedido": "obra de (doyle)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:25.933Z"
+    },
+    "te||doyle|2": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:man-on-the-run-tom-doyle: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:obra-completa-sherlock-holmes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:26.058Z",
+      "pedido": "obra de (doyle)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:26.058Z"
+    },
+    "te||wilde|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:oscar-wilde-a-decadencia-da-mentira-trad-nicolau-bruno: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:26.622Z",
+      "pedido": "obra de (wilde)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:26.622Z"
+    },
+    "te|retrato dorian gray|wilde|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:28.849Z",
+      "pedido": "retrato dorian gray (wilde)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:28.849Z"
+    },
+    "te||le fanu|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:29.099Z",
+      "pedido": "obra de (le fanu)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:29.099Z"
+    },
+    "te||maupassant|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:29.354Z",
+      "pedido": "obra de (maupassant)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:29.354Z"
+    },
+    "te||gautier|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:29.618Z",
+      "pedido": "obra de (gautier)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:29.618Z"
+    },
+    "te||hoffmann|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:29.846Z",
+      "pedido": "obra de (hoffmann)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:29.846Z"
+    },
+    "te||lovecraft|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:Dagon_201609: EPUB com 0.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | internet-archive:h.-p.-lovecraft-os-demonios-de-randolph-carter-1987: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:os-sonhos-na-casa-da-bruxa-hq-allan-sena: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:31.284Z",
+      "pedido": "obra de (lovecraft)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:31.284Z"
+    },
+    "te||leroux|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T19:42:31.587Z",
+      "pedido": "obra de (leroux)",
+      "categoria": "Terror e suspense",
+      "atualizado_em": "2026-11-23T13:42:31.587Z"
     }
   },
   "rejeitados": {
@@ -1252,36 +1523,82 @@
     "internet-archive:4.-kant.-critica-da-razao-pura.": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
     "internet-archive:criticadarazaopura": "EPUB com 93.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
     "internet-archive:genealogia-da-moral-friedrich-nietzsche": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
-    "internet-archive:32-nietzsche_202604": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)"
+    "internet-archive:32-nietzsche_202604": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:AArteDeLidarComAsMulheres": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:a-arte-de-lidar-com-as-mulheres": "EPUB com 28.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:DELTA53781_1FA": "EPUB com 134.9 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:historiatragicom02brituoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:ononplusultradol00cort": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: The Library of Congress is unaware of any copyright restrictions for this item.)",
+    "internet-archive:chronicadecister00brituoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:historiatragicom0407brituoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:historiatragicom01brituoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:DELTA53981FA": "EPUB com 29.3 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:eneidaportuguez00virggoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:obrascompletasd00camgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:barbosa_1956": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:gri_33125005925538": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:portugalantigoe02ferrgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:freud-1931-cinco": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:gri_33125005925355": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:gri_33125005925231": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:cantospopularesd00rome": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:historiadalitter02romeuoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:contospopulares01romegoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:oevolucionismoe00romegoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:estudospoesiapopular1977besgotada": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:a-insurreicao-luso-brasileira-e-o-fim-do-dominio-holandes": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:epdf.tips_o-progresso-do-conhecimento": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:bacon-a-sabedoria-dos-antigosrev": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:dracula-bram-stoker-1897": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:nimona-pt-br": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:o-corvo-edgar-allan-poe": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:man-on-the-run-tom-doyle": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:obra-completa-sherlock-holmes": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:Dagon_201609": "EPUB com 0.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:h.-p.-lovecraft-os-demonios-de-randolph-carter-1987": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:os-sonhos-na-casa-da-bruxa-hq-allan-sena": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)"
   },
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-23T10:44:32.257Z",
+      "verificado_em": "2026-11-23T13:40:41.215Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-23T10:44:32.573Z",
+      "verificado_em": "2026-11-23T13:40:41.571Z",
       "disponivel": true,
-      "ms": 386,
+      "ms": 391,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-23T10:44:32.573Z"
+      "ultimo_ok": "2026-11-23T13:40:41.571Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-23T10:44:32.959Z",
+      "verificado_em": "2026-11-23T13:40:41.962Z",
       "disponivel": true,
-      "ms": 129,
+      "ms": 292,
       "detalhe": "site respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-23T10:44:32.959Z"
+      "ultimo_ok": "2026-11-23T13:40:41.962Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-23T13:40:41.212Z",
+      "fim": "2026-11-23T13:42:31.590Z",
+      "novos": 1,
+      "tentados": 30,
+      "parou_por": "lote de 30 itens",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "adamastor": true
+      },
+      "total": 39
+    },
     {
       "inicio": "2026-11-23T10:44:32.254Z",
       "fim": "2026-11-23T10:52:22.836Z",
@@ -1322,35 +1639,35 @@
       "total": 6
     }
   ],
-  "atualizado_em": "2026-11-23T10:52:22.837Z",
+  "atualizado_em": "2026-11-23T13:42:31.591Z",
   "ultima_execucao": {
-    "inicio": "2026-11-23T10:44:32.254Z",
-    "fim": "2026-11-23T10:52:22.836Z",
-    "novos": 15,
-    "tentados": 100,
-    "parou_por": "lote de 100 itens",
+    "inicio": "2026-11-23T13:40:41.212Z",
+    "fim": "2026-11-23T13:42:31.590Z",
+    "novos": 1,
+    "tentados": 30,
+    "parou_por": "lote de 30 itens",
     "fontes": {
       "gutenberg": false,
       "internet-archive": true,
       "adamastor": true
     },
-    "total": 38
+    "total": 39
   },
   "resumo": {
-    "meta": 60,
-    "concluidos": 38,
-    "pendentes": 81,
-    "erros": 4,
+    "meta": 100,
+    "concluidos": 39,
+    "pendentes": 109,
+    "erros": 5,
     "bloqueados": 0,
     "por_fonte": {
-      "internet-archive": 36,
+      "internet-archive": 37,
       "adamastor": 2
     },
     "por_categoria": {
-      "Brasileiros": "22/24",
-      "Internacionais": "13/24",
-      "Filosofia": "3/6",
-      "Terror e suspense": "0/6"
+      "Brasileiros": "22/40",
+      "Internacionais": "13/40",
+      "Filosofia": "4/10",
+      "Terror e suspense": "0/10"
     }
   }
 }
