@@ -1,6 +1,6 @@
 // Fontes de livros. Cada fonte é independente: { id, nome, disponibilidade(), buscar(item), direitos(cand, item), baixar(cand) }.
 // Só EPUB. Nenhuma fonte inclui obra sem autorização de redistribuição comprovada (direitos() decide).
-import { http, ErroRede, plain, decode, nomeNormal } from './nucleo.mjs';
+import { http, ErroRede, plain, decode, nomeNormal, MAX_BYTES, mb } from './nucleo.mjs';
 
 export const ANO_LIMITE = 1955; // Brasil: vida + 70 anos. Em 2026, autor falecido até 1955 = domínio público.
 const tokens = (t) => plain(t).split(' ').filter(Boolean);
@@ -120,8 +120,10 @@ export function internetArchive() {
     async direitos(cand) {
       const meta = await http(`${IA}/metadata/${encodeURIComponent(cand.id)}`, { tipo: 'json', tent: 2 });
       const v = direitosIA(meta); if (!v.ok) return v;
-      const arq = (meta.files || []).filter((f) => /\.epub$/i.test(f.name || '') && /epub/i.test(f.format || 'epub')).sort((a, b) => Number(b.size || 0) - Number(a.size || 0))[0];
-      if (!arq) return { ok: false, motivo: 'item sem arquivo EPUB (PDFs são ignorados)' };
+      const epubs = (meta.files || []).filter((f) => /\.epub$/i.test(f.name || '') && /epub/i.test(f.format || 'epub')).sort((a, b) => Number(a.size || 0) - Number(b.size || 0));
+      if (!epubs.length) return { ok: false, motivo: 'item sem arquivo EPUB (PDFs são ignorados)' };
+      const arq = epubs.find((f) => Number(f.size || 0) > 20000 && Number(f.size || 0) <= MAX_BYTES); // o menor EPUB utilizável
+      if (!arq) return { ok: false, motivo: `EPUB com ${mb(Number(epubs[epubs.length - 1].size || 0))} MB excede o limite de ${mb(MAX_BYTES)} MB (ou é pequeno demais para ser um livro)` };
       cand.arquivo = arq;
       const m = meta.metadata || {};
       return { ...v, titulo: [].concat(m.title || cand.titulo)[0], autor: [].concat(m.creator || cand.autor).join(', '), fonte: `${IA}/details/${cand.id}`, credito: `Internet Archive: ${cand.id}` };

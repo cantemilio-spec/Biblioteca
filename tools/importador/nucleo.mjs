@@ -5,6 +5,9 @@ import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 
 export const UA = 'BotoAzul-importador/2.0 (+https://github.com/cantemilio-spec/Biblioteca)';
+// Limite por EPUB: o GitHub recusa arquivos acima de 100 MB (e avisa acima de 50 MB); o app também fica mais leve.
+export const MAX_BYTES = (Number(process.env.EPUB_MAX_MB) || 25) * 1024 * 1024;
+export const mb = (n) => (n / 1048576).toFixed(1);
 export const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 export const plain = (t) => String(t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 export const decode = (s) => String(s).replace(/&amp;|&#038;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'").replace(/\s+/g, ' ').trim();
