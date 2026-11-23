@@ -76,7 +76,7 @@ export function gutenberg() {
       const v = checarDireitos(info, item.idioma);
       if (!v.ok) return v;
       const autores = info.agentes.filter((a) => a.papel === 'creator');
-      return { ...v, titulo: info.titulo.split(/\s*;\s*/)[0], autor: autores.map((a) => nomeNormal(a.nome)).join(', '), fonte: `https://www.gutenberg.org/ebooks/${cand.id}`, credito: `Project Gutenberg #${cand.id}` };
+      return { ...v, titulo: info.titulo.split(/\s*;\s*/)[0], autor: autores.map((a) => nomeNormal(a.nome)).join(', '), fonte: `https://www.gutenberg.org/ebooks/${cand.id}`, credito: `Project Gutenberg #${cand.id}`, traducao_verificada: true };
     },
     async baixar(cand) {
       const id = cand.id; let erro;
@@ -112,7 +112,7 @@ export function internetArchive() {
     async buscar(item) {
       const parts = [`mediatype:texts`, `(language:por OR language:Portuguese)`, `format:EPUB`, `-collection:(inlibrary OR printdisabled)`];
       if (item.tit) parts.push(`title:(${tokens(item.tit).join(' AND ')})`);
-      parts.push(`creator:(${first(item.aut)})`);
+      parts.push(`creator:(${String(item.aut).split('/').map((v) => `"${v}"`).join(' OR ')})`); // variantes de grafia: dostoievski/dostoyevsky/dostoiévski
       const u = `${IA}/advancedsearch.php?q=${encodeURIComponent(parts.join(' AND '))}&fl[]=identifier&fl[]=title&fl[]=creator&rows=8&sort[]=downloads+desc&output=json`;
       const j = await http(u, { tipo: 'json', tent: 2 });
       return (j?.response?.docs || []).map((d) => ({ id: d.identifier, titulo: [].concat(d.title || '').join(' '), autor: [].concat(d.creator || '').join(' ') })).filter((c) => c.id && casa(c, item.tit, item.aut));
@@ -126,7 +126,7 @@ export function internetArchive() {
       if (!arq) return { ok: false, motivo: `EPUB com ${mb(Number(epubs[epubs.length - 1].size || 0))} MB excede o limite de ${mb(MAX_BYTES)} MB (ou é pequeno demais para ser um livro)` };
       cand.arquivo = arq;
       const m = meta.metadata || {};
-      return { ...v, titulo: [].concat(m.title || cand.titulo)[0], autor: [].concat(m.creator || cand.autor).join(', '), fonte: `${IA}/details/${cand.id}`, credito: `Internet Archive: ${cand.id}` };
+      return { ...v, titulo: [].concat(m.title || cand.titulo)[0], autor: [].concat(m.creator || cand.autor).join(', '), fonte: `${IA}/details/${cand.id}`, credito: `Internet Archive: ${cand.id}`, traducao_verificada: false /* licença declarada pelo uploader; tradução não verificada individualmente */ };
     },
     async baixar(cand) {
       const a = cand.arquivo; const url = `${IA}/download/${encodeURIComponent(cand.id)}/${a.name.split('/').map(encodeURIComponent).join('/')}`;
@@ -157,7 +157,7 @@ export function adamastor(autores = {}) {
       const a = autores[first(item.aut).split('/')[0]];
       if (!a?.pt) return { ok: false, motivo: 'autor não consta na tabela de autores de domínio público em português (sem comprovação)' };
       if (a.morte > ANO_LIMITE) return { ok: false, motivo: `autor morreu em ${a.morte}` };
-      return { ok: true, licenca: `Domínio público (autor †${a.morte}); edição digital do Projecto Adamastor sob Creative Commons (variante não especificada pelo site) — mantenha o crédito e não altere o arquivo`, titulo: cand.titulo, autor: cand.autor, fonte: cand.pagina, credito: 'Edição digital: Projecto Adamastor' };
+      return { ok: true, licenca: `Domínio público (autor †${a.morte}); edição digital do Projecto Adamastor sob Creative Commons (variante não especificada pelo site) — mantenha o crédito e não altere o arquivo`, titulo: cand.titulo, autor: cand.autor, fonte: cand.pagina, credito: 'Edição digital: Projecto Adamastor', traducao_verificada: true };
     },
     async baixar(cand) {
       const pag = await http(cand.pagina, { tent: 2 });
@@ -168,4 +168,32 @@ export function adamastor(autores = {}) {
   };
 }
 
-export const FONTES = { gutenberg, 'internet-archive': internetArchive, adamastor };
+/* ------------------------------------------------------------------ Wikisource em português (API MediaWiki + exportador oficial ws-export) */
+export function wikisource() {
+  const API = 'https://pt.wikisource.org/w/api.php', EXP = 'https://ws-export.wmcloud.org/';
+  return {
+    id: 'wikisource', nome: 'Wikisource (pt)',
+    async disponibilidade() {
+      const t0 = Date.now(); const j = await http(`${API}?action=query&meta=siteinfo&format=json`, { tipo: 'json', tent: 1, ms: 15000 });
+      if (!j?.query?.general) throw new Error('resposta inesperada');
+      return { ms: Date.now() - t0, detalhe: 'API respondeu' };
+    },
+    async buscar(item) {
+      const q = encodeURIComponent(`${item.tit} ${first(item.aut)}`.trim());
+      const j = await http(`${API}?action=query&list=search&srnamespace=0&srlimit=8&format=json&srsearch=${q}`, { tipo: 'json', tent: 2 });
+      return (j?.query?.search || []).filter((r) => !r.title.includes('/')) // só a página-raiz do livro; o exportador inclui as subpáginas
+        .map((r) => ({ id: r.title, titulo: r.title, autor: `${r.title} ${decode(String(r.snippet || '').replace(/<[^>]+>/g, ''))}` })).filter((c) => casa(c, item.tit, item.aut));
+    },
+    async direitos(cand, item) {
+      return { ok: true, licenca: 'Wikisource em português: conteúdo livre (domínio público ou licença livre CC BY-SA). Atribuição: pt.wikisource.org e colaboradores. Edição/tradução específica não verificada individualmente.', titulo: cand.titulo, autor: first(item.aut), fonte: `https://pt.wikisource.org/wiki/${encodeURIComponent(cand.id.replace(/ /g, '_'))}`, credito: 'Wikisource (pt)', traducao_verificada: false };
+    },
+    async baixar(cand) {
+      const url = `${EXP}?format=epub&lang=pt&page=${encodeURIComponent(cand.id)}`;
+      const buf = await http(url, { tipo: 'buf', tent: 2, ms: 120000 });
+      if (buf.length < 30000) throw new Error('exportação vazia ou muito pequena para ser um livro');
+      return { buf, url };
+    },
+  };
+}
+
+export const FONTES = { gutenberg, 'internet-archive': internetArchive, wikisource, adamastor };
