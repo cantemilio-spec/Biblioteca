@@ -1,10 +1,10 @@
 # Relatório: Acervo
 
-Última execução: 2026-11-23T21:07:16.390Z — parou por: fim da lista
+Última execução: 2026-11-23T21:13:47.923Z — parou por: lote de 40 itens
 
-Concluídos **49** | pendentes 95 | com erro 16 | bloqueados (sem direitos/não encontrados) 0
+Concluídos **51** | pendentes 66 | com erro 43 | bloqueados (sem direitos/não encontrados) 0
 
-Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wikisource (pt): disponível · Projecto Adamastor: disponível
+Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wikisource (pt): disponível · Projecto Adamastor: indisponível
 
 | Categoria | Título | Autor | Idioma | Fonte | Link | Direitos | Tradução verificada |
 |---|---|---|---|---|---|---|---|
@@ -17,6 +17,7 @@ Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wik
 | Brasileiros | Helena | Machado de Assis | pt | internet-archive | [fonte](https://archive.org/details/helena_202503) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
 | Brasileiros | Historias Sem Data | Assis, Machado de, 1839-1908 | pt | internet-archive | [fonte](https://archive.org/details/historiassemdata33056gut) | Declaração do item: "Public domain in the USA." | NÃO — revisar |
 | Brasileiros | Iaiá Garcia | Machado de Assis | pt | internet-archive | [fonte](https://archive.org/details/iaia-garcia) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
+| Brasileiros | Iracema (Versão em pt-PT) | José de Alencar | pt | internet-archive | [fonte](https://archive.org/details/iracema-pt-pt-jose-de-alencar-lusolivros) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
 | Brasileiros | Lira Dos Vinte Anos | Alvares de Azevedo | pt | internet-archive | [fonte](https://archive.org/details/lira-dos-vinte-anos) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
 | Brasileiros | Livro: Esaú e Jacó | Machado de Assis | pt | internet-archive | [fonte](https://archive.org/details/livro-esau-e-jaco) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
 | Brasileiros | Livro: Memórias de um sargento de milícias | Manuel Antônio de Almeida | pt | internet-archive | [fonte](https://archive.org/details/livro-memorias-de-um-sargento-de-milicias) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
@@ -29,6 +30,7 @@ Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wik
 | Brasileiros | poesias | bilac | pt | adamastor | [fonte](https://projectoadamastor.org/poesias-olavo-bilac/) | Domínio público (autor †1918); edição digital do Projecto Adamastor sob Creative Commons (variante não especificada pelo site) — mantenha o crédito e não altere o arquivo | NÃO — revisar |
 | Brasileiros | Quincas Borba | Machado de Assis | pt | internet-archive | [fonte](https://archive.org/details/quincas-borba) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
 | Brasileiros | Senhora | José de Alencar | pt | internet-archive | [fonte](https://archive.org/details/senhora_202503) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
+| Brasileiros | Ubirajara | José de Alencar | pt | internet-archive | [fonte](https://archive.org/details/Ubirajara) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
 | Brasileiros | Várias Histórias | Machado de Assis | pt | internet-archive | [fonte](https://archive.org/details/varias-historias) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
 | Filosofia | Cem 100 Aforismos Sobre O Amor E A Morte Nietzsche | nietzsche | pt | internet-archive | [fonte](https://archive.org/details/cem-100-aforismos-sobre-o-amor-e-a-morte-nietzsche) | Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/ | NÃO — revisar |
 | Filosofia | Contos Populares do Brazil | romero | pt | wikisource | [fonte](https://pt.wikisource.org/wiki/Contos_Populares_do_Brazil) | Wikisource em português: conteúdo livre (domínio público ou licença livre CC BY-SA). Atribuição: pt.wikisource.org e colaboradores. Edição/tradução específica não verificada individualmente. | NÃO — revisar |
@@ -60,14 +62,13 @@ Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wik
 
 ## Não incluídos / pendentes
 
-- **memorial aires (machado)** (Brasileiros) — pendente: fonte indisponível: internet-archive:memorialAires: EPUB com 67.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado
-- **iracema (alencar)** (Brasileiros) — erro: internet-archive:iracema-jose-de-alencar-hqs: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:iracema-jose-de-alencar-original-lusolivros: EPUB inválido — EPUB incompleto: 1 capítulo(s) ausente(s) no arquivo | internet-archive:iracema-pt-pt-jose-de-alencar-lusolivros: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado
-- **guarani (alencar)** (Brasileiros) — erro: internet-archive:bub_gb_RZFcAAAAQBAJ: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado
-- **quixote (cervantes)** (Internacionais) — pendente: fonte indisponível: internet-archive:oengenhosofidal01saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:oengenhosofidal00saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado
-- **miseraveis (hugo)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **conde monte cristo (dumas)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **tres mosqueteiros (dumas)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **obra de (dumas)** (Internacionais) — pendente: fonte indisponível: internet-archive:memoriasdummedic00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ohomemmulher00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado
+- **memorial aires (machado)** (Brasileiros) — pendente: fonte indisponível: internet-archive:memorialAires: EPUB com 67.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource: não encontrado
+- **guarani (alencar)** (Brasileiros) — erro: internet-archive:bub_gb_RZFcAAAAQBAJ: EPUB inválido — EPUB incompleto: 1 capítulo(s) ausente(s) no arquivo | wikisource:O Guarani: download falhou (HTTP 403) | wikisource:José de Alencar: O Guarani: download falhou (HTTP 403)
+- **quixote (cervantes)** (Internacionais) — erro: internet-archive:oengenhosofidal01saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:oengenhosofidal00saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | wikisource:Dom Quixote: download falhou (HTTP 403)
+- **miseraveis (hugo)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource:Os Miseraveis (trad. Justiniano José da Rocha): já existe na biblioteca (Os Miseraveis (trad. Justiniano José da Rocha))
+- **conde monte cristo (dumas)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado
+- **tres mosqueteiros (dumas)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado
+- **obra de (dumas)** (Internacionais) — erro: internet-archive:memoriasdummedic00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ohomemmulher00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:Memorias de José Garibaldi: já existe na biblioteca (Memorias de José Garibaldi) | wikisource:Maria Dupplessis: download falhou (HTTP 403)
 - **volta mundo (verne)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
 - **obra de (verne)** (Internacionais) — pendente: fonte indisponível: internet-archive:daterraluaviagem28341gut: já importado | adamastor: não encontrado
 - **guerra paz (tolstoy/tolstoi)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
@@ -84,38 +85,37 @@ Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wik
 - **candido (voltaire)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
 - **obra de (daudet)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
 - **obra de (stendhal)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **ateneu (pompeia)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **sertoes (cunha)** (Brasileiros) — pendente: fonte indisponível: internet-archive:ossertoeseuclide0000dacu: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:baixar-brasiliana-usp_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ossertoeseuclide0000dacu_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado
-- **inocencia (taunay)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **moreninha (macedo)** (Brasileiros) — pendente: fonte indisponível: internet-archive:a-moreninha: EPUB com 67.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado
-- **mao luva (machado)** (Brasileiros) — pendente: fonte indisponível: internet-archive:maoLuva: EPUB com 47.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado
-- **papeis avulsos (machado)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **reliquias casa velha (machado)** (Brasileiros) — pendente: fonte indisponível: internet-archive:reliquiasCasaVelha: EPUB com 39.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado
-- **ressurreicao (machado)** (Brasileiros) — pendente: fonte indisponível: internet-archive:ressurreicaoMachado: EPUB com 50.2 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado
-- **ubirajara (alencar)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **diva (alencar)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **sertanejo (alencar)** (Brasileiros) — erro: internet-archive:bub_br_1918_00181510: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado
-- **pata gazela (alencar)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **livro sogra (azevedo)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **recordacoes escrivao isaias caminha (barreto)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **numa ninfa (barreto)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **bruzundangas (barreto)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **seminarista (guimaraes)** (Brasileiros) — pendente: fonte indisponível: internet-archive:oseminarista00guim: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado
-- **moco loiro (macedo)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **espumas flutuantes (alves)** (Brasileiros) — pendente: fonte indisponível: internet-archive:alves-espumas-flutuantes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado
-- **primeiros cantos (dias)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **broqueis (sousa)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **canaa (aranha)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **urupes (lobato)** (Brasileiros) — pendente: fonte indisponível: internet-archive:3394502: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado
-- **pelo sertao (arinos)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **minha formacao (nabuco)** (Brasileiros) — pendente: fonte indisponível: internet-archive:minhaformao00nabuuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado
-- **abolicionismo (nabuco)** (Brasileiros) — pendente: fonte indisponível: internet-archive:o-abolicionismo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado
-- **bom crioulo (caminha)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **dona guidinha poco (paiva)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **missionario (sousa)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **poesias completas (machado)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **eu outras poesias (anjos)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **tronco ipe (alencar)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
+- **ateneu (pompeia)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:O Ateneu: download falhou (HTTP 403)
+- **sertoes (cunha)** (Brasileiros) — pendente: fonte indisponível: internet-archive:ossertoeseuclide0000dacu: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:baixar-brasiliana-usp_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ossertoeseuclide0000dacu_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado
+- **inocencia (taunay)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Inocência (Visconde de Taunay): download falhou (HTTP 403) | wikisource:Inocência: download falhou (HTTP 403)
+- **moreninha (macedo)** (Brasileiros) — erro: internet-archive:a-moreninha: EPUB com 67.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource:A Moreninha: download falhou (HTTP 403) | wikisource:A Moreninha (1860): download falhou (HTTP 403)
+- **mao luva (machado)** (Brasileiros) — erro: internet-archive:maoLuva: EPUB com 47.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource:A mão e a luva: download falhou (HTTP 403)
+- **papeis avulsos (machado)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Papéis avulsos: download falhou (HTTP 403)
+- **reliquias casa velha (machado)** (Brasileiros) — erro: internet-archive:reliquiasCasaVelha: EPUB com 39.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource:Relíquias de Casa Velha: download falhou (HTTP 403)
+- **ressurreicao (machado)** (Brasileiros) — erro: internet-archive:ressurreicaoMachado: EPUB com 50.2 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource:Ressurreição (Machado de Assis): download falhou (HTTP 403)
+- **diva (alencar)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Diva: download falhou (HTTP 403)
+- **sertanejo (alencar)** (Brasileiros) — erro: internet-archive:bub_br_1918_00181510: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | wikisource:O Sertanejo: download falhou (HTTP 403)
+- **pata gazela (alencar)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:A Pata da Gazela: download falhou (HTTP 403)
+- **livro sogra (azevedo)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Livro de uma Sogra: download falhou (HTTP 403)
+- **recordacoes escrivao isaias caminha (barreto)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Recordações do Escrivão Isaías Caminha: download falhou (HTTP 403)
+- **numa ninfa (barreto)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Numa e a Ninfa: download falhou (HTTP 403)
+- **bruzundangas (barreto)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Os Bruzundangas: download falhou (HTTP 403)
+- **seminarista (guimaraes)** (Brasileiros) — erro: internet-archive:oseminarista00guim: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:O Seminarista: download falhou (HTTP 403)
+- **moco loiro (macedo)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:O moço loiro: download falhou (HTTP 403)
+- **espumas flutuantes (alves)** (Brasileiros) — erro: internet-archive:alves-espumas-flutuantes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:Espumas Flutuantes (1913): download falhou (HTTP 403)
+- **primeiros cantos (dias)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Primeiros Cantos: download falhou (HTTP 403)
+- **broqueis (sousa)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Broquéis: download falhou (HTTP 403)
+- **canaa (aranha)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado
+- **urupes (lobato)** (Brasileiros) — erro: internet-archive:3394502: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | wikisource:Urupês (5ª edição): já importado | wikisource:Urupês (3ª edição): download falhou (HTTP 403)
+- **pelo sertao (arinos)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Pelo sertão: download falhou (HTTP 403)
+- **minha formacao (nabuco)** (Brasileiros) — erro: internet-archive:minhaformao00nabuuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | wikisource:Minha formação: download falhou (HTTP 403)
+- **abolicionismo (nabuco)** (Brasileiros) — erro: internet-archive:o-abolicionismo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:O Abolicionismo: download falhou (HTTP 403)
+- **bom crioulo (caminha)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Bom Crioulo: download falhou (HTTP 403)
+- **dona guidinha poco (paiva)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:Dona Guidinha do Poço: download falhou (HTTP 403)
+- **missionario (sousa)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:O missionário: download falhou (HTTP 403)
+- **poesias completas (machado)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource:Poesias Completas (Machado de Assis): já existe na biblioteca (Poesias Completas (Machado de Assis))
+- **eu outras poesias (anjos)** (Brasileiros) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado
+- **tronco ipe (alencar)** (Brasileiros) — erro: internet-archive: não encontrado | wikisource:O Tronco do Ipê: download falhou (HTTP 403)
 - **obra de (molière)** (Internacionais) — pendente: fonte indisponível: internet-archive:omedicoforac00moli: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:teatro-o-tartufo-moliere: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) | internet-archive:moliere-don-juan: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) | adamastor: não encontrado
 - **robinson crusoe (defoe)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
 - **gulliver (swift)** (Internacionais) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado

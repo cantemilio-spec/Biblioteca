@@ -23,12 +23,12 @@
     },
     "br|memorial aires|machado|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:memorialAires: EPUB com 67.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:44:34.711Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive:memorialAires: EPUB com 67.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource: não encontrado",
+      "proxima_tentativa": "2026-11-24T21:11:28.779Z",
       "pedido": "memorial aires (machado)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:44:34.711Z"
+      "atualizado_em": "2026-11-23T21:11:28.779Z"
     },
     "br|helena|machado|1": {
       "status": "concluido",
@@ -41,22 +41,23 @@
       "atualizado_em": "2026-11-23T10:11:54.310Z"
     },
     "br|iracema|alencar|1": {
-      "status": "erro",
-      "tentativas": 2,
-      "motivo": "internet-archive:iracema-jose-de-alencar-hqs: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:iracema-jose-de-alencar-original-lusolivros: EPUB inválido — EPUB incompleto: 1 capítulo(s) ausente(s) no arquivo | internet-archive:iracema-pt-pt-jose-de-alencar-lusolivros: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:07.214Z",
+      "status": "concluido",
+      "tentativas": 3,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "iracema (alencar)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:07.214Z"
+      "atualizado_em": "2026-11-23T21:12:03.489Z",
+      "fonte": "internet-archive"
     },
     "br|guarani|alencar|1": {
       "status": "erro",
-      "tentativas": 2,
-      "motivo": "internet-archive:bub_gb_RZFcAAAAQBAJ: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:31.863Z",
+      "tentativas": 3,
+      "motivo": "internet-archive:bub_gb_RZFcAAAAQBAJ: EPUB inválido — EPUB incompleto: 1 capítulo(s) ausente(s) no arquivo | wikisource:O Guarani: download falhou (HTTP 403) | wikisource:José de Alencar: O Guarani: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:07.632Z",
       "pedido": "guarani (alencar)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:31.863Z"
+      "atualizado_em": "2026-11-23T21:12:07.632Z"
     },
     "br|senhora|alencar|1": {
       "status": "concluido",
@@ -69,49 +70,49 @@
       "atualizado_em": "2026-11-23T10:12:57.070Z"
     },
     "in|quixote|cervantes|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:oengenhosofidal01saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:oengenhosofidal00saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:47.868Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:oengenhosofidal01saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:oengenhosofidal00saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | wikisource:Dom Quixote: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:46.455Z",
       "pedido": "quixote (cervantes)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:46:47.868Z"
+      "atualizado_em": "2026-11-23T21:13:46.455Z"
     },
     "in|miseraveis|hugo|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:50.438Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:Os Miseraveis (trad. Justiniano José da Rocha): já existe na biblioteca (Os Miseraveis (trad. Justiniano José da Rocha))",
+      "proxima_tentativa": "2026-11-24T21:13:46.837Z",
       "pedido": "miseraveis (hugo)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:46:50.438Z"
+      "atualizado_em": "2026-11-23T21:13:46.837Z"
     },
     "in|conde monte cristo|dumas|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:52.005Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
+      "proxima_tentativa": "2026-11-24T21:13:47.097Z",
       "pedido": "conde monte cristo (dumas)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:46:52.005Z"
+      "atualizado_em": "2026-11-23T21:13:47.097Z"
     },
     "in|tres mosqueteiros|dumas|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:53.638Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
+      "proxima_tentativa": "2026-11-24T21:13:47.314Z",
       "pedido": "tres mosqueteiros (dumas)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:46:53.638Z"
+      "atualizado_em": "2026-11-23T21:13:47.314Z"
     },
     "in||dumas|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:memoriasdummedic00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ohomemmulher00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:01.270Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:memoriasdummedic00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ohomemmulher00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:Memorias de José Garibaldi: já existe na biblioteca (Memorias de José Garibaldi) | wikisource:Maria Dupplessis: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:47.920Z",
       "pedido": "obra de (dumas)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:01.270Z"
+      "atualizado_em": "2026-11-23T21:13:47.920Z"
     },
     "in||verne|1": {
       "status": "concluido",
@@ -308,22 +309,22 @@
       "atualizado_em": "2026-11-23T10:16:33.296Z"
     },
     "br|ateneu|pompeia|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:32.451Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:O Ateneu: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:08.169Z",
       "pedido": "ateneu (pompeia)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:32.451Z"
+      "atualizado_em": "2026-11-23T21:12:08.169Z"
     },
     "br|sertoes|cunha|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:ossertoeseuclide0000dacu: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:baixar-brasiliana-usp_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ossertoeseuclide0000dacu_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:33.825Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive:ossertoeseuclide0000dacu: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:baixar-brasiliana-usp_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ossertoeseuclide0000dacu_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado",
+      "proxima_tentativa": "2026-11-24T21:12:09.516Z",
       "pedido": "sertoes (cunha)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:33.825Z"
+      "atualizado_em": "2026-11-23T21:12:09.516Z"
     },
     "br|memorias sargento milicias|almeida|1": {
       "status": "concluido",
@@ -346,31 +347,31 @@
       "atualizado_em": "2026-11-23T10:17:02.347Z"
     },
     "br|inocencia|taunay|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:34.095Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Inocência (Visconde de Taunay): download falhou (HTTP 403) | wikisource:Inocência: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:09.895Z",
       "pedido": "inocencia (taunay)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:34.095Z"
+      "atualizado_em": "2026-11-23T21:12:09.895Z"
     },
     "br|moreninha|macedo|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:a-moreninha: EPUB com 67.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:35.274Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:a-moreninha: EPUB com 67.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource:A Moreninha: download falhou (HTTP 403) | wikisource:A Moreninha (1860): download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:11.921Z",
       "pedido": "moreninha (macedo)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:35.274Z"
+      "atualizado_em": "2026-11-23T21:12:11.921Z"
     },
     "br|mao luva|machado|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:maoLuva: EPUB com 47.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:35.737Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:maoLuva: EPUB com 47.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource:A mão e a luva: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:20.734Z",
       "pedido": "mao luva (machado)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:35.737Z"
+      "atualizado_em": "2026-11-23T21:12:20.734Z"
     },
     "br|iaia garcia|machado|1": {
       "status": "concluido",
@@ -383,13 +384,13 @@
       "atualizado_em": "2026-11-23T10:17:17.449Z"
     },
     "br|papeis avulsos|machado|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:35.973Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Papéis avulsos: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:21.204Z",
       "pedido": "papeis avulsos (machado)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:35.973Z"
+      "atualizado_em": "2026-11-23T21:12:21.204Z"
     },
     "br|historias sem data|machado|1": {
       "status": "concluido",
@@ -412,22 +413,22 @@
       "atualizado_em": "2026-11-23T10:17:23.032Z"
     },
     "br|reliquias casa velha|machado|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:reliquiasCasaVelha: EPUB com 39.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:36.321Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:reliquiasCasaVelha: EPUB com 39.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource:Relíquias de Casa Velha: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:27.908Z",
       "pedido": "reliquias casa velha (machado)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:36.321Z"
+      "atualizado_em": "2026-11-23T21:12:27.908Z"
     },
     "br|ressurreicao|machado|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:ressurreicaoMachado: EPUB com 50.2 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:36.727Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:ressurreicaoMachado: EPUB com 50.2 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource:Ressurreição (Machado de Assis): download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:28.577Z",
       "pedido": "ressurreicao (machado)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:36.727Z"
+      "atualizado_em": "2026-11-23T21:12:28.577Z"
     },
     "br|contos fluminenses|machado|1": {
       "status": "concluido",
@@ -440,13 +441,14 @@
       "atualizado_em": "2026-11-23T10:17:37.010Z"
     },
     "br|ubirajara|alencar|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:37.296Z",
+      "status": "concluido",
+      "tentativas": 3,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "ubirajara (alencar)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:37.296Z"
+      "atualizado_em": "2026-11-23T21:12:30.650Z",
+      "fonte": "internet-archive"
     },
     "br|viuvinha|alencar|1": {
       "status": "concluido",
@@ -459,22 +461,22 @@
       "atualizado_em": "2026-11-23T10:17:41.316Z"
     },
     "br|diva|alencar|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:45:37.557Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Diva: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:12:30.974Z",
       "pedido": "diva (alencar)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:45:37.557Z"
+      "atualizado_em": "2026-11-23T21:12:30.974Z"
     },
     "br|sertanejo|alencar|1": {
       "status": "erro",
-      "tentativas": 2,
-      "motivo": "internet-archive:bub_br_1918_00181510: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:01.742Z",
+      "tentativas": 3,
+      "motivo": "internet-archive:bub_br_1918_00181510: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | wikisource:O Sertanejo: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:00.286Z",
       "pedido": "sertanejo (alencar)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:01.742Z"
+      "atualizado_em": "2026-11-23T21:13:00.286Z"
     },
     "br|gaucho|alencar|1": {
       "status": "concluido",
@@ -487,31 +489,31 @@
       "fonte": "internet-archive"
     },
     "br|pata gazela|alencar|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:10.327Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:A Pata da Gazela: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:00.926Z",
       "pedido": "pata gazela (alencar)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:10.327Z"
+      "atualizado_em": "2026-11-23T21:13:00.926Z"
     },
     "br|livro sogra|azevedo|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:10.586Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Livro de uma Sogra: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:01.264Z",
       "pedido": "livro sogra (azevedo)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:10.586Z"
+      "atualizado_em": "2026-11-23T21:13:01.264Z"
     },
     "br|recordacoes escrivao isaias caminha|barreto|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:10.887Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Recordações do Escrivão Isaías Caminha: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:01.615Z",
       "pedido": "recordacoes escrivao isaias caminha (barreto)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:10.887Z"
+      "atualizado_em": "2026-11-23T21:13:01.615Z"
     },
     "br|clara anjos|barreto|1": {
       "status": "concluido",
@@ -524,40 +526,40 @@
       "atualizado_em": "2026-11-23T10:18:52.383Z"
     },
     "br|numa ninfa|barreto|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:11.138Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Numa e a Ninfa: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:01.917Z",
       "pedido": "numa ninfa (barreto)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:11.138Z"
+      "atualizado_em": "2026-11-23T21:13:01.917Z"
     },
     "br|bruzundangas|barreto|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:11.398Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Os Bruzundangas: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:02.232Z",
       "pedido": "bruzundangas (barreto)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:11.398Z"
+      "atualizado_em": "2026-11-23T21:13:02.232Z"
     },
     "br|seminarista|guimaraes|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:oseminarista00guim: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:11.935Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:oseminarista00guim: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:O Seminarista: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:07.674Z",
       "pedido": "seminarista (guimaraes)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:11.935Z"
+      "atualizado_em": "2026-11-23T21:13:07.674Z"
     },
     "br|moco loiro|macedo|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:12.202Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:O moço loiro: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:08.262Z",
       "pedido": "moco loiro (macedo)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:12.202Z"
+      "atualizado_em": "2026-11-23T21:13:08.262Z"
     },
     "br|lira vinte anos|azevedo|1": {
       "status": "concluido",
@@ -580,22 +582,22 @@
       "atualizado_em": "2026-11-23T10:19:04.492Z"
     },
     "br|espumas flutuantes|alves|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:alves-espumas-flutuantes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:12.930Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:alves-espumas-flutuantes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:Espumas Flutuantes (1913): download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:14.989Z",
       "pedido": "espumas flutuantes (alves)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:12.930Z"
+      "atualizado_em": "2026-11-23T21:13:14.989Z"
     },
     "br|primeiros cantos|dias|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:13.253Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Primeiros Cantos: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:15.760Z",
       "pedido": "primeiros cantos (dias)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:13.253Z"
+      "atualizado_em": "2026-11-23T21:13:15.760Z"
     },
     "br|poesias|bilac|1": {
       "status": "concluido",
@@ -608,58 +610,58 @@
       "atualizado_em": "2026-11-23T10:19:14.348Z"
     },
     "br|broqueis|sousa|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:13.518Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Broquéis: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:16.990Z",
       "pedido": "broqueis (sousa)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:13.518Z"
+      "atualizado_em": "2026-11-23T21:13:16.990Z"
     },
     "br|canaa|aranha|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:13.761Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
+      "proxima_tentativa": "2026-11-24T21:13:17.366Z",
       "pedido": "canaa (aranha)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:13.761Z"
+      "atualizado_em": "2026-11-23T21:13:17.366Z"
     },
     "br|urupes|lobato|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:3394502: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:20.914Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:3394502: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | wikisource:Urupês (5ª edição): já importado | wikisource:Urupês (3ª edição): download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:20.018Z",
       "pedido": "urupes (lobato)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:20.914Z"
+      "atualizado_em": "2026-11-23T21:13:20.018Z"
     },
     "br|pelo sertao|arinos|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:21.379Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Pelo sertão: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:21.038Z",
       "pedido": "pelo sertao (arinos)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:21.379Z"
+      "atualizado_em": "2026-11-23T21:13:21.038Z"
     },
     "br|minha formacao|nabuco|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:minhaformao00nabuuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:21.759Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:minhaformao00nabuuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | wikisource:Minha formação: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:25.220Z",
       "pedido": "minha formacao (nabuco)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:21.759Z"
+      "atualizado_em": "2026-11-23T21:13:25.220Z"
     },
     "br|abolicionismo|nabuco|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:o-abolicionismo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:22.127Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:o-abolicionismo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:O Abolicionismo: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:27.687Z",
       "pedido": "abolicionismo (nabuco)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:22.127Z"
+      "atualizado_em": "2026-11-23T21:13:27.687Z"
     },
     "br|oracao mocos|barbosa|1": {
       "status": "concluido",
@@ -672,31 +674,31 @@
       "atualizado_em": "2026-11-23T10:19:30.885Z"
     },
     "br|bom crioulo|caminha|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:22.442Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Bom Crioulo: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:28.425Z",
       "pedido": "bom crioulo (caminha)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:22.442Z"
+      "atualizado_em": "2026-11-23T21:13:28.425Z"
     },
     "br|dona guidinha poco|paiva|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:22.701Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Dona Guidinha do Poço: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:29.282Z",
       "pedido": "dona guidinha poco (paiva)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:22.701Z"
+      "atualizado_em": "2026-11-23T21:13:29.282Z"
     },
     "br|missionario|sousa|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:22.960Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:O missionário: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:30.139Z",
       "pedido": "missionario (sousa)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:22.960Z"
+      "atualizado_em": "2026-11-23T21:13:30.139Z"
     },
     "br|cabeleira|tavora|1": {
       "status": "concluido",
@@ -710,30 +712,30 @@
     },
     "br|poesias completas|machado|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:23.213Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:Poesias Completas (Machado de Assis): já existe na biblioteca (Poesias Completas (Machado de Assis))",
+      "proxima_tentativa": "2026-11-24T21:13:31.200Z",
       "pedido": "poesias completas (machado)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:23.213Z"
+      "atualizado_em": "2026-11-23T21:13:31.200Z"
     },
     "br|eu outras poesias|anjos|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:23.660Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
+      "proxima_tentativa": "2026-11-24T21:13:31.869Z",
       "pedido": "eu outras poesias (anjos)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:23.660Z"
+      "atualizado_em": "2026-11-23T21:13:31.869Z"
     },
     "br|tronco ipe|alencar|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:46:23.958Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:O Tronco do Ipê: download falhou (HTTP 403)",
+      "proxima_tentativa": "2026-11-24T21:13:32.361Z",
       "pedido": "tronco ipe (alencar)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T10:46:23.958Z"
+      "atualizado_em": "2026-11-23T21:13:32.361Z"
     },
     "br|cinco minutos|alencar|1": {
       "status": "concluido",
@@ -1647,45 +1649,62 @@
     "internet-archive:oprocessodostv00tv": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
     "internet-archive:evoluodoseba00azevuoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
     "internet-archive:PASQUALEULISSES.GramaticaDaLinguaPortuguesa": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
-    "wikisource:António Vieira (Mensagem)": "já existe na biblioteca (António Vieira (Mensagem))"
+    "wikisource:António Vieira (Mensagem)": "já existe na biblioteca (António Vieira (Mensagem))",
+    "wikisource:Poesias Completas (Machado de Assis)": "já existe na biblioteca (Poesias Completas (Machado de Assis))",
+    "wikisource:Os Miseraveis (trad. Justiniano José da Rocha)": "já existe na biblioteca (Os Miseraveis (trad. Justiniano José da Rocha))",
+    "wikisource:Memorias de José Garibaldi": "já existe na biblioteca (Memorias de José Garibaldi)"
   },
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-23T21:05:05.934Z",
+      "verificado_em": "2026-11-23T21:11:16.342Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-23T21:05:06.230Z",
+      "verificado_em": "2026-11-23T21:11:16.592Z",
       "disponivel": true,
-      "ms": 593,
+      "ms": 270,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-23T21:05:06.230Z"
+      "ultimo_ok": "2026-11-23T21:11:16.592Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-23T21:05:07.181Z",
-      "disponivel": true,
+      "verificado_em": "2026-11-23T21:11:16.918Z",
+      "disponivel": false,
       "ms": 474,
-      "detalhe": "site respondeu",
-      "erro": null,
+      "detalhe": "indisponível nesta execução; será testada de novo na próxima",
+      "erro": "TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)",
       "ultimo_ok": "2026-11-23T21:05:07.181Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-23T21:05:06.823Z",
+      "verificado_em": "2026-11-23T21:11:16.862Z",
       "disponivel": true,
-      "ms": 357,
+      "ms": 56,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-23T21:05:06.823Z"
+      "ultimo_ok": "2026-11-23T21:11:16.862Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-23T21:11:16.339Z",
+      "fim": "2026-11-23T21:13:47.923Z",
+      "novos": 2,
+      "tentados": 40,
+      "parou_por": "lote de 40 itens",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": false
+      },
+      "total": 51
+    },
     {
       "inicio": "2026-11-23T21:05:05.931Z",
       "fim": "2026-11-23T21:07:16.390Z",
@@ -1766,34 +1785,34 @@
       "total": 6
     }
   ],
-  "atualizado_em": "2026-11-23T21:07:16.391Z",
+  "atualizado_em": "2026-11-23T21:13:47.924Z",
   "ultima_execucao": {
-    "inicio": "2026-11-23T21:05:05.931Z",
-    "fim": "2026-11-23T21:07:16.390Z",
-    "novos": 7,
-    "tentados": 29,
-    "parou_por": "fim da lista",
+    "inicio": "2026-11-23T21:11:16.339Z",
+    "fim": "2026-11-23T21:13:47.923Z",
+    "novos": 2,
+    "tentados": 40,
+    "parou_por": "lote de 40 itens",
     "fontes": {
       "gutenberg": false,
       "internet-archive": true,
       "wikisource": true,
-      "adamastor": true
+      "adamastor": false
     },
-    "total": 49
+    "total": 51
   },
   "resumo": {
     "meta": 100,
-    "concluidos": 49,
-    "pendentes": 95,
-    "erros": 16,
+    "concluidos": 51,
+    "pendentes": 66,
+    "erros": 43,
     "bloqueados": 0,
     "por_fonte": {
-      "internet-archive": 39,
+      "internet-archive": 41,
       "adamastor": 3,
       "wikisource": 7
     },
     "por_categoria": {
-      "Brasileiros": "22/40",
+      "Brasileiros": "24/40",
       "Internacionais": "14/40",
       "Filosofia": "6/10",
       "Terror e suspense": "7/10"

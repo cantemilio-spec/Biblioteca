@@ -237,6 +237,33 @@
       "importado_em": "2026-11-23T10:17:17.449Z"
     },
     {
+      "id": "acervo-iracema-versao-em-pt-pt-intiracema-pt-pt-jose-de-alencar-lusolivros",
+      "chave": "br|iracema|alencar|1",
+      "catKey": "br",
+      "ids": [
+        "internet-archive:iracema-pt-pt-jose-de-alencar-lusolivros"
+      ],
+      "titulo": "Iracema (Versão em pt-PT)",
+      "autor": "José de Alencar",
+      "categoria": "Brasileiros",
+      "idioma": "pt",
+      "genero": "Brasileiros",
+      "capa": "public/books/acervo/capas/iracema-versao-em-pt-pt-intiracema-pt-pt-jose-de-alencar-lusolivros.jpg",
+      "capa_ok": true,
+      "epub": "public/books/acervo/brasileiros/iracema-versao-em-pt-pt-intiracema-pt-pt-jose-de-alencar-lusolivros.epub",
+      "fonte_id": "internet-archive",
+      "fonte": "https://archive.org/details/iracema-pt-pt-jose-de-alencar-lusolivros",
+      "origem_download": "https://archive.org/download/iracema-pt-pt-jose-de-alencar-lusolivros/Iracema-pt-pt-Jose-de-Alencar.epub",
+      "credito": "Internet Archive: iracema-pt-pt-jose-de-alencar-lusolivros",
+      "licenca": "Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/",
+      "autorizacao_redistribuicao": true,
+      "traducao_verificada": false,
+      "baixado": true,
+      "tamanho": 865745,
+      "sha256": "08e9e0ceedea4cf2ce1c6f8e8dba60f4036b4e83e61060c94a8841b1608849cb",
+      "importado_em": "2026-11-23T21:12:03.489Z"
+    },
+    {
       "id": "acervo-lira-dos-vinte-anos-intlira-dos-vinte-anos",
       "chave": "br|lira vinte anos|azevedo|1",
       "catKey": "br",
@@ -547,6 +574,33 @@
       "tamanho": 622212,
       "sha256": "e3c1e5e0b7ef8666d45b07af982f43982f45d97d6d985bd1e863ec4242f1bdb5",
       "importado_em": "2026-11-23T10:12:57.070Z"
+    },
+    {
+      "id": "acervo-ubirajara-intubirajara",
+      "chave": "br|ubirajara|alencar|1",
+      "catKey": "br",
+      "ids": [
+        "internet-archive:Ubirajara"
+      ],
+      "titulo": "Ubirajara",
+      "autor": "José de Alencar",
+      "categoria": "Brasileiros",
+      "idioma": "pt",
+      "genero": "Brasileiros",
+      "capa": null,
+      "capa_ok": false,
+      "epub": "public/books/acervo/brasileiros/ubirajara-intubirajara.epub",
+      "fonte_id": "internet-archive",
+      "fonte": "https://archive.org/details/Ubirajara",
+      "origem_download": "https://archive.org/download/Ubirajara/Ubirajara.epub",
+      "credito": "Internet Archive: Ubirajara",
+      "licenca": "Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/",
+      "autorizacao_redistribuicao": true,
+      "traducao_verificada": false,
+      "baixado": true,
+      "tamanho": 93402,
+      "sha256": "b2052a8db11f8aaeb46535e9a9cbfcd3edc03647353e219b51b6056986b45212",
+      "importado_em": "2026-11-23T21:12:30.650Z"
     },
     {
       "id": "acervo-varias-historias-intvarias-historias",
