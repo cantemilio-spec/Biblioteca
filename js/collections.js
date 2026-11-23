@@ -1,5 +1,6 @@
 // Coleções: grupos criados pelo usuário. Um livro pode estar em várias (book.collections = [ids]).
 import { h, icon, toast, modal, confirmDialog, bimg } from './ui.js';
+import { libTabs, isCatalogBook } from './lib-tabs.js';
 import * as db from './db.js';
 import { setSetting } from './settings.js';
 
@@ -65,7 +66,7 @@ export async function openCollectionPicker(books, onDone) {
 
 /** Tela de gerenciamento de coleções. */
 export async function mountCollections(root) {
-  const [cols, books] = await Promise.all([listCollections(), db.getAll('books')]).then(([c, b]) => [c, b.filter((x) => x.source !== 'adamastor')]);
+  const [cols, books] = await Promise.all([listCollections(), db.getAll('books')]).then(([c, b]) => [c, b.filter((x) => !isCatalogBook(x))]);
   const count = (id) => books.filter((b) => b.collections?.includes(id)).length;
   const reload = () => mountCollections(root);
   const nameIn = h('input', { type: 'text', maxlength: MAX_NAME, placeholder: 'Nova coleção', 'aria-label': 'Nome da nova coleção' });
@@ -88,6 +89,7 @@ export async function mountCollections(root) {
 
   root.replaceChildren(
     h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Coleções'), h('p', { class: 'hint' }, 'Agrupe livros do seu jeito. Para incluir livros, use "Selecionar" na Biblioteca ou os detalhes do livro.'))),
+    libTabs('colecoes'),
     h('section', { class: 'panel' }, h('div', { class: 'coll-new' }, nameIn, h('button', { class: 'btn primary', type: 'button', onclick: create }, icon('plus', 18), 'Criar coleção'))),
     cols.length ? h('ul', { class: 'coll-list' }, cols.map((c) => h('li', { class: 'coll-item' },
       h('button', { class: 'coll-open', type: 'button', onclick: () => openIn(c) }, icon('folder', 22), h('span', { class: 'coll-name' }, c.name), h('span', { class: 'hint' }, `${count(c.id)} livro(s)`)),

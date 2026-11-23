@@ -98,7 +98,7 @@ async function start(root, bookId) {
     h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Voltar à biblioteca', onclick: () => { location.hash = backHash; } }, icon('back')),
     h('div', { class: 'r-title' }, book.title), bmBtn, setBtn, moreBtn);
   const bottom = h('footer', { class: 'r-bottom' }, chapterLabel, pctLabel, slider);
-  const backHash = book.source === 'adamastor' ? '#classicos' : '#biblioteca';
+  const backHash = book.source === 'estante' ? '#estante' : book.source === 'adamastor' ? `#classicos${book.classicCat ? `-${book.classicCat}` : ''}` : '#biblioteca';
   const reader = h('div', { class: 'reader' }, h('div', { class: 'r-stage' }, iframe), status, top, bottom, tocPanel, setPanel, annPanel, selBar);
   // áreas seguras (notch, barra de gestos, cantos arredondados): lidas por um elemento-sonda e somadas ao layout do texto
   const probe = h('div', { class: 'r-probe', 'aria-hidden': 'true', style: 'position:absolute;visibility:hidden;pointer-events:none;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)' });

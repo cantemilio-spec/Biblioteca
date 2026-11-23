@@ -5,14 +5,15 @@ import { mountSettings } from './settings-view.js';
 import { mountReader } from './reader.js';
 import { mountStats } from './stats-view.js';
 import { mountCollections } from './collections.js';
-import { mountClassics } from './classics.js';
+import { mountClassics, mountEstante } from './classics.js';
 
 const ROUTES = {
   inicio: { label: 'Início', icon: 'home', mount: (el) => mountLibrary(el, { home: true }) },
-  biblioteca: { label: 'Biblioteca', icon: 'book', mount: (el) => mountLibrary(el) },
+  biblioteca: { label: 'Biblioteca', icon: 'book', href: '#classicos', mount: (el) => mountLibrary(el) }, // o menu abre em "Disponíveis"; esta tela é "Meus livros"
   favoritos: { mount: (el) => mountLibrary(el, { onlyFavorites: true }), navKey: 'biblioteca' }, // atalho; na barra fica em "Biblioteca"
-  classicos: { label: 'Clássicos', icon: 'bookmark', mount: (el) => mountClassics(el) },
-  colecoes: { label: 'Coleções', icon: 'folder', mount: (el) => mountCollections(el) },
+  estante: { mount: (el) => mountEstante(el), navKey: 'biblioteca' },
+  classicos: { mount: (el, arg) => mountClassics(el, arg), navKey: 'biblioteca' }, // abas dentro da Biblioteca (#classicos-br/pt/in)
+  colecoes: { mount: (el) => mountCollections(el), navKey: 'biblioteca' },
   estatisticas: { label: 'Estatísticas', icon: 'chart', mount: (el) => mountStats(el) },
   configuracoes: { label: 'Ajustes', icon: 'sliders', mount: (el) => mountSettings(el) },
   ler: { fullscreen: true, mount: (el, id) => mountReader(el, id) },
@@ -47,7 +48,7 @@ async function boot() {
   document.getElementById('app').append(
     h('nav', { class: 'nav', 'aria-label': 'Principal' },
       h('div', { class: 'brand' }, h('img', { src: 'icons/boto.png', alt: '', width: 32, height: 32 }), h('span', {}, 'Boto Azul')),
-      Object.entries(ROUTES).filter(([, r]) => r.label).map(([k, r]) => h('a', { href: `#${k}`, 'data-route': k }, h('span', { class: 'ind' }, icon(r.icon, 24)), h('span', { class: 'lbl' }, r.label)))),
+      Object.entries(ROUTES).filter(([, r]) => r.label).map(([k, r]) => h('a', { href: r.href || `#${k}`, 'data-route': k }, h('span', { class: 'ind' }, icon(r.icon, 24)), h('span', { class: 'lbl' }, r.label)))),
     h('main', { id: 'main', tabindex: '-1' })
   );
   window.addEventListener('hashchange', route);

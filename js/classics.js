@@ -5,9 +5,14 @@ import { h, icon, toast, menu, bimg } from './ui.js';
 import * as db from './db.js';
 import { importFile } from './importer.js';
 import { norm } from './books.js';
+import { libTabs, CLASSIC_TABS } from './lib-tabs.js';
 
 export const CLASSICS_SOURCE = 'adamastor';
-const CATALOG_URL = 'public/books/adamastor/catalogo.json';
+// Dois catálogos estáticos usam a mesma tela: os Clássicos (Projecto Adamastor) e a Estante (EPUBs que o dono coloca na pasta do repositório).
+const CFG = {
+  adamastor: { source: 'adamastor', dir: 'public/books/adamastor/', tabKey: 'todos', label: 'Buscar nos clássicos', hint: 'Clássicos da Literatura disponíveis para ler (domínio público, Projecto Adamastor). Toque para abrir; o livro é baixado só na primeira vez.' },
+  estante: { source: 'estante', dir: 'public/books/estante/', tabKey: 'estante', label: 'Buscar na estante', hint: 'Livros colocados na pasta public/books/estante do projeto. Toque para abrir; o livro é baixado só na primeira vez.' },
+};
 
 function tint(id) {
   let n = 0;
@@ -15,47 +20,49 @@ function tint(id) {
   return `hsl(${198 + (n % 14)} ${26 + (n % 10)}% ${34 + (n % 14)}%)`;
 }
 
-async function loadCatalog() {
-  const r = await fetch(CATALOG_URL, { cache: 'no-cache' });
+async function loadCatalog(cfg) {
+  const r = await fetch(`${cfg.dir}catalogo.json`, { cache: 'no-cache' });
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   const j = await r.json();
   const list = Array.isArray(j?.livros) ? j.livros : [];
   // só aceita caminhos dentro da pasta do catálogo (o JSON nunca aponta para fora do projeto)
-  const ok = (p) => typeof p === 'string' && p.startsWith('public/books/adamastor/') && !p.includes('..');
+  const ok = (p) => typeof p === 'string' && p.startsWith(cfg.dir) && !p.includes('..');
   return { info: j, books: list.filter((b) => b && typeof b.id === 'string' && typeof b.titulo === 'string' && ok(b.epub)).map((b) => ({ ...b, capa: ok(b.capa) ? b.capa : null })) };
 }
 
 /** Baixa o EPUB (sob demanda), valida e guarda no aparelho. Devolve o id do livro no banco. */
-export async function fetchClassic(c) {
+export async function fetchClassic(c, cfg = CFG.adamastor) {
   const r = await fetch(c.epub);
   if (!r.ok) throw new Error('Arquivo não encontrado no projeto.');
   const blob = await r.blob();
   const res = await importFile(new File([blob], `${c.id}.epub`, { type: 'application/epub+zip' }));
   if (res.status === 'duplicate') return res.book.id; // você já tem este mesmo arquivo; abre o que existe
-  await db.updateBook(res.book.id, (b) => ({ ...b, source: CLASSICS_SOURCE, classicId: c.id, title: c.titulo, author: c.autor || b.author, genre: c.genero || b.genre, publisher: c.credito || b.publisher }));
+  await db.updateBook(res.book.id, (b) => ({ ...b, source: cfg.source, classicId: c.id, classicCat: CLASSIC_TABS.find(([, l]) => l === c.categoria)?.[0] || '', title: c.titulo, author: c.autor || b.author, genre: c.genero || b.genre, publisher: c.credito || b.publisher }));
   return res.book.id;
 }
 
-export async function mountClassics(root) {
-  const st = { query: '', cat: '', saved: new Map(), busy: new Set() };
+export const mountClassics = (root, tab = '') => mountCatalog(root, tab, CFG.adamastor);
+export const mountEstante = (root) => mountCatalog(root, '', CFG.estante);
+
+async function mountCatalog(root, tab, cfg) {
+  const st = { query: '', cat: CLASSIC_TABS.find(([k]) => k === tab)?.[1] || '', saved: new Map(), busy: new Set() };
   const grid = h('div', { class: 'books grid' });
   const bar = h('div', { class: 'lib-bar' });
   const count = h('p', { class: 'hint cl-count', 'aria-live': 'polite' });
   root.replaceChildren(
-    h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', { class: 'cl-h1' }, 'Clássicos da Literatura'), h('p', { class: 'hint' }, 'Obras em domínio público do Projecto Adamastor. Toque para ler; o livro é baixado só na primeira vez.'))),
-    bar, count, grid);
+    h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Biblioteca'), h('p', { class: 'hint' }, cfg.hint))),
+    libTabs(cfg.source === 'estante' ? 'estante' : CLASSIC_TABS.some(([k]) => k === tab) ? tab : 'todos'), bar, count, grid);
 
   let cat;
-  try { cat = await loadCatalog(); } catch {
+  try { cat = await loadCatalog(cfg); } catch {
     grid.replaceWith(h('div', { class: 'empty small' }, icon('book', 40), h('h2', {}, 'Catálogo indisponível'), h('p', {}, 'Não foi possível carregar a lista agora. Verifique a conexão e tente de novo.'),
-      h('button', { class: 'btn', type: 'button', onclick: () => mountClassics(root) }, 'Tentar de novo')));
+      h('button', { class: 'btn', type: 'button', onclick: () => mountCatalog(root, tab, cfg) }, 'Tentar de novo')));
     bar.remove(); count.remove(); return;
   }
   const books = cat.books;
-  const cats = [...new Set(books.map((b) => b.categoria).filter(Boolean))];
-
+  
   async function refreshSaved() {
-    st.saved = new Map((await db.getAll('books')).filter((b) => b.source === CLASSICS_SOURCE).map((b) => [b.classicId, b]));
+    st.saved = new Map((await db.getAll('books')).filter((b) => b.source === cfg.source).map((b) => [b.classicId, b]));
   }
 
   async function open(c) {
@@ -64,7 +71,7 @@ export async function mountClassics(root) {
     if (saved) { location.hash = `#ler-${saved.id}`; return; }
     if (st.busy.has(c.id)) return;
     st.busy.add(c.id); draw();
-    try { const id = await fetchClassic(c); location.hash = `#ler-${id}`; }
+    try { const id = await fetchClassic(c, cfg); location.hash = `#ler-${id}`; }
     catch (e) {
       st.busy.delete(c.id); draw();
       toast(e?.name === 'TypeError' ? 'Sem conexão para baixar este livro agora.' : (e?.message || 'Não foi possível abrir este livro.'), 'error');
@@ -100,16 +107,17 @@ export async function mountClassics(root) {
   }
   function draw() {
     const list = filtered();
-    count.textContent = `${list.length} ${list.length === 1 ? 'obra' : 'obras'}`;
-    grid.replaceChildren(...(list.length ? list.map(card) : [h('div', { class: 'empty small' }, icon('search', 36), h('p', {}, 'Nenhuma obra encontrada.'))]));
+    count.textContent = books.length || cfg.source !== 'estante' ? `${list.length} ${list.length === 1 ? 'obra' : 'obras'}` : '';
+    const none = !books.length && cfg.source === 'estante'
+      ? h('div', { class: 'empty small' }, icon('book', 40), h('h2', {}, 'Estante vazia'), h('p', {}, 'Envie arquivos .epub para a pasta public/books/estante do repositório no GitHub. Em poucos minutos eles aparecem aqui.'))
+      : h('div', { class: 'empty small' }, icon('search', 36), h('p', {}, 'Nenhuma obra encontrada.'));
+    grid.replaceChildren(...(list.length ? list.map(card) : [none]));
   }
 
-  const search = h('input', { type: 'search', class: 'search', placeholder: 'Buscar título ou autor', 'aria-label': 'Buscar nos clássicos', enterkeyhint: 'search', autocomplete: 'off' });
+  const search = h('input', { type: 'search', class: 'search', placeholder: 'Buscar título ou autor', 'aria-label': cfg.label, enterkeyhint: 'search', autocomplete: 'off' });
   const clear = h('button', { class: 'icon-btn clear', type: 'button', 'aria-label': 'Limpar busca', hidden: true, onclick: () => { search.value = ''; st.query = ''; clear.hidden = true; draw(); search.focus(); } }, icon('close', 20));
   search.addEventListener('input', () => { st.query = search.value; clear.hidden = !st.query; draw(); });
-  const chipBtn = (label, val) => h('button', { type: 'button', class: `chip${st.cat === val ? ' on' : ''}`, 'aria-pressed': String(st.cat === val), onclick: () => { st.cat = val; chips.querySelectorAll('.chip').forEach((b, i) => { const on = [''].concat(cats)[i] === val; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); }); draw(); } }, label);
-  const chips = h('div', { class: 'chips', role: 'group', 'aria-label': 'Categorias' }, chipBtn('Todos', ''), cats.map((c) => chipBtn(c, c)));
-  bar.append(h('div', { class: 'toolbar' }, h('div', { class: 'search-wrap' }, icon('search', 22), search, clear)), chips);
+  bar.append(h('div', { class: 'toolbar' }, h('div', { class: 'search-wrap' }, icon('search', 22), search, clear)));
   if (cat.info?.licenca) root.append(h('p', { class: 'hint cl-license' }, `${cat.info.licenca}`));
 
   await refreshSaved(); draw();

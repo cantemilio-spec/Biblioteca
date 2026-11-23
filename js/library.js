@@ -1,4 +1,5 @@
 import { h, icon, toast, modal, confirmDialog, menu, bimg } from './ui.js';
+import { libTabs, isCatalogBook } from './lib-tabs.js';
 import * as db from './db.js';
 import { getSetting, setSetting } from './settings.js';
 import { listCollections, openCollectionPicker } from './collections.js';
@@ -28,7 +29,9 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
   input.addEventListener('change', () => { const f = [...input.files]; input.value = ''; doImport(f); });
 
   async function load() {
-    st.books = (await db.getAll('books')).filter((b) => b.source !== 'adamastor'); // os Clássicos ficam na própria seção
+    const all = await db.getAll('books');
+    st.books = all.filter((b) => !isCatalogBook(b)); // os Clássicos ficam na própria seção
+    st.classics = all.filter(isCatalogBook); // só entram no Início (o que você está lendo)
     st.collections = await listCollections();
     st.genres = genresOf(st.books);
     if (st.genre && !st.genres.some((g) => g.key === st.genre)) st.genre = '';
@@ -161,10 +164,11 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
 
   function renderHome() {
     const byRead = (x, y) => (y.lastReadAt || 0) - (x.lastReadAt || 0);
-    const reading = st.books.filter((b) => b.lastReadAt && bookStatus(b) !== 'concluido').sort(byRead);
+    const pool = [...st.books, ...(st.classics || [])]; // o livro em andamento aparece no Início mesmo sendo um clássico
+    const reading = pool.filter((b) => b.lastReadAt && bookStatus(b) !== 'concluido').sort(byRead);
     const fresh = st.books.filter((b) => bookStatus(b) === 'nao-iniciado').sort((x, y) => y.addedAt - x.addedAt);
     const hero = reading[0] || fresh[0] || null;
-    const recent = st.books.filter((b) => b.lastReadAt && b !== hero).sort(byRead).slice(0, 12);
+    const recent = pool.filter((b) => b.lastReadAt && b !== hero).sort(byRead).slice(0, 12);
     const added = [...st.books].sort((x, y) => y.addedAt - x.addedAt).slice(0, 12);
     const row = (list) => h('div', { class: 'row' }, list.map((b) => card(b, 'grid')));
     const sec = (title, body, link) => h('section', { class: 'sec', 'aria-label': title }, h('div', { class: 'sec-h' }, h('h2', {}, title), link ? h('button', { class: 'link', type: 'button', onclick: link[1] }, link[0]) : null), body);
@@ -186,7 +190,7 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
         h('div', { class: 'meter', 'aria-hidden': 'true' }, h('i', { style: `width:${Math.min(100, (st.todaySec / goalSec) * 100)}%` }))));
     }
     if (recent.length) out.push(sec('Leitura recente', row(recent), ['Ver tudo', async () => { await setSetting('sort', 'read-desc'); goHash('#biblioteca'); }]));
-    out.push(sec('Adicionados recentemente', row(added), ['Ver tudo', () => goHash('#biblioteca')]));
+    if (added.length) out.push(sec('Adicionados recentemente', row(added), ['Ver tudo', () => goHash('#biblioteca')]));
     out.push(sec('Coleções', h('div', { class: 'pills' },
       st.collections.map((c) => h('button', { class: 'pill', type: 'button', onclick: async () => { await setSetting('collection', c.id); await setSetting('genre', ''); goHash('#biblioteca'); } }, icon('folder', 20), h('span', {}, c.name), h('span', { class: 'pill-n' }, String(st.books.filter((b) => b.collections?.includes(c.id)).length)))),
       h('button', { class: 'pill', type: 'button', onclick: () => goHash('#colecoes') }, icon('plus', 20), h('span', {}, st.collections.length ? 'Gerenciar' : 'Criar coleção'))), null));
@@ -195,7 +199,7 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
   }
 
   function renderContent() {
-    if (!st.books.length) { content.replaceChildren(emptyLibrary()); return; }
+    if (!st.books.length && !(home && st.classics?.some((b) => b.lastReadAt))) { content.replaceChildren(emptyLibrary()); return; }
     if (home && !st.query) { renderHome(); return; }
     const shown = applyView(st.books, { query: st.query, filter: st.filter, sort: st.sort, onlyFavorites, collection: st.collection, genre: st.genre });
     content.replaceChildren();
@@ -346,7 +350,7 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
   root.replaceChildren(
     home ? h('div', { class: 'greet head-brand' }, bimg(), h('div', {}, h('h1', {}, greeting), h('p', { class: 'hint' }, 'Continue de onde parou.')))
       : h('div', { class: 'view-head top-row' }, bimg(), h('h1', {}, onlyFavorites ? 'Favoritos' : 'Biblioteca'), toolsEl),
-    bar, content, input,
+    home ? null : libTabs('meus'), bar, content, input,
     fab);
   if (st.collection || st.genre) { setSetting('collection', ''); setSetting('genre', ''); } // filtro vindo do Início/Coleções vale só para esta visita
 
