@@ -1,0 +1,484 @@
+{
+  "versao": 2,
+  "itens": {
+    "ru|crime castigo|dostoievski/dostoyevsky/dostoevsky/dostoiévski|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "crime castigo (dostoievski/dostoyevsky/dostoevsky/dostoiévski)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:18.902Z"
+    },
+    "ru|irmaos karamazov|dostoievski/dostoyevsky/dostoevsky/dostoiévski|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:dostoievski-fiodor-os-irmaos-karamazov-completo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:07:25.199Z",
+      "pedido": "irmaos karamazov (dostoievski/dostoyevsky/dostoevsky/dostoiévski)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:25.199Z"
+    },
+    "ru|idiota|dostoievski/dostoyevsky/dostoevsky/dostoiévski|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:07:31.597Z",
+      "pedido": "idiota (dostoievski/dostoyevsky/dostoevsky/dostoiévski)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:31.597Z"
+    },
+    "ru|memorias subsolo|dostoievski/dostoyevsky/dostoevsky/dostoiévski|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:memorias-do-subsolo-dostoievski: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:07:35.781Z",
+      "pedido": "memorias subsolo (dostoievski/dostoyevsky/dostoevsky/dostoiévski)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:35.781Z"
+    },
+    "ru||dostoievski/dostoyevsky/dostoevsky/dostoiévski|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (dostoievski/dostoyevsky/dostoevsky/dostoiévski)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:42.940Z"
+    },
+    "ru|guerra paz|tolstoi/tolstoy/tolstói|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:07:45.156Z",
+      "pedido": "guerra paz (tolstoi/tolstoy/tolstói)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:45.156Z"
+    },
+    "ru|karenina|tolstoi/tolstoy/tolstói|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:07:48.994Z",
+      "pedido": "karenina (tolstoi/tolstoy/tolstói)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:48.994Z"
+    },
+    "ru|ressurreicao|tolstoi/tolstoy/tolstói|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:07:52.257Z",
+      "pedido": "ressurreicao (tolstoi/tolstoy/tolstói)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:52.257Z"
+    },
+    "ru|morte ivan ilitch|tolstoi/tolstoy/tolstói|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:a-morte-de-ivan-ilitch-edicao-exclusiva-amazon-liev-tolstoi-tolstoi-liev: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:07:56.012Z",
+      "pedido": "morte ivan ilitch (tolstoi/tolstoy/tolstói)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:56.012Z"
+    },
+    "ru|sonata kreutzer|tolstoi/tolstoy/tolstói|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:07:59.248Z",
+      "pedido": "sonata kreutzer (tolstoi/tolstoy/tolstói)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:07:59.248Z"
+    },
+    "ru||tolstoi/tolstoy/tolstói|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:a-morte-de-ivan-ilitch-edicao-exclusiva-amazon-liev-tolstoi-tolstoi-liev: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Um Borracho: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:01.607Z",
+      "pedido": "obra de (tolstoi/tolstoy/tolstói)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:01.607Z"
+    },
+    "ru||gogol|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:A Casta Suzana: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:03.391Z",
+      "pedido": "obra de (gogol)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:03.391Z"
+    },
+    "ru||gogol|2": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:A Casta Suzana: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:03.874Z",
+      "pedido": "obra de (gogol)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:03.875Z"
+    },
+    "ru||tchekhov/chekhov/tchékhov|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:o-candelabro-e-outros-contos-tchekhov-3: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nd/4.0/; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:05.202Z",
+      "pedido": "obra de (tchekhov/chekhov/tchékhov)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:05.202Z"
+    },
+    "ru||tchekhov/chekhov/tchékhov|2": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:o-candelabro-e-outros-contos-tchekhov-3: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:05.430Z",
+      "pedido": "obra de (tchekhov/chekhov/tchékhov)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:05.430Z"
+    },
+    "ru||turgueniev/turgenev/turguêniev|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:06.377Z",
+      "pedido": "obra de (turgueniev/turgenev/turguêniev)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:06.377Z"
+    },
+    "ru||pushkin/púchkin/puchkin|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:Sem titulo: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:09.452Z",
+      "pedido": "obra de (pushkin/púchkin/puchkin)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:09.452Z"
+    },
+    "ru||gorki/gorky|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:ame00gorkgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | wikisource:Cruzou por mim, veio ter comigo, numa rua da Baixa: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Volto ao Camões: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Semana da Paixão: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:13.710Z",
+      "pedido": "obra de (gorki/gorky)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:13.710Z"
+    },
+    "ru||lermontov|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:14.294Z",
+      "pedido": "obra de (lermontov)",
+      "categoria": "Literatura Russa",
+      "atualizado_em": "2026-11-23T21:08:14.294Z"
+    },
+    "fr|miseraveis|hugo|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "miseraveis (hugo)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:15.766Z"
+    },
+    "fr|corcunda|hugo|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:18.842Z",
+      "pedido": "corcunda (hugo)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:18.842Z"
+    },
+    "fr||hugo|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:colecao-de-artes-liberais-vol-01-trivium-e-quadrivium: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:colecao-de-artes-liberais-vol-02-gramatica: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:trabalhadoresMar: EPUB com 160.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | internet-archive:desbravadores-vol.-i: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-",
+      "proxima_tentativa": "2026-11-24T03:08:28.791Z",
+      "pedido": "obra de (hugo)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:28.791Z"
+    },
+    "fr|conde monte cristo|dumas|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:33.084Z",
+      "pedido": "conde monte cristo (dumas)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:33.084Z"
+    },
+    "fr|tres mosqueteiros|dumas|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:37.677Z",
+      "pedido": "tres mosqueteiros (dumas)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:37.677Z"
+    },
+    "fr||dumas|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (dumas)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:44.811Z"
+    },
+    "fr||dumas|2": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:memoriasdummedic00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:ohomemmulher00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Memorias de José Garibaldi: já importado | wikisource:Maria Dupplessis: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:45.307Z",
+      "pedido": "obra de (dumas)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:45.307Z"
+    },
+    "fr|terra lua|verne|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:daterraluaviagem28341gut: já existe na biblioteca (Da terra à lua viagem directa em 97 horas e 20 minutos) | wikisource:Da Terra á Lua: já existe na biblioteca (Da Terra á Lua) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:49.036Z",
+      "pedido": "terra lua (verne)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:49.036Z"
+    },
+    "fr|centro terra|verne|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:52.097Z",
+      "pedido": "centro terra (verne)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:52.097Z"
+    },
+    "fr|vinte mil leguas|verne|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:54.755Z",
+      "pedido": "vinte mil leguas (verne)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:54.755Z"
+    },
+    "fr|volta mundo|verne|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:08:58.343Z",
+      "pedido": "volta mundo (verne)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:08:58.343Z"
+    },
+    "fr||verne|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (verne)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:00.196Z"
+    },
+    "fr||verne|2": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (verne)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:02.551Z"
+    },
+    "fr||balzac|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:09:02.980Z",
+      "pedido": "obra de (balzac)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:02.980Z"
+    },
+    "fr||balzac|2": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:09:03.194Z",
+      "pedido": "obra de (balzac)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:03.194Z"
+    },
+    "fr|madame bovary|flaubert|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:09:05.736Z",
+      "pedido": "madame bovary (flaubert)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:05.736Z"
+    },
+    "fr||flaubert|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (flaubert)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:07.174Z"
+    },
+    "fr||stendhal|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:Eduardo Prado: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:09:08.227Z",
+      "pedido": "obra de (stendhal)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:08.227Z"
+    },
+    "fr||zola|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (zola)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:09.666Z"
+    },
+    "fr||zola|2": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:A Carne: já importado | wikisource:Dormindo...: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:09:10.104Z",
+      "pedido": "obra de (zola)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:10.104Z"
+    },
+    "fr||maupassant|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:Meu conto de Maupassant: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Urupês (5ª edição): já existe na biblioteca (Urupês (5ª edição)) | wikisource:Um romancista: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:A Sra. D. Albertina Berta: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T03:09:11.176Z",
+      "pedido": "obra de (maupassant)",
+      "categoria": "Literatura Francesa",
+      "atualizado_em": "2026-11-23T21:09:11.176Z"
+    }
+  },
+  "rejeitados": {
+    "internet-archive:dostoievski-fiodor-os-irmaos-karamazov-completo": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:memorias-do-subsolo-dostoievski": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:a-senhoria-fiodor-dostoievski": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:fiodor-dostoievski-noites-brancas1": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:o-adolescente": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "wikisource:Um Club da Má Língua": "já existe na biblioteca (Um Club da Má Língua)",
+    "internet-archive:a-morte-de-ivan-ilitch-edicao-exclusiva-amazon-liev-tolstoi-tolstoi-liev": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:o-candelabro-e-outros-contos-tchekhov-3": "sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nd/4.0/; possible-copyright-status: n/d)",
+    "internet-archive:ame00gorkgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:colecao-de-artes-liberais-vol-01-trivium-e-quadrivium": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:colecao-de-artes-liberais-vol-02-gramatica": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:trabalhadoresMar": "EPUB com 160.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:desbravadores-vol.-i": "sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d)",
+    "internet-archive:fertilidade-do-solo-roberto-ferreira-novais-victor-hugo-alvarez-1": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:tempo_202002": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:memoriasdummedic00duma": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:ohomemmulher00duma": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:daterraluaviagem28341gut": "já existe na biblioteca (Da terra à lua viagem directa em 97 horas e 20 minutos)",
+    "wikisource:Da Terra á Lua": "já existe na biblioteca (Da Terra á Lua)",
+    "wikisource:Urupês (5ª edição)": "já existe na biblioteca (Urupês (5ª edição))"
+  },
+  "fontes": {
+    "gutenberg": {
+      "nome": "Project Gutenberg",
+      "verificado_em": "2026-11-23T21:07:16.447Z",
+      "disponivel": false,
+      "erro": "HTTP 503",
+      "detalhe": "indisponível nesta execução; será testada de novo na próxima"
+    },
+    "internet-archive": {
+      "nome": "Internet Archive",
+      "verificado_em": "2026-11-23T21:07:16.673Z",
+      "disponivel": true,
+      "ms": 122,
+      "detalhe": "advancedsearch respondeu",
+      "erro": null,
+      "ultimo_ok": "2026-11-23T21:07:16.673Z"
+    },
+    "wikisource": {
+      "nome": "Wikisource (pt)",
+      "verificado_em": "2026-11-23T21:07:16.795Z",
+      "disponivel": true,
+      "ms": 143,
+      "detalhe": "API respondeu",
+      "erro": null,
+      "ultimo_ok": "2026-11-23T21:07:16.795Z"
+    },
+    "adamastor": {
+      "nome": "Projecto Adamastor",
+      "verificado_em": "2026-11-23T21:07:16.939Z",
+      "disponivel": true,
+      "ms": 354,
+      "detalhe": "site respondeu",
+      "erro": null,
+      "ultimo_ok": "2026-11-23T21:07:16.939Z"
+    }
+  },
+  "execucoes": [
+    {
+      "inicio": "2026-11-23T21:07:16.445Z",
+      "fim": "2026-11-23T21:09:11.178Z",
+      "novos": 8,
+      "tentados": 40,
+      "parou_por": "lote de 40 itens",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 8
+    }
+  ],
+  "atualizado_em": "2026-11-23T21:09:11.179Z",
+  "ultima_execucao": {
+    "inicio": "2026-11-23T21:07:16.445Z",
+    "fim": "2026-11-23T21:09:11.178Z",
+    "novos": 8,
+    "tentados": 40,
+    "parou_por": "lote de 40 itens",
+    "fontes": {
+      "gutenberg": false,
+      "internet-archive": true,
+      "wikisource": true,
+      "adamastor": true
+    },
+    "total": 8
+  },
+  "resumo": {
+    "meta": 50,
+    "concluidos": 8,
+    "pendentes": 22,
+    "erros": 10,
+    "bloqueados": 0,
+    "por_fonte": {
+      "wikisource": 7,
+      "internet-archive": 1
+    },
+    "por_categoria": {
+      "Literatura Russa": "2/50",
+      "Literatura Francesa": "6/50",
+      "Literatura Inglesa": "0/50",
+      "Literatura Norte-Americana": "0/50",
+      "Literatura Alemã": "0/50",
+      "Literatura Italiana": "0/50",
+      "Literatura Espanhola": "0/50",
+      "Literatura Grega": "0/50",
+      "Literatura Universal": "0/50"
+    }
+  }
+}
