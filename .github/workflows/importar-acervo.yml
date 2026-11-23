@@ -3,47 +3,61 @@ on:
   workflow_dispatch:
     inputs:
       quantidade:
-        description: 'Meta total de livros (10 = teste, 100 = completo)'
+        description: 'Acervo (brasileiros etc.): meta total (10 = teste, 100 = completo)'
         required: true
-        default: '10'
+        default: '100'
+      meta_internacional:
+        description: 'Literatura internacional: meta total (50 a 100; 0 = não importar)'
+        required: true
+        default: '50'
       lote:
         description: 'Itens analisados por execução (lote pequeno)'
         required: false
-        default: '30'
+        default: '40'
       refazer:
-        description: 'Reanalisar também os itens bloqueados? (true/false)'
+        description: 'Reanalisar também os itens bloqueados e pendentes agora? (true/false)'
         required: false
         default: 'false'
   schedule:
-    - cron: '17 */6 * * *'   # retoma sozinho a cada 6 horas; se não há nada a fazer, termina em segundos e não grava nada
+    - cron: '17 */6 * * *'   # retoma sozinho a cada 6 horas; sem nada a fazer, termina em segundos e não grava nada
 permissions:
   contents: write
 concurrency:
-  group: livros-repositorio     # nunca duas importações ao mesmo tempo (evita conflito e download duplicado)
+  group: livros-repositorio     # nunca duas importações ao mesmo tempo
   cancel-in-progress: false
 jobs:
   importar:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-      - name: Importar (fontes independentes, com retomada)
-        timeout-minutes: 48         # menor que o limite do job: o passo seguinte ainda salva o progresso
+      - name: Importar acervo (fontes independentes, com retomada)
+        timeout-minutes: 35
         env:
           LIMITE: ${{ github.event.inputs.quantidade || '100' }}
-          LOTE: ${{ github.event.inputs.lote || '30' }}
+          LOTE: ${{ github.event.inputs.lote || '40' }}
           REFAZER: ${{ github.event.inputs.refazer == 'true' && '1' || '0' }}
-          ORCAMENTO_MIN: '40'       # o próprio script para com folga e grava o estado
+          ORCAMENTO_MIN: '30'
+        run: node tools/importar-acervo.mjs
+      - name: Importar literatura internacional
+        if: ${{ always() && (github.event.inputs.meta_internacional || '50') != '0' }}
+        timeout-minutes: 35
+        env:
+          COLECAO: literatura-internacional
+          LIMITE: ${{ github.event.inputs.meta_internacional || '50' }}
+          LOTE: ${{ github.event.inputs.lote || '40' }}
+          REFAZER: ${{ github.event.inputs.refazer == 'true' && '1' || '0' }}
+          ORCAMENTO_MIN: '30'
         run: node tools/importar-acervo.mjs
       - name: Salvar progresso no repositório
         if: always()
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add public/books/acervo
-          git diff --cached --quiet || git commit -m "Importação: progresso do acervo"
+          git add public/books/acervo public/books/literatura-internacional
+          git diff --cached --quiet || git commit -m "Importação: progresso dos acervos"
           git pull --rebase -q || true
           git push
