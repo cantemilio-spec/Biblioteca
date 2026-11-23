@@ -361,3 +361,20 @@ dialog.modal footer .btn.primary { order: 9; }
 .wl .wl-off input { width: 20px; height: 20px; accent-color: var(--primary); }
 .wl .btn { width: 100%; min-height: 48px; }
 @media (prefers-reduced-motion: reduce) { .wl-back, .wl { animation: none; } }
+
+/* Painel de importação */
+.imp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; }
+.imp-card { background: var(--surface); border-radius: 14px; padding: 12px; display: grid; gap: 2px; border-left: 4px solid var(--border); }
+.imp-card strong { font-size: 1.5rem; line-height: 1.1; } .imp-card span { font-size: .8rem; color: var(--text-2); }
+.imp-card.ok { border-color: var(--primary); } .imp-card.pend { border-color: #C9A227; } .imp-card.err, .imp-card.blk { border-color: var(--danger, #B3261E); }
+.imp-bar { height: 10px; border-radius: 6px; background: var(--surface-3); overflow: hidden; position: static; }
+.imp-bar span { display: block; height: 100%; background: var(--primary); }
+.imp-srcs, .imp-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.imp-src { display: flex; gap: 12px; align-items: flex-start; min-width: 0; } .imp-src > div { min-width: 0; overflow-wrap: anywhere; }
+.imp-dot { flex: none; width: 12px; height: 12px; border-radius: 50%; margin-top: 5px; background: #2E9E5B; } .imp-dot.off { background: #B3261E; }
+.imp-name { font-weight: 600; }
+.imp-item { background: var(--surface); border-radius: 12px; padding: 10px 12px; display: grid; gap: 2px; min-width: 0; }
+.imp-row { display: flex; gap: 8px; justify-content: space-between; align-items: flex-start; } .imp-title { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+.imp-tag { flex: none; font-size: .72rem; font-weight: 600; padding: 2px 8px; border-radius: 8px; background: var(--surface-3); }
+.imp-tag.ok { background: var(--primary-container); color: var(--on-primary-container); } .imp-tag.err, .imp-tag.blk { background: #F9DEDC; color: #601410; } .imp-tag.pend { background: #FFF1C2; color: #4A3B00; }
+.imp-why { font-size: .78rem; color: var(--text-2); overflow-wrap: anywhere; }
