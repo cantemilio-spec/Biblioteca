@@ -294,7 +294,7 @@ dialog.modal footer .btn.primary { order: 9; }
 .switch::before { content: ""; position: absolute; left: 2px; top: 6px; width: 52px; height: 32px; box-sizing: border-box; border-radius: 999px; border: 2px solid var(--border); background: var(--surface-3, var(--surface)); transition: background .2s, border-color .2s; }
 .switch .knob { position: absolute; top: 12px; left: 10px; width: 20px; height: 20px; border-radius: 50%; background: var(--text-2); transition: transform .2s, background .2s; }
 .switch[aria-checked="true"]::before { background: var(--primary); border-color: var(--primary); } .switch[aria-checked="true"] .knob { transform: translateX(20px); background: var(--on-primary); }
-.theme-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.theme-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .theme-card { display: grid; gap: 8px; justify-items: center; padding: 10px 8px; border: 2px solid var(--border); border-radius: 16px; background: transparent; color: var(--text); font: inherit; font-size: .88rem; cursor: pointer; }
 .theme-card.on { border-color: var(--primary); background: var(--primary-container); font-weight: 600; }
 .theme-prev { width: 100%; max-width: 92px; aspect-ratio: 4 / 3; border-radius: 10px; border: 1px solid var(--border); display: grid; align-content: center; gap: 5px; padding: 0 12px; background: #F6F9FB; }
@@ -339,6 +339,13 @@ dialog.modal footer .btn.primary { order: 9; }
 .book.busy { pointer-events: none; }
 .cl-busy { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(15, 26, 32, .55); color: #fff; font-size: .78rem; border-radius: 4px 10px 10px 4px; }
 .cl-license { margin: 24px 0 8px; font-size: .75rem; }
-.head-brand h1.cl-h1 { font-size: 1.35rem; }
 @media (max-width: 399px) { .nav a { font-size: .625rem; letter-spacing: 0; } }
 @media (max-width: 339px) { .nav a { font-size: .5625rem; } }
+
+/* Abas da Biblioteca */
+.lib-tabs { display: flex; gap: 2px; margin: 4px -16px 8px; padding: 0 16px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--border); -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+.lib-tabs::-webkit-scrollbar { display: none; }
+.lib-tabs a { flex: none; padding: 12px 14px; min-height: 44px; color: var(--text-2); text-decoration: none; font-weight: 500; font-size: .875rem; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color .2s var(--ease), border-color .2s var(--ease); }
+.lib-tabs a:hover { color: var(--text); }
+.lib-tabs a[aria-current="page"] { color: var(--primary); border-bottom-color: var(--primary); }
+@media (min-width: 600px) { .lib-tabs { margin: 4px -24px 8px; padding: 0 24px; } }
