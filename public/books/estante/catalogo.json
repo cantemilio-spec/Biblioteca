@@ -3,6 +3,20 @@
   "licenca": "Arquivos enviados por você ao repositório. O app e o repositório são públicos: mantenha aqui apenas obras que você tem direito de distribuir.",
   "livros": [
     {
+      "id": "estante-a-vida-invisivel-de-addie-larue-v-e-schwab-welib-gl",
+      "titulo": "A vida invisível de Addie LaRue",
+      "autor": "V. E. Schwab",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/a-vida-invisivel-de-addie-larue-v-e-schwab-welib-gl.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/a-vida-invisivel-de-addie-larue-v-e-schwab-welib-gl.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 1705668,
+      "sha256": "e5ec1763867ac9995a29cae87ad62c8b0805786dd4bc072a735998aca872bb0a"
+    },
+    {
       "id": "estante-fahrenheit-451-ray-bradbury",
       "titulo": "Fahrenheit 451",
       "autor": "Bradbury, Ray",
