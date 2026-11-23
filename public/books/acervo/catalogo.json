@@ -835,6 +835,32 @@
       "importado_em": "2026-11-23T10:48:51.987Z"
     },
     {
+      "id": "acervo-o-livro-de-cesario-verde-into-livro-de-cesario-verde",
+      "chave": "in||verde|1",
+      "catKey": "in",
+      "ids": [
+        "internet-archive:o-livro-de-cesario-verde"
+      ],
+      "titulo": "O Livro de Cesário Verde",
+      "autor": "Cesário Verde",
+      "categoria": "Internacionais",
+      "idioma": "pt",
+      "genero": "Internacionais",
+      "capa": "public/books/acervo/capas/o-livro-de-cesario-verde-into-livro-de-cesario-verde.jpg",
+      "capa_ok": true,
+      "epub": "public/books/acervo/internacionais/o-livro-de-cesario-verde-into-livro-de-cesario-verde.epub",
+      "fonte_id": "internet-archive",
+      "fonte": "https://archive.org/details/o-livro-de-cesario-verde",
+      "origem_download": "https://archive.org/download/o-livro-de-cesario-verde/O-Livro-de-Cesario-Verde-Cesario-Verde.epub",
+      "credito": "Internet Archive: o-livro-de-cesario-verde",
+      "licenca": "Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/",
+      "autorizacao_redistribuicao": true,
+      "baixado": true,
+      "tamanho": 276863,
+      "sha256": "76980189428472a80d989ed9b5f98d52f233861912f60ec4066b4e01931981bf",
+      "importado_em": "2026-11-23T19:20:06.805Z"
+    },
+    {
       "id": "acervo-o-mandarim-inteca-de-queiros-o-mandarim",
       "chave": "in|mandarim|queiros/queirós|1",
       "catKey": "in",
@@ -1015,6 +1041,58 @@
       "tamanho": 225199,
       "sha256": "20a6003f6e27134c9482a2fd2c7518a66871f42b5c58f38fc4e4248a3fee1d87",
       "importado_em": "2026-11-23T10:49:19.801Z"
+    },
+    {
+      "id": "acervo-colecao-nocoes-de-matematica-aref-neto-intvol-3-trigonometria",
+      "chave": "te||neto|1",
+      "catKey": "te",
+      "ids": [
+        "internet-archive:vol-3-trigonometria"
+      ],
+      "titulo": "Coleção Noções de Matemática Aref Neto",
+      "autor": "Aref Antar Neto",
+      "categoria": "Terror e suspense",
+      "idioma": "pt",
+      "genero": "Terror e suspense",
+      "capa": null,
+      "capa_ok": false,
+      "epub": "public/books/acervo/terror-suspense/colecao-nocoes-de-matematica-aref-neto-intvol-3-trigonometria.epub",
+      "fonte_id": "internet-archive",
+      "fonte": "https://archive.org/details/vol-3-trigonometria",
+      "origem_download": "https://archive.org/download/vol-3-trigonometria/Vol%205%20-%20Geometria.epub",
+      "credito": "Internet Archive: vol-3-trigonometria",
+      "licenca": "Domínio público/CC0 — https://creativecommons.org/publicdomain/mark/1.0/",
+      "autorizacao_redistribuicao": true,
+      "baixado": true,
+      "tamanho": 701718,
+      "sha256": "96ff07e5ff8c9089ef4a34c8265d38db83af067a83501b2ecd1585d28a7b1c54",
+      "importado_em": "2026-11-23T19:21:27.333Z"
+    },
+    {
+      "id": "acervo-defunto-adao-defunto-eca-de-queiros",
+      "chave": "te|defunto|queiros/queirós|1",
+      "catKey": "te",
+      "ids": [
+        "adamastor:o-defunto-eca-de-queiros"
+      ],
+      "titulo": "defunto",
+      "autor": "queiros",
+      "categoria": "Terror e suspense",
+      "idioma": "pt",
+      "genero": "Terror e suspense",
+      "capa": null,
+      "capa_ok": false,
+      "epub": "public/books/acervo/terror-suspense/defunto-adao-defunto-eca-de-queiros.epub",
+      "fonte_id": "adamastor",
+      "fonte": "https://projectoadamastor.org/o-defunto-eca-de-queiros/",
+      "origem_download": "https://projectoadamastor.org/download/o-defunto-eca-de-queiros/?wpdmdl=1795",
+      "credito": "Edição digital: Projecto Adamastor",
+      "licenca": "Domínio público (autor †1900); edição digital do Projecto Adamastor sob Creative Commons (variante não especificada pelo site) — mantenha o crédito e não altere o arquivo",
+      "autorizacao_redistribuicao": true,
+      "baixado": true,
+      "tamanho": 154244,
+      "sha256": "3572ad4ddf697b79db73992bdae08998f007ee2b35b6e7675846a34e83c45078",
+      "importado_em": "2026-11-23T19:21:11.742Z"
     }
   ]
 }
