@@ -1,0 +1,364 @@
+{
+  "versao": 2,
+  "itens": {
+    "br|quincas borba|machado|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "quincas borba (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:11:49.355Z"
+    },
+    "br|esau jaco|machado|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "esau jaco (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:11:50.680Z"
+    },
+    "br|memorial aires|machado|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:memorialAires: EPUB com 67.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:11:53.019Z",
+      "pedido": "memorial aires (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:11:53.019Z"
+    },
+    "br|helena|machado|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "helena (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:11:54.310Z"
+    },
+    "br|iracema|alencar|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:iracema-jose-de-alencar-hqs: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:iracema-jose-de-alencar-original-lusolivros: EPUB inválido — EPUB incompleto: 1 capítulo(s) ausente(s) no arquivo | internet-archive:iracema-pt-pt-jose-de-alencar-lusolivros: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:12:28.799Z",
+      "pedido": "iracema (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:12:28.799Z"
+    },
+    "br|guarani|alencar|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:bub_gb_RZFcAAAAQBAJ: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:12:55.030Z",
+      "pedido": "guarani (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:12:55.030Z"
+    },
+    "br|senhora|alencar|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "senhora (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:12:57.070Z"
+    },
+    "in|quixote|cervantes|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:oengenhosofidal01saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:oengenhosofidal00saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:12:57.887Z",
+      "pedido": "quixote (cervantes)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:12:57.887Z"
+    },
+    "in|miseraveis|hugo|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:12:58.181Z",
+      "pedido": "miseraveis (hugo)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:12:58.181Z"
+    },
+    "in|conde monte cristo|dumas|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:12:58.364Z",
+      "pedido": "conde monte cristo (dumas)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:12:58.364Z"
+    },
+    "in|tres mosqueteiros|dumas|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:12:58.548Z",
+      "pedido": "tres mosqueteiros (dumas)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:12:58.548Z"
+    },
+    "in||dumas|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:memoriasdummedic00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ohomemmulher00duma: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:12:59.103Z",
+      "pedido": "obra de (dumas)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:12:59.103Z"
+    },
+    "in||verne|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (verne)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:00.893Z"
+    },
+    "in|volta mundo|verne|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:01.100Z",
+      "pedido": "volta mundo (verne)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:01.100Z"
+    },
+    "in||verne|2": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:daterraluaviagem28341gut: já importado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:01.242Z",
+      "pedido": "obra de (verne)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:01.242Z"
+    },
+    "in|guerra paz|tolstoy/tolstoi|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:01.459Z",
+      "pedido": "guerra paz (tolstoy/tolstoi)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:01.459Z"
+    },
+    "in|anna karenina|tolstoy/tolstoi|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:01.648Z",
+      "pedido": "anna karenina (tolstoy/tolstoi)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:01.648Z"
+    },
+    "in||tolstoy/tolstoi|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:01.819Z",
+      "pedido": "obra de (tolstoy/tolstoi)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:01.819Z"
+    },
+    "in|crime castigo|dostoyevsky/dostoievski/dostoevsky|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:01.993Z",
+      "pedido": "crime castigo (dostoyevsky/dostoievski/dostoevsky)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:01.993Z"
+    },
+    "in||dostoyevsky/dostoievski/dostoevsky|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (dostoyevsky/dostoievski/dostoevsky)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:19.647Z"
+    },
+    "in||gogol|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:19.769Z",
+      "pedido": "obra de (gogol)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:19.769Z"
+    },
+    "in||turgenev/turgueniev|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:19.883Z",
+      "pedido": "obra de (turgenev/turgueniev)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:19.883Z"
+    },
+    "in||chekhov/tchekhov|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:20.003Z",
+      "pedido": "obra de (chekhov/tchekhov)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:20.003Z"
+    },
+    "in|madame bovary|flaubert|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:20.353Z",
+      "pedido": "madame bovary (flaubert)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:20.353Z"
+    },
+    "in||balzac|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:20.471Z",
+      "pedido": "obra de (balzac)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:20.471Z"
+    },
+    "in||zola|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:20.590Z",
+      "pedido": "obra de (zola)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:20.590Z"
+    },
+    "in||maupassant|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:20.698Z",
+      "pedido": "obra de (maupassant)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:20.698Z"
+    },
+    "in|candido|voltaire|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:20.909Z",
+      "pedido": "candido (voltaire)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:20.909Z"
+    },
+    "in||daudet|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:21.031Z",
+      "pedido": "obra de (daudet)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:21.031Z"
+    },
+    "in||stendhal|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:13:21.153Z",
+      "pedido": "obra de (stendhal)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:13:21.154Z"
+    }
+  },
+  "rejeitados": {
+    "internet-archive:quincasBorbaMachado": "EPUB com 104.3 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:esauJaco": "EPUB com 96.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:memorialAires": "EPUB com 67.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:helenaMachado": "EPUB com 77.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:iracema-jose-de-alencar-hqs": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:oengenhosofidal01saavgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:oengenhosofidal00saavgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:memoriasdummedic00duma": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:ohomemmulher00duma": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)"
+  },
+  "fontes": {
+    "gutenberg": {
+      "nome": "Project Gutenberg",
+      "verificado_em": "2026-11-23T10:11:47.077Z",
+      "disponivel": false,
+      "erro": "HTTP 503",
+      "detalhe": "indisponível nesta execução; será testada de novo na próxima"
+    },
+    "internet-archive": {
+      "nome": "Internet Archive",
+      "verificado_em": "2026-11-23T10:11:47.338Z",
+      "disponivel": true,
+      "ms": 256,
+      "detalhe": "advancedsearch respondeu",
+      "erro": null,
+      "ultimo_ok": "2026-11-23T10:11:47.338Z"
+    },
+    "adamastor": {
+      "nome": "Projecto Adamastor",
+      "verificado_em": "2026-11-23T10:11:47.594Z",
+      "disponivel": true,
+      "ms": 234,
+      "detalhe": "site respondeu",
+      "erro": null,
+      "ultimo_ok": "2026-11-23T10:11:47.594Z"
+    }
+  },
+  "execucoes": [
+    {
+      "inicio": "2026-11-23T10:11:47.075Z",
+      "fim": "2026-11-23T10:13:21.158Z",
+      "novos": 6,
+      "tentados": 30,
+      "parou_por": "lote de 30 itens",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "adamastor": true
+      },
+      "total": 6
+    }
+  ],
+  "atualizado_em": "2026-11-23T10:13:21.158Z",
+  "ultima_execucao": {
+    "inicio": "2026-11-23T10:11:47.075Z",
+    "fim": "2026-11-23T10:13:21.158Z",
+    "novos": 6,
+    "tentados": 30,
+    "parou_por": "lote de 30 itens",
+    "fontes": {
+      "gutenberg": false,
+      "internet-archive": true,
+      "adamastor": true
+    },
+    "total": 6
+  },
+  "resumo": {
+    "meta": 10,
+    "concluidos": 6,
+    "pendentes": 22,
+    "erros": 2,
+    "bloqueados": 0,
+    "por_fonte": {
+      "internet-archive": 6
+    },
+    "por_categoria": {
+      "Brasileiros": "4/4",
+      "Internacionais": "2/4",
+      "Filosofia": "0/1",
+      "Terror e suspense": "0/1"
+    }
+  }
+}
