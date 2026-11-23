@@ -1,0 +1,13 @@
+{
+  "_ajuda": "Ano de morte dos autores da lista (fonte: cadastros públicos como Wikipédia/Wikidata/Project Gutenberg). Usado só para a fonte Projecto Adamastor, que não publica datas de forma estruturada. pt=true: obra original em português (sem tradutor). Autor ausente desta tabela = obra bloqueada nessa fonte.",
+  "machado": {"morte": 1908, "pt": true}, "alencar": {"morte": 1877, "pt": true}, "azevedo": {"morte": 1913, "pt": true}, "barreto": {"morte": 1922, "pt": true},
+  "pompeia": {"morte": 1895, "pt": true}, "cunha": {"morte": 1909, "pt": true}, "almeida": {"morte": 1861, "pt": true}, "guimaraes": {"morte": 1884, "pt": true},
+  "taunay": {"morte": 1899, "pt": true}, "macedo": {"morte": 1882, "pt": true}, "alves": {"morte": 1871, "pt": true}, "dias": {"morte": 1864, "pt": true},
+  "bilac": {"morte": 1918, "pt": true}, "sousa": {"morte": 1898, "pt": true}, "anjos": {"morte": 1914, "pt": true}, "aranha": {"morte": 1931, "pt": true},
+  "lobato": {"morte": 1948, "pt": true}, "arinos": {"morte": 1916, "pt": true}, "nabuco": {"morte": 1910, "pt": true}, "barbosa": {"morte": 1923, "pt": true},
+  "caminha": {"morte": 1897, "pt": true}, "paiva": {"morte": 1892, "pt": true}, "tavora": {"morte": 1888, "pt": true}, "queiros": {"morte": 1900, "pt": true},
+  "garrett": {"morte": 1854, "pt": true}, "herculano": {"morte": 1877, "pt": true}, "dinis": {"morte": 1871, "pt": true}, "pessoa": {"morte": 1935, "pt": true},
+  "verde": {"morte": 1886, "pt": true}, "quental": {"morte": 1891, "pt": true}, "camoes": {"morte": 1580, "pt": true}, "bocage": {"morte": 1805, "pt": true},
+  "vieira": {"morte": 1697, "pt": true}, "pinto": {"morte": 1583, "pt": true}, "ortigao": {"morte": 1915, "pt": true}, "brito": {"morte": 1917, "pt": true},
+  "romero": {"morte": 1914, "pt": true}, "neto": {"morte": 1934, "pt": true}, "castelo branco": {"morte": 1890, "pt": true}
+}
