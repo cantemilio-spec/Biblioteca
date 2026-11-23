@@ -1,8 +1,8 @@
-name: Baixar clássicos do Projecto Adamastor
+name: Atualizar livros do projeto
 on:
   workflow_dispatch:
   push:
-    paths: ['public/books/adamastor/*.epub']
+    paths: ['public/books/adamastor/*.epub', 'public/books/estante/*.epub']
 permissions:
   contents: write
 jobs:
@@ -13,10 +13,12 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: node tools/baixar-adamastor.mjs
-      - name: Salvar arquivos baixados
+      - run: node tools/catalogar-estante.mjs
+      - name: Salvar alterações
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add public/books/adamastor
-          git diff --cached --quiet || git commit -m "Clássicos: EPUBs do Projecto Adamastor"
+          git add public/books
+          git diff --cached --quiet || git commit -m "Livros: atualizar catálogos"
+          git pull --rebase -q || true
           git push
