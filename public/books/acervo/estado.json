@@ -276,6 +276,563 @@
       "pedido": "obra de (stendhal)",
       "categoria": "Internacionais",
       "atualizado_em": "2026-11-23T10:13:21.154Z"
+    },
+    "br|luciola|alencar|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "luciola (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:16:29.234Z"
+    },
+    "br|mulato|azevedo|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "mulato (azevedo)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:16:31.618Z"
+    },
+    "br|casa pensao|azevedo|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "casa pensao (azevedo)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:16:33.296Z"
+    },
+    "br|ateneu|pompeia|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:16:35.943Z",
+      "pedido": "ateneu (pompeia)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:16:35.943Z"
+    },
+    "br|sertoes|cunha|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:ossertoeseuclide0000dacu: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:baixar-brasiliana-usp_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ossertoeseuclide0000dacu_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:16:38.308Z",
+      "pedido": "sertoes (cunha)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:16:38.308Z"
+    },
+    "br|memorias sargento milicias|almeida|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "memorias sargento milicias (almeida)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:16:40.724Z"
+    },
+    "br|escrava isaura|guimaraes|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "escrava isaura (guimaraes)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:02.347Z"
+    },
+    "br|inocencia|taunay|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:17:05.014Z",
+      "pedido": "inocencia (taunay)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:05.014Z"
+    },
+    "br|moreninha|macedo|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:a-moreninha: EPUB com 67.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:17:07.165Z",
+      "pedido": "moreninha (macedo)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:07.165Z"
+    },
+    "br|mao luva|machado|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:maoLuva: EPUB com 47.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:17:15.215Z",
+      "pedido": "mao luva (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:15.215Z"
+    },
+    "br|iaia garcia|machado|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "iaia garcia (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:17.449Z"
+    },
+    "br|papeis avulsos|machado|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:17:18.736Z",
+      "pedido": "papeis avulsos (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:18.736Z"
+    },
+    "br|historias sem data|machado|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "historias sem data (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:20.746Z"
+    },
+    "br|varias historias|machado|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "varias historias (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:23.032Z"
+    },
+    "br|reliquias casa velha|machado|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:reliquiasCasaVelha: EPUB com 39.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:17:28.947Z",
+      "pedido": "reliquias casa velha (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:28.947Z"
+    },
+    "br|ressurreicao|machado|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:ressurreicaoMachado: EPUB com 50.2 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:17:31.106Z",
+      "pedido": "ressurreicao (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:31.106Z"
+    },
+    "br|contos fluminenses|machado|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "contos fluminenses (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:37.010Z"
+    },
+    "br|ubirajara|alencar|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:17:39.020Z",
+      "pedido": "ubirajara (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:39.020Z"
+    },
+    "br|viuvinha|alencar|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "viuvinha (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:41.316Z"
+    },
+    "br|diva|alencar|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:17:44.643Z",
+      "pedido": "diva (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:17:44.643Z"
+    },
+    "br|sertanejo|alencar|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:bub_br_1918_00181510: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:14.731Z",
+      "pedido": "sertanejo (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:14.731Z"
+    },
+    "br|gaucho|alencar|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:ogachoromanceb01alenuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:bub_br_1918_00177310: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:45.210Z",
+      "pedido": "gaucho (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:45.210Z"
+    },
+    "br|pata gazela|alencar|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:46.727Z",
+      "pedido": "pata gazela (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:46.727Z"
+    },
+    "br|livro sogra|azevedo|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:48.456Z",
+      "pedido": "livro sogra (azevedo)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:48.456Z"
+    },
+    "br|recordacoes escrivao isaias caminha|barreto|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:50.658Z",
+      "pedido": "recordacoes escrivao isaias caminha (barreto)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:50.658Z"
+    },
+    "br|clara anjos|barreto|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "clara anjos (barreto)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:52.383Z"
+    },
+    "br|numa ninfa|barreto|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:53.672Z",
+      "pedido": "numa ninfa (barreto)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:53.672Z"
+    },
+    "br|bruzundangas|barreto|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:55.146Z",
+      "pedido": "bruzundangas (barreto)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:55.146Z"
+    },
+    "br|seminarista|guimaraes|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:oseminarista00guim: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:57.850Z",
+      "pedido": "seminarista (guimaraes)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:57.850Z"
+    },
+    "br|moco loiro|macedo|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:18:59.497Z",
+      "pedido": "moco loiro (macedo)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:18:59.497Z"
+    },
+    "br|lira vinte anos|azevedo|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "lira vinte anos (azevedo)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:01.180Z"
+    },
+    "br|noite taverna|azevedo|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "noite taverna (azevedo)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:04.492Z"
+    },
+    "br|espumas flutuantes|alves|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:alves-espumas-flutuantes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:07.867Z",
+      "pedido": "espumas flutuantes (alves)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:07.867Z"
+    },
+    "br|primeiros cantos|dias|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:10.079Z",
+      "pedido": "primeiros cantos (dias)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:10.079Z"
+    },
+    "br|poesias|bilac|1": {
+      "status": "concluido",
+      "fonte": "adamastor",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "poesias (bilac)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:14.348Z"
+    },
+    "br|broqueis|sousa|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:16.371Z",
+      "pedido": "broqueis (sousa)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:16.371Z"
+    },
+    "br|canaa|aranha|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:18.201Z",
+      "pedido": "canaa (aranha)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:18.201Z"
+    },
+    "br|urupes|lobato|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:3394502: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:21.915Z",
+      "pedido": "urupes (lobato)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:21.915Z"
+    },
+    "br|pelo sertao|arinos|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:23.575Z",
+      "pedido": "pelo sertao (arinos)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:23.575Z"
+    },
+    "br|minha formacao|nabuco|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:minhaformao00nabuuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:26.061Z",
+      "pedido": "minha formacao (nabuco)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:26.061Z"
+    },
+    "br|abolicionismo|nabuco|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:o-abolicionismo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:29.066Z",
+      "pedido": "abolicionismo (nabuco)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:29.066Z"
+    },
+    "br|oracao mocos|barbosa|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "oracao mocos (barbosa)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:30.885Z"
+    },
+    "br|bom crioulo|caminha|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:32.472Z",
+      "pedido": "bom crioulo (caminha)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:32.472Z"
+    },
+    "br|dona guidinha poco|paiva|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:34.090Z",
+      "pedido": "dona guidinha poco (paiva)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:34.090Z"
+    },
+    "br|missionario|sousa|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:35.687Z",
+      "pedido": "missionario (sousa)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:35.687Z"
+    },
+    "br|cabeleira|tavora|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "cabeleira (tavora)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:37.467Z"
+    },
+    "br|poesias completas|machado|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:38.947Z",
+      "pedido": "poesias completas (machado)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:38.947Z"
+    },
+    "br|eu outras poesias|anjos|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:40.573Z",
+      "pedido": "eu outras poesias (anjos)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:40.573Z"
+    },
+    "br|tronco ipe|alencar|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:19:42.162Z",
+      "pedido": "tronco ipe (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:19:42.162Z"
+    },
+    "br|cinco minutos|alencar|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:bub_br_1918_00176000: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:09.309Z",
+      "pedido": "cinco minutos (alencar)",
+      "categoria": "Brasileiros",
+      "atualizado_em": "2026-11-23T10:20:09.309Z"
+    },
+    "in||molière|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:omedicoforac00moli: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:teatro-o-tartufo-moliere: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) | internet-archive:moliere-don-juan: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:09.860Z",
+      "pedido": "obra de (molière)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:09.860Z"
+    },
+    "in|robinson crusoe|defoe|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:10.058Z",
+      "pedido": "robinson crusoe (defoe)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:10.058Z"
+    },
+    "in|gulliver|swift|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:10.237Z",
+      "pedido": "gulliver (swift)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:10.237Z"
+    },
+    "in||dickens|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:asaventurasdosrp01dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:asaventurasdosrp03dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:oliverTwistMachado: EPUB com 75.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:18.617Z",
+      "pedido": "obra de (dickens)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:18.617Z"
+    },
+    "in||wilde|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:oscar-wilde-a-decadencia-da-mentira-trad-nicolau-bruno: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:19.494Z",
+      "pedido": "obra de (wilde)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:19.494Z"
+    },
+    "in|divina comedia|dante|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "divina comedia (dante)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:21.551Z"
+    },
+    "in||shakespeare|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:romeoejulietapoe00patr: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:romeoejulietapoe00ferruoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:hamletdramaemcin25667gut: já existe na biblioteca (Hamlet: Drama em cinco Actos) | internet-archive:sonhodumanoited00shakgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:box-classicos-de-sh",
+      "proxima_tentativa": "2026-11-23T16:20:25.983Z",
+      "pedido": "obra de (shakespeare)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:25.983Z"
+    },
+    "in|fausto|goethe|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:fausto-johann-wolfgang-von-goethe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:28.649Z",
+      "pedido": "fausto (goethe)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:28.649Z"
+    },
+    "in||schiller|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:29.244Z",
+      "pedido": "obra de (schiller)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:29.244Z"
+    },
+    "in||ibsen|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-23T16:20:30.855Z",
+      "pedido": "obra de (ibsen)",
+      "categoria": "Internacionais",
+      "atualizado_em": "2026-11-23T10:20:30.855Z"
     }
   },
   "rejeitados": {
@@ -287,36 +844,81 @@
     "internet-archive:oengenhosofidal01saavgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
     "internet-archive:oengenhosofidal00saavgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
     "internet-archive:memoriasdummedic00duma": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
-    "internet-archive:ohomemmulher00duma": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)"
+    "internet-archive:ohomemmulher00duma": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:ossertoeseuclide0000dacu": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:baixar-brasiliana-usp_202510": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:ossertoeseuclide0000dacu_202510": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:hq-memorias-de-um-sgt-de-milicias": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:a-moreninha": "EPUB com 67.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:maoLuva": "EPUB com 47.7 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:iaiaGarcia": "EPUB com 76.3 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:variasHistoriasMachado": "EPUB com 58.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:reliquiasCasaVelha": "EPUB com 39.0 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:ressurreicaoMachado": "EPUB com 50.2 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:contosFluminenses": "EPUB com 75.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:ogachoromanceb01alenuoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:oseminarista00guim": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:alves-espumas-flutuantes": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:3394502": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:minhaformao00nabuuoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:o-abolicionismo": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:omedicoforac00moli": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:teatro-o-tartufo-moliere": "sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d)",
+    "internet-archive:moliere-don-juan": "sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d)",
+    "internet-archive:asaventurasdosrp01dick": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:asaventurasdosrp03dick": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:oliverTwistMachado": "EPUB com 75.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:oscar-wilde-a-decadencia-da-mentira-trad-nicolau-bruno": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:divinaComediaDante": "EPUB com 332.8 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:romeoejulietapoe00patr": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:romeoejulietapoe00ferruoft": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:hamletdramaemcin25667gut": "já existe na biblioteca (Hamlet: Drama em cinco Actos)",
+    "internet-archive:sonhodumanoited00shakgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:box-classicos-de-shakespeare-s-william-shakespeare": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:sonhodumanoited01shakgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:fausto-johann-wolfgang-von-goethe": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)"
   },
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-23T10:11:47.077Z",
+      "verificado_em": "2026-11-23T10:16:22.417Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-23T10:11:47.338Z",
+      "verificado_em": "2026-11-23T10:16:22.711Z",
       "disponivel": true,
-      "ms": 256,
+      "ms": 322,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-23T10:11:47.338Z"
+      "ultimo_ok": "2026-11-23T10:16:22.711Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-23T10:11:47.594Z",
+      "verificado_em": "2026-11-23T10:16:23.033Z",
       "disponivel": true,
-      "ms": 234,
+      "ms": 209,
       "detalhe": "site respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-23T10:11:47.594Z"
+      "ultimo_ok": "2026-11-23T10:16:23.033Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-23T10:16:22.416Z",
+      "fim": "2026-11-23T10:20:30.857Z",
+      "novos": 17,
+      "tentados": 60,
+      "parou_por": "lote de 60 itens",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "adamastor": true
+      },
+      "total": 23
+    },
     {
       "inicio": "2026-11-23T10:11:47.075Z",
       "fim": "2026-11-23T10:13:21.158Z",
@@ -331,34 +933,35 @@
       "total": 6
     }
   ],
-  "atualizado_em": "2026-11-23T10:13:21.158Z",
+  "atualizado_em": "2026-11-23T10:20:30.858Z",
   "ultima_execucao": {
-    "inicio": "2026-11-23T10:11:47.075Z",
-    "fim": "2026-11-23T10:13:21.158Z",
-    "novos": 6,
-    "tentados": 30,
-    "parou_por": "lote de 30 itens",
+    "inicio": "2026-11-23T10:16:22.416Z",
+    "fim": "2026-11-23T10:20:30.857Z",
+    "novos": 17,
+    "tentados": 60,
+    "parou_por": "lote de 60 itens",
     "fontes": {
       "gutenberg": false,
       "internet-archive": true,
       "adamastor": true
     },
-    "total": 6
+    "total": 23
   },
   "resumo": {
-    "meta": 10,
-    "concluidos": 6,
-    "pendentes": 22,
-    "erros": 2,
+    "meta": 100,
+    "concluidos": 23,
+    "pendentes": 62,
+    "erros": 5,
     "bloqueados": 0,
     "por_fonte": {
-      "internet-archive": 6
+      "internet-archive": 22,
+      "adamastor": 1
     },
     "por_categoria": {
-      "Brasileiros": "4/4",
-      "Internacionais": "2/4",
-      "Filosofia": "0/1",
-      "Terror e suspense": "0/1"
+      "Brasileiros": "20/40",
+      "Internacionais": "3/40",
+      "Filosofia": "0/10",
+      "Terror e suspense": "0/10"
     }
   }
 }
