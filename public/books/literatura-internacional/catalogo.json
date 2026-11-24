@@ -138,6 +138,33 @@
       "importado_em": "2026-11-23T21:08:44.811Z"
     },
     {
+      "id": "acervo-narizinho-arrebitado-1-edicao-wiknarizinho-arrebitado-1-edicao",
+      "chave": "fr||anatole france/france|1",
+      "catKey": "fr",
+      "ids": [
+        "wikisource:Narizinho Arrebitado (1ª edição)"
+      ],
+      "titulo": "Narizinho Arrebitado (1ª edição)",
+      "autor": "anatole france",
+      "categoria": "Literatura Francesa",
+      "idioma": "pt",
+      "genero": "Literatura Francesa",
+      "capa": "public/books/literatura-internacional/capas/narizinho-arrebitado-1-edicao-wiknarizinho-arrebitado-1-edicao.jpg",
+      "capa_ok": true,
+      "epub": "public/books/literatura-internacional/literatura-francesa/narizinho-arrebitado-1-edicao-wiknarizinho-arrebitado-1-edicao.epub",
+      "fonte_id": "wikisource",
+      "fonte": "https://pt.wikisource.org/wiki/Narizinho_Arrebitado_(1%C2%AA_edi%C3%A7%C3%A3o)",
+      "origem_download": "https://ws-export.wmcloud.org/?format=epub&lang=pt&page=Narizinho%20Arrebitado%20(1%C2%AA%20edi%C3%A7%C3%A3o)",
+      "credito": "Wikisource (pt)",
+      "licenca": "Wikisource em português: conteúdo livre (domínio público ou licença livre CC BY-SA). Atribuição: pt.wikisource.org e colaboradores. Edição/tradução específica não verificada individualmente.",
+      "autorizacao_redistribuicao": true,
+      "traducao_verificada": false,
+      "baixado": true,
+      "tamanho": 5124425,
+      "sha256": "62ad31ad8c7afcf56f454485d30b559fff1d680938fc32dcf2d302c5ddfdf7ca",
+      "importado_em": "2026-11-24T07:41:56.451Z"
+    },
+    {
       "id": "acervo-os-miseraveis-trad-justiniano-jose-da-rocha-wikos-miseraveis-trad-just",
       "chave": "fr|miseraveis|hugo|1",
       "catKey": "fr",
