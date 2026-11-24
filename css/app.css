@@ -212,7 +212,7 @@ dialog.modal.wide { width: min(720px, calc(100vw - 32px)); }
 dialog.modal::backdrop { background: var(--scrim); animation: fade .2s var(--ease); }
 dialog.modal header { display: flex; align-items: center; justify-content: space-between; padding: 16px 8px 4px 24px; flex: none; }
 dialog.modal header h2 { font-size: 1.25rem; }
-.modal-body { padding: 8px 24px 12px; overflow: auto; flex: 1; min-height: 0; overscroll-behavior: contain; }
+.modal-body { padding: 8px 24px 12px; overflow: auto; flex: 1 1 auto; min-height: 0; overscroll-behavior: contain; } /* basis auto: no iOS/WebKit, 'flex: 1' (basis 0) colapsava o corpo em folhas de altura automática */
 dialog.modal footer { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; padding: 12px 24px calc(20px + env(safe-area-inset-bottom)); flex: none; }
 dialog.modal footer .btn:first-child { margin-right: auto; }
 dialog.modal footer .btn.primary { order: 9; }
@@ -378,3 +378,9 @@ dialog.modal footer .btn.primary { order: 9; }
 .imp-tag { flex: none; font-size: .72rem; font-weight: 600; padding: 2px 8px; border-radius: 8px; background: var(--surface-3); }
 .imp-tag.ok { background: var(--primary-container); color: var(--on-primary-container); } .imp-tag.err, .imp-tag.blk { background: #F9DEDC; color: #601410; } .imp-tag.pend { background: #FFF1C2; color: #4A3B00; }
 .imp-why { font-size: .78rem; color: var(--text-2); overflow-wrap: anywhere; }
+
+/* Abas + busca + filtros ficam fixos no topo ao rolar a lista */
+.lib-sticky { position: sticky; top: 0; z-index: 10; background: var(--bg); margin: 0 -16px; padding: 0 16px; }
+.lib-sticky .lib-tabs { margin: 0 -16px; }
+.lib-sticky .lib-bar { position: static; margin: 0 -16px; }
+@media (min-width: 600px) { .lib-sticky { margin: 0 -24px; padding: 0 24px; } .lib-sticky .lib-tabs, .lib-sticky .lib-bar { margin: 0 -24px; } }
