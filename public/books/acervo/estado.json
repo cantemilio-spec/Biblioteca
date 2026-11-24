@@ -126,57 +126,58 @@
     },
     "in|volta mundo|verne|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:04.207Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:35.563Z",
       "pedido": "volta mundo (verne)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:04.207Z"
+      "atualizado_em": "2026-11-24T01:33:35.563Z"
     },
     "in||verne|2": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:daterraluaviagem28341gut: já importado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:04.466Z",
+      "status": "concluido",
+      "tentativas": 3,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "obra de (verne)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:04.466Z"
+      "atualizado_em": "2026-11-24T01:33:38.599Z",
+      "fonte": "wikisource"
     },
     "in|guerra paz|tolstoy/tolstoi|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:07.176Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:41.116Z",
       "pedido": "guerra paz (tolstoy/tolstoi)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:07.176Z"
+      "atualizado_em": "2026-11-24T01:33:41.116Z"
     },
     "in|anna karenina|tolstoy/tolstoi|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:08.829Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:43.226Z",
       "pedido": "anna karenina (tolstoy/tolstoi)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:08.829Z"
+      "atualizado_em": "2026-11-24T01:33:43.226Z"
     },
     "in||tolstoy/tolstoi|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:09.141Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive:a-morte-de-ivan-ilitch-edicao-exclusiva-amazon-liev-tolstoi-tolstoi-liev: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:44.007Z",
       "pedido": "obra de (tolstoy/tolstoi)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:09.141Z"
+      "atualizado_em": "2026-11-24T01:33:44.007Z"
     },
     "in|crime castigo|dostoyevsky/dostoievski/dostoevsky|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:10.601Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive:crime-e-castigo-1: já existe na biblioteca (Crime E Castigo ( 1)) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:46.237Z",
       "pedido": "crime castigo (dostoyevsky/dostoievski/dostoevsky)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:10.601Z"
+      "atualizado_em": "2026-11-24T01:33:46.237Z"
     },
     "in||dostoyevsky/dostoievski/dostoevsky|1": {
       "status": "concluido",
@@ -189,94 +190,95 @@
       "atualizado_em": "2026-11-23T10:13:19.647Z"
     },
     "in||gogol|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:10.835Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:A Casta Suzana: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:47.083Z",
       "pedido": "obra de (gogol)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:10.835Z"
+      "atualizado_em": "2026-11-24T01:33:47.083Z"
     },
     "in||turgenev/turgueniev|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:11.095Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:47.501Z",
       "pedido": "obra de (turgenev/turgueniev)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:11.095Z"
+      "atualizado_em": "2026-11-24T01:33:47.501Z"
     },
     "in||chekhov/tchekhov|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:11.342Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive:o-candelabro-e-outros-contos-tchekhov-3: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nd/4.0/; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:47.902Z",
       "pedido": "obra de (chekhov/tchekhov)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:11.342Z"
+      "atualizado_em": "2026-11-24T01:33:47.902Z"
     },
     "in|madame bovary|flaubert|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:13.353Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:49.589Z",
       "pedido": "madame bovary (flaubert)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:13.353Z"
+      "atualizado_em": "2026-11-24T01:33:49.589Z"
     },
     "in||balzac|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:13.800Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:50.101Z",
       "pedido": "obra de (balzac)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:13.800Z"
+      "atualizado_em": "2026-11-24T01:33:50.101Z"
     },
     "in||zola|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:14.092Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:A Carne: já existe na biblioteca (A Carne) | wikisource:Dormindo...: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:50.812Z",
       "pedido": "obra de (zola)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:14.092Z"
+      "atualizado_em": "2026-11-24T01:33:50.812Z"
     },
     "in||maupassant|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:14.338Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Meu conto de Maupassant: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Urupês (5ª edição): já importado | wikisource:Um romancista: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:A Sra. D. Albertina Berta: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:52.148Z",
       "pedido": "obra de (maupassant)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:14.338Z"
+      "atualizado_em": "2026-11-24T01:33:52.148Z"
     },
     "in|candido|voltaire|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:16.879Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:54.280Z",
       "pedido": "candido (voltaire)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:16.879Z"
+      "atualizado_em": "2026-11-24T01:33:54.280Z"
     },
     "in||daudet|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:17.125Z",
+      "status": "concluido",
+      "tentativas": 3,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "obra de (daudet)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:17.126Z"
+      "atualizado_em": "2026-11-24T01:33:55.185Z",
+      "fonte": "wikisource"
     },
     "in||stendhal|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:17.395Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Eduardo Prado: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:55.856Z",
       "pedido": "obra de (stendhal)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:17.395Z"
+      "atualizado_em": "2026-11-24T01:33:55.856Z"
     },
     "br|luciola|alencar|1": {
       "status": "concluido",
@@ -748,49 +750,51 @@
       "fonte": "internet-archive"
     },
     "in||molière|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:omedicoforac00moli: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:teatro-o-tartufo-moliere: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) | internet-archive:moliere-don-juan: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:21.189Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive:omedicoforac00moli: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:teatro-o-tartufo-moliere: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | internet-archive:moliere-don-juan: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | wikisource:A atualidade do teatro entre nós: download ",
+      "proxima_tentativa": "2026-11-25T01:33:56.476Z",
       "pedido": "obra de (molière)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:21.189Z"
+      "atualizado_em": "2026-11-24T01:33:56.476Z"
     },
     "in|robinson crusoe|defoe|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:24.620Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:33:59.300Z",
       "pedido": "robinson crusoe (defoe)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:24.620Z"
+      "atualizado_em": "2026-11-24T01:33:59.300Z"
     },
     "in|gulliver|swift|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:29.178Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Viagens de Gulliver: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:34:02.930Z",
       "pedido": "gulliver (swift)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:29.178Z"
+      "atualizado_em": "2026-11-24T01:34:02.930Z"
     },
     "in||dickens|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:asaventurasdosrp01dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:asaventurasdosrp03dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:oliverTwistMachado: EPUB com 75.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:31.317Z",
+      "status": "concluido",
+      "tentativas": 3,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "obra de (dickens)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:31.317Z"
+      "atualizado_em": "2026-11-24T01:34:04.205Z",
+      "fonte": "wikisource"
     },
     "in||wilde|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:oscar-wilde-a-decadencia-da-mentira-trad-nicolau-bruno: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:31.701Z",
+      "status": "concluido",
+      "tentativas": 3,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "obra de (wilde)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:31.701Z"
+      "atualizado_em": "2026-11-24T01:34:06.353Z",
+      "fonte": "wikisource"
     },
     "in|divina comedia|dante|1": {
       "status": "concluido",
@@ -804,39 +808,41 @@
     },
     "in||shakespeare|1": {
       "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:romeoejulietapoe00patr: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:romeoejulietapoe00ferruoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:hamletdramaemcin25667gut: já existe na biblioteca (Hamlet: Drama em cinco Actos) | internet-archive:sonhodumanoited00shakgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:box-classicos-de-sh",
-      "proxima_tentativa": "2026-11-23T22:47:35.015Z",
+      "tentativas": 3,
+      "motivo": "fonte indisponível: internet-archive:romeoejulietapoe00patr: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:romeoejulietapoe00ferruoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:hamletdramaemcin25667gut: já existe na biblioteca (Hamlet: Drama em cinco Actos) (decisão anterior) | internet-archive:sonhodumanoited00shakgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status:",
+      "proxima_tentativa": "2026-11-25T01:34:06.757Z",
       "pedido": "obra de (shakespeare)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:35.015Z"
+      "atualizado_em": "2026-11-24T01:34:06.757Z"
     },
     "in|fausto|goethe|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive:fausto-johann-wolfgang-von-goethe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:35.457Z",
+      "status": "concluido",
+      "tentativas": 3,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "fausto (goethe)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:35.457Z"
+      "atualizado_em": "2026-11-24T01:34:08.099Z",
+      "fonte": "wikisource"
     },
     "in||schiller|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:36.292Z",
+      "status": "erro",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Os deoses da Grecia: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Falenas: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Que o seu pobre servidor: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:O Desterro de um Pobre Velho: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Se se morre de amor: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:34:10.099Z",
       "pedido": "obra de (schiller)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:36.292Z"
+      "atualizado_em": "2026-11-24T01:34:10.099Z"
     },
     "in||ibsen|1": {
-      "status": "pendente",
-      "tentativas": 2,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-23T22:47:36.603Z",
+      "status": "concluido",
+      "tentativas": 3,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "obra de (ibsen)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T10:47:36.603Z"
+      "atualizado_em": "2026-11-24T01:34:11.110Z",
+      "fonte": "wikisource"
     },
     "in||kafka|1": {
       "status": "pendente",
@@ -1428,40 +1434,42 @@
       "fonte": "wikisource"
     },
     "te||wells|1": {
-      "status": "pendente",
-      "tentativas": 1,
-      "motivo": "fonte indisponível: internet-archive:OsSemeadoresDeVida: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:EntrevistaComEstaline: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nd/4.0/; possible-copyright-status: n/d) | internet-archive:marxismoliberalismo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:a-estrela-h.g.-wells: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd",
-      "proxima_tentativa": "2026-11-24T01:20:40.282Z",
+      "status": "concluido",
+      "tentativas": 2,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "obra de (wells)",
       "categoria": "Terror e suspense",
-      "atualizado_em": "2026-11-23T19:20:40.282Z"
+      "atualizado_em": "2026-11-24T01:34:12.553Z",
+      "fonte": "wikisource"
     },
     "te||collins|1": {
-      "status": "pendente",
-      "tentativas": 1,
-      "motivo": "fonte indisponível: internet-archive:9788526801646: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:retrato-dos-pioneiros: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:retrato-dos-pioneiros-vol-ii: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:trilogia-jogos-vorazes-volume-unico-suzanne-collins-2013-pdf_202605: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status",
-      "proxima_tentativa": "2026-11-24T01:20:44.115Z",
+      "status": "erro",
+      "tentativas": 2,
+      "motivo": "internet-archive:9788526801646: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:retrato-dos-pioneiros: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:retrato-dos-pioneiros-vol-ii: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:trilogia-jogos-vorazes-volume-unico-suzanne-collins-2013-pdf_202605: sem licença de redistribuição explícita (licenseur",
+      "proxima_tentativa": "2026-11-24T13:34:13.590Z",
       "pedido": "obra de (collins)",
       "categoria": "Terror e suspense",
-      "atualizado_em": "2026-11-23T19:20:44.115Z"
+      "atualizado_em": "2026-11-24T01:34:13.590Z"
     },
     "te|cartomante|machado|1": {
-      "status": "pendente",
-      "tentativas": 1,
-      "motivo": "fonte indisponível: internet-archive:ACartomante: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T01:20:47.065Z",
+      "status": "erro",
+      "tentativas": 2,
+      "motivo": "internet-archive:ACartomante: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:A Cartomante: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-24T13:34:15.857Z",
       "pedido": "cartomante (machado)",
       "categoria": "Terror e suspense",
-      "atualizado_em": "2026-11-23T19:20:47.065Z"
+      "atualizado_em": "2026-11-24T01:34:15.857Z"
     },
     "te||azevedo|1": {
-      "status": "pendente",
-      "tentativas": 1,
-      "motivo": "fonte indisponível: internet-archive:dicionario-analogico-da-lingua-portuguesa-2e: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:numerologia_201911: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:omarqusdepomba00azevuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) | internet-archive:visionorhellpur03flaxgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT",
-      "proxima_tentativa": "2026-11-24T01:21:06.590Z",
+      "status": "concluido",
+      "tentativas": 2,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "obra de (azevedo)",
       "categoria": "Terror e suspense",
-      "atualizado_em": "2026-11-23T19:21:06.590Z"
+      "atualizado_em": "2026-11-24T01:34:16.836Z",
+      "fonte": "wikisource"
     },
     "te|defunto|queiros/queirós|1": {
       "status": "concluido",
@@ -1474,13 +1482,14 @@
       "atualizado_em": "2026-11-23T19:21:11.742Z"
     },
     "te||castelo branco|1": {
-      "status": "pendente",
-      "tentativas": 1,
-      "motivo": "fonte indisponível: internet-archive:formosalusitania00jackuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:cartasdecamiloca00cast: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:diccionariounive02campuoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:bohemiadoespiri00brangoog: sem licença de redistribuição expl",
-      "proxima_tentativa": "2026-11-24T01:21:11.995Z",
+      "status": "concluido",
+      "tentativas": 2,
+      "motivo": null,
+      "proxima_tentativa": null,
       "pedido": "obra de (castelo branco)",
       "categoria": "Terror e suspense",
-      "atualizado_em": "2026-11-23T19:21:11.995Z"
+      "atualizado_em": "2026-11-24T01:34:19.591Z",
+      "fonte": "wikisource"
     },
     "te||neto|1": {
       "status": "concluido",
@@ -1652,45 +1661,67 @@
     "wikisource:António Vieira (Mensagem)": "já existe na biblioteca (António Vieira (Mensagem))",
     "wikisource:Poesias Completas (Machado de Assis)": "já existe na biblioteca (Poesias Completas (Machado de Assis))",
     "wikisource:Os Miseraveis (trad. Justiniano José da Rocha)": "já existe na biblioteca (Os Miseraveis (trad. Justiniano José da Rocha))",
-    "wikisource:Memorias de José Garibaldi": "já existe na biblioteca (Memorias de José Garibaldi)"
+    "wikisource:Memorias de José Garibaldi": "já existe na biblioteca (Memorias de José Garibaldi)",
+    "wikisource:Descobrimento Prodigioso e suas Incalculaveis Consequências para o Futuro da Humanidade": "já existe na biblioteca (Descobrimento Prodigioso e suas Incalculaveis Consequências para o Futuro da Humanidade)",
+    "wikisource:A Estrella do Sul": "já existe na biblioteca (A Estrella do Sul)",
+    "wikisource:Da Terra á Lua": "já existe na biblioteca (Da Terra á Lua)",
+    "internet-archive:a-morte-de-ivan-ilitch-edicao-exclusiva-amazon-liev-tolstoi-tolstoi-liev": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:crime-e-castigo-1": "já existe na biblioteca (Crime E Castigo ( 1))",
+    "internet-archive:o-candelabro-e-outros-contos-tchekhov-3": "sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nd/4.0/; possible-copyright-status: n/d)",
+    "wikisource:A Carne": "já existe na biblioteca (A Carne)",
+    "wikisource:Hamlet: drama em cinco actos": "já existe na biblioteca (Hamlet: drama em cinco actos)"
   },
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-23T21:11:16.342Z",
+      "verificado_em": "2026-11-24T01:33:29.800Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-23T21:11:16.592Z",
+      "verificado_em": "2026-11-24T01:33:30.276Z",
       "disponivel": true,
-      "ms": 270,
+      "ms": 352,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-23T21:11:16.592Z"
+      "ultimo_ok": "2026-11-24T01:33:30.276Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-23T21:11:16.918Z",
-      "disponivel": false,
-      "ms": 474,
-      "detalhe": "indisponível nesta execução; será testada de novo na próxima",
-      "erro": "TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)",
-      "ultimo_ok": "2026-11-23T21:05:07.181Z"
+      "verificado_em": "2026-11-24T01:33:30.898Z",
+      "disponivel": true,
+      "ms": 2514,
+      "detalhe": "site respondeu",
+      "erro": null,
+      "ultimo_ok": "2026-11-24T01:33:30.898Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-23T21:11:16.862Z",
+      "verificado_em": "2026-11-24T01:33:30.628Z",
       "disponivel": true,
-      "ms": 56,
+      "ms": 270,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-23T21:11:16.862Z"
+      "ultimo_ok": "2026-11-24T01:33:30.628Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-24T01:33:29.796Z",
+      "fim": "2026-11-24T01:34:19.594Z",
+      "novos": 9,
+      "tentados": 30,
+      "parou_por": "fim da lista",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 60
+    },
     {
       "inicio": "2026-11-23T21:11:16.339Z",
       "fim": "2026-11-23T21:13:47.923Z",
@@ -1785,37 +1816,37 @@
       "total": 6
     }
   ],
-  "atualizado_em": "2026-11-23T21:13:47.924Z",
+  "atualizado_em": "2026-11-24T01:34:19.595Z",
   "ultima_execucao": {
-    "inicio": "2026-11-23T21:11:16.339Z",
-    "fim": "2026-11-23T21:13:47.923Z",
-    "novos": 2,
-    "tentados": 40,
-    "parou_por": "lote de 40 itens",
+    "inicio": "2026-11-24T01:33:29.796Z",
+    "fim": "2026-11-24T01:34:19.594Z",
+    "novos": 9,
+    "tentados": 30,
+    "parou_por": "fim da lista",
     "fontes": {
       "gutenberg": false,
       "internet-archive": true,
       "wikisource": true,
-      "adamastor": false
+      "adamastor": true
     },
-    "total": 51
+    "total": 60
   },
   "resumo": {
     "meta": 100,
-    "concluidos": 51,
-    "pendentes": 66,
-    "erros": 43,
+    "concluidos": 60,
+    "pendentes": 48,
+    "erros": 52,
     "bloqueados": 0,
     "por_fonte": {
       "internet-archive": 41,
       "adamastor": 3,
-      "wikisource": 7
+      "wikisource": 16
     },
     "por_categoria": {
       "Brasileiros": "24/40",
-      "Internacionais": "14/40",
+      "Internacionais": "20/40",
       "Filosofia": "6/10",
-      "Terror e suspense": "7/10"
+      "Terror e suspense": "10/10"
     }
   }
 }
