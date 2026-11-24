@@ -89,7 +89,7 @@ export async function mountCollections(root) {
 
   root.replaceChildren(
     h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Coleções'), h('p', { class: 'hint' }, 'Agrupe livros do seu jeito. Para incluir livros, use "Selecionar" na Biblioteca ou os detalhes do livro.'))),
-    libTabs('colecoes'),
+    h('div', { class: 'lib-sticky' }, libTabs('colecoes')),
     h('section', { class: 'panel' }, h('div', { class: 'coll-new' }, nameIn, h('button', { class: 'btn primary', type: 'button', onclick: create }, icon('plus', 18), 'Criar coleção'))),
     cols.length ? h('ul', { class: 'coll-list' }, cols.map((c) => h('li', { class: 'coll-item' },
       h('button', { class: 'coll-open', type: 'button', onclick: () => openIn(c) }, icon('folder', 22), h('span', { class: 'coll-name' }, c.name), h('span', { class: 'hint' }, `${count(c.id)} livro(s)`)),

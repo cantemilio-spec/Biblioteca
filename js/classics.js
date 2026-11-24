@@ -55,7 +55,7 @@ async function mountCatalog(root, tab, cfg) {
   const count = h('p', { class: 'hint cl-count', 'aria-live': 'polite' });
   root.replaceChildren(
     h('div', { class: 'view-head head-brand' }, bimg(), h('div', {}, h('h1', {}, 'Biblioteca'), h('p', { class: 'hint' }, cfg.source === 'adamastor' && CLASSIC_TABS.some(([k]) => k === tab) ? 'Clássicos da Literatura (domínio público, Projecto Adamastor). Toque para abrir; o livro é baixado só na primeira vez.' : cfg.hint))),
-    libTabs(['estante', 'acervo', 'literatura'].includes(cfg.source) ? cfg.source : CLASSIC_TABS.some(([k]) => k === tab) ? tab : 'todos'), bar, count, grid);
+    h('div', { class: 'lib-sticky' }, libTabs(['estante', 'acervo', 'literatura'].includes(cfg.source) ? cfg.source : CLASSIC_TABS.some(([k]) => k === tab) ? tab : 'todos'), bar), count, grid);
 
   let cat;
   try { cat = await loadCatalog(cfg); } catch {

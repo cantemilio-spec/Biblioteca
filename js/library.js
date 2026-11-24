@@ -350,7 +350,7 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
   root.replaceChildren(
     home ? h('div', { class: 'greet head-brand' }, bimg(), h('div', {}, h('h1', {}, greeting), h('p', { class: 'hint' }, 'Continue de onde parou.')))
       : h('div', { class: 'view-head top-row' }, bimg(), h('h1', {}, onlyFavorites ? 'Favoritos' : 'Biblioteca'), toolsEl),
-    ...(home ? [] : [libTabs('meus')]), bar, content, input,
+    ...(home ? [bar] : [h('div', { class: 'lib-sticky' }, libTabs('meus'), bar)]), content, input,
     fab);
   if (st.collection || st.genre) { setSetting('collection', ''); setSetting('genre', ''); } // filtro vindo do Início/Coleções vale só para esta visita
 
