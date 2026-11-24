@@ -881,6 +881,376 @@
       "pedido": "metamorfose (kafka)",
       "categoria": "Literatura Alemã",
       "atualizado_em": "2026-11-24T13:37:02.965Z"
+    },
+    "de||kafka|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:carta-ao-pai-franz-kafka: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:franz-kafka-o-covil-editorial-inquerito: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:franz-kafka-consideracoes-sobre-o-pecado-o-sofrimento-a-esperanca-e-o-verdadeiro-caminho-1992: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:04.624Z",
+      "pedido": "obra de (kafka)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:04.624Z"
+    },
+    "de|processo|kafka|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:07.712Z",
+      "pedido": "processo (kafka)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:07.712Z"
+    },
+    "de||grimm|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:perolasediamante30510gut: download falhou (TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)) | wikisource:Contos de Grimm: já importado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:32.218Z",
+      "pedido": "obra de (grimm)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:32.218Z"
+    },
+    "de||grimm|2": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (grimm)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:33.103Z"
+    },
+    "de||grimm|3": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:perolasediamante30510gut: já importado | wikisource:Contos de Grimm: já importado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:33.330Z",
+      "pedido": "obra de (grimm)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:33.330Z"
+    },
+    "de||goethe|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (goethe)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:36.146Z"
+    },
+    "de|fausto|goethe|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:fausto-johann-wolfgang-von-goethe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Fausto (traduzido por António Feliciano de Castilho): já existe na biblioteca (Fausto (traduzido por António Feliciano de Castilho)) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:38.980Z",
+      "pedido": "fausto (goethe)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:38.980Z"
+    },
+    "de||schiller|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:Os deoses da Grecia: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Falenas: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Que o seu pobre servidor: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:O Desterro de um Pobre Velho: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Se se morre de amor: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:42.306Z",
+      "pedido": "obra de (schiller)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:42.306Z"
+    },
+    "de||hoffmann|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:João Felpudo: já existe na biblioteca (João Felpudo) | wikisource:Das Lied der Deutschen: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:43.074Z",
+      "pedido": "obra de (hoffmann)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:43.074Z"
+    },
+    "de||zweig|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:dli.ernet.447892: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:46.857Z",
+      "pedido": "obra de (zweig)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:46.857Z"
+    },
+    "de||thomas mann/mann|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:a-genese-do-doutor-fausto-thomas-mann: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:19:47.890Z",
+      "pedido": "obra de (thomas mann/mann)",
+      "categoria": "Literatura Alemã",
+      "atualizado_em": "2026-11-24T19:19:47.890Z"
+    },
+    "it|divina comedia|dante|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:divinaComediaDante: EPUB com 332.8 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | internet-archive:a-divina-comedia-dante-alighieri: já existe na biblioteca (A Divina Comédia – Dante Alighieri) | internet-archive:dante-divina-comedia-01-03-inferno_202602: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:dante-divina-comedia-01-03-inferno: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:dante-divina-comedia-02-03-purgatorio: s",
+      "proxima_tentativa": "2026-11-25T01:19:54.981Z",
+      "pedido": "divina comedia (dante)",
+      "categoria": "Literatura Italiana",
+      "atualizado_em": "2026-11-24T19:19:54.981Z"
+    },
+    "it||dante|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:pdf_study_multi_inferno: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:divinaComediaDante: EPUB com 332.8 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) (decisão anterior) | internet-archive:a-divina-comedia-dante-alighieri: já existe na biblioteca (A Divina Comédia – Dante Alighieri) (decisão anterior) | internet-archive:papavero-e-teixeira-2015-zoonimia-tupi-nos-escritos-quinhentistas-europeus: EPUB com 28.9 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | interne",
+      "proxima_tentativa": "2026-11-25T01:19:59.460Z",
+      "pedido": "obra de (dante)",
+      "categoria": "Literatura Italiana",
+      "atualizado_em": "2026-11-24T19:19:59.460Z"
+    },
+    "it|decameron|boccaccio|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:02.319Z",
+      "pedido": "decameron (boccaccio)",
+      "categoria": "Literatura Italiana",
+      "atualizado_em": "2026-11-24T19:20:02.319Z"
+    },
+    "it|pinoquio|collodi|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:04.867Z",
+      "pedido": "pinoquio (collodi)",
+      "categoria": "Literatura Italiana",
+      "atualizado_em": "2026-11-24T19:20:04.867Z"
+    },
+    "it||manzoni|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (manzoni)",
+      "categoria": "Literatura Italiana",
+      "atualizado_em": "2026-11-24T19:20:06.598Z"
+    },
+    "it|coracao|amicis|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:coraotraddev00deam: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:09.480Z",
+      "pedido": "coracao (amicis)",
+      "categoria": "Literatura Italiana",
+      "atualizado_em": "2026-11-24T19:20:09.480Z"
+    },
+    "it||salgari|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:10.064Z",
+      "pedido": "obra de (salgari)",
+      "categoria": "Literatura Italiana",
+      "atualizado_em": "2026-11-24T19:20:10.064Z"
+    },
+    "it|principe|maquiavel/machiavelli|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:MaquiavelOPrincipe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:maquiavel-o-principe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:o-principe-texto-integral: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:colecao-os-pensadores-nicolau-maquiavel_202601: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-ar",
+      "proxima_tentativa": "2026-11-25T01:20:16.378Z",
+      "pedido": "principe (maquiavel/machiavelli)",
+      "categoria": "Literatura Italiana",
+      "atualizado_em": "2026-11-24T19:20:16.378Z"
+    },
+    "es|quixote|cervantes|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "quixote (cervantes)",
+      "categoria": "Literatura Espanhola",
+      "atualizado_em": "2026-11-24T19:20:20.917Z"
+    },
+    "es||cervantes|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:oengenhosofidal01saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:oengenhosofidal00saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:livros-de-meditacao-e-auto-ajuda: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:Dom Quixote: já importado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:23.471Z",
+      "pedido": "obra de (cervantes)",
+      "categoria": "Literatura Espanhola",
+      "atualizado_em": "2026-11-24T19:20:23.471Z"
+    },
+    "es||galdos|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:24.617Z",
+      "pedido": "obra de (galdos)",
+      "categoria": "Literatura Espanhola",
+      "atualizado_em": "2026-11-24T19:20:24.617Z"
+    },
+    "es||becquer/bécquer|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:25.760Z",
+      "pedido": "obra de (becquer/bécquer)",
+      "categoria": "Literatura Espanhola",
+      "atualizado_em": "2026-11-24T19:20:25.760Z"
+    },
+    "es||quevedo|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:a-face-oculta-da-mente-oscar-g.-quevedo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:antes-que-os-demonios-voltem-padre-quevedo: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:Hino do município de Quevedos: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Hino do município de São Lourenço do Sul: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Concordata de 1940: download falhou (ex",
+      "proxima_tentativa": "2026-11-25T01:20:29.056Z",
+      "pedido": "obra de (quevedo)",
+      "categoria": "Literatura Espanhola",
+      "atualizado_em": "2026-11-24T19:20:29.056Z"
+    },
+    "es||lope|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive: não encontrado | wikisource:Senhor João Lopes, o meu baixo estado: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Balas de Estalo (João Simões Lopes Neto): download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Don Afonso Lopes de Baián quer: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Hino do município de Avelino Lopes: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Hino do município de Paulo Lopes: download falhou (exportação vazia ou mu",
+      "proxima_tentativa": "2026-11-25T01:20:31.567Z",
+      "pedido": "obra de (lope)",
+      "categoria": "Literatura Espanhola",
+      "atualizado_em": "2026-11-24T19:20:31.567Z"
+    },
+    "gr|iliada|homero|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "iliada (homero)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:20:36.913Z"
+    },
+    "gr|odisseia|homero|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:hq-fragmentos-do-horror-volume-unico-junji-ito: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:odisseia-vol.-01-trad-pe.-manuel-alves-correia_202509: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:41.551Z",
+      "pedido": "odisseia (homero)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:20:41.551Z"
+    },
+    "gr||homero|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (homero)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:20:45.087Z"
+    },
+    "gr||sofocles/sófocles|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (sofocles/sófocles)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:20:48.543Z"
+    },
+    "gr||euripides/eurípides|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:20:49.593Z",
+      "pedido": "obra de (euripides/eurípides)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:20:49.593Z"
+    },
+    "gr||esquilo|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (esquilo)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:20:52.154Z"
+    },
+    "gr||aristofanes/aristófanes|1": {
+      "status": "concluido",
+      "fonte": "internet-archive",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (aristofanes/aristófanes)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:20:55.162Z"
+    },
+    "gr||esopo|1": {
+      "status": "concluido",
+      "fonte": "wikisource",
+      "tentativas": 1,
+      "motivo": null,
+      "proxima_tentativa": null,
+      "pedido": "obra de (esopo)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:20:58.332Z"
+    },
+    "gr||plutarco|1": {
+      "status": "erro",
+      "tentativas": 1,
+      "motivo": "internet-archive:a-vida-de-alexandre-o-grande-plutarco: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:como-tirar-proveito-de-seus-inimigos_202509: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:a-vida-de-alexandre-o-grande-plutarco_202509: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource:Empunhou cupido as setas: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Uma visita ",
+      "proxima_tentativa": "2026-11-25T01:21:00.807Z",
+      "pedido": "obra de (plutarco)",
+      "categoria": "Literatura Grega",
+      "atualizado_em": "2026-11-24T19:21:00.807Z"
+    },
+    "un||andersen|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:apequenasereia_201807: sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) | internet-archive:sophia-de-mello-breyner-andersen-o-nu-na-antiguidade-classica: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:21:03.487Z",
+      "pedido": "obra de (andersen)",
+      "categoria": "Literatura Universal",
+      "atualizado_em": "2026-11-24T19:21:03.487Z"
+    },
+    "un||andersen|2": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive:apequenasereia_201807: sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | internet-archive:sophia-de-mello-breyner-andersen-o-nu-na-antiguidade-classica: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:21:03.638Z",
+      "pedido": "obra de (andersen)",
+      "categoria": "Literatura Universal",
+      "atualizado_em": "2026-11-24T19:21:03.638Z"
+    },
+    "un||ibsen|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:Constituição de 1988 da República Federativa do Brasil: já existe na biblioteca (Constituição de 1988 da República Federativa do Brasil) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:21:04.080Z",
+      "pedido": "obra de (ibsen)",
+      "categoria": "Literatura Universal",
+      "atualizado_em": "2026-11-24T19:21:04.080Z"
+    },
+    "un||sienkiewicz|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:21:04.695Z",
+      "pedido": "obra de (sienkiewicz)",
+      "categoria": "Literatura Universal",
+      "atualizado_em": "2026-11-24T19:21:04.695Z"
+    },
+    "un||strindberg|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:21:05.050Z",
+      "pedido": "obra de (strindberg)",
+      "categoria": "Literatura Universal",
+      "atualizado_em": "2026-11-24T19:21:05.050Z"
+    },
+    "un||lagerlof/lagerlöf|1": {
+      "status": "pendente",
+      "tentativas": 1,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T01:21:05.641Z",
+      "pedido": "obra de (lagerlof/lagerlöf)",
+      "categoria": "Literatura Universal",
+      "atualizado_em": "2026-11-24T19:21:05.641Z"
     }
   },
   "rejeitados": {
@@ -949,45 +1319,107 @@
     "internet-archive:g.-k.-chesterton-a-inocencia-do-padre-brown": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
     "internet-archive:o-corvo-edgar-allan-poe": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
     "wikisource:Violeiros do norte (1925)": "já existe na biblioteca (Violeiros do norte (1925))",
-    "internet-archive:o-diario-de-adao-e-eva-mark-twain_a-ultima-cabecada-luis-alarcon": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)"
+    "internet-archive:o-diario-de-adao-e-eva-mark-twain_a-ultima-cabecada-luis-alarcon": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:carta-ao-pai-franz-kafka": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:franz-kafka-o-covil-editorial-inquerito": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:franz-kafka-consideracoes-sobre-o-pecado-o-sofrimento-a-esperanca-e-o-verdadeiro-caminho-1992": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:ossofrimentosdojovemwertherjohannwolfganggoethe": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:fausto-johann-wolfgang-von-goethe": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:GoetheAsAfinidadesEletivas": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:os-sofrimentos-do-jovem-werther-portuguese-edition-johann-wolfgang-goethe-2001-l": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "wikisource:Fausto (traduzido por António Feliciano de Castilho)": "já existe na biblioteca (Fausto (traduzido por António Feliciano de Castilho))",
+    "wikisource:João Felpudo": "já existe na biblioteca (João Felpudo)",
+    "internet-archive:dli.ernet.447892": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:a-genese-do-doutor-fausto-thomas-mann": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:divinaComediaDante": "EPUB com 332.8 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:a-divina-comedia-dante-alighieri": "já existe na biblioteca (A Divina Comédia – Dante Alighieri)",
+    "internet-archive:dante-divina-comedia-01-03-inferno_202602": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:dante-divina-comedia-01-03-inferno": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:dante-divina-comedia-02-03-purgatorio": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:dante-divina-comedia-02-03-purgatorio_202602": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "wikisource:A Divina Comédia": "já existe na biblioteca (A Divina Comédia)",
+    "internet-archive:pdf_study_multi_inferno": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:papavero-e-teixeira-2015-zoonimia-tupi-nos-escritos-quinhentistas-europeus": "EPUB com 28.9 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro)",
+    "internet-archive:coraotraddev00deam": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:MaquiavelOPrincipe": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:maquiavel-o-principe": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:o-principe-texto-integral": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:colecao-os-pensadores-nicolau-maquiavel_202601": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:001143485-o-principe_202601": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:oengenhosofidal01saavgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:oengenhosofidal00saavgoog": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT)",
+    "internet-archive:livros-de-meditacao-e-auto-ajuda": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:a-face-oculta-da-mente-oscar-g.-quevedo": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:antes-que-os-demonios-voltem-padre-quevedo": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:hq-fragmentos-do-horror-volume-unico-junji-ito": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:iliada_20230504": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:iliadadehomero00home_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:iliada_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:iliada-vol.-01-trad-pe.-manuel-alves-correia_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:iliadadehomer00home_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:odisseia-vol.-01-trad-pe.-manuel-alves-correia_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:costa-e-silva-sofocles-tragedias-do-ciclo-troiano_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:sofocles-tragedias-do-ciclo-tebano_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:esquilo-prometeu-agrilhoado-frenesi-1995": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:fabulas-completas-esopo_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:a-vida-de-alexandre-o-grande-plutarco": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:como-tirar-proveito-de-seus-inimigos_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:a-vida-de-alexandre-o-grande-plutarco_202509": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "internet-archive:apequenasereia_201807": "sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d)",
+    "internet-archive:sophia-de-mello-breyner-andersen-o-nu-na-antiguidade-classica": "sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d)",
+    "wikisource:Constituição de 1988 da República Federativa do Brasil": "já existe na biblioteca (Constituição de 1988 da República Federativa do Brasil)"
   },
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-24T13:36:22.961Z",
+      "verificado_em": "2026-11-24T19:19:00.283Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-24T13:36:23.069Z",
+      "verificado_em": "2026-11-24T19:19:00.545Z",
       "disponivel": true,
-      "ms": 268,
+      "ms": 591,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-24T13:36:23.069Z"
+      "ultimo_ok": "2026-11-24T19:19:00.545Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-24T13:36:23.337Z",
+      "verificado_em": "2026-11-24T19:19:01.136Z",
       "disponivel": true,
-      "ms": 48,
+      "ms": 167,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-24T13:36:23.337Z"
+      "ultimo_ok": "2026-11-24T19:19:01.136Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-24T13:36:23.385Z",
-      "disponivel": false,
-      "ms": 192,
-      "detalhe": "indisponível nesta execução; será testada de novo na próxima",
-      "erro": "TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)",
-      "ultimo_ok": "2026-11-24T07:41:38.904Z"
+      "verificado_em": "2026-11-24T19:19:01.303Z",
+      "disponivel": true,
+      "ms": 238,
+      "detalhe": "site respondeu",
+      "erro": null,
+      "ultimo_ok": "2026-11-24T19:19:01.303Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-24T19:19:00.279Z",
+      "fim": "2026-11-24T19:21:05.645Z",
+      "novos": 10,
+      "tentados": 40,
+      "parou_por": "lote de 40 itens",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 27
+    },
     {
       "inicio": "2026-11-24T13:36:22.958Z",
       "fim": "2026-11-24T13:37:02.966Z",
@@ -1059,40 +1491,40 @@
       "total": 8
     }
   ],
-  "atualizado_em": "2026-11-24T13:37:02.967Z",
+  "atualizado_em": "2026-11-24T19:21:05.646Z",
   "ultima_execucao": {
-    "inicio": "2026-11-24T13:36:22.958Z",
-    "fim": "2026-11-24T13:37:02.966Z",
-    "novos": 0,
+    "inicio": "2026-11-24T19:19:00.279Z",
+    "fim": "2026-11-24T19:21:05.645Z",
+    "novos": 10,
     "tentados": 40,
     "parou_por": "lote de 40 itens",
     "fontes": {
       "gutenberg": false,
       "internet-archive": true,
       "wikisource": true,
-      "adamastor": false
+      "adamastor": true
     },
-    "total": 17
+    "total": 27
   },
   "resumo": {
     "meta": 50,
-    "concluidos": 17,
-    "pendentes": 41,
-    "erros": 38,
+    "concluidos": 27,
+    "pendentes": 63,
+    "erros": 46,
     "bloqueados": 0,
     "por_fonte": {
-      "wikisource": 15,
-      "internet-archive": 2
+      "wikisource": 22,
+      "internet-archive": 5
     },
     "por_categoria": {
       "Literatura Russa": "2/50",
       "Literatura Francesa": "7/50",
       "Literatura Inglesa": "8/50",
       "Literatura Norte-Americana": "0/50",
-      "Literatura Alemã": "0/50",
-      "Literatura Italiana": "0/50",
-      "Literatura Espanhola": "0/50",
-      "Literatura Grega": "0/50",
+      "Literatura Alemã": "2/50",
+      "Literatura Italiana": "1/50",
+      "Literatura Espanhola": "1/50",
+      "Literatura Grega": "6/50",
       "Literatura Universal": "0/50"
     }
   }
