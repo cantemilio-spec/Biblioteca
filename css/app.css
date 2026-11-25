@@ -207,12 +207,12 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px
 
 /* Diálogos: caixa no desktop, folha inferior no celular */
 dialog.modal { border: 0; padding: 0; border-radius: var(--radius-lg); background: var(--surface); color: var(--text); width: min(480px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); box-shadow: var(--shadow-menu); animation: pop .22s var(--ease); overflow: hidden; }
-dialog.modal[open] { display: flex; flex-direction: column; }
+dialog.modal[open] { display: block; }
 dialog.modal.wide { width: min(720px, calc(100vw - 32px)); }
 dialog.modal::backdrop { background: var(--scrim); animation: fade .2s var(--ease); }
 dialog.modal header { display: flex; align-items: center; justify-content: space-between; padding: 16px 8px 4px 24px; flex: none; }
 dialog.modal header h2 { font-size: 1.25rem; }
-.modal-body { padding: 8px 24px 12px; overflow: auto; flex: 1 1 auto; min-height: 0; overscroll-behavior: contain; } /* basis auto: no iOS/WebKit, 'flex: 1' (basis 0) colapsava o corpo em folhas de altura automática */
+.modal-body { padding: 8px 24px 12px; overflow-y: auto; -webkit-overflow-scrolling: touch; max-height: calc(100vh - 230px); max-height: calc(100dvh - 230px); min-height: 80px; overscroll-behavior: contain; } /* basis auto: no iOS/WebKit, 'flex: 1' (basis 0) colapsava o corpo em folhas de altura automática */
 dialog.modal footer { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; padding: 12px 24px calc(20px + env(safe-area-inset-bottom)); flex: none; }
 dialog.modal footer .btn:first-child { margin-right: auto; }
 dialog.modal footer .btn.primary { order: 9; }
@@ -384,3 +384,12 @@ dialog.modal footer .btn.primary { order: 9; }
 .lib-sticky .lib-tabs { margin: 0 -16px; }
 .lib-sticky .lib-bar { position: static; margin: 0 -16px; }
 @media (min-width: 600px) { .lib-sticky { margin: 0 -24px; padding: 0 24px; } .lib-sticky .lib-tabs, .lib-sticky .lib-bar { margin: 0 -24px; } }
+
+/* Barra fixa: a animação 'rise' (transform) num ancestral/elemento sticky quebra o position:sticky no WebKit/iOS (modo app) */
+.enter > .lib-sticky { animation: none; position: -webkit-sticky; position: sticky; }
+
+/* Status da busca automática de capas */
+.cv-status { margin: 0 0 8px; font-size: .8rem; color: var(--text-2); display: flex; align-items: center; gap: 8px; min-height: 20px; }
+.cv-status.busy::before { content: ""; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--border); border-top-color: var(--primary); animation: cvspin .9s linear infinite; }
+.cv-status.ok { color: var(--link); } .cv-status.warn { color: var(--text-2); }
+@keyframes cvspin { to { transform: rotate(360deg); } }
