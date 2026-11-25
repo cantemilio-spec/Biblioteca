@@ -55,6 +55,21 @@ export function setCover(id, blob, source) {
   });
 }
 
+/** Grava a capa SÓ se o livro ainda não tiver uma (nunca substitui capa existente). Devolve true se gravou. */
+export function setCoverIfMissing(id, blob, source) {
+  return tx(['books', 'covers'], 'readwrite', async (b, c) => {
+    const book = await wrap(b.get(id));
+    if (!book || book.coverSource || (await wrap(c.get(id)))) return false;
+    const now = Date.now();
+    c.put({ id, blob, source, updatedAt: now });
+    b.put({ ...book, coverSource: source, updatedAt: now });
+    return true;
+  });
+}
+
+/** Avisa serviços internos (ex.: busca automática de capas) que a biblioteca mudou. */
+const changed = () => { try { window.dispatchEvent(new Event('bd:library')); } catch { /* sem window */ } };
+
 /** Lê-modifica-grava um livro numa só transação. `fn` devolve o novo registro ou null para não gravar. */
 export function updateBook(id, fn) {
   return tx('books', 'readwrite', async (b) => {
@@ -89,7 +104,7 @@ export function addBookBundle({ book, blob, cover }) {
     f.put({ id: book.id, blob, updatedAt: book.updatedAt });
     if (cover) c.put({ id: book.id, blob: cover, source: book.coverSource || 'file', updatedAt: book.updatedAt });
     await Promise.resolve();
-  });
+  }).then((r) => { changed(); return r; });
 }
 
 export function replaceBookFile(book, blob) {

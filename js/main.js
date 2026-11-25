@@ -8,6 +8,7 @@ import { mountCollections } from './collections.js';
 import { mountClassics, mountEstante, mountAcervo, mountLiteratura } from './classics.js';
 import { showWelcome } from './welcome.js';
 import { mountPainel } from './painel.js';
+import { startCovers } from './capas.js';
 
 const ROUTES = {
   inicio: { label: 'Início', icon: 'home', mount: (el) => mountLibrary(el, { home: true }) },
@@ -60,6 +61,7 @@ async function boot() {
   const reading = /^#\/?ler/.test(location.hash); // reabriu direto num livro: não interrompe a leitura
   await route();
   if (!reading) showWelcome();
+  startCovers(); // busca automática de capas (livros sem capa + novos livros)
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }

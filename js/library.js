@@ -7,6 +7,7 @@ import { importFiles, replaceFile } from './importer.js';
 import { normalizeCover } from './covers.js';
 import { autoIdentify, MetadataUnavailable } from './metadata.js';
 import { openMetadataPicker } from './metadata-ui.js';
+import { onCoverStatus, getCoverStatus } from './capas.js';
 import { applyView, bookStatus, formatBytes, genresOf } from './books.js';
 import { loadSessions, byDay, dayKey, fmtDuration, DEFAULT_GOALS } from './stats.js';
 
@@ -346,11 +347,24 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
   const fab = h('button', { class: 'fab', type: 'button', 'aria-label': 'Importar livros', onclick: () => input.click() }, icon('plus', 24), h('span', { class: 'fab-l' }, 'Importar'));
   const onScroll = () => fab.classList.toggle('min', window.scrollY > 120);
   window.addEventListener('scroll', onScroll, { passive: true });
+  // Indicação de status da busca automática de capas (serviço em capas.js)
+  const cvStat = h('div', { class: 'cv-status', role: 'status', 'aria-live': 'polite', hidden: true });
+  let cvTimer = 0, cvPrev = getCoverStatus(), cvFound = cvPrev.found, cvReload = 0, cvFlash = false;
+  const cvShow = (txt, kind = '') => { cvStat.hidden = !txt; cvStat.className = `cv-status ${kind}`; cvStat.textContent = txt || ''; };
+  const offCovers = onCoverStatus((s) => {
+    if (s.found !== cvFound) { cvFound = s.found; clearTimeout(cvReload); cvReload = setTimeout(() => load().catch(() => {}), 800); }
+    if (s.state === 'searching') { cvFlash = false; clearTimeout(cvTimer); cvShow(`Procurando capas…${s.pending ? ` (${s.pending} restante${s.pending > 1 ? 's' : ''})` : ''}`, 'busy'); }
+    else if (cvPrev.state === 'searching' && (s.state === 'done' || s.state === 'partial')) {
+      const end = () => { cvFlash = false; cvShow(s.state === 'partial' ? 'Algumas capas não foram localizadas.' : 'Sincronização concluída.', s.state === 'partial' ? 'warn' : 'ok'); if (s.state === 'done') cvTimer = setTimeout(() => cvShow(''), 5000); };
+      if (s.found > 0) { cvFlash = true; cvShow('Capas encontradas.', 'ok'); cvTimer = setTimeout(end, 3000); } else end();
+    } else if (!cvFlash && s.state === 'partial' && cvStat.hidden) cvShow('Algumas capas não foram localizadas.', 'warn');
+    cvPrev = s;
+  });
   const hour = new Date().getHours(), greeting = hour < 5 ? 'Boa madrugada' : hour < 12 ? 'Bom dia' : hour < 18 ? 'Boa tarde' : 'Boa noite';
   root.replaceChildren(
     home ? h('div', { class: 'greet head-brand' }, bimg(), h('div', {}, h('h1', {}, greeting), h('p', { class: 'hint' }, 'Continue de onde parou.')))
       : h('div', { class: 'view-head top-row' }, bimg(), h('h1', {}, onlyFavorites ? 'Favoritos' : 'Biblioteca'), toolsEl),
-    ...(home ? [bar] : [h('div', { class: 'lib-sticky' }, libTabs('meus'), bar)]), content, input,
+    ...(home ? [bar] : [h('div', { class: 'lib-sticky' }, libTabs('meus'), bar)]), ...(home ? [] : [cvStat]), content, input,
     fab);
   if (st.collection || st.genre) { setSetting('collection', ''); setSetting('genre', ''); } // filtro vindo do Início/Coleções vale só para esta visita
 
@@ -361,5 +375,5 @@ export function mountLibrary(root, { onlyFavorites = false, home = false } = {})
   root.addEventListener('dragover', onDragOver); root.addEventListener('dragleave', onDragLeave); root.addEventListener('drop', onDrop);
 
   load().catch(() => toast('Não foi possível abrir o armazenamento local.', 'error'));
-  return () => { window.removeEventListener('scroll', onScroll); st.coverUrls.forEach((u) => URL.revokeObjectURL(u)); root.removeEventListener('dragover', onDragOver); root.removeEventListener('dragleave', onDragLeave); root.removeEventListener('drop', onDrop); };
+  return () => { offCovers(); clearTimeout(cvTimer); clearTimeout(cvReload); window.removeEventListener('scroll', onScroll); st.coverUrls.forEach((u) => URL.revokeObjectURL(u)); root.removeEventListener('dragover', onDragOver); root.removeEventListener('dragleave', onDragLeave); root.removeEventListener('drop', onDrop); };
 }
