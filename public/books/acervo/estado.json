@@ -1188,21 +1188,21 @@
     },
     "fi||locke|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-25T13:36:18.497Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T13:41:11.048Z",
       "pedido": "obra de (locke)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T13:36:18.497Z"
+      "atualizado_em": "2026-11-25T13:41:11.048Z"
     },
     "fi||hobbes|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-25T13:36:18.873Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T13:41:12.513Z",
       "pedido": "obra de (hobbes)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T13:36:18.873Z"
+      "atualizado_em": "2026-11-25T13:41:12.513Z"
     },
     "fi||brito|1": {
       "status": "erro",
@@ -1263,12 +1263,12 @@
     },
     "fi||bacon|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:epdf.tips_o-progresso-do-conhecimento: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:bacon-a-sabedoria-dos-antigosrev: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-25T13:36:22.903Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:epdf.tips_o-progresso-do-conhecimento: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:bacon-a-sabedoria-dos-antigosrev: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T13:41:13.053Z",
       "pedido": "obra de (bacon)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T13:36:22.903Z"
+      "atualizado_em": "2026-11-25T13:41:13.053Z"
     },
     "te|dracula|stoker|1": {
       "status": "pendente",
@@ -1698,40 +1698,54 @@
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-25T07:43:30.772Z",
+      "verificado_em": "2026-11-25T13:41:09.460Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-25T07:43:31.283Z",
+      "verificado_em": "2026-11-25T13:41:09.783Z",
       "disponivel": true,
-      "ms": 265,
+      "ms": 283,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T07:43:31.283Z"
+      "ultimo_ok": "2026-11-25T13:41:09.783Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-25T07:43:31.705Z",
+      "verificado_em": "2026-11-25T13:41:10.297Z",
       "disponivel": true,
-      "ms": 378,
+      "ms": 356,
       "detalhe": "site respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T07:43:31.705Z"
+      "ultimo_ok": "2026-11-25T13:41:10.297Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-25T07:43:31.548Z",
+      "verificado_em": "2026-11-25T13:41:10.066Z",
       "disponivel": true,
-      "ms": 157,
+      "ms": 231,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T07:43:31.548Z"
+      "ultimo_ok": "2026-11-25T13:41:10.066Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-25T13:41:09.455Z",
+      "fim": "2026-11-25T13:41:13.057Z",
+      "novos": 0,
+      "tentados": 3,
+      "parou_por": "fim da lista",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 64
+    },
     {
       "inicio": "2026-11-25T07:43:30.768Z",
       "fim": "2026-11-25T07:43:54.739Z",
@@ -1896,12 +1910,12 @@
       "total": 6
     }
   ],
-  "atualizado_em": "2026-11-25T07:43:54.740Z",
+  "atualizado_em": "2026-11-25T13:41:13.058Z",
   "ultima_execucao": {
-    "inicio": "2026-11-25T07:43:30.768Z",
-    "fim": "2026-11-25T07:43:54.739Z",
+    "inicio": "2026-11-25T13:41:09.455Z",
+    "fim": "2026-11-25T13:41:13.057Z",
     "novos": 0,
-    "tentados": 9,
+    "tentados": 3,
     "parou_por": "fim da lista",
     "fontes": {
       "gutenberg": false,
