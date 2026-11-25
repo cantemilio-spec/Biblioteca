@@ -371,57 +371,57 @@
     },
     "fr||maupassant|2": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive: não encontrado | wikisource:Meu conto de Maupassant: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Urupês (5ª edição): já existe na biblioteca (Urupês (5ª edição)) (decisão anterior) | wikisource:Um romancista: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:A Sra. D. Albertina Berta: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:41:40.130Z",
+      "proxima_tentativa": "2026-11-26T01:39:34.527Z",
       "pedido": "obra de (maupassant)",
       "categoria": "Literatura Francesa",
-      "atualizado_em": "2026-11-24T07:41:40.130Z"
+      "atualizado_em": "2026-11-25T01:39:34.527Z"
     },
     "fr|candido|voltaire|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:41:41.961Z",
+      "proxima_tentativa": "2026-11-26T01:39:34.819Z",
       "pedido": "candido (voltaire)",
       "categoria": "Literatura Francesa",
-      "atualizado_em": "2026-11-24T07:41:41.961Z"
+      "atualizado_em": "2026-11-25T01:39:34.819Z"
     },
     "fr||moliere/molière|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:omedicoforac00moli: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:teatro-o-tartufo-moliere: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | internet-archive:moliere-don-juan: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | wikisource:A atualidade do teatro entre nós: download ",
-      "proxima_tentativa": "2026-11-24T19:41:42.567Z",
+      "proxima_tentativa": "2026-11-26T01:39:35.598Z",
       "pedido": "obra de (moliere/molière)",
       "categoria": "Literatura Francesa",
-      "atualizado_em": "2026-11-24T07:41:42.568Z"
+      "atualizado_em": "2026-11-25T01:39:35.598Z"
     },
     "fr||daudet|1": {
       "status": "erro",
-      "tentativas": 2,
-      "motivo": "internet-archive: não encontrado | wikisource:Violeiros do norte (1925): já existe na biblioteca (Violeiros do norte (1925)) | wikisource:Ritmos da noite: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:A Sra. D. Albertina Berta: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:41:43.312Z",
+      "tentativas": 3,
+      "motivo": "internet-archive: não encontrado | wikisource:Violeiros do norte (1925): já existe na biblioteca (Violeiros do norte (1925)) (decisão anterior) | wikisource:Ritmos da noite: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:A Sra. D. Albertina Berta: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-26T01:39:36.462Z",
       "pedido": "obra de (daudet)",
       "categoria": "Literatura Francesa",
-      "atualizado_em": "2026-11-24T07:41:43.312Z"
+      "atualizado_em": "2026-11-25T01:39:36.462Z"
     },
     "fr|fantasma opera|leroux|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:41:45.100Z",
+      "proxima_tentativa": "2026-11-26T01:39:38.371Z",
       "pedido": "fantasma opera (leroux)",
       "categoria": "Literatura Francesa",
-      "atualizado_em": "2026-11-24T07:41:45.100Z"
+      "atualizado_em": "2026-11-25T01:39:38.371Z"
     },
     "fr||leblanc|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:41:45.369Z",
+      "proxima_tentativa": "2026-11-26T01:39:38.827Z",
       "pedido": "obra de (leblanc)",
       "categoria": "Literatura Francesa",
-      "atualizado_em": "2026-11-24T07:41:45.369Z"
+      "atualizado_em": "2026-11-25T01:39:38.827Z"
     },
     "fr||anatole france/france|1": {
       "status": "concluido",
@@ -435,21 +435,21 @@
     },
     "en|orgulho preconceito|austen|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:00.097Z",
+      "proxima_tentativa": "2026-11-26T01:39:40.495Z",
       "pedido": "orgulho preconceito (austen)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:00.097Z"
+      "atualizado_em": "2026-11-25T01:39:40.495Z"
     },
     "en|emma|austen|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:02.739Z",
+      "proxima_tentativa": "2026-11-26T01:39:41.925Z",
       "pedido": "emma (austen)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:02.739Z"
+      "atualizado_em": "2026-11-25T01:39:41.925Z"
     },
     "en||austen|1": {
       "status": "concluido",
@@ -463,93 +463,93 @@
     },
     "en||dickens|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:asaventurasdosrp01dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:asaventurasdosrp03dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:oliverTwistMachado: EPUB com 75.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) (decisão anterior) | wikisource:Uma lôa do Natal: já existe na biblioteca (Uma lôa do Natal) (decisão anterior) | wikisource:Oliveiro Twist: download falhou (exportaçã",
-      "proxima_tentativa": "2026-11-24T19:42:03.361Z",
+      "proxima_tentativa": "2026-11-26T01:39:42.548Z",
       "pedido": "obra de (dickens)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:03.361Z"
+      "atualizado_em": "2026-11-25T01:39:42.548Z"
     },
     "en||dickens|2": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:asaventurasdosrp01dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:asaventurasdosrp03dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:oliverTwistMachado: EPUB com 75.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) (decisão anterior) | wikisource:Uma lôa do Natal: já existe na biblioteca (Uma lôa do Natal) (decisão anterior) | wikisource:Oliveiro Twist: download falhou (exportaçã",
-      "proxima_tentativa": "2026-11-24T19:42:03.778Z",
+      "proxima_tentativa": "2026-11-26T01:39:43.024Z",
       "pedido": "obra de (dickens)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:03.778Z"
+      "atualizado_em": "2026-11-25T01:39:43.024Z"
     },
     "en||dickens|3": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:asaventurasdosrp01dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:asaventurasdosrp03dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:oliverTwistMachado: EPUB com 75.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) (decisão anterior) | wikisource:Uma lôa do Natal: já existe na biblioteca (Uma lôa do Natal) (decisão anterior) | wikisource:Oliveiro Twist: download falhou (exportaçã",
-      "proxima_tentativa": "2026-11-24T19:42:04.225Z",
+      "proxima_tentativa": "2026-11-26T01:39:43.384Z",
       "pedido": "obra de (dickens)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:04.225Z"
+      "atualizado_em": "2026-11-25T01:39:43.384Z"
     },
     "en||dickens|4": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:asaventurasdosrp01dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:asaventurasdosrp03dick: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:oliverTwistMachado: EPUB com 75.1 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) (decisão anterior) | wikisource:Uma lôa do Natal: já existe na biblioteca (Uma lôa do Natal) (decisão anterior) | wikisource:Oliveiro Twist: download falhou (exportaçã",
-      "proxima_tentativa": "2026-11-24T19:42:04.689Z",
+      "proxima_tentativa": "2026-11-26T01:39:43.872Z",
       "pedido": "obra de (dickens)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:04.689Z"
+      "atualizado_em": "2026-11-25T01:39:43.872Z"
     },
     "en|retrato dorian gray|wilde|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:O Retrato de Dorian Gray: já existe na biblioteca (O Retrato de Dorian Gray) (decisão anterior) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:07.031Z",
+      "proxima_tentativa": "2026-11-26T01:39:45.544Z",
       "pedido": "retrato dorian gray (wilde)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:07.031Z"
+      "atualizado_em": "2026-11-25T01:39:45.544Z"
     },
     "en||wilde|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:oscar-wilde-a-decadencia-da-mentira-trad-nicolau-bruno: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:O Retrato de Dorian Gray: já existe na biblioteca (O Retrato de Dorian Gray) (decisão anterior) | wikisource:Sinfonia em amarelo: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Ballada do Enforcado: já existe na biblioteca (Ballada do Enforcado) (decisão anterior) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:07.611Z",
+      "proxima_tentativa": "2026-11-26T01:39:46.032Z",
       "pedido": "obra de (wilde)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:07.611Z"
+      "atualizado_em": "2026-11-25T01:39:46.032Z"
     },
     "en||wilde|2": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:oscar-wilde-a-decadencia-da-mentira-trad-nicolau-bruno: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:O Retrato de Dorian Gray: já existe na biblioteca (O Retrato de Dorian Gray) (decisão anterior) | wikisource:Sinfonia em amarelo: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Ballada do Enforcado: já existe na biblioteca (Ballada do Enforcado) (decisão anterior) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:08.189Z",
+      "proxima_tentativa": "2026-11-26T01:39:46.381Z",
       "pedido": "obra de (wilde)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:08.189Z"
+      "atualizado_em": "2026-11-25T01:39:46.381Z"
     },
     "en|medico monstro|stevenson|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:10.904Z",
+      "proxima_tentativa": "2026-11-26T01:39:48.222Z",
       "pedido": "medico monstro (stevenson)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:10.904Z"
+      "atualizado_em": "2026-11-25T01:39:48.222Z"
     },
     "en|ilha tesouro|stevenson|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:13.578Z",
+      "proxima_tentativa": "2026-11-26T01:39:50.336Z",
       "pedido": "ilha tesouro (stevenson)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:13.578Z"
+      "atualizado_em": "2026-11-25T01:39:50.336Z"
     },
     "en||stevenson|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:nimona-pt-br: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:O Macaco Cientista: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:O Relojoeiro: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:14.460Z",
+      "proxima_tentativa": "2026-11-26T01:39:51.116Z",
       "pedido": "obra de (stevenson)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:14.460Z"
+      "atualizado_em": "2026-11-25T01:39:51.116Z"
     },
     "en|alice|carroll|1": {
       "status": "concluido",
@@ -573,57 +573,57 @@
     },
     "en|gulliver|swift|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive: não encontrado | wikisource:Viagens de Gulliver: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:16.833Z",
+      "proxima_tentativa": "2026-11-26T01:39:53.115Z",
       "pedido": "gulliver (swift)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:16.833Z"
+      "atualizado_em": "2026-11-25T01:39:53.115Z"
     },
     "en||swift|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive: não encontrado | wikisource:Viagens de Gulliver: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Os exames: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Cartas de Inglaterra (Rui Barbosa): download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Viagens: já existe na biblioteca (Viagens) (decisão anterior) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:17.856Z",
+      "proxima_tentativa": "2026-11-26T01:39:54.295Z",
       "pedido": "obra de (swift)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:17.856Z"
+      "atualizado_em": "2026-11-25T01:39:54.295Z"
     },
     "en||doyle|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:man-on-the-run-tom-doyle: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:obra-completa-sherlock-holmes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Um Crime Estranho: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:18.339Z",
+      "proxima_tentativa": "2026-11-26T01:39:54.876Z",
       "pedido": "obra de (doyle)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:18.339Z"
+      "atualizado_em": "2026-11-25T01:39:54.876Z"
     },
     "en||doyle|2": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:man-on-the-run-tom-doyle: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:obra-completa-sherlock-holmes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Um Crime Estranho: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:18.774Z",
+      "proxima_tentativa": "2026-11-26T01:39:55.226Z",
       "pedido": "obra de (doyle)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:18.774Z"
+      "atualizado_em": "2026-11-25T01:39:55.226Z"
     },
     "en||doyle|3": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:man-on-the-run-tom-doyle: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:obra-completa-sherlock-holmes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Um Crime Estranho: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:19.237Z",
+      "proxima_tentativa": "2026-11-26T01:39:55.644Z",
       "pedido": "obra de (doyle)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:19.237Z"
+      "atualizado_em": "2026-11-25T01:39:55.644Z"
     },
     "en||doyle|4": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:man-on-the-run-tom-doyle: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:obra-completa-sherlock-holmes: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Um Crime Estranho: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:19.643Z",
+      "proxima_tentativa": "2026-11-26T01:39:56.107Z",
       "pedido": "obra de (doyle)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:19.643Z"
+      "atualizado_em": "2026-11-25T01:39:56.107Z"
     },
     "en|maquina tempo|wells|1": {
       "status": "concluido",
@@ -637,12 +637,12 @@
     },
     "en|homem invisivel|wells|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:21.995Z",
+      "proxima_tentativa": "2026-11-26T01:39:58.882Z",
       "pedido": "homem invisivel (wells)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:21.995Z"
+      "atualizado_em": "2026-11-25T01:39:58.882Z"
     },
     "en||wells|1": {
       "status": "concluido",
@@ -656,21 +656,21 @@
     },
     "en|frankenstein|shelley|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:mary-shelley-frankenstein-ou-o-prometeu-moderno: EPUB inválido — EPUB incompleto: 1 capítulo(s) ausente(s) no arquivo | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:26.643Z",
+      "proxima_tentativa": "2026-11-26T01:40:16.622Z",
       "pedido": "frankenstein (shelley)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:26.643Z"
+      "atualizado_em": "2026-11-25T01:40:16.622Z"
     },
     "en|robinson crusoe|defoe|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:28.371Z",
+      "proxima_tentativa": "2026-11-26T01:40:16.874Z",
       "pedido": "robinson crusoe (defoe)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:28.371Z"
+      "atualizado_em": "2026-11-25T01:40:16.874Z"
     },
     "en||defoe|1": {
       "status": "concluido",
@@ -684,30 +684,30 @@
     },
     "en||bronte|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:savefanfiction-11881889-Perpetuum_Mobile-Mel_Bronte: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:New York: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:O Grande Curador do Mal das Vinhas: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:29.205Z",
+      "proxima_tentativa": "2026-11-26T01:40:17.672Z",
       "pedido": "obra de (bronte)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:29.205Z"
+      "atualizado_em": "2026-11-25T01:40:17.672Z"
     },
     "en||bronte|2": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:savefanfiction-11881889-Perpetuum_Mobile-Mel_Bronte: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:New York: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:O Grande Curador do Mal das Vinhas: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:29.865Z",
+      "proxima_tentativa": "2026-11-26T01:40:18.194Z",
       "pedido": "obra de (bronte)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:29.865Z"
+      "atualizado_em": "2026-11-25T01:40:18.194Z"
     },
     "en|dracula|stoker|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive:dracula-bram-stoker-1897: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:31.656Z",
+      "proxima_tentativa": "2026-11-26T01:40:19.800Z",
       "pedido": "dracula (stoker)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:31.656Z"
+      "atualizado_em": "2026-11-25T01:40:19.800Z"
     },
     "en||conrad|1": {
       "status": "concluido",
@@ -721,48 +721,48 @@
     },
     "en||kipling|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:OLivrodaSelva: sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | internet-archive:OsIrmosdeMowgli: sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | wikisource:A Bigorna: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:O fardo do Homem Branco: download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:O prima",
-      "proxima_tentativa": "2026-11-24T19:42:32.641Z",
+      "proxima_tentativa": "2026-11-26T01:40:20.671Z",
       "pedido": "obra de (kipling)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:32.641Z"
+      "atualizado_em": "2026-11-25T01:40:20.671Z"
     },
     "en||thackeray|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:32.918Z",
+      "proxima_tentativa": "2026-11-26T01:40:21.195Z",
       "pedido": "obra de (thackeray)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:32.918Z"
+      "atualizado_em": "2026-11-25T01:40:21.195Z"
     },
     "en||hardy|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive: não encontrado | wikisource:Relações algébricas entre certos produtos infinitos: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:33.427Z",
+      "proxima_tentativa": "2026-11-26T01:40:21.891Z",
       "pedido": "obra de (hardy)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:33.427Z"
+      "atualizado_em": "2026-11-25T01:40:21.891Z"
     },
     "en||shakespeare|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive:romeoejulietapoe00patr: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:romeoejulietapoe00ferruoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:hamletdramaemcin25667gut: já existe na biblioteca (Hamlet: Drama em cinco Actos) (decisão anterior) | internet-archive:sonhodumanoited00shakgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status:",
-      "proxima_tentativa": "2026-11-24T19:42:33.741Z",
+      "proxima_tentativa": "2026-11-26T01:40:22.084Z",
       "pedido": "obra de (shakespeare)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:33.741Z"
+      "atualizado_em": "2026-11-25T01:40:22.084Z"
     },
     "en||shakespeare|2": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive:romeoejulietapoe00patr: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:romeoejulietapoe00ferruoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:hamletdramaemcin25667gut: já existe na biblioteca (Hamlet: Drama em cinco Actos) (decisão anterior) | internet-archive:sonhodumanoited00shakgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status:",
-      "proxima_tentativa": "2026-11-24T19:42:33.942Z",
+      "proxima_tentativa": "2026-11-26T01:40:22.305Z",
       "pedido": "obra de (shakespeare)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:33.942Z"
+      "atualizado_em": "2026-11-25T01:40:22.305Z"
     },
     "en||haggard|1": {
       "status": "concluido",
@@ -776,48 +776,48 @@
     },
     "en||chesterton|1": {
       "status": "pendente",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "fonte indisponível: internet-archive:g.-k.-chesterton-a-inocencia-do-padre-brown_202310: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:g.-k.-chesterton-a-sabedoria-do-padre-brown: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:g.-k.-chesterton-outras-historias-do-padre-brown: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:g.-k.-chesterton-a-i",
-      "proxima_tentativa": "2026-11-24T19:42:34.368Z",
+      "proxima_tentativa": "2026-11-26T01:40:22.850Z",
       "pedido": "obra de (chesterton)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-24T07:42:34.368Z"
+      "atualizado_em": "2026-11-25T01:40:22.850Z"
     },
     "us||poe|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:o-corvo-edgar-allan-poe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:O Corvo (tradução de Machado de Assis): download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Reverendo Fr. Sovela: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:35.218Z",
+      "proxima_tentativa": "2026-11-26T01:40:23.518Z",
       "pedido": "obra de (poe)",
       "categoria": "Literatura Norte-Americana",
-      "atualizado_em": "2026-11-24T07:42:35.218Z"
+      "atualizado_em": "2026-11-25T01:40:23.518Z"
     },
     "us||poe|2": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:o-corvo-edgar-allan-poe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:O Corvo (tradução de Machado de Assis): download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Reverendo Fr. Sovela: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:35.919Z",
+      "proxima_tentativa": "2026-11-26T01:40:24.113Z",
       "pedido": "obra de (poe)",
       "categoria": "Literatura Norte-Americana",
-      "atualizado_em": "2026-11-24T07:42:35.919Z"
+      "atualizado_em": "2026-11-25T01:40:24.113Z"
     },
     "us||poe|3": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive:o-corvo-edgar-allan-poe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:O Corvo (tradução de Machado de Assis): download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Reverendo Fr. Sovela: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-24T19:42:36.708Z",
+      "proxima_tentativa": "2026-11-26T01:40:24.663Z",
       "pedido": "obra de (poe)",
       "categoria": "Literatura Norte-Americana",
-      "atualizado_em": "2026-11-24T07:42:36.708Z"
+      "atualizado_em": "2026-11-25T01:40:24.663Z"
     },
     "us||poe|4": {
       "status": "erro",
-      "tentativas": 1,
-      "motivo": "internet-archive:o-corvo-edgar-allan-poe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:O Corvo (tradução de Machado de Assis): download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Reverendo Fr. Sovela: download falhou (exportação vazia ou muito pequena para ser um livro)",
-      "proxima_tentativa": "2026-11-24T19:36:56.516Z",
+      "tentativas": 2,
+      "motivo": "internet-archive:o-corvo-edgar-allan-poe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:O Corvo (tradução de Machado de Assis): download falhou (exportação vazia ou muito pequena para ser um livro) | wikisource:Reverendo Fr. Sovela: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-25T13:40:25.229Z",
       "pedido": "obra de (poe)",
       "categoria": "Literatura Norte-Americana",
-      "atualizado_em": "2026-11-24T13:36:56.516Z"
+      "atualizado_em": "2026-11-25T01:40:25.230Z"
     },
     "us||twain|1": {
       "status": "erro",
@@ -1372,40 +1372,54 @@
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-24T19:19:00.283Z",
+      "verificado_em": "2026-11-25T01:39:32.646Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-24T19:19:00.545Z",
+      "verificado_em": "2026-11-25T01:39:32.739Z",
       "disponivel": true,
-      "ms": 591,
+      "ms": 600,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-24T19:19:00.545Z"
+      "ultimo_ok": "2026-11-25T01:39:32.739Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-24T19:19:01.136Z",
+      "verificado_em": "2026-11-25T01:39:33.340Z",
       "disponivel": true,
-      "ms": 167,
+      "ms": 58,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-24T19:19:01.136Z"
+      "ultimo_ok": "2026-11-25T01:39:33.340Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-24T19:19:01.303Z",
+      "verificado_em": "2026-11-25T01:39:33.398Z",
       "disponivel": true,
-      "ms": 238,
+      "ms": 245,
       "detalhe": "site respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-24T19:19:01.303Z"
+      "ultimo_ok": "2026-11-25T01:39:33.398Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-25T01:39:32.643Z",
+      "fim": "2026-11-25T01:40:25.232Z",
+      "novos": 0,
+      "tentados": 40,
+      "parou_por": "lote de 40 itens",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 27
+    },
     {
       "inicio": "2026-11-24T19:19:00.279Z",
       "fim": "2026-11-24T19:21:05.645Z",
@@ -1491,11 +1505,11 @@
       "total": 8
     }
   ],
-  "atualizado_em": "2026-11-24T19:21:05.646Z",
+  "atualizado_em": "2026-11-25T01:40:25.233Z",
   "ultima_execucao": {
-    "inicio": "2026-11-24T19:19:00.279Z",
-    "fim": "2026-11-24T19:21:05.645Z",
-    "novos": 10,
+    "inicio": "2026-11-25T01:39:32.643Z",
+    "fim": "2026-11-25T01:40:25.232Z",
+    "novos": 0,
     "tentados": 40,
     "parou_por": "lote de 40 itens",
     "fontes": {

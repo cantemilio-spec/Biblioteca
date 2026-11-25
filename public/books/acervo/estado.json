@@ -23,12 +23,12 @@
     },
     "br|memorial aires|machado|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:memorialAires: EPUB com 67.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-24T21:11:28.779Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:memorialAires: EPUB com 67.5 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:05.401Z",
       "pedido": "memorial aires (machado)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T21:11:28.779Z"
+      "atualizado_em": "2026-11-25T01:39:05.401Z"
     },
     "br|helena|machado|1": {
       "status": "concluido",
@@ -80,30 +80,30 @@
     },
     "in|miseraveis|hugo|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:Os Miseraveis (trad. Justiniano José da Rocha): já existe na biblioteca (Os Miseraveis (trad. Justiniano José da Rocha))",
-      "proxima_tentativa": "2026-11-24T21:13:46.837Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:Os Miseraveis (trad. Justiniano José da Rocha): já existe na biblioteca (Os Miseraveis (trad. Justiniano José da Rocha)) (decisão anterior) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:13.018Z",
       "pedido": "miseraveis (hugo)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T21:13:46.837Z"
+      "atualizado_em": "2026-11-25T01:39:13.018Z"
     },
     "in|conde monte cristo|dumas|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-24T21:13:47.097Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:14.676Z",
       "pedido": "conde monte cristo (dumas)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T21:13:47.097Z"
+      "atualizado_em": "2026-11-25T01:39:14.676Z"
     },
     "in|tres mosqueteiros|dumas|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-24T21:13:47.314Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:16.347Z",
       "pedido": "tres mosqueteiros (dumas)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-23T21:13:47.314Z"
+      "atualizado_em": "2026-11-25T01:39:16.347Z"
     },
     "in||dumas|1": {
       "status": "erro",
@@ -126,12 +126,12 @@
     },
     "in|volta mundo|verne|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:35.563Z",
+      "proxima_tentativa": "2026-11-27T01:39:18.594Z",
       "pedido": "volta mundo (verne)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:35.563Z"
+      "atualizado_em": "2026-11-25T01:39:18.594Z"
     },
     "in||verne|2": {
       "status": "concluido",
@@ -145,39 +145,39 @@
     },
     "in|guerra paz|tolstoy/tolstoi|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:41.116Z",
+      "proxima_tentativa": "2026-11-27T01:39:20.955Z",
       "pedido": "guerra paz (tolstoy/tolstoi)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:41.116Z"
+      "atualizado_em": "2026-11-25T01:39:20.955Z"
     },
     "in|anna karenina|tolstoy/tolstoi|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:43.226Z",
+      "proxima_tentativa": "2026-11-27T01:39:22.586Z",
       "pedido": "anna karenina (tolstoy/tolstoi)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:43.226Z"
+      "atualizado_em": "2026-11-25T01:39:22.586Z"
     },
     "in||tolstoy/tolstoi|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:a-morte-de-ivan-ilitch-edicao-exclusiva-amazon-liev-tolstoi-tolstoi-liev: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:44.007Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:a-morte-de-ivan-ilitch-edicao-exclusiva-amazon-liev-tolstoi-tolstoi-liev: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:22.970Z",
       "pedido": "obra de (tolstoy/tolstoi)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:44.007Z"
+      "atualizado_em": "2026-11-25T01:39:22.970Z"
     },
     "in|crime castigo|dostoyevsky/dostoievski/dostoevsky|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:crime-e-castigo-1: já existe na biblioteca (Crime E Castigo ( 1)) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:46.237Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:crime-e-castigo-1: já existe na biblioteca (Crime E Castigo ( 1)) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:24.564Z",
       "pedido": "crime castigo (dostoyevsky/dostoievski/dostoevsky)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:46.237Z"
+      "atualizado_em": "2026-11-25T01:39:24.564Z"
     },
     "in||dostoyevsky/dostoievski/dostoevsky|1": {
       "status": "concluido",
@@ -200,39 +200,39 @@
     },
     "in||turgenev/turgueniev|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:47.501Z",
+      "proxima_tentativa": "2026-11-27T01:39:24.884Z",
       "pedido": "obra de (turgenev/turgueniev)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:47.501Z"
+      "atualizado_em": "2026-11-25T01:39:24.884Z"
     },
     "in||chekhov/tchekhov|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:o-candelabro-e-outros-contos-tchekhov-3: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nd/4.0/; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:47.902Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:o-candelabro-e-outros-contos-tchekhov-3: sem licença de redistribuição explícita (licenseurl: https://creativecommons.org/licenses/by-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:25.162Z",
       "pedido": "obra de (chekhov/tchekhov)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:47.902Z"
+      "atualizado_em": "2026-11-25T01:39:25.162Z"
     },
     "in|madame bovary|flaubert|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:49.589Z",
+      "proxima_tentativa": "2026-11-27T01:39:27.594Z",
       "pedido": "madame bovary (flaubert)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:49.589Z"
+      "atualizado_em": "2026-11-25T01:39:27.594Z"
     },
     "in||balzac|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:50.101Z",
+      "proxima_tentativa": "2026-11-27T01:39:27.881Z",
       "pedido": "obra de (balzac)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:50.101Z"
+      "atualizado_em": "2026-11-25T01:39:27.881Z"
     },
     "in||zola|1": {
       "status": "erro",
@@ -254,12 +254,12 @@
     },
     "in|candido|voltaire|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:54.280Z",
+      "proxima_tentativa": "2026-11-27T01:39:29.745Z",
       "pedido": "candido (voltaire)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:54.280Z"
+      "atualizado_em": "2026-11-25T01:39:29.745Z"
     },
     "in||daudet|1": {
       "status": "concluido",
@@ -321,12 +321,12 @@
     },
     "br|sertoes|cunha|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:ossertoeseuclide0000dacu: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:baixar-brasiliana-usp_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:ossertoeseuclide0000dacu_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-24T21:12:09.516Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:ossertoeseuclide0000dacu: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:baixar-brasiliana-usp_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:ossertoeseuclide0000dacu_202510: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:06.851Z",
       "pedido": "sertoes (cunha)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T21:12:09.516Z"
+      "atualizado_em": "2026-11-25T01:39:06.851Z"
     },
     "br|memorias sargento milicias|almeida|1": {
       "status": "concluido",
@@ -622,12 +622,12 @@
     },
     "br|canaa|aranha|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-24T21:13:17.366Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:08.473Z",
       "pedido": "canaa (aranha)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T21:13:17.366Z"
+      "atualizado_em": "2026-11-25T01:39:08.473Z"
     },
     "br|urupes|lobato|1": {
       "status": "erro",
@@ -714,21 +714,21 @@
     },
     "br|poesias completas|machado|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:Poesias Completas (Machado de Assis): já existe na biblioteca (Poesias Completas (Machado de Assis))",
-      "proxima_tentativa": "2026-11-24T21:13:31.200Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:Poesias Completas (Machado de Assis): já existe na biblioteca (Poesias Completas (Machado de Assis)) (decisão anterior) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:09.904Z",
       "pedido": "poesias completas (machado)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T21:13:31.200Z"
+      "atualizado_em": "2026-11-25T01:39:09.904Z"
     },
     "br|eu outras poesias|anjos|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado",
-      "proxima_tentativa": "2026-11-24T21:13:31.869Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T01:39:11.660Z",
       "pedido": "eu outras poesias (anjos)",
       "categoria": "Brasileiros",
-      "atualizado_em": "2026-11-23T21:13:31.869Z"
+      "atualizado_em": "2026-11-25T01:39:11.660Z"
     },
     "br|tronco ipe|alencar|1": {
       "status": "erro",
@@ -760,12 +760,12 @@
     },
     "in|robinson crusoe|defoe|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T01:33:59.300Z",
+      "proxima_tentativa": "2026-11-27T01:39:32.043Z",
       "pedido": "robinson crusoe (defoe)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:33:59.300Z"
+      "atualizado_em": "2026-11-25T01:39:32.043Z"
     },
     "in|gulliver|swift|1": {
       "status": "erro",
@@ -808,12 +808,12 @@
     },
     "in||shakespeare|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:romeoejulietapoe00patr: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:romeoejulietapoe00ferruoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:hamletdramaemcin25667gut: já existe na biblioteca (Hamlet: Drama em cinco Actos) (decisão anterior) | internet-archive:sonhodumanoited00shakgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status:",
-      "proxima_tentativa": "2026-11-25T01:34:06.757Z",
+      "proxima_tentativa": "2026-11-27T01:39:32.590Z",
       "pedido": "obra de (shakespeare)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T01:34:06.757Z"
+      "atualizado_em": "2026-11-25T01:39:32.590Z"
     },
     "in|fausto|goethe|1": {
       "status": "concluido",
@@ -1698,40 +1698,54 @@
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-24T13:36:03.873Z",
+      "verificado_em": "2026-11-25T01:39:00.866Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-24T13:36:04.136Z",
+      "verificado_em": "2026-11-25T01:39:01.416Z",
       "disponivel": true,
-      "ms": 314,
+      "ms": 375,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-24T13:36:04.136Z"
+      "ultimo_ok": "2026-11-25T01:39:01.416Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-24T13:36:04.529Z",
-      "disponivel": false,
-      "ms": 249,
-      "detalhe": "indisponível nesta execução; será testada de novo na próxima",
-      "erro": "TypeError: fetch failed (UND_ERR_CONNECT_TIMEOUT)",
-      "ultimo_ok": "2026-11-24T07:40:30.278Z"
+      "verificado_em": "2026-11-25T01:39:01.850Z",
+      "disponivel": true,
+      "ms": 61,
+      "detalhe": "site respondeu",
+      "erro": null,
+      "ultimo_ok": "2026-11-25T01:39:01.850Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-24T13:36:04.450Z",
+      "verificado_em": "2026-11-25T01:39:01.791Z",
       "disponivel": true,
-      "ms": 79,
+      "ms": 59,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-24T13:36:04.450Z"
+      "ultimo_ok": "2026-11-25T01:39:01.791Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-25T01:39:00.862Z",
+      "fim": "2026-11-25T01:39:32.593Z",
+      "novos": 0,
+      "tentados": 20,
+      "parou_por": "fim da lista",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 64
+    },
     {
       "inicio": "2026-11-24T13:36:03.868Z",
       "fim": "2026-11-24T13:36:22.907Z",
@@ -1868,18 +1882,18 @@
       "total": 6
     }
   ],
-  "atualizado_em": "2026-11-24T13:36:22.908Z",
+  "atualizado_em": "2026-11-25T01:39:32.594Z",
   "ultima_execucao": {
-    "inicio": "2026-11-24T13:36:03.868Z",
-    "fim": "2026-11-24T13:36:22.907Z",
+    "inicio": "2026-11-25T01:39:00.862Z",
+    "fim": "2026-11-25T01:39:32.593Z",
     "novos": 0,
-    "tentados": 9,
+    "tentados": 20,
     "parou_por": "fim da lista",
     "fontes": {
       "gutenberg": false,
       "internet-archive": true,
       "wikisource": true,
-      "adamastor": false
+      "adamastor": true
     },
     "total": 64
   },
