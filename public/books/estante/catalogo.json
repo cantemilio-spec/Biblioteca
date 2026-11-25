@@ -3,6 +3,20 @@
   "licenca": "Arquivos enviados por você ao repositório. O app e o repositório são públicos: mantenha aqui apenas obras que você tem direito de distribuir.",
   "livros": [
     {
+      "id": "estante-a-princesa-e-a-rainha-os-negros-e-os-verdes-george-r-r-martin",
+      "titulo": "23c9552202514a79a7272a0cf67f9448",
+      "autor": "Jefferson Vasconcelos",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/a-princesa-e-a-rainha-os-negros-e-os-verdes-george-r-r-martin.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/a-princesa-e-a-rainha-os-negros-e-os-verdes-george-r-r-martin.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 210973,
+      "sha256": "8c86ca1eeacfbb09b8b9ec1f5c855f2117e6a02d1a950ab271c7eccfe3e3387d"
+    },
+    {
       "id": "estante-dostoievski-fiodor-mikhailovich-a-aldeia-de-stepantchikovo-e-seus-habitantes",
       "titulo": "A aldeia de Stepántchikovo e seus habitantes",
       "autor": "Fiódor Dostoiévski",
@@ -15,6 +29,62 @@
       "baixado": true,
       "tamanho": 1599189,
       "sha256": "56e2dc10f5fa1e658b21c98bc9e9fbf100016724fd741753118ff9db4b5d9f93"
+    },
+    {
+      "id": "estante-george-r-r-martin-5-a-danca-dos-dragoes",
+      "titulo": "A Dança dos Dragões",
+      "autor": "George R. R. Martin",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/george-r-r-martin-5-a-danca-dos-dragoes.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/george-r-r-martin-5-a-danca-dos-dragoes.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 2512791,
+      "sha256": "938e05c6a1226666df85d08851f31c39433384a263e83d935d7b91b15c845ae7"
+    },
+    {
+      "id": "estante-a-furia-dos-reis-george-r-r-martin",
+      "titulo": "A Fúria dos Reis - As Crônicas de Gelo e Fogo",
+      "autor": "George R. R. Martin",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/a-furia-dos-reis-george-r-r-martin.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/a-furia-dos-reis-george-r-r-martin.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 2396438,
+      "sha256": "dc69bef80639d0992fc8c35f868a580d119227a701eb84e92c06840b0a3456ef"
+    },
+    {
+      "id": "estante-cronicas-de-gelo-e-fogo-01-a-guerra-dos-tronos-george-r-r-martin",
+      "titulo": "A Guerra dos Tronos - As Crônicas de Gelo e Fogo",
+      "autor": "George R. R. Martin",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/cronicas-de-gelo-e-fogo-01-a-guerra-dos-tronos-george-r-r-martin.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/cronicas-de-gelo-e-fogo-01-a-guerra-dos-tronos-george-r-r-martin.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 2966828,
+      "sha256": "b8ae5f30d8f783b9ca1e29e20c0e6ec2abb198e968e48d3083b62730cdf8963f"
+    },
+    {
+      "id": "estante-01-a-rainha-vermelha",
+      "titulo": "A Rainha Vermelha",
+      "autor": "Victoria Aveyard",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/01-a-rainha-vermelha.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/01-a-rainha-vermelha.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 438446,
+      "sha256": "af28d81fe86775d2da96905cbfe12cfe65b3c36915fa42977629d07eb6b91351"
     },
     {
       "id": "estante-colecao-leste-fiodor-dostoievski-a-senhoria-editora-34-2011",
@@ -73,6 +143,20 @@
       "sha256": "a056f034ebef4ca1b125d0424fb4480a066f153dc08dd363ebd91572ee2255a1"
     },
     {
+      "id": "estante-1-5-cicatrizes-de-aco-conto",
+      "titulo": "Cicatrizes de aço – Um conto da série A Rainha Vermelha",
+      "autor": "Victoria Aveyard",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/1-5-cicatrizes-de-aco-conto.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/1-5-cicatrizes-de-aco-conto.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 347130,
+      "sha256": "edc589098abc1433a9cfa4faa9d9f314116d3a78dfcdf497305e86afc19ed97c"
+    },
+    {
       "id": "estante-colecao-leste-fiodor-dostoievski-crime-e-castigo-editora-34-2009",
       "titulo": "Crime e Castigo",
       "autor": "Fiódor Dostoiévski",
@@ -115,6 +199,20 @@
       "sha256": "cbdeff052d5fa2dd27956e8051822f917fbb0e4bf759534090743cdf41efe424"
     },
     {
+      "id": "estante-02-espada-de-vidro",
+      "titulo": "Espada de Vidro",
+      "autor": "Victoria Aveyard",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/02-espada-de-vidro.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/02-espada-de-vidro.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 514134,
+      "sha256": "70ee845ef61f9c99ddc120b787b86140b72ec51e51a8972e229cd4e360918711"
+    },
+    {
       "id": "estante-fahrenheit-451-ray-bradbury",
       "titulo": "Fahrenheit 451",
       "autor": "Bradbury, Ray",
@@ -129,6 +227,20 @@
       "sha256": "0f1ab2abd6c110b04987a2a3ed1504202d51f6f8daa397b27ec71a43c4d1ab5d"
     },
     {
+      "id": "estante-fogo-e-sangue-george-r-r-martin",
+      "titulo": "Fogo & Sangue – Volume 1",
+      "autor": "George R. R. Martin",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/fogo-e-sangue-george-r-r-martin.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/fogo-e-sangue-george-r-r-martin.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 9690161,
+      "sha256": "fbd92b4c29ac2f060c901f7379d8028244cb7ebb9f68631533077aa616bfa1da"
+    },
+    {
       "id": "estante-colecao-leste-fiodor-dostoievski-gente-pobre-editora-34-2009",
       "titulo": "Gente Pobre",
       "autor": "Fiodor Dostoievski",
@@ -141,6 +253,20 @@
       "baixado": true,
       "tamanho": 259238,
       "sha256": "283588d5db275902d672c83f77477d96eec24bf3aa1e051c95f774aef1814075"
+    },
+    {
+      "id": "estante-04-tempestade-de-guerra",
+      "titulo": "Harry Potter e a Câmara Secreta",
+      "autor": "J. K. Rowling",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/04-tempestade-de-guerra.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/04-tempestade-de-guerra.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 261264,
+      "sha256": "c57a239b80fa438e03c69524a071a8d1ccfa9bef5971779584f4e7324c2d4936"
     },
     {
       "id": "estante-2-harry-potter-e-a-camara-secreta",
@@ -325,6 +451,20 @@
       "sha256": "df3a5d0b46ce4dea85b92d5425e4dadf867143f816971d8893dc8ff2c6295343"
     },
     {
+      "id": "estante-george-r-r-martin-o-cavaleiro-dos-sete-reinos",
+      "titulo": "O cavaleiro dos Sete Reinos",
+      "autor": "George R. R. Martin",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/george-r-r-martin-o-cavaleiro-dos-sete-reinos.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/george-r-r-martin-o-cavaleiro-dos-sete-reinos.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 356853,
+      "sha256": "fcdb7135988c12d00c469e86a992063212e1ea1ffcd19bf5b888341526896491"
+    },
+    {
       "id": "estante-dostoievski-fiodor-o-duplo-2017-editora-34-libgen-li",
       "titulo": "O duplo",
       "autor": "Fiódor Dostoiévski",
@@ -353,6 +493,20 @@
       "sha256": "a0ce2986acd0fd718a35ddd3bf5c6ddafd1a9cf719be5795c132505d1e614a0e"
     },
     {
+      "id": "estante-o-festim-dos-corvos-george-r-r-martin",
+      "titulo": "O Festim dos Corvos",
+      "autor": "George R. R. Martin",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/o-festim-dos-corvos-george-r-r-martin.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/o-festim-dos-corvos-george-r-r-martin.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 1675365,
+      "sha256": "58abb1088045b0172414fb95c181525c8219ee4c7e9ca2237d88aba8e766a6b7"
+    },
+    {
       "id": "estante-dostoievski-fiodor-o-idiota",
       "titulo": "O Idiota",
       "autor": "Fiódor Dostoiévski",
@@ -365,6 +519,34 @@
       "baixado": true,
       "tamanho": 967978,
       "sha256": "f3ec55dbbf9557e87aab3f986ab23e9e5fc38cec35aa27fc318699d574abca40"
+    },
+    {
+      "id": "estante-george-r-r-martin-o-mundo-de-gelo-e-fogo",
+      "titulo": "O mundo de gelo e fogo - oficial",
+      "autor": "George R. R. Martin",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/george-r-r-martin-o-mundo-de-gelo-e-fogo.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/george-r-r-martin-o-mundo-de-gelo-e-fogo.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 7716414,
+      "sha256": "bc143c4a6db2bda1f22b9bd971a8dddb9ad247a39658ab788d81a9a23b13f775"
+    },
+    {
+      "id": "estante-o-principe-de-westeros-e-outras-historias-george-r-r-m",
+      "titulo": "O príncipe de Westeros e outras histórias: Contos de George R. R. Martin, Neil Gaiman, Patrick Rothfuss, Scott Lynch e muitos outros...",
+      "autor": "George R. R. Martin",
+      "categoria": "Estante",
+      "genero": "",
+      "capa": "public/books/estante/capas/o-principe-de-westeros-e-outras-historias-george-r-r-m.jpg",
+      "capa_ok": true,
+      "epub": "public/books/estante/o-principe-de-westeros-e-outras-historias-george-r-r-m.epub",
+      "credito": "Enviado pelo dono do app",
+      "baixado": true,
+      "tamanho": 718966,
+      "sha256": "1479e89282b0f4c1fbfac605a753ea2a11d859d7e9d60b7a6806bde6c2efc525"
     },
     {
       "id": "estante-dostoievski-fiodor-os-demonios",
