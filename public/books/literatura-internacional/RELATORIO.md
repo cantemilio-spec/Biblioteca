@@ -1,8 +1,8 @@
 # Relatório: Literatura internacional
 
-Última execução: 2026-11-25T13:44:52.143Z — parou por: fim da lista
+Última execução: 2026-11-25T19:13:53.247Z — parou por: fim da lista
 
-Concluídos **27** | pendentes 72 | com erro 39 | bloqueados (sem direitos/não encontrados) 0
+Concluídos **27** | pendentes 70 | com erro 41 | bloqueados (sem direitos/não encontrados) 0
 
 Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wikisource (pt): disponível · Projecto Adamastor: disponível
 
@@ -147,5 +147,5 @@ Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wik
 - **obra de (sienkiewicz)** (Literatura Universal) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
 - **obra de (strindberg)** (Literatura Universal) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
 - **obra de (lagerlof/lagerlöf)** (Literatura Universal) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **obra de (tagore)** (Literatura Universal) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
-- **obra de (perrault)** (Literatura Universal) — pendente: fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado
+- **obra de (tagore)** (Literatura Universal) — erro: internet-archive: não encontrado | wikisource:Rabiscando: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado
+- **obra de (perrault)** (Literatura Universal) — erro: internet-archive: não encontrado | wikisource:Contos de Grimm: já importado | wikisource:Superstições domésticas: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado

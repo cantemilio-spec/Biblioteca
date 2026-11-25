@@ -1253,22 +1253,22 @@
       "atualizado_em": "2026-11-25T08:06:24.726Z"
     },
     "un||tagore|1": {
-      "status": "pendente",
-      "tentativas": 1,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T14:06:25.001Z",
+      "status": "erro",
+      "tentativas": 2,
+      "motivo": "internet-archive: não encontrado | wikisource:Rabiscando: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-26T07:13:51.351Z",
       "pedido": "obra de (tagore)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-25T08:06:25.001Z"
+      "atualizado_em": "2026-11-25T19:13:51.351Z"
     },
     "un||perrault|1": {
-      "status": "pendente",
-      "tentativas": 1,
-      "motivo": "fonte indisponível: internet-archive: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T14:06:25.171Z",
+      "status": "erro",
+      "tentativas": 2,
+      "motivo": "internet-archive: não encontrado | wikisource:Contos de Grimm: já importado | wikisource:Superstições domésticas: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-26T07:13:53.244Z",
       "pedido": "obra de (perrault)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-25T08:06:25.171Z"
+      "atualizado_em": "2026-11-25T19:13:53.244Z"
     }
   },
   "rejeitados": {
@@ -1390,40 +1390,54 @@
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-25T13:41:13.122Z",
+      "verificado_em": "2026-11-25T19:13:46.882Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-25T13:41:13.357Z",
+      "verificado_em": "2026-11-25T19:13:47.247Z",
       "disponivel": true,
-      "ms": 126,
+      "ms": 585,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T13:41:13.357Z"
+      "ultimo_ok": "2026-11-25T19:13:47.247Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-25T13:41:13.483Z",
+      "verificado_em": "2026-11-25T19:13:47.832Z",
       "disponivel": true,
-      "ms": 167,
+      "ms": 140,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T13:41:13.483Z"
+      "ultimo_ok": "2026-11-25T19:13:47.832Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-25T13:41:13.651Z",
+      "verificado_em": "2026-11-25T19:13:47.973Z",
       "disponivel": true,
-      "ms": 338,
+      "ms": 2252,
       "detalhe": "site respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T13:41:13.651Z"
+      "ultimo_ok": "2026-11-25T19:13:47.973Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-25T19:13:46.878Z",
+      "fim": "2026-11-25T19:13:53.247Z",
+      "novos": 0,
+      "tentados": 2,
+      "parou_por": "fim da lista",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 27
+    },
     {
       "inicio": "2026-11-25T13:41:13.119Z",
       "fim": "2026-11-25T13:44:52.143Z",
@@ -1551,12 +1565,12 @@
       "total": 8
     }
   ],
-  "atualizado_em": "2026-11-25T13:44:52.144Z",
+  "atualizado_em": "2026-11-25T19:13:53.248Z",
   "ultima_execucao": {
-    "inicio": "2026-11-25T13:41:13.119Z",
-    "fim": "2026-11-25T13:44:52.143Z",
+    "inicio": "2026-11-25T19:13:46.878Z",
+    "fim": "2026-11-25T19:13:53.247Z",
     "novos": 0,
-    "tentados": 23,
+    "tentados": 2,
     "parou_por": "fim da lista",
     "fontes": {
       "gutenberg": false,
@@ -1569,8 +1583,8 @@
   "resumo": {
     "meta": 50,
     "concluidos": 27,
-    "pendentes": 72,
-    "erros": 39,
+    "pendentes": 70,
+    "erros": 41,
     "bloqueados": 0,
     "por_fonte": {
       "wikisource": 22,
