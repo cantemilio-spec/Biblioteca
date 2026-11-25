@@ -846,12 +846,12 @@
     },
     "in||kafka|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:carta-ao-pai-franz-kafka: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:franz-kafka-o-covil-editorial-inquerito: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:franz-kafka-consideracoes-sobre-o-pecado-o-sofrimento-a-esperanca-e-o-verdadeiro-caminho-1992: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encont",
-      "proxima_tentativa": "2026-11-25T07:40:30.830Z",
+      "proxima_tentativa": "2026-11-27T07:43:32.416Z",
       "pedido": "obra de (kafka)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T07:40:30.830Z"
+      "atualizado_em": "2026-11-25T07:43:32.416Z"
     },
     "in|primo basilio|queiros/queirós|1": {
       "status": "concluido",
@@ -1001,12 +1001,12 @@
     },
     "in|peregrinacao|pinto|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:dli.ernet.447925: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T07:40:39.946Z",
+      "proxima_tentativa": "2026-11-27T07:43:36.848Z",
       "pedido": "peregrinacao (pinto)",
       "categoria": "Internacionais",
-      "atualizado_em": "2026-11-24T07:40:39.946Z"
+      "atualizado_em": "2026-11-25T07:43:36.848Z"
     },
     "in||castelo branco|1": {
       "status": "erro",
@@ -1029,12 +1029,12 @@
     },
     "fi|republica|plato/platao|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:platao-trad.-c.-a.-nunes-vi-vii-a-republica_202509: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:isbn-978-972-31-0509-8-250h: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T07:40:44.161Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:platao-trad.-c.-a.-nunes-vi-vii-a-republica_202509: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:isbn-978-972-31-0509-8-250h: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
+      "proxima_tentativa": "2026-11-27T07:43:40.822Z",
       "pedido": "republica (plato/platao)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T07:40:44.161Z"
+      "atualizado_em": "2026-11-25T07:43:40.822Z"
     },
     "fi||plato/platao|1": {
       "status": "concluido",
@@ -1048,12 +1048,12 @@
     },
     "fi||plato/platao|2": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:escritos-completos-de-platao: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:platonispoliteiaab: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:platao-trad.-c.-a.-nunes-vi-vii-a-republica_202509: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:platao-gorgias: sem licença de redistribuição explícita (licenseu",
-      "proxima_tentativa": "2026-11-25T07:40:52.268Z",
+      "proxima_tentativa": "2026-11-27T07:43:41.537Z",
       "pedido": "obra de (plato/platao)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T07:40:52.268Z"
+      "atualizado_em": "2026-11-25T07:43:41.537Z"
     },
     "fi||aristotle/aristoteles|1": {
       "status": "concluido",
@@ -1067,12 +1067,12 @@
     },
     "fi|meditacoes|aurelius/aurelio|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T07:41:24.631Z",
+      "proxima_tentativa": "2026-11-27T07:43:44.235Z",
       "pedido": "meditacoes (aurelius/aurelio)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T07:41:24.631Z"
+      "atualizado_em": "2026-11-25T07:43:44.235Z"
     },
     "fi||seneca|1": {
       "status": "concluido",
@@ -1086,12 +1086,12 @@
     },
     "fi||epictetus/epicteto|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:OEncheiridionDeEpictetoEdicaoBilingue: sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/3.0/; possible-copyright-status: n/d) | internet-archive:a-arte-de-viver: EPUB com 38.4 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) | internet-archive:manualdeepictto00epicgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:enchbifinal26.04.12: sem licença de redistribuição explícita (licenseurl: nen",
-      "proxima_tentativa": "2026-11-25T07:41:29.533Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:OEncheiridionDeEpictetoEdicaoBilingue: sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/3.0/; possible-copyright-status: n/d) (decisão anterior) | internet-archive:a-arte-de-viver: EPUB com 38.4 MB excede o limite de 25.0 MB (ou é pequeno demais para ser um livro) (decisão anterior) | internet-archive:manualdeepictto00epicgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:enchbifinal26.04.12: sem licença de red",
+      "proxima_tentativa": "2026-11-27T07:43:44.641Z",
       "pedido": "obra de (epictetus/epicteto)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T07:41:29.533Z"
+      "atualizado_em": "2026-11-25T07:43:44.641Z"
     },
     "fi|discurso metodo|descartes|1": {
       "status": "concluido",
@@ -1105,12 +1105,12 @@
     },
     "fi|etica|spinoza/espinosa|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:spinozabaruch.eticaautenticaeditora: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T07:41:31.807Z",
+      "proxima_tentativa": "2026-11-27T07:43:48.276Z",
       "pedido": "etica (spinoza/espinosa)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T07:41:31.808Z"
+      "atualizado_em": "2026-11-25T07:43:48.276Z"
     },
     "fi||kant|1": {
       "status": "erro",
@@ -1143,21 +1143,21 @@
     },
     "fi|principe|machiavelli/maquiavel|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:MaquiavelOPrincipe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:maquiavel-o-principe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:o-principe-texto-integral: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:001143485-o-principe_202601: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) | internet-archive:colecao-os-pe",
-      "proxima_tentativa": "2026-11-25T07:41:36.758Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:MaquiavelOPrincipe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:maquiavel-o-principe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:o-principe-texto-integral: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:colecao-os-pensadores-nicolau-maquiavel_202601: sem licença de redistribuição explícita (licenseur",
+      "proxima_tentativa": "2026-11-27T07:43:51.765Z",
       "pedido": "principe (machiavelli/maquiavel)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T07:41:36.759Z"
+      "atualizado_em": "2026-11-25T07:43:51.765Z"
     },
     "fi|contrato social|rousseau|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-25T07:41:38.329Z",
+      "proxima_tentativa": "2026-11-27T07:43:54.736Z",
       "pedido": "contrato social (rousseau)",
       "categoria": "Filosofia",
-      "atualizado_em": "2026-11-24T07:41:38.329Z"
+      "atualizado_em": "2026-11-25T07:43:54.736Z"
     },
     "fi||schopenhauer|1": {
       "status": "erro",
@@ -1698,40 +1698,54 @@
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-25T01:39:00.866Z",
+      "verificado_em": "2026-11-25T07:43:30.772Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-25T01:39:01.416Z",
+      "verificado_em": "2026-11-25T07:43:31.283Z",
       "disponivel": true,
-      "ms": 375,
+      "ms": 265,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T01:39:01.416Z"
+      "ultimo_ok": "2026-11-25T07:43:31.283Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-25T01:39:01.850Z",
+      "verificado_em": "2026-11-25T07:43:31.705Z",
       "disponivel": true,
-      "ms": 61,
+      "ms": 378,
       "detalhe": "site respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T01:39:01.850Z"
+      "ultimo_ok": "2026-11-25T07:43:31.705Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-25T01:39:01.791Z",
+      "verificado_em": "2026-11-25T07:43:31.548Z",
       "disponivel": true,
-      "ms": 59,
+      "ms": 157,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-25T01:39:01.791Z"
+      "ultimo_ok": "2026-11-25T07:43:31.548Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-25T07:43:30.768Z",
+      "fim": "2026-11-25T07:43:54.739Z",
+      "novos": 0,
+      "tentados": 9,
+      "parou_por": "fim da lista",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 64
+    },
     {
       "inicio": "2026-11-25T01:39:00.862Z",
       "fim": "2026-11-25T01:39:32.593Z",
@@ -1882,12 +1896,12 @@
       "total": 6
     }
   ],
-  "atualizado_em": "2026-11-25T01:39:32.594Z",
+  "atualizado_em": "2026-11-25T07:43:54.740Z",
   "ultima_execucao": {
-    "inicio": "2026-11-25T01:39:00.862Z",
-    "fim": "2026-11-25T01:39:32.593Z",
+    "inicio": "2026-11-25T07:43:30.768Z",
+    "fim": "2026-11-25T07:43:54.739Z",
     "novos": 0,
-    "tentados": 20,
+    "tentados": 9,
     "parou_por": "fim da lista",
     "fontes": {
       "gutenberg": false,
