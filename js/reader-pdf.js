@@ -1,12 +1,13 @@
 // Leitor PDF independente (PDF.js). Páginas são desenhadas sob demanda (só as próximas à tela) e liberadas ao sair,
 // então documentos grandes não consomem memória em excesso. Modos: contínuo ou página única; zoom por gesto,
 // ajuste à largura/altura, rotação, miniaturas, sumário, busca, marcadores e destaques com notas.
-import { h, icon, toast, menu } from './ui.js';
+import { h, icon, toast, menu, modal } from './ui.js';
 import * as db from './db.js';
 import { getSetting, setSetting } from './settings.js';
 import * as ann from './annotations.js';
 import { loadPdfjs, openPdf } from './pdf.js';
 import { startTracking } from './stats.js';
+import { formatBytes } from './books.js';
 import { copyToClipboard, colorDots, barButton, placeBar, openNoteEditor, renderAnnPanel, attachDim, brightnessControl, keepAwake } from './annot-ui.js';
 
 const SCALE_MIN = 0.25, SCALE_MAX = 6, MAX_PIXELS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform)) ? 8e6 : 16e6, PAD_X = 12, PAD_Y = 60;
@@ -71,7 +72,8 @@ export async function mountPdfReader(root, book, blob) {
   const selBar = h('div', { class: 'r-selbar', hidden: true, role: 'toolbar', 'aria-label': 'Marcar trecho' });
   const pagesEl = h('div', { class: 'pdf-pages' });
   const viewer = h('div', { class: 'pdf-viewer', tabindex: '0', 'aria-label': 'Documento PDF' }, pagesEl);
-  const reader = h('div', { class: 'reader pdf' }, viewer, top, bottom, pagesPanel, searchPanel, annPanel, viewPanel, selBar);
+  const backBtn = h('button', { class: 'r-backpg', type: 'button', hidden: true });
+  const reader = h('div', { class: 'reader pdf' }, viewer, top, bottom, backBtn, pagesPanel, searchPanel, annPanel, viewPanel, selBar);
   reader.dataset.rtheme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
   root.replaceChildren(reader);
   const applyDim = attachDim(reader);
@@ -93,8 +95,8 @@ export async function mountPdfReader(root, book, blob) {
 
   function makeView(n) {
     const el = h('div', { class: 'pdf-page', 'data-page': n });
-    const pv = { n, el, canvas: h('canvas'), tl: h('div', { class: 'textLayer' }), hl: h('div', { class: 'pdf-hl-layer' }), state: 'idle', key: '', task: null, wanted: false, page: null };
-    el.append(pv.canvas, pv.hl, pv.tl);
+    const pv = { n, el, canvas: h('canvas'), tl: h('div', { class: 'textLayer' }), hl: h('div', { class: 'pdf-hl-layer' }), ln: h('div', { class: 'pdf-link-layer' }), state: 'idle', key: '', task: null, wanted: false, page: null };
+    el.append(pv.canvas, pv.hl, pv.tl, pv.ln);
     el.__pv = pv;
     applySize(pv);
     return pv;
@@ -136,20 +138,40 @@ export async function mountPdfReader(root, book, blob) {
     tl.style.setProperty('--total-scale-factor', String(vp.scale));
     tl.style.width = `${vp.width}px`; tl.style.height = `${vp.height}px`;
     try { await new lib.TextLayer({ textContentSource: page.streamTextContent(), container: tl, viewport: vp }).render(); } catch { /* sem texto selecionável */ }
+    const ln = await buildLinks(page, vp);
     if (!pv.wanted) { cv.width = cv.height = 0; pv.state = 'idle'; return; }
     pv.canvas.width = pv.canvas.height = 0; // libera o desenho anterior
     pv.canvas.replaceWith(cv); pv.canvas = cv;
     pv.tl.replaceWith(tl); pv.tl = tl;
+    pv.ln.replaceWith(ln); pv.ln = ln;
     pv.state = 'done'; pv.key = key;
     drawHighlights(pv); markSearch(pv);
     if (pv.key !== keyNow() && pv.wanted) schedule(pv); // a escala mudou durante o desenho
+  }
+
+  // Links do próprio PDF: internos (vão à página) e externos (http/https/mailto, abertos sem dar acesso à janela do app).
+  async function buildLinks(page, vp) {
+    const layer = h('div', { class: 'pdf-link-layer' });
+    try {
+      for (const a of await page.getAnnotations({ intent: 'display' })) {
+        if (a.subtype !== 'Link' || !a.rect || (!a.url && !a.dest)) continue;
+        let ext = null;
+        if (a.url) { try { const u = new URL(a.url); if (['http:', 'https:', 'mailto:'].includes(u.protocol)) ext = u.href; } catch { /* URL inválida */ } if (!ext) continue; }
+        const [m0, m1, m2, m3, m4, m5] = vp.transform, pt = (x, y) => [m0 * x + m2 * y + m4, m1 * x + m3 * y + m5];
+        const [x1, y1] = pt(a.rect[0], a.rect[1]), [x2, y2] = pt(a.rect[2], a.rect[3]);
+        const el = h('a', { class: 'pdf-link', href: ext || '#', 'aria-label': ext ? `Abrir link ${ext}` : 'Ir para o destino do link', style: `left:${Math.min(x1, x2)}px;top:${Math.min(y1, y2)}px;width:${Math.abs(x2 - x1)}px;height:${Math.abs(y2 - y1)}px` });
+        el.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); if (ext) window.open(ext, '_blank', 'noopener,noreferrer'); else gotoDest(a.dest); });
+        layer.append(el);
+      }
+    } catch { /* sem anotações de link */ }
+    return layer;
   }
 
   function release(pv) {
     pv.wanted = false;
     try { pv.task?.cancel(); } catch { /* já terminou */ }
     pv.task = null;
-    if (pv.state !== 'idle') { pv.canvas.width = pv.canvas.height = 0; pv.tl.replaceChildren(); pv.hl.replaceChildren(); pv.page?.cleanup?.(); pv.state = 'idle'; pv.key = ''; }
+    if (pv.state !== 'idle') { pv.canvas.width = pv.canvas.height = 0; pv.tl.replaceChildren(); pv.hl.replaceChildren(); pv.ln.replaceChildren(); pv.page?.cleanup?.(); pv.state = 'idle'; pv.key = ''; }
   }
 
   function buildPages() {
@@ -185,8 +207,9 @@ export async function mountPdfReader(root, book, blob) {
     if (!pv) return;
     viewer.scrollTop = pageTop(pv) - 8 + frac * pv.el.offsetHeight;
   }
-  function goPage(n, frac = 0) {
+  function goPage(n, frac = 0, { noBack = false } = {}) {
     n = clamp(Math.round(n) || 1, 1, N);
+    if (!noBack && st.ready && Math.abs(n - st.page) > 1) showBack(st.page);
     st.page = n; st.jump = true;
     if (st.mode === 'continuous') {
       scrollToPage(n, frac);
@@ -195,6 +218,13 @@ export async function mountPdfReader(root, book, blob) {
     clearTimeout(goPage.t); goPage.t = setTimeout(() => { st.jump = false; updateCurrent(); }, 250);
     updateUI();
   }
+  // Depois de um salto longo (página digitada, miniatura, resultado de busca, link), oferece voltar de onde estava.
+  let backT = 0;
+  function showBack(n) {
+    backBtn.textContent = `↩ Voltar à pág. ${n}`; backBtn.dataset.n = String(n); backBtn.hidden = false;
+    clearTimeout(backT); backT = setTimeout(() => { backBtn.hidden = true; }, 9000);
+  }
+  backBtn.addEventListener('click', () => { const n = Number(backBtn.dataset.n); backBtn.hidden = true; clearTimeout(backT); st.dirty = true; goPage(n, 0, { noBack: true }); });
   function updateCurrent() {
     if (st.mode !== 'continuous' || st.jump) return;
     const mid = viewer.scrollTop + viewer.clientHeight / 2;
@@ -212,7 +242,7 @@ export async function mountPdfReader(root, book, blob) {
   const prevPage = () => { st.dirty = true; hideChrome(); goPage(st.page - 1); };
 
   function updateUI() {
-    pgInput.value = String(st.page); pgSlider.value = String(st.page);
+    if (document.activeElement !== pgInput) pgInput.value = String(st.page); /* não apaga o número que a pessoa está digitando */ pgSlider.value = String(st.page);
     updateBookmarkBtn();
     pagesPanel.querySelectorAll('.thumb').forEach((t) => t.classList.toggle('on', Number(t.dataset.n) === st.page));
     if (st.dirty) { clearTimeout(saveT); saveT = setTimeout(save, 600); }
@@ -274,7 +304,33 @@ export async function mountPdfReader(root, book, blob) {
     { label: 'Páginas e sumário', icon: 'grid', onClick: () => togglePanel(pagesPanel, moreBtn, buildPagesPanel) },
     { label: 'Marcações e anotações', icon: 'note', onClick: () => togglePanel(annPanel, moreBtn, buildAnn) },
     ...(reader.requestFullscreen ? [{ label: 'Tela cheia', icon: 'maximize', onClick: () => toggleFullscreen() }] : []),
+    { label: 'Informações do documento', icon: 'info', onClick: showInfo },
+    ...(canShareFile() ? [{ label: 'Compartilhar PDF', icon: 'share', onClick: sharePdf }] : []),
+    { label: 'Baixar PDF', icon: 'download', onClick: downloadPdf },
   ], { title: 'Mais opções' }));
+
+  /* ---------- informações, compartilhar e baixar (o arquivo original, sem alterações) ---------- */
+  const fileName = () => `${(book.title || 'documento').replace(/[\\/:*?"<>|\u0000-\u001f]+/g, ' ').trim().slice(0, 80) || 'documento'}.pdf`;
+  const asFile = () => new File([blob], fileName(), { type: 'application/pdf' });
+  const canShareFile = () => { try { return !!(navigator.share && navigator.canShare?.({ files: [asFile()] })); } catch { return false; } };
+  async function sharePdf() { try { await navigator.share({ files: [asFile()], title: book.title }); } catch (e) { if (e?.name !== 'AbortError') toast('Não foi possível compartilhar. Use "Baixar PDF".', 'error'); } }
+  function downloadPdf() {
+    const url = URL.createObjectURL(blob);
+    const a = Object.assign(document.createElement('a'), { href: url, download: fileName() });
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+    toast('PDF salvo. No iPhone, ele vai para o app Arquivos / Downloads.');
+  }
+  async function showInfo() {
+    let meta = {};
+    try { meta = (await pdf.getMetadata())?.info || {}; } catch { /* sem metadados */ }
+    const fmt = (d) => (d ? new Date(d).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }) : '—');
+    const pct = Math.round((st.page / N) * 100);
+    const rows = [['Nome do arquivo', book.fileName || fileName()], ['Título', meta.Title || book.title || '—'], ['Autor', meta.Author || book.author || '—'],
+      ['Páginas', String(N)], ['Tamanho', formatBytes(blob.size)], ['Versão do PDF', meta.PDFFormatVersion || '—'], ['Criado com', meta.Creator || meta.Producer || '—'],
+      ['Adicionado em', fmt(book.addedAt)], ['Última leitura', fmt(book.lastReadAt)], ['Progresso', `página ${st.page} de ${N} (${pct}%)`]];
+    modal({ title: 'Informações do documento', body: h('dl', { class: 'doc-info' }, rows.flatMap(([k, v]) => [h('dt', {}, k), h('dd', {}, v)])), actions: [{ label: 'Fechar' }] });
+  }
   viewBtn.addEventListener('click', () => togglePanel(viewPanel, viewBtn, buildView));
 
   const seg = (opts, cur, pick) => {
@@ -286,6 +342,7 @@ export async function mountPdfReader(root, book, blob) {
   };
   const row = (label, ctl) => h('div', { class: 'r-row' }, h('span', {}, label), ctl);
 
+  const applyGap = () => { pagesEl.style.gap = `${clamp(Number(prefs.gap ?? 12), 0, 60)}px`; };
   const saveView = () => setSetting('pdfReader', { ...prefs, mode: st.mode, fit: st.fit, scale: st.scale }).catch(() => {});
   function buildView() {
     viewPanel.replaceChildren(h('h2', {}, 'Exibição'), brightnessControl(applyDim),
@@ -293,6 +350,7 @@ export async function mountPdfReader(root, book, blob) {
       row('Ajuste', seg([['width', 'À largura'], ['height', 'À altura']], st.fit === 'custom' ? '' : st.fit, setFit)),
       row('Zoom', h('div', { class: 'stepper' }, h('button', { class: 'btn', type: 'button', 'aria-label': 'Diminuir zoom', onclick: () => setScale(st.scale / 1.25) }, icon('minus', 18)), h('span', { class: 'r-val' }, `${Math.round(st.scale * 100)}%`), h('button', { class: 'btn', type: 'button', 'aria-label': 'Aumentar zoom', onclick: () => setScale(st.scale * 1.25) }, icon('plus', 18)))),
       row('Cor das páginas', seg([['normal', 'Normal'], ['sepia', 'Sépia'], ['night', 'Noturno'], ['invert', 'Invertido']], prefs.tone || 'normal', (val) => { prefs.tone = val; reader.dataset.ptone = val; saveView(); })),
+      row('Espaço entre páginas', seg([[4, 'Pequeno'], [12, 'Médio'], [28, 'Grande']], prefs.gap ?? 12, (val) => { prefs.gap = val; applyGap(); saveView(); })),
       row('Manter tela ligada', seg([[true, 'Sim'], [false, 'Não']], prefs.awake !== false, (val) => { prefs.awake = val; saveView(); releaseAwake(); releaseAwake = val ? keepAwake() : () => {}; })),
       h('div', { class: 'r-row' }, h('div', { class: 'view-actions' },
         h('button', { class: 'btn', type: 'button', onclick: rotate }, icon('rotate', 18), 'Girar páginas'),
@@ -371,6 +429,15 @@ export async function mountPdfReader(root, book, blob) {
     const input = h('input', { type: 'search', placeholder: 'Buscar no documento', 'aria-label': 'Buscar no documento', value: st.query });
     const status = h('p', { class: 'hint', role: 'status' });
     const list = h('ul', { class: 'results' });
+    const hist = h('div', { class: 'search-hist', hidden: true });
+    const readHist = () => { const v = getSetting('pdfSearches'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string').slice(0, 8) : []; };
+    const remember = (q) => setSetting('pdfSearches', [q, ...readHist().filter((x) => x.toLowerCase() !== q.toLowerCase())].slice(0, 8)).catch(() => {});
+    const showHist = () => {
+      const items = readHist();
+      hist.hidden = !items.length || results.length > 0;
+      hist.replaceChildren(h('span', { class: 'hint' }, 'Buscas recentes'), ...items.map((q) => h('button', { type: 'button', class: 'chip', onclick: () => { input.value = q; go(); } }, q)),
+        h('button', { type: 'button', class: 'chip clear', 'aria-label': 'Limpar histórico de buscas', onclick: () => { setSetting('pdfSearches', []).catch(() => {}); hist.hidden = true; } }, 'Limpar'));
+    };
     const renderResults = () => list.replaceChildren(...results.slice(0, 300).map((r, i) => h('li', {}, h('button', { type: 'button', class: i === resultIdx ? 'on' : '', onclick: () => openResult(i) },
       h('span', { class: 'res-p' }, `Pág. ${r.n}`), h('span', { class: 'res-t' }, r.before, h('mark', {}, r.hit), r.after)))));
     const go = async () => {
@@ -378,7 +445,8 @@ export async function mountPdfReader(root, book, blob) {
       const id = ++searchId;
       results = []; resultIdx = -1; list.replaceChildren();
       setQuery(q);
-      if (q.length < 2) { status.textContent = q ? 'Digite ao menos 2 letras.' : ''; return; }
+      if (q.length < 2) { status.textContent = q ? 'Digite ao menos 2 letras.' : ''; showHist(); return; }
+      remember(q); hist.hidden = true;
       const nq = normStr(q);
       for (let n = 1; n <= N; n++) {
         if (id !== searchId) return;
@@ -390,6 +458,8 @@ export async function mountPdfReader(root, book, blob) {
         if (n % 10 === 0 || n === N) { status.textContent = n < N ? `Buscando… ${n} de ${N} páginas` : ''; renderResults(); }
       }
       const pagesHit = new Set(results.map((r) => r.n)).size;
+      const chars = [...textCache.values()].reduce((a, t) => a + t.raw.length, 0);
+      if (!results.length && chars < 20) { status.textContent = 'Este PDF parece digitalizado (só imagens, sem texto): não há o que buscar nem selecionar. O reconhecimento de texto (OCR) exige um pacote grande e baixado da internet, por isso não está incluído.'; renderResults(); return; }
       status.textContent = results.length ? `${results.length >= 500 ? '500+' : results.length} resultado(s) em ${pagesHit} página(s).` : 'Nenhum resultado.';
       renderResults();
       if (results.length) openResult(0, false);
@@ -404,8 +474,8 @@ export async function mountPdfReader(root, book, blob) {
     input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); if (results.length && input.value.trim() === st.query) step(e.shiftKey ? -1 : 1); else go(); } e.stopPropagation(); });
     searchPanel.replaceChildren(h('h2', {}, 'Buscar'),
       h('div', { class: 'search-row' }, input, h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Resultado anterior', onclick: () => step(-1) }, icon('up')), h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Próximo resultado', onclick: () => step(1) }, icon('down'))),
-      status, list);
-    if (results.length) renderResults();
+      hist, status, list);
+    if (results.length) renderResults(); else showHist();
     setTimeout(() => input.focus(), 30);
   }
   function setQuery(q) { st.query = q; views.forEach((pv) => { if (pv.state === 'done') markSearch(pv); }); }
@@ -614,7 +684,7 @@ export async function mountPdfReader(root, book, blob) {
     });
   }, { passive: true });
 
-  pgInput.addEventListener('change', () => { st.dirty = true; goPage(Number(pgInput.value)); });
+  pgInput.addEventListener('change', () => { st.dirty = true; goPage(Number(pgInput.value)); pgInput.value = String(st.page); });
   pgInput.addEventListener('keydown', (e) => e.stopPropagation());
   pgSlider.addEventListener('input', () => { pgInput.value = pgSlider.value; });
   pgSlider.addEventListener('change', () => { st.dirty = true; goPage(Number(pgSlider.value)); });
@@ -651,15 +721,17 @@ export async function mountPdfReader(root, book, blob) {
   if (loc && Number.isInteger(loc.page)) st.page = clamp(loc.page, 1, N);
   buildPages(); relayout();
   goPage(st.page, loc && typeof loc.frac === 'number' ? loc.frac : 0);
+  st.ready = true;
   updateUI();
   const autoHide = setTimeout(hideChrome, loc ? 1800 : 3500);
   reader.addEventListener('pointerdown', (e) => { if (e.target.closest('.r-top,.r-bottom,.r-panel')) clearTimeout(autoHide); }, true);
   let releaseAwake = prefs.awake === false ? () => {} : keepAwake();
   reader.dataset.ptone = prefs.tone || 'normal';
+  applyGap();
 
   return () => {
     save(); tracker.stop(); releaseAwake(); clearTimeout(autoHide);
-    clearTimeout(resizeT); clearTimeout(goPage.t);
+    clearTimeout(resizeT); clearTimeout(goPage.t); clearTimeout(backT);
     ro.disconnect(); io?.disconnect(); thumbIO?.disconnect();
     views.forEach(release);
     document.removeEventListener('keydown', onKey);

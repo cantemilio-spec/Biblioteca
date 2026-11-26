@@ -56,6 +56,7 @@ const ICONS = {
   note: 'M5 4h14v12H9l-4 4zM8 8h8M8 11h5',
   copy: 'M9 9h11v11H9zM5 15V5h10',
   download: 'M12 4v11M7 11l5 5 5-5M5 20h14',
+  share: 'M12 15V3M8 7l4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7',
   info: 'M12 11v6M12 7.5h.01M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z',
 };
 
