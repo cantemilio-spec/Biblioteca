@@ -407,21 +407,21 @@
     },
     "fr|fantasma opera|leroux|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:39:38.371Z",
+      "proxima_tentativa": "2026-11-28T07:42:23.367Z",
       "pedido": "fantasma opera (leroux)",
       "categoria": "Literatura Francesa",
-      "atualizado_em": "2026-11-25T01:39:38.371Z"
+      "atualizado_em": "2026-11-26T07:42:23.367Z"
     },
     "fr||leblanc|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:39:38.827Z",
+      "proxima_tentativa": "2026-11-28T07:42:23.788Z",
       "pedido": "obra de (leblanc)",
       "categoria": "Literatura Francesa",
-      "atualizado_em": "2026-11-25T01:39:38.827Z"
+      "atualizado_em": "2026-11-26T07:42:23.788Z"
     },
     "fr||anatole france/france|1": {
       "status": "concluido",
@@ -435,21 +435,21 @@
     },
     "en|orgulho preconceito|austen|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:39:40.495Z",
+      "proxima_tentativa": "2026-11-28T07:42:26.667Z",
       "pedido": "orgulho preconceito (austen)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:39:40.495Z"
+      "atualizado_em": "2026-11-26T07:42:26.667Z"
     },
     "en|emma|austen|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:39:41.925Z",
+      "proxima_tentativa": "2026-11-28T07:42:28.426Z",
       "pedido": "emma (austen)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:39:41.925Z"
+      "atualizado_em": "2026-11-26T07:42:28.426Z"
     },
     "en||austen|1": {
       "status": "concluido",
@@ -499,12 +499,12 @@
     },
     "en|retrato dorian gray|wilde|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:O Retrato de Dorian Gray: já existe na biblioteca (O Retrato de Dorian Gray) (decisão anterior) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:39:45.544Z",
+      "proxima_tentativa": "2026-11-28T07:42:30.382Z",
       "pedido": "retrato dorian gray (wilde)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:39:45.544Z"
+      "atualizado_em": "2026-11-26T07:42:30.382Z"
     },
     "en||wilde|1": {
       "status": "erro",
@@ -526,21 +526,21 @@
     },
     "en|medico monstro|stevenson|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:39:48.222Z",
+      "proxima_tentativa": "2026-11-28T07:42:32.102Z",
       "pedido": "medico monstro (stevenson)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:39:48.222Z"
+      "atualizado_em": "2026-11-26T07:42:32.102Z"
     },
     "en|ilha tesouro|stevenson|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:39:50.336Z",
+      "proxima_tentativa": "2026-11-28T07:42:33.697Z",
       "pedido": "ilha tesouro (stevenson)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:39:50.336Z"
+      "atualizado_em": "2026-11-26T07:42:33.697Z"
     },
     "en||stevenson|1": {
       "status": "erro",
@@ -637,12 +637,12 @@
     },
     "en|homem invisivel|wells|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:39:58.882Z",
+      "proxima_tentativa": "2026-11-28T07:42:35.750Z",
       "pedido": "homem invisivel (wells)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:39:58.882Z"
+      "atualizado_em": "2026-11-26T07:42:35.750Z"
     },
     "en||wells|1": {
       "status": "concluido",
@@ -665,12 +665,12 @@
     },
     "en|robinson crusoe|defoe|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:40:16.874Z",
+      "proxima_tentativa": "2026-11-28T07:42:37.446Z",
       "pedido": "robinson crusoe (defoe)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:40:16.874Z"
+      "atualizado_em": "2026-11-26T07:42:37.446Z"
     },
     "en||defoe|1": {
       "status": "concluido",
@@ -702,12 +702,12 @@
     },
     "en|dracula|stoker|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:dracula-bram-stoker-1897: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:40:19.800Z",
+      "proxima_tentativa": "2026-11-28T07:42:39.453Z",
       "pedido": "dracula (stoker)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:40:19.800Z"
+      "atualizado_em": "2026-11-26T07:42:39.453Z"
     },
     "en||conrad|1": {
       "status": "concluido",
@@ -730,12 +730,12 @@
     },
     "en||thackeray|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T01:40:21.195Z",
+      "proxima_tentativa": "2026-11-28T07:42:39.938Z",
       "pedido": "obra de (thackeray)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:40:21.195Z"
+      "atualizado_em": "2026-11-26T07:42:39.938Z"
     },
     "en||hardy|1": {
       "status": "erro",
@@ -748,21 +748,21 @@
     },
     "en||shakespeare|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:romeoejulietapoe00patr: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:romeoejulietapoe00ferruoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:hamletdramaemcin25667gut: já existe na biblioteca (Hamlet: Drama em cinco Actos) (decisão anterior) | internet-archive:sonhodumanoited00shakgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status:",
-      "proxima_tentativa": "2026-11-26T01:40:22.084Z",
+      "proxima_tentativa": "2026-11-28T07:42:40.752Z",
       "pedido": "obra de (shakespeare)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:40:22.084Z"
+      "atualizado_em": "2026-11-26T07:42:40.752Z"
     },
     "en||shakespeare|2": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:romeoejulietapoe00patr: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:romeoejulietapoe00ferruoft: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:hamletdramaemcin25667gut: já existe na biblioteca (Hamlet: Drama em cinco Actos) (decisão anterior) | internet-archive:sonhodumanoited00shakgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status:",
-      "proxima_tentativa": "2026-11-26T01:40:22.305Z",
+      "proxima_tentativa": "2026-11-28T07:42:40.988Z",
       "pedido": "obra de (shakespeare)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:40:22.305Z"
+      "atualizado_em": "2026-11-26T07:42:40.988Z"
     },
     "en||haggard|1": {
       "status": "concluido",
@@ -776,12 +776,12 @@
     },
     "en||chesterton|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:g.-k.-chesterton-a-inocencia-do-padre-brown_202310: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:g.-k.-chesterton-a-sabedoria-do-padre-brown: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:g.-k.-chesterton-outras-historias-do-padre-brown: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:g.-k.-chesterton-a-i",
-      "proxima_tentativa": "2026-11-26T01:40:22.850Z",
+      "proxima_tentativa": "2026-11-28T07:42:41.523Z",
       "pedido": "obra de (chesterton)",
       "categoria": "Literatura Inglesa",
-      "atualizado_em": "2026-11-25T01:40:22.850Z"
+      "atualizado_em": "2026-11-26T07:42:41.523Z"
     },
     "us||poe|1": {
       "status": "erro",
@@ -1254,21 +1254,21 @@
     },
     "un||tagore|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive: não encontrado | wikisource:Rabiscando: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T07:13:51.351Z",
+      "proxima_tentativa": "2026-11-27T07:42:42.408Z",
       "pedido": "obra de (tagore)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-25T19:13:51.351Z"
+      "atualizado_em": "2026-11-26T07:42:42.408Z"
     },
     "un||perrault|1": {
       "status": "erro",
-      "tentativas": 2,
+      "tentativas": 3,
       "motivo": "internet-archive: não encontrado | wikisource:Contos de Grimm: já importado | wikisource:Superstições domésticas: download falhou (exportação vazia ou muito pequena para ser um livro) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-26T07:13:53.244Z",
+      "proxima_tentativa": "2026-11-27T07:42:42.916Z",
       "pedido": "obra de (perrault)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-25T19:13:53.244Z"
+      "atualizado_em": "2026-11-26T07:42:42.916Z"
     }
   },
   "rejeitados": {
@@ -1390,40 +1390,54 @@
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-26T01:39:33.161Z",
+      "verificado_em": "2026-11-26T07:42:18.863Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-26T01:39:33.451Z",
+      "verificado_em": "2026-11-26T07:42:19.162Z",
       "disponivel": true,
-      "ms": 346,
+      "ms": 302,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-26T01:39:33.451Z"
+      "ultimo_ok": "2026-11-26T07:42:19.162Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-26T01:39:33.797Z",
+      "verificado_em": "2026-11-26T07:42:19.464Z",
       "disponivel": true,
-      "ms": 127,
+      "ms": 173,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-26T01:39:33.797Z"
+      "ultimo_ok": "2026-11-26T07:42:19.464Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-26T01:39:33.924Z",
+      "verificado_em": "2026-11-26T07:42:19.637Z",
       "disponivel": true,
-      "ms": 1601,
+      "ms": 179,
       "detalhe": "site respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-26T01:39:33.924Z"
+      "ultimo_ok": "2026-11-26T07:42:19.637Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-26T07:42:18.859Z",
+      "fim": "2026-11-26T07:42:42.918Z",
+      "novos": 0,
+      "tentados": 16,
+      "parou_por": "fim da lista",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 27
+    },
     {
       "inicio": "2026-11-26T01:39:33.157Z",
       "fim": "2026-11-26T01:40:15.205Z",
@@ -1579,12 +1593,12 @@
       "total": 8
     }
   ],
-  "atualizado_em": "2026-11-26T01:40:15.206Z",
+  "atualizado_em": "2026-11-26T07:42:42.919Z",
   "ultima_execucao": {
-    "inicio": "2026-11-26T01:39:33.157Z",
-    "fim": "2026-11-26T01:40:15.205Z",
+    "inicio": "2026-11-26T07:42:18.859Z",
+    "fim": "2026-11-26T07:42:42.918Z",
     "novos": 0,
-    "tentados": 38,
+    "tentados": 16,
     "parou_por": "fim da lista",
     "fontes": {
       "gutenberg": false,
