@@ -134,3 +134,29 @@ html:has(.reader[data-rtheme="light"]), body:has(.reader[data-rtheme="light"]) {
 @media (max-width: 599px) { .r-panel.settings { max-height: min(56%, 520px); } }
 #app.reading ~ #toasts { top: calc(60px + env(safe-area-inset-top, 0px)); bottom: auto; }
 #app.reading ~ #toasts .toast { pointer-events: none; }
+
+/* "Ir para": botão de posição (rodapé do EPUB) e painel com barra para achar qualquer página */
+.r-gobtn { pointer-events: auto; max-width: 100%; min-height: 32px; padding: 6px 14px; border: 0; border-radius: 999px; background: color-mix(in srgb, var(--r-bg) 72%, transparent); color: inherit; font: inherit; letter-spacing: inherit; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; -webkit-tap-highlight-color: transparent; }
+.r-gobtn:hover, .r-gobtn[aria-expanded="true"] { color: var(--r-fg); }
+.r-panel.goto .go-info { margin: 0 0 6px; font-size: .95rem; font-weight: 600; color: var(--r-fg); overflow-wrap: anywhere; }
+.r-panel.goto input[type=range] { display: block; width: 100%; min-height: 36px; padding: 0; margin: 0; border: 0; background: transparent; accent-color: #6DA5C0; box-shadow: none; }
+.r-panel.goto .go-pages { margin-top: 10px; }
+.r-panel.goto .go-line { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: .85rem; color: var(--r-muted); }
+.r-panel.goto .go-num { display: inline-flex; align-items: center; gap: 6px; color: var(--r-fg); }
+.r-panel.goto .pg-input { width: 4.6em; min-height: 36px; padding: 0 6px; text-align: center; font: inherit; color: var(--r-fg); background: var(--r-hover); border: 1px solid var(--r-border); border-radius: 8px; }
+.r-panel.goto .view-actions { margin-top: 14px; }
+.r-panel.goto .go-pages[hidden], .r-panel.goto .btn[hidden] { display: none; }
+
+/* PDF: links do documento, voltar à página anterior, buscas recentes e informações */
+.pdf-link-layer { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.pdf-link { position: absolute; display: block; pointer-events: auto; border-radius: 2px; -webkit-tap-highlight-color: rgba(109, 165, 192, .35); }
+.pdf-link:hover, .pdf-link:focus-visible { background: rgba(109, 165, 192, .22); outline: 1px solid rgba(109, 165, 192, .7); }
+.r-backpg { position: absolute; z-index: 3; left: 50%; transform: translateX(-50%); bottom: calc(64px + env(safe-area-inset-bottom)); max-width: calc(100% - 32px); padding: 9px 16px; border: 0; border-radius: 999px; background: #6DA5C0; color: #0b1f2a; font: 600 .85rem/1 var(--font-ui); box-shadow: 0 4px 14px rgba(0, 0, 0, .25); cursor: pointer; animation: rise .2s ease both; }
+.r-backpg[hidden] { display: none; }
+.chrome-off .r-backpg { bottom: calc(24px + env(safe-area-inset-bottom)); }
+.search-hist { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 8px 0; }
+.search-hist[hidden] { display: none; }
+.search-hist .chip { border: 1px solid var(--r-border); background: var(--r-hover); color: var(--r-fg); border-radius: 999px; padding: 6px 12px; font: inherit; font-size: .82rem; cursor: pointer; min-height: 32px; }
+.search-hist .chip.clear { background: none; color: var(--r-muted); }
+.doc-info { display: grid; grid-template-columns: max-content 1fr; gap: 8px 14px; margin: 0; font-size: .9rem; }
+.doc-info dt { color: var(--text-2, #667); } .doc-info dd { margin: 0; overflow-wrap: anywhere; font-weight: 500; }
