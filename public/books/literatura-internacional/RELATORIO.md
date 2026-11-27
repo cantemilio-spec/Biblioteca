@@ -1,6 +1,6 @@
 # Relatório: Literatura internacional
 
-Última execução: 2026-11-26T07:42:42.918Z — parou por: fim da lista
+Última execução: 2026-11-27T01:41:31.093Z — parou por: fim da lista
 
 Concluídos **27** | pendentes 64 | com erro 47 | bloqueados (sem direitos/não encontrados) 0
 
@@ -132,7 +132,7 @@ Fontes: Project Gutenberg: indisponível · Internet Archive: disponível · Wik
 - **pinoquio (collodi)** (Literatura Italiana) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado
 - **coracao (amicis)** (Literatura Italiana) — pendente: fonte indisponível: internet-archive:coraotraddev00deam: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado
 - **obra de (salgari)** (Literatura Italiana) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado
-- **principe (maquiavel/machiavelli)** (Literatura Italiana) — pendente: fonte indisponível: internet-archive:MaquiavelOPrincipe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:maquiavel-o-principe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:o-principe-texto-integral: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:001143485-o-principe_202601: sem licença de redistribuição explícita (licenseurl: nenhuma; possibl
+- **principe (maquiavel/machiavelli)** (Literatura Italiana) — pendente: fonte indisponível: internet-archive:MaquiavelOPrincipe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:maquiavel-o-principe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:o-principe-texto-integral: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:colecao-os-pensadores-nicolau-maquiavel_202601: sem licença de redistribuição explícita (licenseur
 - **obra de (cervantes)** (Literatura Espanhola) — pendente: fonte indisponível: internet-archive:oengenhosofidal01saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:oengenhosofidal00saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:livros-de-meditacao-e-auto-ajuda: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Dom Quixote: já importado | adamastor: não encontrado
 - **obra de (galdos)** (Literatura Espanhola) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado
 - **obra de (becquer/bécquer)** (Literatura Espanhola) — pendente: fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado

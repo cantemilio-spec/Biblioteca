@@ -839,21 +839,21 @@
     },
     "us|moby dick|melville|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:40.168Z",
+      "proxima_tentativa": "2026-11-29T01:41:10.219Z",
       "pedido": "moby dick (melville)",
       "categoria": "Literatura Norte-Americana",
-      "atualizado_em": "2026-11-26T01:39:40.168Z"
+      "atualizado_em": "2026-11-27T01:41:10.219Z"
     },
     "us||hawthorne|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:40.427Z",
+      "proxima_tentativa": "2026-11-29T01:41:10.541Z",
       "pedido": "obra de (hawthorne)",
       "categoria": "Literatura Norte-Americana",
-      "atualizado_em": "2026-11-26T01:39:40.427Z"
+      "atualizado_em": "2026-11-27T01:41:10.541Z"
     },
     "us||london|1": {
       "status": "erro",
@@ -866,48 +866,48 @@
     },
     "us||alcott|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:41.827Z",
+      "proxima_tentativa": "2026-11-29T01:41:10.810Z",
       "pedido": "obra de (alcott)",
       "categoria": "Literatura Norte-Americana",
-      "atualizado_em": "2026-11-26T01:39:41.827Z"
+      "atualizado_em": "2026-11-27T01:41:10.810Z"
     },
     "de|metamorfose|kafka|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:43.686Z",
+      "proxima_tentativa": "2026-11-29T01:41:12.219Z",
       "pedido": "metamorfose (kafka)",
       "categoria": "Literatura Alemã",
-      "atualizado_em": "2026-11-26T01:39:43.686Z"
+      "atualizado_em": "2026-11-27T01:41:12.219Z"
     },
     "de||kafka|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:carta-ao-pai-franz-kafka: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:franz-kafka-o-covil-editorial-inquerito: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:franz-kafka-consideracoes-sobre-o-pecado-o-sofrimento-a-esperanca-e-o-verdadeiro-caminho-1992: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encont",
-      "proxima_tentativa": "2026-11-27T01:39:44.382Z",
+      "proxima_tentativa": "2026-11-29T01:41:12.511Z",
       "pedido": "obra de (kafka)",
       "categoria": "Literatura Alemã",
-      "atualizado_em": "2026-11-26T01:39:44.382Z"
+      "atualizado_em": "2026-11-27T01:41:12.511Z"
     },
     "de|processo|kafka|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:45.783Z",
+      "proxima_tentativa": "2026-11-29T01:41:14.010Z",
       "pedido": "processo (kafka)",
       "categoria": "Literatura Alemã",
-      "atualizado_em": "2026-11-26T01:39:45.783Z"
+      "atualizado_em": "2026-11-27T01:41:14.010Z"
     },
     "de||grimm|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:perolasediamante30510gut: já importado | wikisource:Contos de Grimm: já importado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:46.181Z",
+      "proxima_tentativa": "2026-11-29T01:41:14.351Z",
       "pedido": "obra de (grimm)",
       "categoria": "Literatura Alemã",
-      "atualizado_em": "2026-11-26T01:39:46.181Z"
+      "atualizado_em": "2026-11-27T01:41:14.351Z"
     },
     "de||grimm|2": {
       "status": "concluido",
@@ -921,12 +921,12 @@
     },
     "de||grimm|3": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:perolasediamante30510gut: já importado | wikisource:Contos de Grimm: já importado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:46.376Z",
+      "proxima_tentativa": "2026-11-29T01:41:14.550Z",
       "pedido": "obra de (grimm)",
       "categoria": "Literatura Alemã",
-      "atualizado_em": "2026-11-26T01:39:46.376Z"
+      "atualizado_em": "2026-11-27T01:41:14.550Z"
     },
     "de||goethe|1": {
       "status": "concluido",
@@ -940,12 +940,12 @@
     },
     "de|fausto|goethe|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:fausto-johann-wolfgang-von-goethe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Fausto (traduzido por António Feliciano de Castilho): já existe na biblioteca (Fausto (traduzido por António Feliciano de Castilho)) (decisão anterior) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:48.108Z",
+      "proxima_tentativa": "2026-11-29T01:41:16.075Z",
       "pedido": "fausto (goethe)",
       "categoria": "Literatura Alemã",
-      "atualizado_em": "2026-11-26T01:39:48.108Z"
+      "atualizado_em": "2026-11-27T01:41:16.075Z"
     },
     "de||schiller|1": {
       "status": "erro",
@@ -967,21 +967,21 @@
     },
     "de||zweig|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:dli.ernet.447892: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:50.469Z",
+      "proxima_tentativa": "2026-11-29T01:41:16.500Z",
       "pedido": "obra de (zweig)",
       "categoria": "Literatura Alemã",
-      "atualizado_em": "2026-11-26T01:39:50.469Z"
+      "atualizado_em": "2026-11-27T01:41:16.500Z"
     },
     "de||thomas mann/mann|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:a-genese-do-doutor-fausto-thomas-mann: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:50.967Z",
+      "proxima_tentativa": "2026-11-29T01:41:16.850Z",
       "pedido": "obra de (thomas mann/mann)",
       "categoria": "Literatura Alemã",
-      "atualizado_em": "2026-11-26T01:39:50.967Z"
+      "atualizado_em": "2026-11-27T01:41:16.850Z"
     },
     "it|divina comedia|dante|1": {
       "status": "erro",
@@ -1003,21 +1003,21 @@
     },
     "it|decameron|boccaccio|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:39:59.220Z",
+      "proxima_tentativa": "2026-11-29T01:41:18.876Z",
       "pedido": "decameron (boccaccio)",
       "categoria": "Literatura Italiana",
-      "atualizado_em": "2026-11-26T01:39:59.220Z"
+      "atualizado_em": "2026-11-27T01:41:18.876Z"
     },
     "it|pinoquio|collodi|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:01.111Z",
+      "proxima_tentativa": "2026-11-29T01:41:20.843Z",
       "pedido": "pinoquio (collodi)",
       "categoria": "Literatura Italiana",
-      "atualizado_em": "2026-11-26T01:40:01.111Z"
+      "atualizado_em": "2026-11-27T01:41:20.843Z"
     },
     "it||manzoni|1": {
       "status": "concluido",
@@ -1031,30 +1031,30 @@
     },
     "it|coracao|amicis|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:coraotraddev00deam: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:02.588Z",
+      "proxima_tentativa": "2026-11-29T01:41:22.735Z",
       "pedido": "coracao (amicis)",
       "categoria": "Literatura Italiana",
-      "atualizado_em": "2026-11-26T01:40:02.588Z"
+      "atualizado_em": "2026-11-27T01:41:22.735Z"
     },
     "it||salgari|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:02.854Z",
+      "proxima_tentativa": "2026-11-29T01:41:23.117Z",
       "pedido": "obra de (salgari)",
       "categoria": "Literatura Italiana",
-      "atualizado_em": "2026-11-26T01:40:02.854Z"
+      "atualizado_em": "2026-11-27T01:41:23.117Z"
     },
     "it|principe|maquiavel/machiavelli|1": {
       "status": "pendente",
-      "tentativas": 3,
-      "motivo": "fonte indisponível: internet-archive:MaquiavelOPrincipe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:maquiavel-o-principe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:o-principe-texto-integral: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:001143485-o-principe_202601: sem licença de redistribuição explícita (licenseurl: nenhuma; possibl",
-      "proxima_tentativa": "2026-11-27T01:40:04.537Z",
+      "tentativas": 4,
+      "motivo": "fonte indisponível: internet-archive:MaquiavelOPrincipe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:maquiavel-o-principe: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:o-principe-texto-integral: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:colecao-os-pensadores-nicolau-maquiavel_202601: sem licença de redistribuição explícita (licenseur",
+      "proxima_tentativa": "2026-11-29T01:41:25.847Z",
       "pedido": "principe (maquiavel/machiavelli)",
       "categoria": "Literatura Italiana",
-      "atualizado_em": "2026-11-26T01:40:04.537Z"
+      "atualizado_em": "2026-11-27T01:41:25.847Z"
     },
     "es|quixote|cervantes|1": {
       "status": "concluido",
@@ -1068,30 +1068,30 @@
     },
     "es||cervantes|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:oengenhosofidal01saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:oengenhosofidal00saavgoog: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: NOT_IN_COPYRIGHT) (decisão anterior) | internet-archive:livros-de-meditacao-e-auto-ajuda: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource:Dom Quixote: já importado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:05.311Z",
+      "proxima_tentativa": "2026-11-29T01:41:26.323Z",
       "pedido": "obra de (cervantes)",
       "categoria": "Literatura Espanhola",
-      "atualizado_em": "2026-11-26T01:40:05.311Z"
+      "atualizado_em": "2026-11-27T01:41:26.323Z"
     },
     "es||galdos|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:05.636Z",
+      "proxima_tentativa": "2026-11-29T01:41:26.654Z",
       "pedido": "obra de (galdos)",
       "categoria": "Literatura Espanhola",
-      "atualizado_em": "2026-11-26T01:40:05.636Z"
+      "atualizado_em": "2026-11-27T01:41:26.654Z"
     },
     "es||becquer/bécquer|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:05.923Z",
+      "proxima_tentativa": "2026-11-29T01:41:27.032Z",
       "pedido": "obra de (becquer/bécquer)",
       "categoria": "Literatura Espanhola",
-      "atualizado_em": "2026-11-26T01:40:05.923Z"
+      "atualizado_em": "2026-11-27T01:41:27.032Z"
     },
     "es||quevedo|1": {
       "status": "erro",
@@ -1123,12 +1123,12 @@
     },
     "gr|odisseia|homero|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:hq-fragmentos-do-horror-volume-unico-junji-ito: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | internet-archive:odisseia-vol.-01-trad-pe.-manuel-alves-correia_202509: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:11.805Z",
+      "proxima_tentativa": "2026-11-29T01:41:28.737Z",
       "pedido": "odisseia (homero)",
       "categoria": "Literatura Grega",
-      "atualizado_em": "2026-11-26T01:40:11.805Z"
+      "atualizado_em": "2026-11-27T01:41:28.737Z"
     },
     "gr||homero|1": {
       "status": "concluido",
@@ -1152,12 +1152,12 @@
     },
     "gr||euripides/eurípides|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:12.097Z",
+      "proxima_tentativa": "2026-11-29T01:41:29.029Z",
       "pedido": "obra de (euripides/eurípides)",
       "categoria": "Literatura Grega",
-      "atualizado_em": "2026-11-26T01:40:12.097Z"
+      "atualizado_em": "2026-11-27T01:41:29.029Z"
     },
     "gr||esquilo|1": {
       "status": "concluido",
@@ -1200,57 +1200,57 @@
     },
     "un||andersen|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:apequenasereia_201807: sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | internet-archive:sophia-de-mello-breyner-andersen-o-nu-na-antiguidade-classica: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:13.452Z",
+      "proxima_tentativa": "2026-11-29T01:41:29.656Z",
       "pedido": "obra de (andersen)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-26T01:40:13.452Z"
+      "atualizado_em": "2026-11-27T01:41:29.656Z"
     },
     "un||andersen|2": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive:apequenasereia_201807: sem licença de redistribuição explícita (licenseurl: http://creativecommons.org/licenses/by-nc-nd/4.0/; possible-copyright-status: n/d) (decisão anterior) | internet-archive:sophia-de-mello-breyner-andersen-o-nu-na-antiguidade-classica: sem licença de redistribuição explícita (licenseurl: nenhuma; possible-copyright-status: n/d) (decisão anterior) | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:13.646Z",
+      "proxima_tentativa": "2026-11-29T01:41:29.831Z",
       "pedido": "obra de (andersen)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-26T01:40:13.646Z"
+      "atualizado_em": "2026-11-27T01:41:29.831Z"
     },
     "un||ibsen|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource:Constituição de 1988 da República Federativa do Brasil: já existe na biblioteca (Constituição de 1988 da República Federativa do Brasil) (decisão anterior) | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:13.967Z",
+      "proxima_tentativa": "2026-11-29T01:41:30.118Z",
       "pedido": "obra de (ibsen)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-26T01:40:13.967Z"
+      "atualizado_em": "2026-11-27T01:41:30.118Z"
     },
     "un||sienkiewicz|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:14.467Z",
+      "proxima_tentativa": "2026-11-29T01:41:30.519Z",
       "pedido": "obra de (sienkiewicz)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-26T01:40:14.467Z"
+      "atualizado_em": "2026-11-27T01:41:30.519Z"
     },
     "un||strindberg|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:14.830Z",
+      "proxima_tentativa": "2026-11-29T01:41:30.812Z",
       "pedido": "obra de (strindberg)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-26T01:40:14.830Z"
+      "atualizado_em": "2026-11-27T01:41:30.812Z"
     },
     "un||lagerlof/lagerlöf|1": {
       "status": "pendente",
-      "tentativas": 3,
+      "tentativas": 4,
       "motivo": "fonte indisponível: internet-archive: não encontrado | wikisource: não encontrado | adamastor: não encontrado",
-      "proxima_tentativa": "2026-11-27T01:40:15.203Z",
+      "proxima_tentativa": "2026-11-29T01:41:31.090Z",
       "pedido": "obra de (lagerlof/lagerlöf)",
       "categoria": "Literatura Universal",
-      "atualizado_em": "2026-11-26T01:40:15.203Z"
+      "atualizado_em": "2026-11-27T01:41:31.090Z"
     },
     "un||tagore|1": {
       "status": "erro",
@@ -1390,40 +1390,54 @@
   "fontes": {
     "gutenberg": {
       "nome": "Project Gutenberg",
-      "verificado_em": "2026-11-26T07:42:18.863Z",
+      "verificado_em": "2026-11-27T01:41:07.730Z",
       "disponivel": false,
       "erro": "HTTP 503",
       "detalhe": "indisponível nesta execução; será testada de novo na próxima"
     },
     "internet-archive": {
       "nome": "Internet Archive",
-      "verificado_em": "2026-11-26T07:42:19.162Z",
+      "verificado_em": "2026-11-27T01:41:07.839Z",
       "disponivel": true,
-      "ms": 302,
+      "ms": 241,
       "detalhe": "advancedsearch respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-26T07:42:19.162Z"
+      "ultimo_ok": "2026-11-27T01:41:07.839Z"
     },
     "wikisource": {
       "nome": "Wikisource (pt)",
-      "verificado_em": "2026-11-26T07:42:19.464Z",
+      "verificado_em": "2026-11-27T01:41:08.080Z",
       "disponivel": true,
-      "ms": 173,
+      "ms": 64,
       "detalhe": "API respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-26T07:42:19.464Z"
+      "ultimo_ok": "2026-11-27T01:41:08.080Z"
     },
     "adamastor": {
       "nome": "Projecto Adamastor",
-      "verificado_em": "2026-11-26T07:42:19.637Z",
+      "verificado_em": "2026-11-27T01:41:08.144Z",
       "disponivel": true,
-      "ms": 179,
+      "ms": 336,
       "detalhe": "site respondeu",
       "erro": null,
-      "ultimo_ok": "2026-11-26T07:42:19.637Z"
+      "ultimo_ok": "2026-11-27T01:41:08.144Z"
     }
   },
   "execucoes": [
+    {
+      "inicio": "2026-11-27T01:41:07.727Z",
+      "fim": "2026-11-27T01:41:31.093Z",
+      "novos": 0,
+      "tentados": 27,
+      "parou_por": "fim da lista",
+      "fontes": {
+        "gutenberg": false,
+        "internet-archive": true,
+        "wikisource": true,
+        "adamastor": true
+      },
+      "total": 27
+    },
     {
       "inicio": "2026-11-26T07:42:18.859Z",
       "fim": "2026-11-26T07:42:42.918Z",
@@ -1593,12 +1607,12 @@
       "total": 8
     }
   ],
-  "atualizado_em": "2026-11-26T07:42:42.919Z",
+  "atualizado_em": "2026-11-27T01:41:31.094Z",
   "ultima_execucao": {
-    "inicio": "2026-11-26T07:42:18.859Z",
-    "fim": "2026-11-26T07:42:42.918Z",
+    "inicio": "2026-11-27T01:41:07.727Z",
+    "fim": "2026-11-27T01:41:31.093Z",
     "novos": 0,
-    "tentados": 16,
+    "tentados": 27,
     "parou_por": "fim da lista",
     "fontes": {
       "gutenberg": false,
