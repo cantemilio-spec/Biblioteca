@@ -257,13 +257,32 @@ export async function mountPdfReader(root, book, blob) {
   }
 
   /* ---------- zoom ---------- */
-  function setScale(s, cx = viewer.clientWidth / 2, cy = viewer.clientHeight / 2) {
+  // (cx,cy) = ponto de referência do zoom, em coordenadas da área de leitura; (tx,ty) = onde esse ponto deve ficar depois
+  // (iguais, exceto quando os dedos da pinça também se moveram).
+  function setScale(s, cx = viewer.clientWidth / 2, cy = viewer.clientHeight / 2, tx = cx, ty = cy) {
     s = clamp(s, SCALE_MIN, SCALE_MAX);
-    const fx = (viewer.scrollLeft + cx) / Math.max(1, viewer.scrollWidth), fy = (viewer.scrollTop + cy) / Math.max(1, viewer.scrollHeight);
-    st.fit = 'custom'; st.scale = s;
+    const vr = viewer.getBoundingClientRect();
+    // Âncora = ponto da própria folha sob (cx,cy), em fração da folha. O preenchimento e o espaço entre folhas não escalam,
+    // então a fração do conteúdo inteiro (usada antes) deslocava o ponto tocado.
+    const hit = document.elementFromPoint(vr.left + cx, vr.top + cy)?.closest?.('.pdf-page');
+    const el = hit && viewer.contains(hit) ? hit : (views[Math.min(views.length, Math.max(1, st.page)) - 1] || views[0])?.el;
+    const r0 = el?.getBoundingClientRect();
+    const fx = r0 ? (vr.left + cx - r0.left) / Math.max(1, r0.width) : 0, fy = r0 ? (vr.top + cy - r0.top) / Math.max(1, r0.height) : 0;
+    if (st.fit !== 'custom') st.baseFit = st.fit;
+    const base = st.baseFit || 'width';
+    // perto do tamanho padrão: volta ao ajuste automático (a folha fica centralizada, sem rolagem lateral)
+    const keep = st.fit; st.fit = base; const fit = computeFit(); st.fit = keep;
+    const snap = Math.abs(s / fit - 1) < 0.04;
+    if (snap) { st.fit = base; s = fit; } else st.fit = 'custom';
+    st.scale = s;
     relayout();
-    viewer.scrollLeft = fx * viewer.scrollWidth - cx; viewer.scrollTop = fy * viewer.scrollHeight - cy;
-    setSetting('pdfReader', { ...prefs, mode: st.mode, fit: 'custom', scale: s }).catch(() => {});
+    if (r0 && el.isConnected) {
+      const r1 = el.getBoundingClientRect();
+      viewer.scrollLeft += r1.left + fx * r1.width - (vr.left + tx);
+      viewer.scrollTop += r1.top + fy * r1.height - (vr.top + ty);
+    }
+    if (snap && viewer.scrollWidth <= viewer.clientWidth + 2) viewer.scrollLeft = 0;
+    setSetting('pdfReader', { ...prefs, mode: st.mode, fit: st.fit, scale: s }).catch(() => {});
   }
   function setFit(fit) {
     const f = fracInPage(), p = st.page;
@@ -637,6 +656,10 @@ export async function mountPdfReader(root, book, blob) {
     if (e.touches.length === 2) {
       const [a, b] = e.touches, vr = viewer.getBoundingClientRect();
       pinch = { d0: dist(a, b), s0: st.scale, cx: (a.clientX + b.clientX) / 2 - vr.left, cy: (a.clientY + b.clientY) / 2 - vr.top, r: 1 };
+      pinch.mx = pinch.cx; pinch.my = pinch.cy;
+      // Congela a rolagem enquanto dura a pinça: a prévia (transform) não pode aumentar a área rolável nem competir com um arrasto já iniciado.
+      viewer.style.overflow = 'hidden';
+      pagesEl.style.willChange = 'transform';
       pagesEl.style.transformOrigin = `${pinch.cx + viewer.scrollLeft - pagesEl.offsetLeft}px ${pinch.cy + viewer.scrollTop - pagesEl.offsetTop}px`;
       swipe = null;
     } else if (e.touches.length === 1) {
@@ -648,14 +671,17 @@ export async function mountPdfReader(root, book, blob) {
     if (pinch && e.touches.length === 2) {
       e.preventDefault();
       pinch.r = clamp(dist(e.touches[0], e.touches[1]) / pinch.d0, SCALE_MIN / pinch.s0, SCALE_MAX / pinch.s0);
-      pagesEl.style.transform = `scale(${pinch.r})`;
+      const vr = viewer.getBoundingClientRect(), [a, b] = e.touches;
+      pinch.mx = (a.clientX + b.clientX) / 2 - vr.left; pinch.my = (a.clientY + b.clientY) / 2 - vr.top;
+      pagesEl.style.transform = `translate(${pinch.mx - pinch.cx}px, ${pinch.my - pinch.cy}px) scale(${pinch.r})`;
     }
   }, { passive: false });
   viewer.addEventListener('touchend', (e) => {
     if (pinch && e.touches.length < 2) {
       const p = pinch; pinch = null;
-      pagesEl.style.transform = ''; pagesEl.style.transformOrigin = '';
-      if (Math.abs(p.r - 1) > 0.02) setScale(p.s0 * p.r, p.cx, p.cy);
+      pagesEl.style.transform = ''; pagesEl.style.transformOrigin = ''; pagesEl.style.willChange = '';
+      viewer.style.overflow = '';
+      if (Math.abs(p.r - 1) > 0.02) setScale(p.s0 * p.r, p.cx, p.cy, p.mx, p.my);
       return;
     }
     if (swipe && !pinch) {
@@ -670,6 +696,10 @@ export async function mountPdfReader(root, book, blob) {
     }
     swipe = null;
   }, { passive: false });
+  viewer.addEventListener('touchcancel', () => { if (!pinch) return; pinch = null; pagesEl.style.transform = pagesEl.style.transformOrigin = pagesEl.style.willChange = ''; viewer.style.overflow = ''; swipe = null; }, { passive: true });
+  // Pinça iniciada sobre a barra, os controles ou fora do PDF: nunca amplia a página/app inteiro (iOS ignora user-scalable)
+  for (const ev of ['gesturestart', 'gesturechange', 'gestureend']) reader.addEventListener(ev, (e) => e.preventDefault());
+  reader.addEventListener('touchmove', (e) => { if (e.touches.length > 1 && !viewer.contains(e.target) && e.cancelable) e.preventDefault(); }, { passive: false });
   viewer.addEventListener('wheel', (e) => {
     if (!e.ctrlKey) return;
     e.preventDefault();
