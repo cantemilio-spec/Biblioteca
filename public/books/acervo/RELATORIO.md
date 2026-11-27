@@ -1,6 +1,6 @@
 # Relatório: Acervo
 
-Última execução: 2026-11-27T01:41:07.659Z — parou por: fim da lista
+Última execução: 2026-11-27T13:37:07.061Z — parou por: fim da lista
 
 Concluídos **64** | pendentes 38 | com erro 58 | bloqueados (sem direitos/não encontrados) 0
 
