@@ -1,6 +1,6 @@
 # Relatório: Literatura internacional
 
-Última execução: 2026-11-27T19:17:26.529Z — parou por: fim da lista
+Última execução: 2026-11-28T07:35:05.994Z — parou por: fim da lista
 
 Concluídos **27** | pendentes 64 | com erro 47 | bloqueados (sem direitos/não encontrados) 0
 
